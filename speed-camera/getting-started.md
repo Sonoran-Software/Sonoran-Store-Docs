@@ -2,7 +2,7 @@
 title: Getting Started
 description: This page will walk you through getting and installing the script.
 published: false
-date: 2022-03-31T19:49:06.189Z
+date: 2022-03-31T20:21:26.253Z
 tags: 
 editor: markdown
 dateCreated: 2022-03-31T19:23:48.740Z
@@ -17,57 +17,58 @@ Inside the script package will be a file called config.CHANGEME.json you should 
 
 ## Configuring the Script
 Default config.json:
-```json
+```js
 {
-	"configuration_version": 1.0,
-  "script_version": 1.0,
-  "debugMode" = false,
+	"configuration_version": 1.0, //An internal identifier for the version number
+  "script_version": 1.0, //An internal identifier for the script version
+  "debugMode" = false, //Debug mode may cause console spam, useful for debugging issues
 	"ace_perms": {
-		"use_ace": false,
-		"ace_object_place": "sonoran.trafficcam",
-		"ace_object_notification": "sonoran.police"
+		"use_ace": false, //Change to true to use the FiveM Ace Perms system
+		"ace_object_place": "sonoran.trafficcam", //The name of the permission to place new traffic cameras
+		"ace_object_notification": "sonoran.police" //The name of the permission to receive notifications and to manage the BOLO system
 	},
 	"framework": {
-		"framework_enabled": true,
-		"framework_type": "qb-core",
-		"police_job_names": ["police"],
-		"allowed_to_place_groups": ["admin"]
+		"framework_enabled": true, //This is used to choose whether or not to use a framework such as ESX or qb-core
+		"framework_type": "qb-core", //Change to ESX if that is your framework
+		"police_job_names": ["police"], //A list of police jobs to receive notifications and manage the BOLO system
+		"allowed_to_place_groups": ["admin"] //A list of QBCore permission groups allowed to add new cameras
 	},
 	"custom": {
-		"use_custom": false,
-		"check_perms_server_side": true,
-		"custom_place_event": "community::IsAdmin",
-		"custom_notify_event": "community::IsPolice"
+		"use_custom": false, //Set to true if you want to setup a custom permission syste
+		"check_perms_server_side": true, //Choose to verify custom perms on the server or client (server is recommended for security)
+		"custom_place_event": "community::IsAdmin", //The name of the event that should be triggered when checking if someone can place new cameras
+		"custom_notify_event": "community::IsPolice" //The name of the event that should be triggered when checking if someone should receive notifications
 	},
 	"camera_settings": {
-		"ignore_emergency": true,
-		"only_ignore_on_els": true,
-		"show_camera_blips_for_police": false,
-		"unit_system": "mph",
-		"time_between_flags": 1
+		"ignore_emergency": true, //Configure whether the speed cameras should ignore emergency vehicles
+		"only_ignore_on_els": true, //Configure whether emergencies vehicles should only be ignored if they are running lights (only works if above value is set to true)
+		"show_camera_blips_for_police": false, //Should camera blips be shown on officer's in-game maps
+		"unit_system": "mph", //What unit system should be used, "mph" and "kph" are the only valid option
+		"time_between_flags": 1 //The number of minutes between alerts about a single vehicle at a location, this will be overridden if the vehicle is seen by a different camera before this time has passed.
 	},
 	"standalone_features": {
-		"show_notification_blips_for_police": true,
-		"blips_expire_after_seconds": 90,
-		"enable_standalone_bolo_system": true
+		"show_notification_blips_for_police": true, //Set to false to hide deteted vehicles map blips for officers in game
+		"blips_expire_after_seconds": 90, //The blips from above will be deleted after this number of seconds
+		"enable_standalone_bolo_system": true //Enable this setting to use the built in BOLO system through `/addplate` and `/delplate` (NOTE: this setting must be set to false to use the SonoranCAD BOLOs below)
 	},
 	"integration": {
-		"SonoranCAD_integration": {
-			"use": true,
-			"add_live_map_blips": true,
-			"enable_911_calls": true,
-			"enable_cad_bolos": true,
-			"nearest_postal_plugin": "nearest-postal"
+		"SonoranCAD_integration": { //All of these will require the SonoranCAD Framework to be installed
+			"use": true, //Should any of the below CAD integrations be used?
+			"add_live_map_blips": true, //Add blips for cameras to the livemap on the CAD
+			"enable_911_calls": true, //Create 911 calls in CAD when a vehicle with a BOLO or that was speeding was detected
+			"enable_cad_bolos": true, //Whether to check for BOLOs through the SonoranCAD
+			"nearest_postal_plugin": "nearest-postal" //The name of the nearest-postal script you use, if you don't use one you can ignore this and it won't be used
 		},
-		"SpeedLimit_Display_integration": true,
+		"SpeedLimit_Display_integration": false, //To use this integration you will have to modify your SpeedLimitDisplay script as is described in the following section
 		"Discord_Webhook": {
-			"enabled": false,
+			"enabled": false, //Set to true and configure the webhook_url field below to use the Discord Webhook Feature
 			"webhook_url": ""
 		}
 	},
 	"notifications": {
-		"type": "native"
+		"type": "native" //Select notification type, available options: native, pNotify, okokNotify, cadOnly
+    //cadOnly will only send 911 calls to CAD, if this isn't configured you can also use that to disable notifications entirely.
 	}
 }
 ```
-If a config value is not listed in the table below, please do not edit it. It is most likely a value that is only used internally such as a version number.
+Do not directly copy the config found above, the comments included will not work in your resource.
