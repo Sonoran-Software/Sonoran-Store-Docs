@@ -2,7 +2,7 @@
 title: Getting Started
 description: This page will walk you through getting and installing the script.
 published: false
-date: 2022-03-31T19:36:55.998Z
+date: 2022-03-31T19:49:06.189Z
 tags: 
 editor: markdown
 dateCreated: 2022-03-31T19:23:48.740Z
@@ -70,3 +70,4 @@ Default config.json:
 	}
 }
 ```
+If a config value is not listed in the table below, please do not edit it. It is most likely a value that is only used internally such as a version number.
