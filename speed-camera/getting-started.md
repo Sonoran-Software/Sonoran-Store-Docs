@@ -2,7 +2,7 @@
 title: Getting Started
 description: This page will walk you through getting and installing the script.
 published: false
-date: 2022-03-31T19:23:48.740Z
+date: 2022-03-31T19:36:55.998Z
 tags: 
 editor: markdown
 dateCreated: 2022-03-31T19:23:48.740Z
@@ -20,7 +20,8 @@ Default config.json:
 ```json
 {
 	"configuration_version": 1.0,
-  "debugMode = false,
+  "script_version": 1.0,
+  "debugMode" = false,
 	"ace_perms": {
 		"use_ace": false,
 		"ace_object_place": "sonoran.trafficcam",
