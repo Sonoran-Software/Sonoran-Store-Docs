@@ -2,7 +2,7 @@
 title: Shot Spotter
 description: Quickly be alerted when gunshots are detected around San Andreas
 published: false
-date: 2022-04-03T23:33:16.016Z
+date: 2022-04-03T23:33:35.737Z
 tags: 
 editor: markdown
 dateCreated: 2022-03-24T01:45:51.587Z
@@ -22,4 +22,4 @@ dateCreated: 2022-03-24T01:45:51.587Z
 ## Commands
 | Command Name          | Command Description                                                                                                                         | Required Permission    |
 |-----------------------|---------------------------------------------------------------------------------------------------------------------------------------------|------------------------|
-| `/sonoran.shotspot` | This command will toggle the user's shot spotter status, either enabling or disabling shot spotter alerts and blips | LEO or as configured |
+| `/shotspot` | This command will toggle the user's shot spotter status, either enabling or disabling shot spotter alerts and blips | LEO or as configured |
