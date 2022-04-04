@@ -2,18 +2,15 @@
 title: Shot Spotter Installation
 description: 
 published: false
-date: 2022-04-04T00:45:15.088Z
+date: 2022-04-04T00:45:58.700Z
 tags: 
 editor: markdown
 dateCreated: 2022-03-24T01:48:28.702Z
 ---
 
-# Sonoran Shot Spotter
+# Sonoran Shot Spotter Written Installation
 
-
-## Written Installation
-
-### The Basics
+## The Basics
 
 Step 1.) Extract your downloaded folder into your server files
 > This can be done using [WinRAR](https://www.win-rar.com/predownload.html?&L=0) {.is-info}
