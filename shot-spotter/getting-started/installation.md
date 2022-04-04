@@ -2,7 +2,7 @@
 title: Shot Spotter Installation
 description: 
 published: false
-date: 2022-04-04T00:45:58.700Z
+date: 2022-04-04T00:54:19.434Z
 tags: 
 editor: markdown
 dateCreated: 2022-03-24T01:48:28.702Z
@@ -35,9 +35,9 @@ Sonoran Shot Spotter contains highly configurable permissions that have a fit fo
 | `use_ace_perms` | Would you like to utilize FiveM Ace Permissions? | `true` or `false`
 | `ace_object` | The ace name that will be used to assign permissions. More can be read about Ace Permissions [Here](https://forum.cfx.re/t/basic-aces-principals-overview-guide/90917)  | `string`
 | `use_esx` | Would you like to utilize ESX framework jobs for permissions? | `true` or `false`
-| `police_job` | What is the name of your ESX jobs that should have access to the shotspotter? | `arary`
+| `police_job` | What is the name of your ESX jobs that should have access to the shotspotter? | `array`
 | `use_qbcore` | Would you like to utilize QB-Core framework jobs for permissions? | `true` or `false`
-| `police_job` | What is the name of your QB-Core jobs that should have access to the shotspotter? | `arary`
+| `police_job` | What is the name of your QB-Core jobs that should have access to the shotspotter? | `array`
 
 ### Webhooks
 | Config Option          | Option Description                                                                                                                         | Possible Values    |
@@ -48,3 +48,22 @@ Sonoran Shot Spotter contains highly configurable permissions that have a fit fo
 | `onshot` | Would you like to send a webhook when the shot spotter is triggered? | `true` or `false`
 
 ### General 
+| Config Option          | Option Description                                                                                                                         | Possible Values    |
+|-----------------------|---------------------------------------------------------------------------------------------------------------------------------------------|------------------------|
+| `use_cad` | Would you like to utilize the Sonoran Cad framework to automatically send 911 calls to Sonoran Cad? | `true` or `false`
+| `use_command` | Would you like to be able to toggle the shot spotter alerts in game on and off? | `true` or `false`
+| `shotspot_cmd` | The command to toggle the shot spotter alerts in game | `string`
+| `show_on_map` | Would you like to show a blip on the map when the shot spotter was triggered? | `true` or `false`
+| `radius` | How large of a radius should each shot spotter scan? | `integer` 
+
+### Spotter
+| Config Option          | Option Description                                                                                                                         | Possible Values    |
+|-----------------------|---------------------------------------------------------------------------------------------------------------------------------------------|------------------------|
+| `use_object` | Would you like to utilize the included shot spotter object? | `true` or `false`
+| `cooldown` | How long of a cooldown should be between shot spotter alerts?  | `integer` (time in seconds)
+
+### Whitelist
+| Config Option          | Option Description                                                                                                                         | Possible Values    |
+|-----------------------|---------------------------------------------------------------------------------------------------------------------------------------------|------------------------|
+| `peds` | Peds that will not trigger the shot spotter | `array` 
+| `weapons` | Weapons that will not trigger the shot spotter | `array`
