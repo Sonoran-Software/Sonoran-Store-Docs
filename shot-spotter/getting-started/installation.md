@@ -2,7 +2,7 @@
 title: Shot Spotter Installation
 description: 
 published: false
-date: 2022-04-04T00:42:36.828Z
+date: 2022-04-04T00:43:58.114Z
 tags: 
 editor: markdown
 dateCreated: 2022-03-24T01:48:28.702Z
@@ -13,7 +13,7 @@ dateCreated: 2022-03-24T01:48:28.702Z
 
 ## Written Installation
 
-### The Basics
+# The Basics
 
 Step 1.) Extract your downloaded folder into your server files
 > This can be done using [WinRAR](https://www.win-rar.com/predownload.html?&L=0) {.is-info}
@@ -28,7 +28,7 @@ ensure sonoran_shotspotter
 
 Congrats! You have successfully installed Sonoran Shot Spotter. See Section II for configuration.
 
-### Configuration
+# Configuration
 #### Permissions
 Sonoran Shot Spotter contains highly configurable permissions that have a fit for any server. In this section you will see options for standalone, QB-Core and ESX. Below will detail every option in this section, it's meaning and options.  
 
