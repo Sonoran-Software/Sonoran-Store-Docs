@@ -2,7 +2,7 @@
 title: Shot Spotter Installation
 description: 
 published: false
-date: 2022-04-04T00:44:49.739Z
+date: 2022-04-04T00:45:15.088Z
 tags: 
 editor: markdown
 dateCreated: 2022-03-24T01:48:28.702Z
@@ -28,8 +28,8 @@ ensure sonoran_shotspotter
 
 Congrats! You have successfully installed Sonoran Shot Spotter. See Section II for configuration.
 
-### Configuration
-#### Permissions
+## Configuration
+### Permissions
 Sonoran Shot Spotter contains highly configurable permissions that have a fit for any server. In this section you will see options for standalone, QB-Core and ESX. Below will detail every option in this section, it's meaning and options.  
 
 | Config Option          | Option Description                                                                                                                         | Possible Values    |
@@ -42,7 +42,7 @@ Sonoran Shot Spotter contains highly configurable permissions that have a fit fo
 | `use_qbcore` | Would you like to utilize QB-Core framework jobs for permissions? | `true` or `false`
 | `police_job` | What is the name of your QB-Core jobs that should have access to the shotspotter? | `arary`
 
-#### Webhooks
+### Webhooks
 | Config Option          | Option Description                                                                                                                         | Possible Values    |
 |-----------------------|---------------------------------------------------------------------------------------------------------------------------------------------|------------------------|
 | `webhook_URL` | The Discord URL to send webhooks to | `string` 
@@ -50,4 +50,4 @@ Sonoran Shot Spotter contains highly configurable permissions that have a fit fo
 | `offduty` | Would you like to send a webhook when someone goes off duty? | `true` or `false`
 | `onshot` | Would you like to send a webhook when the shot spotter is triggered? | `true` or `false`
 
-#### General 
+### General 
