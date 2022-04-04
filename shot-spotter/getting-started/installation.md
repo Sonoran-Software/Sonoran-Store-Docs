@@ -2,7 +2,7 @@
 title: Shot Spotter Installation
 description: 
 published: false
-date: 2022-04-04T00:54:19.434Z
+date: 2022-04-04T00:59:32.616Z
 tags: 
 editor: markdown
 dateCreated: 2022-03-24T01:48:28.702Z
@@ -67,3 +67,11 @@ Sonoran Shot Spotter contains highly configurable permissions that have a fit fo
 |-----------------------|---------------------------------------------------------------------------------------------------------------------------------------------|------------------------|
 | `peds` | Peds that will not trigger the shot spotter | `array` 
 | `weapons` | Weapons that will not trigger the shot spotter | `array`
+
+## Spotter Locations 
+These locations can be found and set in the `spotters.json` found within the `config` folder. To configure spotters follow this chart:
+| Config Option          | Option Description                                                                                                                         | Possible Values    | Notes | 
+|-----------------------|---------------------------------------------------------------------------------------------------------------------------------------------|------------------------|
+| `ID` | The shot spotter ID (used internally) | `integer` | This cannot be duplicated
+| `x`, `y`, `z` | The in game coordinates | `integer` | N/A
+| `pitch`, `roll`, `yaw` | Rotation values | `integer` | N/A
