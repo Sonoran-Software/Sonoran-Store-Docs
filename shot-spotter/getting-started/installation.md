@@ -2,7 +2,7 @@
 title: Shot Spotter Installation
 description: 
 published: false
-date: 2022-04-04T01:00:16.087Z
+date: 2022-04-04T01:02:57.227Z
 tags: 
 editor: markdown
 dateCreated: 2022-03-24T01:48:28.702Z
@@ -23,7 +23,9 @@ Step 3.)  Add the following line to your `server.cfg` (or other startup config):
 ensure sonoran_shotspotter
 ```
 
-Congrats! You have successfully installed Sonoran Shot Spotter. See Section II for configuration.
+> Congrats! You have successfully installed Sonoran Shot Spotter. See Section II for configuration.
+{.is-success}
+
 
 ## Configuration
 ### Permissions
@@ -67,6 +69,9 @@ Sonoran Shot Spotter contains highly configurable permissions that have a fit fo
 |-----------------------|---------------------------------------------------------------------------------------------------------------------------------------------|------------------------|
 | `peds` | Peds that will not trigger the shot spotter | `array` 
 | `weapons` | Weapons that will not trigger the shot spotter | `array`
+
+> Congrats! You have successfully configured Sonoran Shot Spotter. See Section III for spotter locations.
+{.is-success}
 
 ## Spotter Locations 
 These locations can be found and set in the `spotters.json` found within the `config` folder. To configure spotters follow this chart:
