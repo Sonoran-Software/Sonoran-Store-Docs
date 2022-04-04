@@ -2,14 +2,16 @@
 title: Information
 description: Learn more about the Sonoran Store!
 published: true
-date: 2022-03-30T21:56:19.361Z
+date: 2022-04-04T23:09:26.476Z
 tags: 
 editor: markdown
 dateCreated: 2022-03-30T21:56:19.361Z
 ---
 
 # Our Company
+![sonoran_software_systems.png](/sonoran_software_systems.png =50%x)
 Learn more about Sonoran Software, who we are, and what we do.
+
 [Visit our Website!](https://sonoransoftware.com)
 
 # Customer Support
@@ -32,4 +34,4 @@ Left-click on your Discord username to copy it.
 
 ### 3. Claim your Role
 On support.sonoransoftware.com select `Discord Role` > `Store Customer` and enter in your credentials.
-![customer_role_support.png](/customer_role_support.png)
+![customer_role_support.png](/customer_role_support.png =75%x)
