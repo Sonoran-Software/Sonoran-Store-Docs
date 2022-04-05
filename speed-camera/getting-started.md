@@ -2,7 +2,7 @@
 title: Getting Started
 description: This page will walk you through getting and installing the script.
 published: false
-date: 2022-03-31T20:21:26.253Z
+date: 2022-04-05T23:18:54.908Z
 tags: 
 editor: markdown
 dateCreated: 2022-03-31T19:23:48.740Z
@@ -72,3 +72,29 @@ Default config.json:
 }
 ```
 Do not directly copy the config found above, the comments included will not work in your resource.
+
+## Camera Location Config
+You have two options for placing new cameras:
+1. You can use the command `/spawnnewcam [name]` to spawn a new camera and generate the relevant config data
+	- You may need to modify some of the rotation values manually to get that perfect placement you are looking for
+2. You can manually copy and paste an existing config and then modify the values to meet your needs for the new camera
+### `camera.json` property explanation
+| Property Name | Example   | Notes                                                                |
+|---------------|-----------|----------------------------------------------------------------------|
+| `ID`          | 2         | `ID` must be unique. No other camera can share this ID               |
+| `Prop`        | `radar01` | The only valid value for `Prop` is currently `radar01`               |
+| `Position`    |           | This is a table that contains the x, y, and z coords of the camera   |
+| `Rotation`    | 				  | This is a table that contains the x, y, and z rotation of the camera |
+| `Label`       | `Test 1`  | This is a human readable label for the camera, can have spaces       |
+| `SpeedLimit`  | 10        | This is the speed over which this camera will trip                   |
+| `ViewRadius`  | 10        | How far away this camera can see in GTA units, default is 10         |
+
+## Needed Changes for Speed Display
+We recommend [this](https://forum.cfx.re/t/release-posted-speedlimit/180949) speed limit display script by BigYoda.
+
+Add the following code snippet to the bottom of your speed display script's client.lua:
+```lua
+exports("GetCurrentSpeed", function()
+    return speedlimit
+end)
+```
