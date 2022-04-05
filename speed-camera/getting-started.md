@@ -2,7 +2,7 @@
 title: Getting Started
 description: This page will walk you through getting and installing the script.
 published: false
-date: 2022-04-05T23:20:09.472Z
+date: 2022-04-05T23:21:37.721Z
 tags: 
 editor: markdown
 dateCreated: 2022-03-31T19:23:48.740Z
@@ -78,7 +78,7 @@ You have two options for placing new cameras:
 1. You can use the command `/spawnnewcam [name]` to spawn a new camera and generate the relevant config data
 	- You may need to modify some of the rotation values manually to get that perfect placement you are looking for
 2. You can manually copy and paste an existing config and then modify the values to meet your needs for the new camera
-### `camera.json` property explanation
+### `camera.json` Property Explanation
 | Property Name | Example   | Notes                                                                |
 |---------------|-----------|----------------------------------------------------------------------|
 | `ID`          | 2         | `ID` must be unique. No other camera can share this ID               |
