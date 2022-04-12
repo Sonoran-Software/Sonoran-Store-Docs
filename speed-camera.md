@@ -2,7 +2,7 @@
 title: Speed Cameras/ALPR
 description: Automated system to detect and warn when a vehicle with an active BOLO or a speeding vehicle is spotted.
 published: false
-date: 2022-03-31T19:16:45.399Z
+date: 2022-04-12T21:59:04.570Z
 tags: 
 editor: markdown
 dateCreated: 2022-03-31T18:53:58.629Z
@@ -23,7 +23,13 @@ dateCreated: 2022-03-31T18:53:58.629Z
 ## Commands
 | Command Name          | Command Description                                                                                                                         | Required Permission    |
 |-----------------------|---------------------------------------------------------------------------------------------------------------------------------------------|------------------------|
-| `/spawnnewcam [name]` | This command will allow an admin to spawn a new camera using a gun placement system where the name argument is the label for the new camera | Admin or as configured |
+| `/spawnnewcam [prop] [name]` | This command will allow an admin to spawn a new camera using a gun placement system where the name argument is the label for the new camera and the prop argument is the text name of the model to use | Admin or as configured |
 | `/addplate [plate]`           | This command will add a plate to the standalone BOLO system when in use.                                                                    | LEO or as configured   |
 | `/delplate [plate]`           | This command will remove a plate from the standalone BOLO system when in use.                                                               | LEO or as configured   |
 | `/cancelcamplacement` | This command will cancel the current camera placement if one is currently in progress.                                                      | N/A                    |
+
+## Model Options
+### `radar01`
+![radar01-preview.png](/speed-camera/radar01-preview.png)
+### `prop_traffic_camera`
+PREVIEW COMGIN SOON!
