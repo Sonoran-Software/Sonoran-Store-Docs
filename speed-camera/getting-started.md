@@ -2,7 +2,7 @@
 title: Getting Started
 description: This page will walk you through getting and installing the script.
 published: false
-date: 2022-04-05T23:21:37.721Z
+date: 2022-04-12T21:13:55.923Z
 tags: 
 editor: markdown
 dateCreated: 2022-03-31T19:23:48.740Z
@@ -20,7 +20,6 @@ Default config.json:
 ```js
 {
 	"configuration_version": 1.0, //An internal identifier for the version number
-  "script_version": 1.0, //An internal identifier for the script version
   "debugMode" = false, //Debug mode may cause console spam, useful for debugging issues
 	"ace_perms": {
 		"use_ace": false, //Change to true to use the FiveM Ace Perms system
@@ -49,7 +48,8 @@ Default config.json:
 	"standalone_features": {
 		"show_notification_blips_for_police": true, //Set to false to hide deteted vehicles map blips for officers in game
 		"blips_expire_after_seconds": 90, //The blips from above will be deleted after this number of seconds
-		"enable_standalone_bolo_system": true //Enable this setting to use the built in BOLO system through `/addplate` and `/delplate` (NOTE: this setting must be set to false to use the SonoranCAD BOLOs below)
+		"enable_standalone_bolo_system": true, //Enable this setting to use the built in BOLO system through `/addplate` and `/delplate` (NOTE: this setting must be set to false to use the SonoranCAD BOLOs below)
+    "enable_auto_update": true //Sets whether the auto update system should be used. Automatic version checks will always be performed.
 	},
 	"integration": {
 		"SonoranCAD_integration": { //All of these will require the SonoranCAD Framework to be installed
@@ -62,12 +62,18 @@ Default config.json:
 		"SpeedLimit_Display_integration": false, //To use this integration you will have to modify your SpeedLimitDisplay script as is described in the following section
 		"Discord_Webhook": {
 			"enabled": false, //Set to true and configure the webhook_url field below to use the Discord Webhook Feature
-			"webhook_url": ""
+			"webhook_url": "", //See: https://support.discord.com/hc/en-us/articles/228383668-Intro-to-Webhooks
+      //All available placeholders are visible in the below configurations.
+      "webhook_title": "{{EVENT_TYPE}} Alert", //The title of the webhook embed
+			"webhook_message": "License Plate: {{PLATE}}\nSpeed: {{SPEED}} {{SPEED_UNIT}}\nCamera: {{CAMERA_NAME}}" //The message that the webhook displays
 		}
 	},
 	"notifications": {
 		"type": "native" //Select notification type, available options: native, pNotify, okokNotify, cadOnly
     //cadOnly will only send 911 calls to CAD, if this isn't configured you can also use that to disable notifications entirely.
+    //All available placeholders are visible in the below configurations.
+    "notification_title": "{{EVENT_TYPE}} Alert", //The title of the notification for methods that support it
+		"notification_message": "License Plate: {{PLATE}}\nSpeed: {{SPEED}} {{SPEED_UNIT}}\nCamera: {{CAMERA_NAME}}" //The message text of the notification
 	}
 }
 ```
