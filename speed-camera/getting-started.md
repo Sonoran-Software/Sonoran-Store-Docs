@@ -2,7 +2,7 @@
 title: Getting Started
 description: This page will walk you through getting and installing the script.
 published: false
-date: 2022-04-12T21:13:55.923Z
+date: 2022-04-13T00:24:39.860Z
 tags: 
 editor: markdown
 dateCreated: 2022-03-31T19:23:48.740Z
@@ -13,7 +13,15 @@ dateCreated: 2022-03-31T19:23:48.740Z
 After purchasing the script through the sonoran store you may download the script through the keymaster account that purchased the script. Upon downloading extract the file to a safe place.
 
 ## Install the Script
-Inside the script package will be a file called config.CHANGEME.json you should rename that to be config.json. You can then install the script as you would any other resource for FiveM.
+Inside the script package will be a file called `config.CHANGEME.json` you should rename that to be config.json. You can then install the script as you would any other resource for FiveM.
+
+In your `server.cfg` add the following:
+```
+ensure sonoran-trafficcam
+
+add_ace resource.sonoran-trafficcam command allow
+add_ace resource.sonoran-trafficcam_helper command allow
+```
 
 ## Configuring the Script
 Default config.json:
