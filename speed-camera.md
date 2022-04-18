@@ -2,7 +2,7 @@
 title: Speed Cameras/ALPR
 description: Automated system to detect and warn when a vehicle with an active BOLO or a speeding vehicle is spotted.
 published: false
-date: 2022-04-18T18:18:13.051Z
+date: 2022-04-18T18:48:12.863Z
 tags: 
 editor: markdown
 dateCreated: 2022-03-31T18:53:58.629Z
@@ -16,6 +16,8 @@ dateCreated: 2022-03-31T18:53:58.629Z
 - Support for AcePerms, ESX, QBCore, and custom permissions systems
 ![cad-integration-feature.png](/speed-camera/cad-integration-feature.png)
 ![in-game-blip.png](/speed-camera/in-game-blip.png)
+![auto-update-feature.png](/speed-camera/auto-update-feature.png)
+![gun-placement-feature.png](/speed-camera/gun-placement-feature.png)
 ![discord-webhook-feature.png](/speed-camera/discord-webhook-feature.png)
 ![configurable-feature.png](/speed-camera/configurable-feature.png)
 
