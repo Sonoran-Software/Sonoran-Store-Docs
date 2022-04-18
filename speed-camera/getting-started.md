@@ -2,7 +2,7 @@
 title: Getting Started
 description: This page will walk you through getting and installing the script.
 published: false
-date: 2022-04-18T19:00:13.227Z
+date: 2022-04-18T19:16:05.796Z
 tags: 
 editor: markdown
 dateCreated: 2022-03-31T19:23:48.740Z
@@ -66,6 +66,8 @@ Default config.json:
 			"use": true, //Should any of the below CAD integrations be used?
 			"add_live_map_blips": true, //Add blips for cameras to the livemap on the CAD
 			"enable_911_calls": true, //Create 911 calls in CAD when a vehicle with a BOLO or that was speeding was detected
+      "911_caller": "Automated System", //Determines what shows up in the CAD as the caller
+			"911_message": "{{EVENT_TYPE}} vehicle with license plate {{PLATE}} was seen doing {{SPEED}} {{SPEED_UNIT}} at camera {{CAMERA_NAME}}", //This message is what shows up in the message area of the generated 911 calls
 			"enable_cad_bolos": true, //Whether to check for BOLOs through the SonoranCAD
 			"nearest_postal_plugin": "nearest-postal" //The name of the nearest-postal script you use, if you don't use one you can ignore this and it won't be used
 		},
