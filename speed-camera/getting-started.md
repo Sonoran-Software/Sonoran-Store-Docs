@@ -2,7 +2,7 @@
 title: Getting Started
 description: This page will walk you through getting and installing the script.
 published: false
-date: 2022-04-13T00:24:39.860Z
+date: 2022-04-18T19:00:13.227Z
 tags: 
 editor: markdown
 dateCreated: 2022-03-31T19:23:48.740Z
@@ -13,9 +13,11 @@ dateCreated: 2022-03-31T19:23:48.740Z
 After purchasing the script through the sonoran store you may download the script through the keymaster account that purchased the script. Upon downloading extract the file to a safe place.
 
 ## Install the Script
-Inside the script package will be a file called `config.CHANGEME.json` you should rename that to be config.json. You can then install the script as you would any other resource for FiveM.
-
-In your `server.cfg` add the following:
+1. Inside the script package you just extracted will be two folders. Copy both to a folder in your server's resources folder called `[sonoranscripts]` note the `[]` in the name, without them it will not work.
+![directory-example.png](/speed-camera/directory-example.png)
+2. In the `sonoran-trafficcam` folder there will be a file called `config.CHANGEME.json` you should rename that to be config.json and configure the settings inside as you would like them to be configured based on the configuration documentation below. In that same folder will also be a file called `cameras.CHANGEME.json` which you should rename to `cameras.json` and use to manually place cameras based on the existing template, note you can also use the gun placement system in game.
+![files-example.png](/speed-camera/files-example.png)
+3. Finally, in your `server.cfg` add the following:
 ```
 ensure sonoran-trafficcam
 
