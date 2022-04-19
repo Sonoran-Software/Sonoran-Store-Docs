@@ -1,14 +1,16 @@
 ---
 title: Sonoran Scripts
 description: Documentation and Information on Sonoran Scripts Products
-published: false
-date: 2022-04-19T22:27:57.581Z
+published: true
+date: 2022-04-19T22:30:52.503Z
 tags: 
 editor: markdown
 dateCreated: 2022-03-24T01:10:35.431Z
 ---
 
 # Welcome to the Sonoran Store
+
+![sonoran_software_systems.png](/sonoran_software_systems.png =50%x)
 
 We're dedicated to providing the highest quality, most advanced, and most feature rich assets to the FiveM community.
 
