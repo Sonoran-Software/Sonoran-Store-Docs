@@ -2,7 +2,7 @@
 title: Getting Started
 description: This page will walk you through getting and installing the script.
 published: false
-date: 2022-04-19T21:17:05.158Z
+date: 2022-04-19T21:17:24.119Z
 tags: 
 editor: markdown
 dateCreated: 2022-03-31T19:23:48.740Z
@@ -10,7 +10,7 @@ dateCreated: 2022-03-31T19:23:48.740Z
 
 # Getting Started
 ## Acquire the Script
-After purchasing the script through the sonoran store you may download the script through the keymaster account[tebex-assets](/tebex-assets) that purchased the script. Upon downloading extract the file to a safe place.
+After purchasing the script through the sonoran store you may [download the script through the keymaster account](/tebex-assets) that purchased the script. Upon downloading extract the file to a safe place.
 
 ## Install the Script
 1. Inside the script package you just extracted will be two folders. Copy both to a folder in your server's resources folder called `[sonoranscripts]` note the `[]` in the name, without them it will not work.
