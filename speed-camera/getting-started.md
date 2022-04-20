@@ -2,7 +2,7 @@
 title: Getting Started
 description: This page will walk you through getting and installing the script.
 published: true
-date: 2022-04-20T18:23:32.918Z
+date: 2022-04-20T19:53:47.441Z
 tags: 
 editor: markdown
 dateCreated: 2022-03-31T19:23:48.740Z
@@ -29,7 +29,7 @@ add_ace resource.sonoran-trafficcam_helper command allow
 Default config.json:
 ```js
 {
-	"configuration_version": 1.0, //An internal identifier for the version number
+	"configuration_version": 1.5, //An internal identifier for the version number
   "debugMode" = false, //Debug mode may cause console spam, useful for debugging issues
 	"ace_perms": {
 		"use_ace": true, //Change to true to use the FiveM Ace Perms system
@@ -41,6 +41,16 @@ Default config.json:
 		"framework_type": "qb-core", //Change to ESX if that is your framework
 		"police_job_names": ["police"], //A list of police jobs to receive notifications and manage the BOLO system
 		"allowed_to_place_groups": ["admin"] //A list of QBCore permission groups allowed to add new cameras
+	},
+  "command_names": { //Set the names for the commands
+		"add_bolo_plate": "addplate", //The command for adding a plate to the standalone BOLO system
+		"remove_bolo_plate": "delplate", //The command for removing a plate from the standalone BOLO system
+		"spawn_new_cam": "spawnnewcam", //The command for spawning a new camera using the gun system
+		"cancel_new_spawn": "cancelcamplacement", //The command for canceling a new camera spawn
+		"reload_config": "adminconfigreload", //The command for reloading the config.json without restarting the script
+		"position_debug_display": "position", //The command for getting a present position and heading within the game
+		"upload_client_log": "uploadnewclientlog", //The command for uploading a client log to the server a support rep may ask you to do this
+		"upload_server_log": "uploadnewlog" //The command for uploading a server log to the server a support rep may ask you to do this
 	},
 	"custom": {
 		"use_custom": false, //Set to true if you want to setup a custom permission syste
