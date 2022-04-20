@@ -2,7 +2,7 @@
 title: Getting Started
 description: This page will walk you through getting and installing the script.
 published: true
-date: 2022-04-20T19:53:47.441Z
+date: 2022-04-20T21:23:01.293Z
 tags: 
 editor: markdown
 dateCreated: 2022-03-31T19:23:48.740Z
@@ -103,7 +103,8 @@ Do not directly copy the config found above, the comments included will not work
 
 ## Camera Location Config
 You have two options for placing new cameras:
-1. You can use the command `/spawnnewcam [name]` to spawn a new camera and generate the relevant config data
+1. You can use the command `/spawnnewcam [prop] [name]` to initiate spawning a new camera and generate the relevant config data
+	- After running this command you must pull out, aim, and shoot with a gun to confirm placement.
 	- You may need to modify some of the rotation values manually to get that perfect placement you are looking for
 2. You can manually copy and paste an existing config and then modify the values to meet your needs for the new camera
 ### `camera.json` Property Explanation
