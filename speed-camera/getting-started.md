@@ -2,7 +2,7 @@
 title: Getting Started
 description: This page will walk you through getting and installing the script.
 published: true
-date: 2022-04-19T22:29:14.133Z
+date: 2022-04-20T18:23:32.918Z
 tags: 
 editor: markdown
 dateCreated: 2022-03-31T19:23:48.740Z
@@ -32,12 +32,12 @@ Default config.json:
 	"configuration_version": 1.0, //An internal identifier for the version number
   "debugMode" = false, //Debug mode may cause console spam, useful for debugging issues
 	"ace_perms": {
-		"use_ace": false, //Change to true to use the FiveM Ace Perms system
+		"use_ace": true, //Change to true to use the FiveM Ace Perms system
 		"ace_object_place": "sonoran.trafficcam", //The name of the permission to place new traffic cameras
 		"ace_object_notification": "sonoran.police" //The name of the permission to receive notifications and to manage the BOLO system
 	},
 	"framework": {
-		"framework_enabled": true, //This is used to choose whether or not to use a framework such as ESX or qb-core
+		"framework_enabled": false, //This is used to choose whether or not to use a framework such as ESX or qb-core
 		"framework_type": "qb-core", //Change to ESX if that is your framework
 		"police_job_names": ["police"], //A list of police jobs to receive notifications and manage the BOLO system
 		"allowed_to_place_groups": ["admin"] //A list of QBCore permission groups allowed to add new cameras
