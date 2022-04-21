@@ -2,7 +2,7 @@
 title: Getting Started
 description: This page will walk you through getting and installing the script.
 published: true
-date: 2022-04-20T21:23:01.293Z
+date: 2022-04-21T23:13:39.093Z
 tags: 
 editor: markdown
 dateCreated: 2022-03-31T19:23:48.740Z
@@ -27,79 +27,96 @@ add_ace resource.sonoran-trafficcam_helper command allow
 
 ## Configuring the Script
 Default config.json:
-```js
-{
-	"configuration_version": 1.5, //An internal identifier for the version number
-  "debugMode" = false, //Debug mode may cause console spam, useful for debugging issues
-	"ace_perms": {
-		"use_ace": true, //Change to true to use the FiveM Ace Perms system
-		"ace_object_place": "sonoran.trafficcam", //The name of the permission to place new traffic cameras
-		"ace_object_notification": "sonoran.police" //The name of the permission to receive notifications and to manage the BOLO system
-	},
-	"framework": {
-		"framework_enabled": false, //This is used to choose whether or not to use a framework such as ESX or qb-core
-		"framework_type": "qb-core", //Change to ESX if that is your framework
-		"police_job_names": ["police"], //A list of police jobs to receive notifications and manage the BOLO system
-		"allowed_to_place_groups": ["admin"] //A list of QBCore permission groups allowed to add new cameras
-	},
-  "command_names": { //Set the names for the commands
-		"add_bolo_plate": "addplate", //The command for adding a plate to the standalone BOLO system
-		"remove_bolo_plate": "delplate", //The command for removing a plate from the standalone BOLO system
-		"spawn_new_cam": "spawnnewcam", //The command for spawning a new camera using the gun system
-		"cancel_new_spawn": "cancelcamplacement", //The command for canceling a new camera spawn
-		"reload_config": "adminconfigreload", //The command for reloading the config.json without restarting the script
-		"position_debug_display": "position", //The command for getting a present position and heading within the game
-		"upload_client_log": "uploadnewclientlog", //The command for uploading a client log to the server a support rep may ask you to do this
-		"upload_server_log": "uploadnewlog" //The command for uploading a server log to the server a support rep may ask you to do this
-	},
-	"custom": {
-		"use_custom": false, //Set to true if you want to setup a custom permission syste
-		"check_perms_server_side": true, //Choose to verify custom perms on the server or client (server is recommended for security)
-		"custom_place_event": "community::IsAdmin", //The name of the event that should be triggered when checking if someone can place new cameras
-		"custom_notify_event": "community::IsPolice" //The name of the event that should be triggered when checking if someone should receive notifications
-	},
-	"camera_settings": {
-		"ignore_emergency": true, //Configure whether the speed cameras should ignore emergency vehicles
-		"only_ignore_on_els": true, //Configure whether emergencies vehicles should only be ignored if they are running lights (only works if above value is set to true)
-		"show_camera_blips_for_police": false, //Should camera blips be shown on officer's in-game maps
-		"unit_system": "mph", //What unit system should be used, "mph" and "kph" are the only valid option
-		"time_between_flags": 1 //The number of minutes between alerts about a single vehicle at a location, this will be overridden if the vehicle is seen by a different camera before this time has passed.
-	},
-	"standalone_features": {
-		"show_notification_blips_for_police": true, //Set to false to hide deteted vehicles map blips for officers in game
-		"blips_expire_after_seconds": 90, //The blips from above will be deleted after this number of seconds
-		"enable_standalone_bolo_system": true, //Enable this setting to use the built in BOLO system through `/addplate` and `/delplate` (NOTE: this setting must be set to false to use the SonoranCAD BOLOs below)
-    "enable_auto_update": true //Sets whether the auto update system should be used. Automatic version checks will always be performed.
-	},
-	"integration": {
-		"SonoranCAD_integration": { //All of these will require the SonoranCAD Framework to be installed
-			"use": true, //Should any of the below CAD integrations be used?
-			"add_live_map_blips": true, //Add blips for cameras to the livemap on the CAD
-			"enable_911_calls": true, //Create 911 calls in CAD when a vehicle with a BOLO or that was speeding was detected
-      "911_caller": "Automated System", //Determines what shows up in the CAD as the caller
-			"911_message": "{{EVENT_TYPE}} vehicle with license plate {{PLATE}} was seen doing {{SPEED}} {{SPEED_UNIT}} at camera {{CAMERA_NAME}}", //This message is what shows up in the message area of the generated 911 calls
-			"enable_cad_bolos": true, //Whether to check for BOLOs through the SonoranCAD
-			"nearest_postal_plugin": "nearest-postal" //The name of the nearest-postal script you use, if you don't use one you can ignore this and it won't be used
-		},
-		"SpeedLimit_Display_integration": false, //To use this integration you will have to modify your SpeedLimitDisplay script as is described in the following section
-		"Discord_Webhook": {
-			"enabled": false, //Set to true and configure the webhook_url field below to use the Discord Webhook Feature
-			"webhook_url": "", //See: https://support.discord.com/hc/en-us/articles/228383668-Intro-to-Webhooks
-      //All available placeholders are visible in the below configurations.
-      "webhook_title": "{{EVENT_TYPE}} Alert", //The title of the webhook embed
-			"webhook_message": "License Plate: {{PLATE}}\nSpeed: {{SPEED}} {{SPEED_UNIT}}\nCamera: {{CAMERA_NAME}}" //The message that the webhook displays
-		}
-	},
-	"notifications": {
-		"type": "native" //Select notification type, available options: native, pNotify, okokNotify, cadOnly
-    //cadOnly will only send 911 calls to CAD, if this isn't configured you can also use that to disable notifications entirely.
-    //All available placeholders are visible in the below configurations.
-    "notification_title": "{{EVENT_TYPE}} Alert", //The title of the notification for methods that support it
-		"notification_message": "License Plate: {{PLATE}}\nSpeed: {{SPEED}} {{SPEED_UNIT}}\nCamera: {{CAMERA_NAME}}" //The message text of the notification
-	}
+```lua
+Config = {}
+
+-- General Configuration Section --
+Config.configuration_version = 2.0
+Config.debug_mode = false -- Only useful for developers and if support asks you to enable it
+Config.permission_mode = "ace" -- Available Options: ace, framework, custom
+
+-- Ace Permissions Section --
+Config.ace_perms = {
+    ace_object_place = "sonoran.trafficcam", -- Select the ace for placing new cameras
+    ace_object_notification = "sonoran.police" -- Select the ace for receiving in-game notifications
+}
+
+-- Framework Related Settings --
+Config.framework = {
+    framework_type = "qb-core", -- This setting controls which framework is in use options are esx or qb-core
+    police_job_names = {"police"}, -- An array of job names that should receive notifications
+    allowed_to_place_groups = {"admin"} -- The permission group that should be allowed to place new cameras
+}
+
+-- Configuration For Custom Permissions Handling --
+Config.custom = {
+    check_perms_server_side = true, -- If true the permission event will be sent out to the server side resource, this is recommended
+    permissionCheck = function(source, type) -- This function will always be called server side.
+        if type == 0 then -- Check for admin
+            return true or false -- Return true if they have admin, return false if they don't
+        elseif type == 1 then -- Check for notification perms
+            return true or false -- Return true if they have permissions, return false if they don't
+        end
+    end
+}
+
+-- Choose Custom Command Names --
+Config.command_names = {
+    add_bolo_plate = "addplate",
+    remove_bolo_plate = "delplate",
+    spawn_new_cam = "spawnnewcam",
+    cancel_new_spawn = "cancelcamplacement",
+    position_debug_display = "position",
+    upload_client_log = "uploadnewclientlog",
+    upload_server_log = "uploadnewlog"
+}
+
+-- Settings Related to Camera Functionality --
+Config.camera_settings = {
+    ignore_emergency = true, -- Sets whether emergency vehicles should be ignored by the cameras
+    only_ignore_on_els = true, -- If the setting above and this one are true emergency vehicles will only be ignored if their lights are on
+    show_camera_blips_for_police = false, -- Should the cameras show up as blips for police on the map?
+    unit_system = "mph", -- Speed unit options: mph and kph
+    time_between_flags = 1 -- This is the number of minutes before a car will ping again, if they pass a different camera it will ping again regardless of whether this time has passed
+}
+
+-- Feature Settings That Don't Require Other Resources --
+Config.standalone_features = {
+    show_notification_blips_for_police = true, -- Should police see a blip when a car is pinged?
+    blips_expire_after_seconds = 90, -- Number of seconds before the blip type above is removed
+    enable_standalone_bolo_system = true, -- Selects whether the built in BOLO system should be used, this must be false for the SonoranCAD BOLO integration to work
+    enable_auto_update = true -- Should the script automatically update itself, it will check for updates regardless
+}
+
+-- Settings For Integrations With Other Resources --
+Config.integration = {
+    SonoranCAD_integration = {
+        use = true, -- Should any of the options below be used?
+        add_live_map_blips = true, -- Should blips for the camera be added to the live map?
+        enable_911_calls = true, -- Should 911 calls be generated in the CAD when a BOLO vehicle or speeder is detected?
+        ["911_caller"] = "Automated System", -- Who should the 911 call appear to be from?
+        ["911_message"] = "{{EVENT_TYPE}} vehicle with license plate {{PLATE}} was seen doing {{SPEED}} {{SPEED_UNIT}} at camera {{CAMERA_NAME}}", -- Configurable 911 call description
+        enable_cad_bolos = true, -- Should CAD BOLO system be used?
+        nearest_postal_plugin = "nearest-postal" -- If you want to use postals, what is the exact name of your postals script?
+    },
+    SpeedLimit_Display_integration = false, -- Should the speedlimit set in the SpeedLimit Display script be used? See docs.sonoran.store for more info
+    Discord_Webhook = {
+        enabled = false, -- Should discord webhooks be used?
+        webhook_url = "", -- See https://support.discord.com/hc/en-us/articles/228383668-Intro-to-Webhooks
+        webhook_title = "{{EVENT_TYPE}} Alert", -- The title of the webhook embed
+        webhook_message = "License Plate: {{PLATE}}\nSpeed: {{SPEED}} {{SPEED_UNIT}}\nCamera: {{CAMERA_NAME}}" -- The message that the webhook displays
+    }
+}
+
+-- Notification Settings --
+Config.notifications = {
+    type = "native", -- Available options: native, pNotify, okokNotify, or cadonly
+    notification_title = "{{EVENT_TYPE}} Alert", -- Notification Title for methods that support it
+    -- Uncomment line below and comment line 84 if you plan to use pNotify
+    -- notification_message = "<b>{{EVENT_TYPE}}</b></br>License Plate: {{PLATE}}</br>Speed: {{SPEED}} {{SPEED_UNIT}}</br>Camera: {{CAMERA_NAME}}"
+    notification_message = "License Plate: {{PLATE}}\nSpeed: {{SPEED}} {{SPEED_UNIT}}\nCamera: {{CAMERA_NAME}}" -- The text of the notification
 }
 ```
-Do not directly copy the config found above, the comments included will not work in your resource.
 
 ## Camera Location Config
 You have two options for placing new cameras:
