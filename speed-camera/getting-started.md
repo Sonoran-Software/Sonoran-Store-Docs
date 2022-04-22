@@ -2,7 +2,7 @@
 title: Getting Started
 description: This page will walk you through getting and installing the script.
 published: true
-date: 2022-04-21T23:13:39.093Z
+date: 2022-04-22T00:15:41.665Z
 tags: 
 editor: markdown
 dateCreated: 2022-03-31T19:23:48.740Z
@@ -122,7 +122,9 @@ Config.notifications = {
 You have two options for placing new cameras:
 1. You can use the command `/spawnnewcam [prop] [name]` to initiate spawning a new camera and generate the relevant config data
 	- After running this command you must pull out, aim, and shoot with a gun to confirm placement.
-	- You may need to modify some of the rotation values manually to get that perfect placement you are looking for
+	- You may need to modify some of the rotation values manually to get that perfect placement you are looking for.
+  - If you aren't using the speed limit display integration you will need to manually go into the config file to change the set speed limit. You will also need to change the view radius to be the way you want it.
+  - [Click here for more information.](/gun-placement)
 2. You can manually copy and paste an existing config and then modify the values to meet your needs for the new camera
 ### `camera.json` Property Explanation
 | Property Name | Example   | Notes                                                                |
