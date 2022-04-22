@@ -2,7 +2,7 @@
 title: Getting Started
 description: This page will walk you through getting and installing the script.
 published: true
-date: 2022-04-22T21:41:11.536Z
+date: 2022-04-22T23:30:07.976Z
 tags: 
 editor: markdown
 dateCreated: 2022-03-31T19:23:48.740Z
@@ -91,7 +91,7 @@ Config.standalone_features = {
 -- Settings For Integrations With Other Resources --
 Config.integration = {
     SonoranCAD_integration = {
-        use = true, -- Should any of the options below be used?
+        use = true, -- Should any of the options below be used? Integration with this script requires at least a Plus subscription.
         add_live_map_blips = true, -- Should blips for the camera be added to the live map? This reqires the Pro SonoranCAD plan.
         enable_911_calls = true, -- Should 911 calls be generated in the CAD when a BOLO vehicle or speeder is detected?
         ["911_caller"] = "Automated System", -- Who should the 911 call appear to be from?
