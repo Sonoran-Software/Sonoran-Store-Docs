@@ -2,7 +2,7 @@
 title: Speed Cameras - Advanced Documentation
 description: 
 published: true
-date: 2022-04-23T00:23:30.363Z
+date: 2022-04-23T00:27:20.766Z
 tags: 
 editor: markdown
 dateCreated: 2022-04-23T00:23:30.363Z
@@ -29,7 +29,12 @@ If you need assitance setting this up you can hire a dev by going [here](https:/
 
 ## Developer Documentation
 
-When a BOLO vehicle is caught events will be sent out. It will be sent to both the client that was caught and the server. It will contain a data argument, the table below contains the layout of this value. Events are named the same on client and server
+When a BOLO vehicle is caught events will be sent out. It will be sent to both the client that was caught and the server. It will contain a data argument, the table below contains the layout of this value. Events are named the same on both the client and server.
+
+#### Event List
+- `SonoranScripts::PlateBOLO` (Used if standalone BOLO system is used)
+- `SonoranScripts::SPlateBOLO` (Used if SonoranCAD BOLO system is used)
+- `SonoranScripts::Speeding`
 
 #### Data Table Structure
 | Index         | Description                                                                                                                | Example               |
