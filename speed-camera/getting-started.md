@@ -2,7 +2,7 @@
 title: Getting Started
 description: This page will walk you through getting and installing the script.
 published: true
-date: 2022-04-22T23:30:07.976Z
+date: 2022-04-23T19:54:10.486Z
 tags: 
 editor: markdown
 dateCreated: 2022-03-31T19:23:48.740Z
@@ -130,7 +130,7 @@ You have two options for placing new cameras:
 | Property Name | Example   | Notes                                                                |
 |---------------|-----------|----------------------------------------------------------------------|
 | `ID`          | 2         | `ID` must be unique. No other camera can share this ID               |
-| `Prop`        | `radar01` | The only valid value for `Prop` is currently `radar01`               |
+| `Prop`        | `radar01` | Valid values are `radar01` and `porp_traffic_cam`                    |
 | `Position`    |           | This is a table that contains the x, y, and z coords of the camera   |
 | `Rotation`    | 				  | This is a table that contains the x, y, and z rotation of the camera |
 | `Label`       | `Test 1`  | This is a human readable label for the camera, can have spaces       |
