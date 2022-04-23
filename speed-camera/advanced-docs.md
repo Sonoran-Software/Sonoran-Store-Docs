@@ -2,7 +2,7 @@
 title: Speed Cameras - Advanced Documentation
 description: 
 published: true
-date: 2022-04-23T00:27:20.766Z
+date: 2022-04-23T00:36:01.998Z
 tags: 
 editor: markdown
 dateCreated: 2022-04-23T00:23:30.363Z
@@ -48,3 +48,8 @@ When a BOLO vehicle is caught events will be sent out. It will be sent to both t
 | `postal`      | If the postal script is enabled, this will contain the nearest postal of the sighting                                      | 413                   |
 
 #### Example Handler
+```lua
+AddEventHandler("SonoranScripts::Speeding", function(data)
+	print("Plate " .. data["plate"] .. " was caught going " .. data["speed"] .. ".")
+end)
+```
