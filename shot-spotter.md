@@ -2,7 +2,7 @@
 title: Shot Spotter
 description: Quickly be alerted when gunshots are detected around San Andreas
 published: false
-date: 2022-04-20T19:29:23.089Z
+date: 2022-04-26T21:36:24.828Z
 tags: 
 editor: markdown
 dateCreated: 2022-03-24T01:45:51.587Z
@@ -14,7 +14,7 @@ dateCreated: 2022-03-24T01:45:51.587Z
 - Ability to operate standalone
 - SonoranCAD integration for 911 calls, and livemap blips
 - Support for AcePerms, ESX, QBCore, and custom permissions systems
-- Add blip at last detected location for police as well as bips for shot spotters
+![ss-in-game-blips.png](/shot-spotter/ss-in-game-blips.png)
 ![ss-discord-webhooks.png](/shot-spotter/ss-discord-webhooks.png)
 ![ss-translate-feature.png](/shot-spotter/ss-translate-feature.png)
 ![ss-highly-configurable.png](/shot-spotter/ss-highly-configurable.png)
