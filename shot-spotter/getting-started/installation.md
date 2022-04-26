@@ -2,7 +2,7 @@
 title: Shot Spotter Installation
 description: 
 published: false
-date: 2022-04-04T01:03:45.593Z
+date: 2022-04-26T03:11:15.946Z
 tags: 
 editor: markdown
 dateCreated: 2022-03-24T01:48:28.702Z
@@ -70,6 +70,9 @@ Sonoran Shot Spotter contains highly configurable permissions that have a fit fo
 | `peds` | Peds that will not trigger the shot spotter | `array` 
 | `weapons` | Weapons that will not trigger the shot spotter | `array`
 
+### Lang
+The language section was created to make the script as universal as possible. Please simply edit the strings to your prefered text. 
+#### Note: Available place holders are {{street}}, {{spotter}} and {{player}}
 > Congrats! You have successfully configured Sonoran Shot Spotter. See Section III for spotter locations.
 {.is-success}
 
