@@ -46,3 +46,19 @@ These are the default names of commands, they may have been modified by the serv
 
 ![promo-models.png](/speed-camera/promo-models.png)
 The model on the left is named `prop_traffic_cam` and the model is named `radar01`.
+
+## Changelog
+
+### v1.5.0
+
+#### Features
+
+-   `Added ability to list BOLO plates with the standalone system`
+-   `Added the ability to edit and reload cameras in real time for admins`
+-   `Added the ability to enable and disable specific cameras`
+-   `Added a development tool to draw the IDs of cameras in the vicinity as 3D text`
+
+#### Bugfixes and Improvements
+
+-   `Added a warning when both standalone and CAD BOLO systems are enabled`
+-   `Overhauled the BOLO permissions system to allow selecting specific job grades allowed to access it for framework servers, and allowed a separate ace object to be used`
