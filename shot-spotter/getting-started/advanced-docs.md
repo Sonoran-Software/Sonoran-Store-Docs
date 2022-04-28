@@ -1,8 +1,8 @@
 ---
 title: Shot Spotter - Advanced Documentation
 description: 
-published: false
-date: 2022-04-28T03:18:10.922Z
+published: true
+date: 2022-04-28T19:06:31.175Z
 tags: 
 editor: markdown
 dateCreated: 2022-03-24T01:48:28.702Z
