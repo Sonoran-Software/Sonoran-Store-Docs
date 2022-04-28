@@ -2,7 +2,7 @@
 title: Shot Spotter
 description: Quickly be alerted when gunshots are detected around San Andreas
 published: false
-date: 2022-04-26T21:36:24.828Z
+date: 2022-04-28T02:38:07.410Z
 tags: 
 editor: markdown
 dateCreated: 2022-03-24T01:45:51.587Z
@@ -23,3 +23,7 @@ dateCreated: 2022-03-24T01:45:51.587Z
 | Command Name          | Command Description                                                                                                                         | Required Permission    |
 |-----------------------|---------------------------------------------------------------------------------------------------------------------------------------------|------------------------|
 | `/shotspot` | This command will toggle the user's shot spotter status, either enabling or disabling shot spotter alerts and blips | LEO or as configured |
+| `/showspotterid` | Show the ID above the shot spotters | Admin
+| `/showspotterpos` | Show the position of the shot spotters | Admin
+| `/changepositiondata` | Change the position data of the shot spotter | Admin
+| `/reloadspotters` | Reload all spotters and positions | Admin
