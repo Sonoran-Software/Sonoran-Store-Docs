@@ -2,7 +2,7 @@
 title: Shot Spotter - Advanced Documentation
 description: 
 published: false
-date: 2022-04-28T03:14:16.403Z
+date: 2022-04-28T03:17:09.584Z
 tags: 
 editor: markdown
 dateCreated: 2022-03-24T01:48:28.702Z
@@ -18,7 +18,7 @@ This event will pass the following data:
 | Index         | Description                                                                                                                | Example               |
 |---------------|----------------------------------------------------------------------------------------------------------------------------|-----------------------|
 | `serverid`       | The server ID of the player that triggered the spotter                                               | `43`             |
-| `street1`       | The name of the closest street to the spotter | `Vespucci Blvd.` |
+| `street`       | The name of the closest street to the spotter | `Vespucci Blvd.` |
 | `spotter`       | The array of spotter data                                                   | See below
 
 ### Spotter Data 
@@ -33,3 +33,10 @@ This event will pass the following data:
 | `Rotation.pitch` | The pitch value | `12`
 | `Rotation.roll` | The roll value | `6`
 | `Rotation.yaw` | The yaw value | `177`
+
+# Example Handler
+```lua
+AddEventHandler("Sonoran:ShotSpotter:Server", function(serverid, street, spotter)
+    print("serverid" .. serverid .. " triggered shot spotter " .. spotter.Label .. " on " .. street)
+end)
+```
