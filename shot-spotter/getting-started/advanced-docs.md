@@ -2,7 +2,7 @@
 title: Shot Spotter - Advanced Documentation
 description: 
 published: false
-date: 2022-04-28T03:17:09.584Z
+date: 2022-04-28T03:18:10.922Z
 tags: 
 editor: markdown
 dateCreated: 2022-03-24T01:48:28.702Z
@@ -37,6 +37,6 @@ This event will pass the following data:
 # Example Handler
 ```lua
 AddEventHandler("Sonoran:ShotSpotter:Server", function(serverid, street, spotter)
-    print("serverid" .. serverid .. " triggered shot spotter " .. spotter.Label .. " on " .. street)
+    print("player: " .. serverid .. " triggered shot spotter " .. spotter.Label .. " on " .. street)
 end)
 ```
