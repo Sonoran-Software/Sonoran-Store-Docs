@@ -1,8 +1,8 @@
 ---
 title: Getting Started
 description: This page will walk you through getting and installing the script.
-published: false
-date: 2022-04-28T03:00:04.975Z
+published: true
+date: 2022-04-28T19:06:03.008Z
 tags: 
 editor: markdown
 dateCreated: 2022-03-24T01:46:37.738Z
