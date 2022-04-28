@@ -2,7 +2,7 @@
 title: Shot Spotter
 description: Quickly be alerted when gunshots are detected around San Andreas
 published: true
-date: 2022-04-28T19:05:38.699Z
+date: 2022-04-28T19:22:25.297Z
 tags: 
 editor: markdown
 dateCreated: 2022-03-24T01:45:51.587Z
@@ -16,6 +16,7 @@ dateCreated: 2022-03-24T01:45:51.587Z
 - Support for AcePerms, ESX, QBCore, and custom permissions systems
 ![ss-cad-integration.png](/shot-spotter/ss-cad-integration.png)
 ![ss-in-game-blips.png](/shot-spotter/ss-in-game-blips.png)
+![ss-gun-placement-system.png](/ss-gun-placement-system.png)
 ![ss-discord-webhooks.png](/shot-spotter/ss-discord-webhooks.png)
 ![ss-translate-feature.png](/shot-spotter/ss-translate-feature.png)
 ![ss-highly-configurable.png](/shot-spotter/ss-highly-configurable.png)
