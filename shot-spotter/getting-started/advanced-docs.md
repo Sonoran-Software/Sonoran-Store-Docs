@@ -2,13 +2,14 @@
 title: Shot Spotter - Advanced Documentation
 description: 
 published: false
-date: 2022-04-28T03:01:07.530Z
+date: 2022-04-28T03:05:08.326Z
 tags: 
 editor: markdown
 dateCreated: 2022-03-24T01:48:28.702Z
 ---
 
-# Sonoran Shot Spotter Written Installation
+# Sonoran Shot Spotter - Advanced Documentation
+
 
 ## The Basics
 
