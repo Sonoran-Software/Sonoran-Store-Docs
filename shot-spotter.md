@@ -2,7 +2,7 @@
 title: Shot Spotter
 description: Quickly be alerted when gunshots are detected around San Andreas
 published: false
-date: 2022-04-28T02:40:35.154Z
+date: 2022-04-28T02:54:59.668Z
 tags: 
 editor: markdown
 dateCreated: 2022-03-24T01:45:51.587Z
