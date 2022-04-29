@@ -1,8 +1,8 @@
 ---
-title: Getting Started
+title: Shot Spotter - Getting Started
 description: This page will walk you through getting and installing the script.
 published: true
-date: 2022-04-29T19:06:25.907Z
+date: 2022-04-29T19:11:55.034Z
 tags: 
 editor: markdown
 dateCreated: 2022-03-24T01:46:37.738Z
