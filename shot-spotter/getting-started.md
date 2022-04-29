@@ -2,7 +2,7 @@
 title: Getting Started
 description: This page will walk you through getting and installing the script.
 published: true
-date: 2022-04-28T19:06:03.008Z
+date: 2022-04-29T17:38:34.053Z
 tags: 
 editor: markdown
 dateCreated: 2022-03-24T01:46:37.738Z
@@ -84,3 +84,13 @@ These locations can be found and set in the `spotters.json` found within the `co
 | `ID` | The shot spotter ID (used internally) | `integer` | This cannot be duplicated
 | `x`, `y`, `z` | The in game coordinates | `integer` | N/A
 | `pitch`, `roll`, `yaw` | Rotation values | `integer` | N/A
+
+## Commands
+| Command Name          | Command Description                                                                                                                         | Required Permission    |
+|-----------------------|---------------------------------------------------------------------------------------------------------------------------------------------|------------------------|
+| `/shotspot` | This command will toggle the user's shot spotter status, either enabling or disabling shot spotter alerts and blips | LEO or as configured |
+| `/showspotterid` | Show the ID above the shot spotters | Admin
+| `/showspotterpos` | Show the position of the shot spotters | Admin
+| `/changepositiondata` | Change the position data of the shot spotter | Admin
+| `/reloadspotters` | Reload all spotters and positions | Admin
+| `/spawnnewspotter` | Activate the placement gun | Admin
