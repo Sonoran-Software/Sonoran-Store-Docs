@@ -1,8 +1,8 @@
 ---
 title: Shot Spotter - Advanced Documentation
-description: 
+description: Developer Documentation and other Advanced Configuration Topics for the Shot Spotter system.
 published: true
-date: 2022-04-28T19:06:31.175Z
+date: 2022-04-29T19:13:15.132Z
 tags: 
 editor: markdown
 dateCreated: 2022-03-24T01:48:28.702Z
