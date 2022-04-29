@@ -2,26 +2,31 @@
 title: Getting Started
 description: This page will walk you through getting and installing the script.
 published: true
-date: 2022-04-29T17:38:34.053Z
+date: 2022-04-29T19:06:25.907Z
 tags: 
 editor: markdown
 dateCreated: 2022-03-24T01:46:37.738Z
 ---
 
-# Sonoran Shot Spotter Written Installation
+# Getting Started
+## Acquire the Script
+After purchasing the script through the sonoran store you may [download the script through the keymaster account](/tebex-assets) that purchased the script. Upon downloading extract the file to a safe place.
 
-## The Basics
-
-Step 1.) Extract your downloaded folder into your server files
-> This can be done using [WinRAR](https://www.win-rar.com/predownload.html?&L=0) {.is-info}
-
-Step 2.) Change the folder name to `sonoran_shotspotter`
-> This name **MUST** match exactly {.is-warning}
-
-Step 3.)  Add the following line to your `server.cfg` (or other startup config): 
+## Install the Script
+1. Inside the script package you just extracted will be two folders. Copy both to a folder in your server's resources folder called `[sonoranscripts]` note the `[]` in the name, without them it will not work.
+![directory-example.png](/shot-spotter/directory-example.png)
+2. In the `sonoran-shotspotter/config` folder there will be a file called `config.CHANGEME.lua` you should rename that to be config.lua and configure the settings inside as you would like them to be configured based on the configuration documentation below. In that same folder will also be a file called `spotters.CHANGEME.json` which you should rename to `spotters.json` and use to manually place cameras based on the existing template, note you can also use the gun placement system in game.
+![files-example1.png](/shot-spotter/files-example1.png)
+![files-example2.png](/shot-spotter/files-example2.png)
+3. Finally, in your `server.cfg` add the following:
+> **NEVER** add `ensure sonoran-shotspotter_helper` or `ensure [sonoranscripts]` to your server.cfg as this will lead to crashing under specific conditions. {.is-warning}
 ```
-ensure sonoran_shotspotter
+ensure sonoran-shotspotter
+
+add_ace resource.sonoran-shotspotter command allow
+add_ace resource.sonoran-shotspotter_helper command allow
 ```
+
 
 > Congrats! You have successfully installed Sonoran Shot Spotter. See Section II for configuration.
 {.is-success}
