@@ -1,8 +1,8 @@
 ---
-title: Shot Spotter - Getting Started
-description: This page will walk you through getting and installing the Shot Spotter script.
+title: Speed Camera - Getting Started
+description: This page will walk you through getting and installing the Speed Camera script.
 published: true
-date: 2022-04-29T19:08:30.716Z
+date: 2022-04-29T19:10:06.973Z
 tags: 
 editor: markdown
 dateCreated: 2022-03-31T19:23:48.740Z
