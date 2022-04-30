@@ -2,7 +2,7 @@
 title: Shot Spotter
 description: Quickly be alerted when gunshots are detected around San Andreas
 published: true
-date: 2022-04-28T19:22:25.297Z
+date: 2022-04-30T04:26:37.962Z
 tags: 
 editor: markdown
 dateCreated: 2022-03-24T01:45:51.587Z
@@ -29,4 +29,4 @@ dateCreated: 2022-03-24T01:45:51.587Z
 | `/showspotterpos` | Show the position of the shot spotters | Admin
 | `/changepositiondata` | Change the position data of the shot spotter | Admin
 | `/reloadspotters` | Reload all spotters and positions | Admin
-| `/spawnnewspotter` | Activate the placement gun | Admin
+| `/spawnnewspotter` | Activate the placement gun [SEE HERE](https://docs.sonoran.store/en/gun-placement) | Admin
