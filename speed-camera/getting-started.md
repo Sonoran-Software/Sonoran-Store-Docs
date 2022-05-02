@@ -9,15 +9,19 @@ dateCreated: 2022-03-31T19:23:48.740Z
 ---
 
 # Getting Started
+
 ## Acquire the Script
+
 After purchasing the script through the sonoran store you may [download the script through the keymaster account](/tebex-assets) that purchased the script. Upon downloading extract the file to a safe place.
 
 ## Install the Script
+
 1. Inside the script package you just extracted will be two folders. Copy both to a folder in your server's resources folder called `[sonoranscripts]` note the `[]` in the name, without them it will not work.
 ![directory-example.png](/speed-camera/directory-example.png)
 2. In the `sonoran-trafficcam` folder there will be a file called `config.CHANGEME.lua` you should rename that to be `config.lua` and configure the settings inside as you would like them to be configured based on the configuration documentation below. In that same folder will also be a file called `cameras.CHANGEME.json` which you should rename to `cameras.json` and use to manually place cameras based on the existing template, note you can also use the gun placement system in game.
 ![files-example.png](/speed-camera/files-example.png)
 3. Finally, in your `server.cfg` add the following:
+
 ```
 ensure sonoran-trafficcam
 
@@ -26,26 +30,32 @@ add_ace resource.sonoran-trafficcam_helper command allow
 ```
 
 ## Configuring the Script
+
 Default config.json:
+
 ```lua
 Config = {}
 
 -- General Configuration Section --
-Config.configuration_version = 2.0
+Config.configuration_version = 2.1
 Config.debug_mode = false -- Only useful for developers and if support asks you to enable it
 Config.permission_mode = "ace" -- Available Options: ace, framework, custom
 
 -- Ace Permissions Section --
 Config.ace_perms = {
     ace_object_place = "sonoran.trafficcam", -- Select the ace for placing new cameras
-    ace_object_notification = "sonoran.police" -- Select the ace for receiving in-game notifications
+    ace_object_notification = "sonoran.police", -- Select the ace for receiving in-game notifications
+    ace_object_to_place_bolo = "sonoran.bolo", -- The required ace to add BOLOs when using a framework
+    ace_object_to_disable_cameras = "sonoran.disablecam" -- The required ace to disable cameras
 }
 
 -- Framework Related Settings --
 Config.framework = {
     framework_type = "qb-core", -- This setting controls which framework is in use options are esx or qb-core
     police_job_names = {"police"}, -- An array of job names that should receive notifications
-    allowed_to_place_groups = {"admin"} -- The permission group that should be allowed to place new cameras
+    allowed_to_place_groups = {"admin"}, -- The permission group that should be allowed to place new cameras
+    required_grade_to_place_bolo = 4, -- The required grade to add BOLOs when using a framework
+    required_grade_to_disable_cameras = 6 -- The required grade to disable cameras
 }
 
 -- Configuration For Custom Permissions Handling --
@@ -55,6 +65,10 @@ Config.custom = {
         if type == 0 then -- Check for admin
             return true or false -- Return true if they have admin, return false if they don't
         elseif type == 1 then -- Check for notification perms
+            return true or false -- Return true if they have permissions, return false if they don't
+        elseif type == 2 then -- Check for BOLO creation/deletion/view perms
+            return true or false -- Return true if they have permissions, return false if they don't
+        elseif type == 3 then -- Check for permissions to enable/disable cameras
             return true or false -- Return true if they have permissions, return false if they don't
         end
     end
@@ -68,7 +82,14 @@ Config.command_names = {
     cancel_new_spawn = "cancelcamplacement",
     position_debug_display = "position",
     upload_client_log = "uploadnewclientlog",
-    upload_server_log = "uploadnewlog"
+    upload_server_log = "uploadnewlog",
+    change_position_data = "changepositiondata",
+    show_cam_id = "showcamid",
+    get_position_data = "getpositiondata",
+    reload_cameras = "reloadcameras",
+    list_bolo_plate = "listplates",
+    disable_camera = "disablecam",
+    enable_camera = "enablecam"
 }
 
 -- Settings Related to Camera Functionality --
@@ -85,19 +106,33 @@ Config.standalone_features = {
     show_notification_blips_for_police = true, -- Should police see a blip when a car is pinged?
     blips_expire_after_seconds = 90, -- Number of seconds before the blip type above is removed
     enable_standalone_bolo_system = true, -- Selects whether the built in BOLO system should be used, this must be false for the SonoranCAD BOLO integration to work
+    enable_camera_disable = true,
     enable_auto_update = true -- Should the script automatically update itself, it will check for updates regardless
 }
+
+--[[
+    Placeholder list:
+    {{POSTAL}}
+    {{EVENT_TYPE}}
+    {{PLATE}}
+    {{SPEED}}
+    {{SPEED_UNIT}}
+    {{CAMERA_NAME}}
+    {{DIRECTION}}
+]]
 
 -- Settings For Integrations With Other Resources --
 Config.integration = {
     SonoranCAD_integration = {
         use = true, -- Should any of the options below be used? Integration with this script requires at least a Plus subscription.
-        add_live_map_blips = true, -- Should blips for the camera be added to the live map? This reqires the Pro SonoranCAD plan.
+        add_live_map_blips = true, -- Should blips for the camera be added to the live map? This requires the Pro SonoranCAD plan
         enable_911_calls = true, -- Should 911 calls be generated in the CAD when a BOLO vehicle or speeder is detected?
         ["911_caller"] = "Automated System", -- Who should the 911 call appear to be from?
         ["911_message"] = "{{EVENT_TYPE}} vehicle with license plate {{PLATE}} was seen doing {{SPEED}} {{SPEED_UNIT}} at camera {{CAMERA_NAME}}", -- Configurable 911 call description
-        enable_cad_bolos = true, -- Should CAD BOLO system be used?
-        nearest_postal_plugin = "nearest-postal" -- If you want to use postals, what is the exact name of your postals script?
+        enable_cad_bolos = true, -- Should CAD BOLO system be used? The standalone BOLO system found above must be disabled to use this system.
+        nearest_postal_plugin = "nearest-postal", -- If you want to use postals, what is the exact name of your postals script?
+        disable_in_game_with_dispatch = true, -- If true disables in-game notifications when dispatch is online in CAD
+        disable_cad_without_dispatch = true -- If true disables CAD notifications when dispatch is offline in CAD
     },
     SpeedLimit_Display_integration = false, -- Should the speedlimit set in the SpeedLimit Display script be used? See docs.sonoran.store for more info
     Discord_Webhook = {
@@ -112,27 +147,31 @@ Config.integration = {
 Config.notifications = {
     type = "native", -- Available options: native, pNotify, okokNotify, or cadonly
     notification_title = "{{EVENT_TYPE}} Alert", -- Notification Title for methods that support it
-    -- Uncomment line below and comment line 84 if you plan to use pNotify
+    -- Uncomment line below and comment line 87 if you plan to use pNotify
     -- notification_message = "<b>{{EVENT_TYPE}}</b></br>License Plate: {{PLATE}}</br>Speed: {{SPEED}} {{SPEED_UNIT}}</br>Camera: {{CAMERA_NAME}}"
-    notification_message = "License Plate: {{PLATE}}\nSpeed: {{SPEED}} {{SPEED_UNIT}}\nCamera: {{CAMERA_NAME}}" -- The text of the notification
+    notification_message = "{{EVENT_TYPE}} Alert\nLicense Plate: {{PLATE}}\nSpeed: {{SPEED}} {{SPEED_UNIT}}\nCamera: {{CAMERA_NAME}}" -- The text of the notification
 }
 ```
 
 ## Camera Location Config
+
 You have two options for placing new cameras:
+
 1. You can use the command `/spawnnewcam [prop] [name]` to initiate spawning a new camera and generate the relevant config data
-	- After running this command you must pull out, aim, and shoot with a gun to confirm placement.
-	- You may need to modify some of the rotation values manually to get that perfect placement you are looking for.
-	- If you aren't using the speed limit display integration you will need to manually go into the config file to change the set speed limit. You will also need to change the view radius to be the way you want it.
- 	- [Click here for more information.](/gun-placement)
+    - After running this command you must pull out, aim, and shoot with a gun to confirm placement.
+    - You may need to modify some of the rotation values manually to get that perfect placement you are looking for.
+    - If you aren't using the speed limit display integration you will need to manually go into the config file to change the set speed limit. You will also need to change the view radius to be the way you want it.
+    - [Click here for more information.](/gun-placement)
 2. You can manually copy and paste an existing config and then modify the values to meet your needs for the new camera
+
 ### `camera.json` Property Explanation
+
 | Property Name | Example   | Notes                                                                |
-|---------------|-----------|----------------------------------------------------------------------|
+| ------------- | --------- | -------------------------------------------------------------------- |
 | `ID`          | 2         | `ID` must be unique. No other camera can share this ID               |
 | `Prop`        | `radar01` | Valid values are `radar01` and `porp_traffic_cam`                    |
 | `Position`    |           | This is a table that contains the x, y, and z coords of the camera   |
-| `Rotation`    | 				  | This is a table that contains the x, y, and z rotation of the camera |
+| `Rotation`    |           | This is a table that contains the x, y, and z rotation of the camera |
 | `Label`       | `Test 1`  | This is a human readable label for the camera, can have spaces       |
 | `SpeedLimit`  | 10        | This is the speed over which this camera will trip                   |
 | `ViewRadius`  | 10        | How far away this camera can see in GTA units, default is 10         |
@@ -150,9 +189,11 @@ You have two options for placing new cameras:
 The model on the left is named `prop_traffic_cam` and the model is named `radar01`.
 
 ## Needed Changes for Speed Display
+
 We recommend [this](https://forum.cfx.re/t/release-posted-speedlimit/180949) speed limit display script by BigYoda.
 
 Add the following code snippet to the bottom of your speed display script's client.lua:
+
 ```lua
 exports("GetCurrentSpeed", function()
     return speedlimit
