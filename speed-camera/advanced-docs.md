@@ -1,9 +1,9 @@
 ---
-title: Speed Cameras - Advanced Documentation
-description:
+title: Speed Camera - Advanced Documentation
+description: Developer Documentation and other advanced configuration options of the Speed Camera system.
 published: true
-date: 2022-04-23T00:36:01.998Z
-tags:
+date: 2022-04-29T19:11:31.921Z
+tags: 
 editor: markdown
 dateCreated: 2022-04-23T00:23:30.363Z
 ---
