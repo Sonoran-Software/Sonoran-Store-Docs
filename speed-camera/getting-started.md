@@ -2,7 +2,7 @@
 title: Speed Camera - Getting Started
 description: This page will walk you through getting and installing the Speed Camera script.
 published: true
-date: 2022-04-29T19:10:06.973Z
+date: 2022-05-02T22:13:34.365Z
 tags: 
 editor: markdown
 dateCreated: 2022-03-31T19:23:48.740Z
@@ -177,12 +177,19 @@ You have two options for placing new cameras:
 | `ViewRadius`  | 10        | How far away this camera can see in GTA units, default is 10         |
 
 ## Commands
-| Command Name          | Command Description                                                                                                                         | Required Permission    |
+| Command Name | Command Description | Required Permission |
 |-----------------------|---------------------------------------------------------------------------------------------------------------------------------------------|------------------------|
 | `/spawnnewcam [prop] [name]` | This command will allow an admin to spawn a new camera using a gun placement system where the name argument is the label for the new camera and the prop argument is the text name of the model to use | Admin or as configured |
-| `/addplate [plate]`           | This command will add a plate to the standalone BOLO system when in use.                                                                    | LEO or as configured   |
-| `/delplate [plate]`           | This command will remove a plate from the standalone BOLO system when in use.                                                               | LEO or as configured   |
-| `/cancelcamplacement` | This command will cancel the current camera placement if one is currently in progress.                                                      | N/A                    |
+| `/addplate [plate]` | This command will add a plate to the standalone BOLO system when in use. | LEO or as configured |
+| `/delplate [plate]` | This command will remove a plate from the standalone BOLO system when in use. | LEO or as configured |
+| `/listplates` | This command will list the plates currently configured in the standalone BOLO system when in use | LEO or as configured |
+| `/showcamid` | This command will draw the ID of cameras which you are in the radius of with 3D text near the camera | N/A |
+| `/getpositiondata` | This command will print the current positional data of the camera to the chat | Admin or as configured |
+| `/changepositiondata` | This command will change the value which you specify of the camera you specify, run this command without arguments for example usage. All changes made with this command will be immediately saved | Admin or as configured |
+| `/reloadcameras` | This command will completely reload the cameras.json from the server's storage | Admin or as configured |
+| `/disablecamera` | This command will disable the camera with the ID specified as an argument, this will prevent that camera from flagging vehicles | LEO or as configured |
+| `/enablecamera` | This command will enable the camera with the ID specified as an argument, this resume that camera's ability to flag vehicles | LEO or as configured |
+| `/cancelcamplacement` | This command will cancel the current camera placement if one is currently in progress. | N/A |
 
 ## Model Options
 ![promo-models.png](/speed-camera/promo-models.png)
