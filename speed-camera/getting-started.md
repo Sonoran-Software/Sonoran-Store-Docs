@@ -2,7 +2,7 @@
 title: Speed Camera - Getting Started
 description: This page will walk you through getting and installing the Speed Camera script.
 published: true
-date: 2022-05-09T19:37:28.046Z
+date: 2022-05-09T19:38:47.762Z
 tags: 
 editor: markdown
 dateCreated: 2022-03-31T19:23:48.740Z
@@ -163,7 +163,6 @@ add_ace group.admin sonoran.trafficcam allow
 add_ace group.leo sonoran.police allow
 add_ace group.leosupervisor sonoran.bolo allow
 add_ace group.moderator sonoran.disablecam allow
-
 ```
 
 ## Camera Location Config
