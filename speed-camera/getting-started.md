@@ -2,7 +2,7 @@
 title: Speed Camera - Getting Started
 description: This page will walk you through getting and installing the Speed Camera script.
 published: true
-date: 2022-05-09T19:35:58.905Z
+date: 2022-05-09T19:37:28.046Z
 tags: 
 editor: markdown
 dateCreated: 2022-03-31T19:23:48.740Z
@@ -156,6 +156,15 @@ Config.notifications = {
 ## Setting Up Permissions (Ace Permissions Only)
 
 To use this script you must assign the permissions object to the groups which you would like to have permissions. You can find the objects needed in the config under `Config.ace_perms` section in the config. To assign these perms you must add the lines to your `server.cfg` or where ever you setup permissions on your server. You can learn more about Ace Permissions [here](https://forum.cfx.re/t/basic-aces-principals-overview-guide/90917).
+
+Example:
+```lua
+add_ace group.admin sonoran.trafficcam allow
+add_ace group.leo sonoran.police allow
+add_ace group.leosupervisor sonoran.bolo allow
+add_ace group.moderator sonoran.disablecam allow
+
+```
 
 ## Camera Location Config
 
