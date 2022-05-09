@@ -2,7 +2,7 @@
 title: Speed Camera - Getting Started
 description: This page will walk you through getting and installing the Speed Camera script.
 published: true
-date: 2022-05-02T22:13:34.365Z
+date: 2022-05-09T19:35:58.905Z
 tags: 
 editor: markdown
 dateCreated: 2022-03-31T19:23:48.740Z
@@ -152,6 +152,10 @@ Config.notifications = {
     notification_message = "{{EVENT_TYPE}} Alert\nLicense Plate: {{PLATE}}\nSpeed: {{SPEED}} {{SPEED_UNIT}}\nCamera: {{CAMERA_NAME}}" -- The text of the notification
 }
 ```
+
+## Setting Up Permissions (Ace Permissions Only)
+
+To use this script you must assign the permissions object to the groups which you would like to have permissions. You can find the objects needed in the config under `Config.ace_perms` section in the config. To assign these perms you must add the lines to your `server.cfg` or where ever you setup permissions on your server. You can learn more about Ace Permissions [here](https://forum.cfx.re/t/basic-aces-principals-overview-guide/90917).
 
 ## Camera Location Config
 
