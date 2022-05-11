@@ -2,7 +2,7 @@
 title: Advanced Documentation
 description: 
 published: false
-date: 2022-05-11T22:17:37.440Z
+date: 2022-05-11T22:19:37.110Z
 tags: 
 editor: markdown
 dateCreated: 2022-05-11T21:59:08.098Z
@@ -12,7 +12,7 @@ dateCreated: 2022-05-11T21:59:08.098Z
 
 In this documentation you'll find information on integrating your scripts with the Power Grid system from Sonoran.
 
-
+> All events listed here are server side {.is-warning}
 
 ### Registration Event
 
