@@ -2,7 +2,7 @@
 title: Advanced Documentation
 description: 
 published: false
-date: 2022-05-11T22:19:37.110Z
+date: 2022-05-11T22:44:25.635Z
 tags: 
 editor: markdown
 dateCreated: 2022-05-11T21:59:08.098Z
@@ -36,4 +36,22 @@ AddEventHandler("SonoranScripts::PowerGrid::RegisterNewDevice", function(coords,
 end)
 ```
 
-When a power system is disabled an event will be fired
+When a power system is disabled an event will be triggered that contains a table of internal script identifiers that map to a table of internal IDs of devices that are affected by the system that was disabled. An example from the Sonoran Traffic Camera script is available below:
+```lua
+AddEventHandler("SonoranScripts::PowerGrid::DeviceDisabled", function(affectedDevices)
+	for _, v in pairs(affectedDevices["trafficcams"]) do
+  	cameraDatabase[tostring(v.ID)].disabled = true
+  end
+  TriggerClientEvent(GetCurrentResourceName() .. "::UpdateDB", -1, cameraDatabase)
+end)
+```
+
+When a power system is repaired a similar event will be triggered an example from the same script is below:
+```lua
+AddEventHandler("SonoranScripts::PowerGrid::DeviceRepaired", function(affectedDevices)
+	for _, v in pairs(affectedDevices["trafficcams"]) do
+  	cameraDatabase[tostring(v.ID)].disabled = false
+  end
+  TriggerClientEvent(GetCurrentResourceName() .. "::UpdateDB", -1, cameraDatabase)
+end)
+```
