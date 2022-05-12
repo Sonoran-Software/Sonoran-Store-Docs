@@ -2,7 +2,7 @@
 title: Advanced Documentation
 description: 
 published: true
-date: 2022-05-11T22:53:08.042Z
+date: 2022-05-12T22:23:42.303Z
 tags: 
 editor: markdown
 dateCreated: 2022-05-11T21:59:08.098Z
@@ -35,6 +35,8 @@ AddEventHandler("SonoranScripts::PowerGrid::RegisterNewDevice", function(coords,
   end
 end)
 ```
+
+> The entity ID field may be nil if the player does not aim directly at the device. You may want to run a check if you have a device in a small area surrounding the target if the entity ID is nil. {.is-warning}
 
 When a power system is disabled an event will be triggered that contains a table of internal script identifiers that map to a table of internal IDs of devices that are affected by the system that was disabled. An example from the Sonoran Traffic Camera script is available below:
 ```lua
