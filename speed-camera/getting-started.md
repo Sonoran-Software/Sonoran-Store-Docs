@@ -2,7 +2,7 @@
 title: Speed Camera - Getting Started
 description: This page will walk you through getting and installing the Speed Camera script.
 published: true
-date: 2022-05-09T19:38:47.762Z
+date: 2022-05-20T23:15:42.736Z
 tags: 
 editor: markdown
 dateCreated: 2022-03-31T19:23:48.740Z
@@ -37,7 +37,7 @@ Default config.json:
 Config = {}
 
 -- General Configuration Section --
-Config.configuration_version = 2.1
+Config.configuration_version = 2.2
 Config.debug_mode = false -- Only useful for developers and if support asks you to enable it
 Config.permission_mode = "ace" -- Available Options: ace, framework, custom
 
@@ -55,7 +55,37 @@ Config.framework = {
     police_job_names = {"police"}, -- An array of job names that should receive notifications
     allowed_to_place_groups = {"admin"}, -- The permission group that should be allowed to place new cameras
     required_grade_to_place_bolo = 4, -- The required grade to add BOLOs when using a framework
-    required_grade_to_disable_cameras = 6 -- The required grade to disable cameras
+    required_grade_to_disable_cameras = 6, -- The required grade to disable cameras
+    autofine = { -- This configures the autofine feature of the Speed Camera system
+        enable = false,
+        fine_method = "immediate", -- Options are immediate, invoice(requires the latest esx_billing for esx, invoice mode is not yet supported for QB-Core aiming for support by version 2.5.0 you can use custom mode to implement your own invoice system though), or custom(see function below)
+        custom_fine = function(speed, speedlimit, playerId, fineTableFine)
+            -- Put your code to fine here
+        end,
+        police_society_account_name = 'society_police', -- The name of the society account to pay invoices into
+        fine_table = { -- Follow the format of the placeholder values, the last value in this table will be use for a speed difference of anything greater than that set value
+            [1] = {
+                speed_difference = 5,
+                fine = 20
+            },
+            [2] = {
+                speed_difference = 10,
+                fine = 100
+            },
+            [3] = {
+                speed_difference = 15,
+                fine = 400
+            },
+            [4] = {
+                speed_difference = 20,
+                fine = 800
+            },
+            [5] = {
+                speed_difference = 35,
+                fine = 1200
+            }
+        }
+    }
 }
 
 -- Configuration For Custom Permissions Handling --
@@ -98,7 +128,8 @@ Config.camera_settings = {
     only_ignore_on_els = true, -- If the setting above and this one are true emergency vehicles will only be ignored if their lights are on
     show_camera_blips_for_police = false, -- Should the cameras show up as blips for police on the map?
     unit_system = "mph", -- Speed unit options: mph and kph
-    time_between_flags = 1 -- This is the number of minutes before a car will ping again, if they pass a different camera it will ping again regardless of whether this time has passed
+    time_between_flags = 1, -- This is the number of minutes before a car will ping again, if they pass a different camera it will ping again regardless of whether this time has passed
+    alpr_only_mode = false -- If this is true the speed detection system of this script will be disabled
 }
 
 -- Feature Settings That Don't Require Other Resources --
