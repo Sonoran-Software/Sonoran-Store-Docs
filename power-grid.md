@@ -2,7 +2,7 @@
 title: Power Grid
 description: 
 published: false
-date: 2022-05-23T18:36:11.661Z
+date: 2022-05-23T18:43:07.820Z
 tags: 
 editor: markdown
 dateCreated: 2022-05-11T21:57:17.341Z
@@ -32,15 +32,12 @@ These are the default names of commands, they may have been modified by the serv
 |-----------------------|---------------------------------------------------------------------------------------------------------------------------------------------|------------------------|
 | `/spawnnewsystem [prop] [name]` | This command will allow an admin to spawn a new camera using a gun placement system where the name argument is the label for the new camera and the prop argument is the text name of the model to use | Admin or as configured |
 | `/cancelsystemplacement` | This command will cancel the current camera placement if one is currently in progress. | N/A |
-| `/addplate [plate]` | This command will add a plate to the standalone BOLO system when in use. | LEO or as configured |
-| `/delplate [plate]` | This command will remove a plate from the standalone BOLO system when in use. | LEO or as configured |
-| `/listplates` | This command will list the plates currently configured in the standalone BOLO system when in use | LEO or as configured |
-| `/showcamid` | This command will draw the ID of cameras which you are in the radius of with 3D text near the camera | N/A |
+| `/showsystemids` | This command will draw the ID of cameras which you are in the radius of with 3D text near the camera | N/A |
 | `/getpositiondata` | This command will print the current positional data of the camera to the chat | Admin or as configured |
-| `/changepositiondata` | This command will change the value which you specify of the camera you specify, run this command without arguments for example usage. All changes made with this command will be immediately saved | Admin or as configured |
-| `/reloadcameras` | This command will completely reload the cameras.json from the server's storage | Admin or as configured |
-| `/disablecamera` | This command will disable the camera with the ID specified as an argument, this will prevent that camera from flagging vehicles | LEO or as configured |
-| `/enablecamera` | This command will enable the camera with the ID specified as an argument, this resume that camera's ability to flag vehicles | LEO or as configured |
+| `/changesystemdata` | This command will change the value which you specify of the camera you specify, run this command without arguments for example usage. All changes made with this command will be immediately saved | Admin or as configured |
+| `/reloadpowersystems` | This command will completely reload the cameras.json from the server's storage | Admin or as configured |
+| `/pslink [system id]` | This command will allow the admin to link a power system to a different system using a system similar to the gun placement system | Admin or as configured |
+| `/cancelpslink` | This command will enable the camera with the ID specified as an argument, this resume that camera's ability to flag vehicles | N/A |
 
 ## Model Options
 
