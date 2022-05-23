@@ -2,7 +2,7 @@
 title: Power Grid
 description: 
 published: false
-date: 2022-05-14T00:46:51.055Z
+date: 2022-05-23T18:36:11.661Z
 tags: 
 editor: markdown
 dateCreated: 2022-05-11T21:57:17.341Z
@@ -30,7 +30,8 @@ PROMO IMAGE HERE - AWAITING WYATT
 These are the default names of commands, they may have been modified by the server owner.
 | Command Name | Command Description | Required Permission |
 |-----------------------|---------------------------------------------------------------------------------------------------------------------------------------------|------------------------|
-| `/spawnnewcam [prop] [name]` | This command will allow an admin to spawn a new camera using a gun placement system where the name argument is the label for the new camera and the prop argument is the text name of the model to use | Admin or as configured |
+| `/spawnnewsystem [prop] [name]` | This command will allow an admin to spawn a new camera using a gun placement system where the name argument is the label for the new camera and the prop argument is the text name of the model to use | Admin or as configured |
+| `/cancelsystemplacement` | This command will cancel the current camera placement if one is currently in progress. | N/A |
 | `/addplate [plate]` | This command will add a plate to the standalone BOLO system when in use. | LEO or as configured |
 | `/delplate [plate]` | This command will remove a plate from the standalone BOLO system when in use. | LEO or as configured |
 | `/listplates` | This command will list the plates currently configured in the standalone BOLO system when in use | LEO or as configured |
@@ -40,7 +41,6 @@ These are the default names of commands, they may have been modified by the serv
 | `/reloadcameras` | This command will completely reload the cameras.json from the server's storage | Admin or as configured |
 | `/disablecamera` | This command will disable the camera with the ID specified as an argument, this will prevent that camera from flagging vehicles | LEO or as configured |
 | `/enablecamera` | This command will enable the camera with the ID specified as an argument, this resume that camera's ability to flag vehicles | LEO or as configured |
-| `/cancelcamplacement` | This command will cancel the current camera placement if one is currently in progress. | N/A |
 
 ## Model Options
 
