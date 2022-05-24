@@ -2,7 +2,7 @@
 title: Shot Spotter - Getting Started
 description: This page will walk you through getting and installing the script.
 published: true
-date: 2022-04-29T19:11:55.034Z
+date: 2022-05-24T02:47:13.804Z
 tags: 
 editor: markdown
 dateCreated: 2022-03-24T01:46:37.738Z
@@ -43,13 +43,19 @@ Sonoran Shot Spotter contains highly configurable permissions that have a fit fo
 | `ace_object` | The ace name that will be used to assign permissions. More can be read about Ace Permissions [Here](https://forum.cfx.re/t/basic-aces-principals-overview-guide/90917)  | `string`
 | `use_esx` | Would you like to utilize ESX framework jobs for permissions? | `true` or `false`
 | `police_job` | What is the name of your ESX jobs that should have access to the shotspotter? | `array`
+| `admin` | Admin name for ESX | `string` 
 | `use_qbcore` | Would you like to utilize QB-Core framework jobs for permissions? | `true` or `false`
 | `police_job` | What is the name of your QB-Core jobs that should have access to the shotspotter? | `array`
+| `admin` | Admin name for QBCore | `string`
+| `ace_object` | Ace permission name for admin perms | `string`
 
 ### Webhooks
 | Config Option          | Option Description                                                                                                                         | Possible Values    |
 |-----------------------|---------------------------------------------------------------------------------------------------------------------------------------------|------------------------|
-| `webhook_URL` | The Discord URL to send webhooks to | `string` 
+| `onduty_url` | URL to send OnDuty webhooks to | `string`
+| `offduty_url` | URL to send OffDuty webhooks to | `string`
+| `onshot_url` | URL to send shot webhooks to | `string`
+| `disabled` | URL to log toggled shot spotters to | `string`
 | `onduty` | Would you like to send a webhook when someone goes on duty? | `true` or `false` 
 | `offduty` | Would you like to send a webhook when someone goes off duty? | `true` or `false`
 | `onshot` | Would you like to send a webhook when the shot spotter is triggered? | `true` or `false`
@@ -57,7 +63,14 @@ Sonoran Shot Spotter contains highly configurable permissions that have a fit fo
 ### General 
 | Config Option          | Option Description                                                                                                                         | Possible Values    |
 |-----------------------|---------------------------------------------------------------------------------------------------------------------------------------------|------------------------|
+| `use_auto_detect` | Ignore spotter locations and radius | `true` or `false`
+| `auto_update` | Auto update the script | `true` or `false`
 | `use_cad` | Would you like to utilize the Sonoran Cad framework to automatically send 911 calls to Sonoran Cad? | `true` or `false`
+| `use_cad` | Would you like to utilize the Sonoran Cad livemap? | `true` or `false`
+| `check_dispatch` | Check if a dispatcher is online before sending a 911 call | `true` or `false`
+| `use_network_latency` | Add a random delay to calls | `true` or `false`
+| `network_time` | Max time to wait | `integer`
+| `notif` | Which notification system would you like to use | 
 | `use_command` | Would you like to be able to toggle the shot spotter alerts in game on and off? | `true` or `false`
 | `shotspot_cmd` | The command to toggle the shot spotter alerts in game | `string`
 | `show_on_map` | Would you like to show a blip on the map when the shot spotter was triggered? | `true` or `false`
