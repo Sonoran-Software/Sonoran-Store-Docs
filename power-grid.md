@@ -2,7 +2,7 @@
 title: Power Grid
 description: 
 published: false
-date: 2022-05-25T23:28:45.314Z
+date: 2022-05-25T23:55:39.349Z
 tags: 
 editor: markdown
 dateCreated: 2022-05-11T21:57:17.341Z
@@ -18,10 +18,10 @@ PROMO IMAGE HERE - AWAITING WYATT
 -   Support for AcePerms, ESX, QBCore, and custom permissions systems
     ![notification-feature.png](/speed-camera/notification-feature.png)
 		![ps-cad-integration.png](/power-system/ps-cad-integration.png)
-    ![in-game-blip.png](/speed-camera/in-game-blip.png)
+    ![ps-in-game-blips.png](/power-system/ps-in-game-blips.png)
     ![auto-update-feature.png](/speed-camera/auto-update-feature.png)
     ![ps-gun-placement-system.png](/power-system/ps-gun-placement-system.png)
-    ![configurable-feature.png](/speed-camera/configurable-feature.png)
+    ![ps-highly-configurable.png](/power-system/ps-highly-configurable.png)
     ![translate-feature.png](/speed-camera/translate-feature.png)
 
 ## Commands
@@ -29,7 +29,7 @@ PROMO IMAGE HERE - AWAITING WYATT
 These are the default names of commands, they may have been modified by the server owner.
 | Command Name | Command Description | Required Permission |
 |-----------------------|---------------------------------------------------------------------------------------------------------------------------------------------|------------------------|
-| `/spawnnewsystem [prop] [name]` | This command will allow an admin to spawn a new camera using a gun placement system where the name argument is the label for the new camera and the prop argument is the text name of the model to use | Admin or as configured |
+| `/spawnnewsystem [prop] [name]` | This command will allow an admin to spawn a new power system using a gun placement system where the name argument is the label for the new power system and the prop argument is the text name of the model to use | Admin or as configured |
 | `/cancelsystemplacement` | This command will cancel the current camera placement if one is currently in progress. | N/A |
 | `/showsystemids` | This command will draw the ID of cameras which you are in the radius of with 3D text near the camera | N/A |
 | `/getpositiondata [system id]` | This command will print the current positional data of the camera to the chat | Admin or as configured |
