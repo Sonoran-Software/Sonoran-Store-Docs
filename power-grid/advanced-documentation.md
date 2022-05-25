@@ -2,7 +2,7 @@
 title: Advanced Documentation
 description: 
 published: true
-date: 2022-05-12T22:23:42.303Z
+date: 2022-05-25T19:42:36.993Z
 tags: 
 editor: markdown
 dateCreated: 2022-05-11T21:59:08.098Z
@@ -40,7 +40,7 @@ end)
 
 When a power system is disabled an event will be triggered that contains a table of internal script identifiers that map to a table of internal IDs of devices that are affected by the system that was disabled. An example from the Sonoran Traffic Camera script is available below:
 ```lua
-AddEventHandler("SonoranScripts::PowerGrid::DeviceDisabled", function(affectedDevices)
+RegisterNetEvent("SonoranScripts::PowerGrid::DeviceDisabled", function(affectedDevices)
 	for _, v in pairs(affectedDevices["trafficcams"]) do
   	cameraDatabase[tostring(v.ID)].disabled = true
   end
@@ -50,7 +50,7 @@ end)
 
 When a power system is repaired a similar event will be triggered an example from the same script is below:
 ```lua
-AddEventHandler("SonoranScripts::PowerGrid::DeviceRepaired", function(affectedDevices)
+RegisterNetEvent("SonoranScripts::PowerGrid::DeviceRepaired", function(affectedDevices)
 	for _, v in pairs(affectedDevices["trafficcams"]) do
   	cameraDatabase[tostring(v.ID)].disabled = false
   end
