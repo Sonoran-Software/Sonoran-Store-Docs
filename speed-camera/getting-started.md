@@ -2,7 +2,7 @@
 title: Speed Camera - Getting Started
 description: This page will walk you through getting and installing the Speed Camera script.
 published: true
-date: 2022-05-20T23:15:42.736Z
+date: 2022-05-25T19:48:42.090Z
 tags: 
 editor: markdown
 dateCreated: 2022-03-31T19:23:48.740Z
@@ -31,7 +31,9 @@ add_ace resource.sonoran-trafficcam_helper command allow
 
 ## Configuring the Script
 
-Default config.json:
+> As of `v2.0.2` this script utilizes two separate Lua configs. This is for security reasons. Having a separate config for your Discord Configuration keeps them server side only and safer from malicious clients {.is-danger}
+
+Default config.lua:
 
 ```lua
 Config = {}
@@ -166,12 +168,6 @@ Config.integration = {
         disable_cad_without_dispatch = true -- If true disables CAD notifications when dispatch is offline in CAD
     },
     SpeedLimit_Display_integration = false, -- Should the speedlimit set in the SpeedLimit Display script be used? See docs.sonoran.store for more info
-    Discord_Webhook = {
-        enabled = false, -- Should discord webhooks be used?
-        webhook_url = "", -- See https://support.discord.com/hc/en-us/articles/228383668-Intro-to-Webhooks
-        webhook_title = "{{EVENT_TYPE}} Alert", -- The title of the webhook embed
-        webhook_message = "License Plate: {{PLATE}}\nSpeed: {{SPEED}} {{SPEED_UNIT}}\nCamera: {{CAMERA_NAME}}" -- The message that the webhook displays
-    }
 }
 
 -- Notification Settings --
@@ -182,6 +178,15 @@ Config.notifications = {
     -- notification_message = "<b>{{EVENT_TYPE}}</b></br>License Plate: {{PLATE}}</br>Speed: {{SPEED}} {{SPEED_UNIT}}</br>Camera: {{CAMERA_NAME}}"
     notification_message = "{{EVENT_TYPE}} Alert\nLicense Plate: {{PLATE}}\nSpeed: {{SPEED}} {{SPEED_UNIT}}\nCamera: {{CAMERA_NAME}}" -- The text of the notification
 }
+```
+
+```lua
+DiscordConfig = {
+        enabled = false, -- Should discord webhooks be used?
+        webhook_url = "", -- See https://support.discord.com/hc/en-us/articles/228383668-Intro-to-Webhooks
+        webhook_title = "{{EVENT_TYPE}} Alert", -- The title of the webhook embed
+        webhook_message = "License Plate: {{PLATE}}\nSpeed: {{SPEED}} {{SPEED_UNIT}}\nCamera: {{CAMERA_NAME}}" -- The message that the webhook displays
+    }
 ```
 
 ## Setting Up Permissions (Ace Permissions Only)
