@@ -2,7 +2,7 @@
 title: Advanced Documentation
 description: 
 published: true
-date: 2022-05-25T19:42:36.993Z
+date: 2022-05-25T19:44:54.336Z
 tags: 
 editor: markdown
 dateCreated: 2022-05-11T21:59:08.098Z
@@ -47,6 +47,8 @@ RegisterNetEvent("SonoranScripts::PowerGrid::DeviceDisabled", function(affectedD
   TriggerClientEvent(GetCurrentResourceName() .. "::UpdateDB", -1, cameraDatabase)
 end)
 ```
+
+> The event above and the one below **must** use the `RegisterNetEvent` native, this is to avoid possible issues believed to be caused by resource load order in the server.cfg {.is-danger}
 
 When a power system is repaired a similar event will be triggered an example from the same script is below:
 ```lua
