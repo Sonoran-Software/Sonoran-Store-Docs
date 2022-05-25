@@ -2,7 +2,7 @@
 title: Speed Camera - Getting Started
 description: This page will walk you through getting and installing the Speed Camera script.
 published: true
-date: 2022-05-25T19:48:42.090Z
+date: 2022-05-25T19:49:30.133Z
 tags: 
 editor: markdown
 dateCreated: 2022-03-31T19:23:48.740Z
@@ -182,11 +182,11 @@ Config.notifications = {
 
 ```lua
 DiscordConfig = {
-        enabled = false, -- Should discord webhooks be used?
-        webhook_url = "", -- See https://support.discord.com/hc/en-us/articles/228383668-Intro-to-Webhooks
-        webhook_title = "{{EVENT_TYPE}} Alert", -- The title of the webhook embed
-        webhook_message = "License Plate: {{PLATE}}\nSpeed: {{SPEED}} {{SPEED_UNIT}}\nCamera: {{CAMERA_NAME}}" -- The message that the webhook displays
-    }
+		enabled = false, -- Should discord webhooks be used?
+    webhook_url = "", -- See https://support.discord.com/hc/en-us/articles/228383668-Intro-to-Webhooks
+    webhook_title = "{{EVENT_TYPE}} Alert", -- The title of the webhook embed
+    webhook_message = "License Plate: {{PLATE}}\nSpeed: {{SPEED}} {{SPEED_UNIT}}\nCamera: {{CAMERA_NAME}}" -- The message that the webhook displays
+}
 ```
 
 ## Setting Up Permissions (Ace Permissions Only)
