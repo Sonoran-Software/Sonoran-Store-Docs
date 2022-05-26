@@ -2,7 +2,7 @@
 title: Getting Started
 description: 
 published: false
-date: 2022-05-26T00:14:42.013Z
+date: 2022-05-26T00:15:03.269Z
 tags: 
 editor: markdown
 dateCreated: 2022-05-11T21:58:21.146Z
@@ -178,8 +178,8 @@ You have two options for placing new systems:
 
 | Property Name | Example         | Notes                                                                |
 | ------------- | --------------- | -------------------------------------------------------------------- |
-| `ID`          | 2               | `ID` must be unique. No other camera can share this ID               |
-| `Prop`        | `prop_powerbox` | Valid values are `radar01` and `porp_traffic_cam`                    |
+| `ID`          | 2               | `ID` must be unique. No other power system can share this ID               |
+| `Prop`        | `prop_powerbox` | Valid values are `prop_powerbox` and `prop_street_light_solar_panel`                    |
 | `Position`    |                 | This is a table that contains the x, y, and z coords of the power system   |
 | `Rotation`    |                 | This is a table that contains the x, y, and z rotation of the power system |
 | `Label`       | `Test 1`        | This is a human readable label for the power system, can have spaces       |
