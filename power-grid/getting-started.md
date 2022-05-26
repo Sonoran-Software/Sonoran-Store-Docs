@@ -2,14 +2,14 @@
 title: Getting Started
 description: 
 published: false
-date: 2022-05-26T00:03:54.246Z
+date: 2022-05-26T00:05:10.636Z
 tags: 
 editor: markdown
 dateCreated: 2022-05-11T21:58:21.146Z
 ---
 
 # Getting Started
-This is a test... The Cake is a Lie.
+
 ## Acquire the Script
 
 After purchasing the script through the sonoran store you may [download the script through the keymaster account](/tebex-assets) that purchased the script. Upon downloading extract the file to a safe place.
