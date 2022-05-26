@@ -2,7 +2,7 @@
 title: Power Grid
 description: 
 published: false
-date: 2022-05-26T00:13:24.661Z
+date: 2022-05-26T19:06:53.188Z
 tags: 
 editor: markdown
 dateCreated: 2022-05-11T21:57:17.341Z
@@ -16,11 +16,13 @@ PROMO IMAGE HERE - AWAITING WYATT
 
 -   Ability to operate standalone
 -   Support for AcePerms, ESX, QBCore, and custom permissions systems
+		![ps-minigame.png](/power-system/ps-minigame.png)
     ![notification-feature.png](/speed-camera/notification-feature.png)
 		![ps-cad-integration.png](/power-system/ps-cad-integration.png)
     ![ps-in-game-blips.png](/power-system/ps-in-game-blips.png)
     ![auto-update-feature.png](/speed-camera/auto-update-feature.png)
     ![ps-gun-placement-system.png](/power-system/ps-gun-placement-system.png)
+    ![ps-discord-webhooks.png](/power-system/ps-discord-webhooks.png)
     ![ps-highly-configurable.png](/power-system/ps-highly-configurable.png)
     ![translate-feature.png](/speed-camera/translate-feature.png)
 
