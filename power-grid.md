@@ -2,7 +2,7 @@
 title: Power Grid
 description: 
 published: false
-date: 2022-05-26T00:12:52.269Z
+date: 2022-05-26T00:13:24.661Z
 tags: 
 editor: markdown
 dateCreated: 2022-05-11T21:57:17.341Z
@@ -41,7 +41,7 @@ These are the default names of commands, they may have been modified by the serv
 ## Model Options
 
 ![ps-model-options-feature.png](/power-system/ps-model-options-feature.png)
-The model on the left is named `prop_traffic_cam` and the model is named `radar01`.
+The model on the left is named `prop_street_light_solar_panel` and the model is named `prop_powerbox`.
 
 ## Changelog
 
