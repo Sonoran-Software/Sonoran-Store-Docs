@@ -2,16 +2,14 @@
 title: Power Grid
 description: 
 published: true
-date: 2022-05-26T21:06:31.760Z
+date: 2022-05-26T21:30:37.885Z
 tags: 
 editor: markdown
 dateCreated: 2022-05-11T21:57:17.341Z
 ---
 
-PROMO IMAGE HERE - AWAITING WYATT
-
 # Power Grid
-
+![power-grid.png](/power-system/power-grid.png)
 ## Features
 
 -   Ability to operate standalone
