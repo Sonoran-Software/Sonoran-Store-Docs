@@ -2,7 +2,7 @@
 title: Shot Spotter
 description: Quickly be alerted when gunshots are detected around San Andreas
 published: true
-date: 2022-05-24T02:37:49.105Z
+date: 2022-06-29T16:15:22.999Z
 tags: 
 editor: markdown
 dateCreated: 2022-03-24T01:45:51.587Z
@@ -32,3 +32,31 @@ dateCreated: 2022-03-24T01:45:51.587Z
 | `/spawnnewspotter` | Activate the placement gun [SEE HERE](https://docs.sonoran.store/en/gun-placement) | Admin
 | `/cancelspotterplacement` | Cancels the placement gun | Admin
 | `togglespotter` | Toggle the spotter with the specified ID | Admin
+
+## Changelog
+
+### v1.2.1 
+#### Hotpatch
+- `Fixed Livemap Icons`
+
+### v1.2.0
+#### Bugfixes, Improvements & Features
+- `Disabling of Shot Spotters`
+- `"Network Time" / "Latency"`
+- `QB/ ESX Admin Permissions`
+- `Standalone Option`
+- `Livemap Radius`
+- `Powergrid Integration`
+- `Dispatcher Check`
+- `Separate Webhook Options`
+- `OkOk Notify/pNotify Integration`
+- `Numerous Bug Fixes`
+
+### v1.1.0
+
+#### Bugfixes and Improvements
+- `Fixes CAD livemap bugs, typos & more misc. bugs`
+
+### v1.0.0
+
+- `Inital Release`
