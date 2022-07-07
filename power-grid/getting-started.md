@@ -1,8 +1,8 @@
 ---
-title: Getting Started
+title: Power Grid - Getting Started
 description: 
 published: true
-date: 2022-05-26T21:07:02.716Z
+date: 2022-07-07T00:35:47.770Z
 tags: 
 editor: markdown
 dateCreated: 2022-05-11T21:58:21.146Z
