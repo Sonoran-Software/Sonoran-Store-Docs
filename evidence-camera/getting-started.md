@@ -2,7 +2,7 @@
 title: Evidence Camera - Getting Started
 description: This page will walk you through getting and installing the script.
 published: true
-date: 2022-07-06T21:52:03.851Z
+date: 2022-07-07T16:08:24.460Z
 tags: 
 editor: markdown
 dateCreated: 2022-07-06T21:52:03.851Z
@@ -14,17 +14,18 @@ After purchasing the script through the sonoran store you may [download the scri
 
 ## Install the Script
 1. Inside the script package you just extracted will be two folders. Copy both to a folder in your server's resources folder called `[sonoranscripts]` note the `[]` in the name, without them it will not work.
-![directory-example.png](/shot-spotter/directory-example.png)
-2. In the `sonoran-shotspotter/config` folder there will be a file called `config.CHANGEME.lua` you should rename that to be config.lua and configure the settings inside as you would like them to be configured based on the configuration documentation below. In that same folder will also be a file called `spotters.CHANGEME.json` which you should rename to `spotters.json` and use to manually place cameras based on the existing template, note you can also use the gun placement system in game.
-![files-example1.png](/shot-spotter/files-example1.png)
-![files-example2.png](/shot-spotter/files-example2.png)
-3. Finally, in your `server.cfg` add the following:
-> **NEVER** add `ensure sonoran-shotspotter_helper` or `ensure [sonoranscripts]` to your server.cfg as this will lead to crashing under specific conditions. {.is-warning}
+![directory-example_(1).png](/evidence-camera/directory-example_(1).png)
+2. In the `evidence-cam/config` folder there will be a file called `config.CHANGEME.lua` you should rename that to be config.lua and configure the settings inside as you would like them to be configured based on the configuration documentation below. In that same folder will also be a file called `photos.json` which is a storage file for all photos that are take and "printed" 
+![config-folder.png](/evidence-camera/config-folder.png)
+3. Extract the screenshot-basic.rar file into your server resources as you did with the previous 2 resources. 
+4. Finally, in your `server.cfg` add the following:
+> **NEVER** add `ensure evidence-cam_helper` or `ensure [sonoranscripts]` to your server.cfg as this will lead to crashing under specific conditions. {.is-warning}
 ```
-ensure sonoran-shotspotter
+ensure screenshot-basic
+ensure evidence-cam
 
-add_ace resource.sonoran-shotspotter command allow
-add_ace resource.sonoran-shotspotter_helper command allow
+add_ace resource.evidence-cam command allow
+add_ace resource.evidence-cam_helper command allow
 ```
 
 
