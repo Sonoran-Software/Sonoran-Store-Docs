@@ -1,8 +1,8 @@
 ---
-title: Advanced Documentation
+title: Power Grid - Advanced Documentation
 description: 
 published: true
-date: 2022-05-25T19:44:54.336Z
+date: 2022-07-07T00:35:11.289Z
 tags: 
 editor: markdown
 dateCreated: 2022-05-11T21:59:08.098Z
