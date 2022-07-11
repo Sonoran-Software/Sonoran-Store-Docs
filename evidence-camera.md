@@ -2,7 +2,7 @@
 title: Evidence Camera
 description: Easily take photos and upload them to CAD/ Discord 
 published: true
-date: 2022-07-08T22:39:56.866Z
+date: 2022-07-11T23:01:29.024Z
 tags: 
 editor: markdown
 dateCreated: 2022-07-06T21:41:55.238Z
@@ -22,6 +22,11 @@ dateCreated: 2022-07-06T21:41:55.238Z
 | `/ecam` | Toggle the evidence camera | None |
 
 ## Changelog
+
+### v1.1.0
+- `Fix QBCore Camera`
+- `Add photo object to inventory`
+- `Misc bug fixes`
 
 ### v1.0.1
 - `Fix NUI bug (Please ensure resource name is sonoran-evidencecam)`
