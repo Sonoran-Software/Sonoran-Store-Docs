@@ -2,7 +2,7 @@
 title: Evidence Camera
 description: Easily take photos and upload them to CAD/ Discord 
 published: true
-date: 2022-07-19T20:51:56.284Z
+date: 2022-07-20T23:13:29.267Z
 tags: 
 editor: markdown
 dateCreated: 2022-07-06T21:41:55.238Z
@@ -22,6 +22,9 @@ dateCreated: 2022-07-06T21:41:55.238Z
 | `/ecam` | Toggle the evidence camera | None |
 
 ## Changelog
+
+### v1.1.3
+- `Standalone object duplication hot fix`
 
 ### v1.1.2 
 - `Fix QBCore bug on newer servers`
