@@ -2,7 +2,7 @@
 title: Power Grid
 description: 
 published: true
-date: 2022-05-26T21:30:37.885Z
+date: 2022-07-26T01:36:18.012Z
 tags: 
 editor: markdown
 dateCreated: 2022-05-11T21:57:17.341Z
@@ -47,3 +47,5 @@ The model on the left is named `prop_street_light_solar_panel` and the model is 
 
 ### v1.0.0
 `Initial Release`
+### v1.0.1
+`Fixed: discord.CHANGEME.lua file added to escrowignore (required config file for configuring discord webhooks)`
