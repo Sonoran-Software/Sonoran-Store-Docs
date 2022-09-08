@@ -1,8 +1,8 @@
 ---
 title: Mobile Command Center - Getting Started
 description: This page will walk you through getting and installing the script.
-published: true
-date: 2022-08-29T23:33:46.684Z
+published: false
+date: 2022-09-08T00:59:01.695Z
 tags: 
 editor: markdown
 dateCreated: 2022-08-29T17:42:49.311Z
