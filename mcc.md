@@ -2,7 +2,7 @@
 title: Mobile Command Center
 description: Take command on scene like never before.
 published: false
-date: 2022-09-14T21:03:30.857Z
+date: 2022-09-14T21:08:12.911Z
 tags: 
 editor: markdown
 dateCreated: 2022-08-29T17:41:44.650Z
@@ -13,7 +13,7 @@ dateCreated: 2022-08-29T17:41:44.650Z
 
 ## Features 
 - Ability to operate standalone
-
+![auto-update-feature.png](/speed-camera/auto-update-feature.png)
 
 ## Commands 
 These are the default names of commands, they may have been modified by the server owner.
@@ -21,7 +21,7 @@ These are the default names of commands, they may have been modified by the serv
 |-----------------------|---------------------------------------------------------------------------------------------------------------------------------------------|------------------------|
 | `/mcctoggle [door]` | This is the base command that. (See [`Available Doors`](https://docs.sonoran.store/en/mcc/getting-started#available-doors) for all the possible doors)
 | `/togglem` | Toggle the MCC control menu
-| `/camera` | Access the MCC camera system
+| `/mcccamera` | Access the MCC camera system
 | `/intlights` | Toggle the MCC interior lights
 | `/mccradio` | Toggle the MCC radio repeater
 
