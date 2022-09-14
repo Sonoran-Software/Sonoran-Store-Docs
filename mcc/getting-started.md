@@ -2,7 +2,7 @@
 title: Mobile Command Center - Getting Started
 description: This page will walk you through getting and installing the script.
 published: false
-date: 2022-09-14T20:16:00.591Z
+date: 2022-09-14T21:04:04.841Z
 tags: 
 editor: markdown
 dateCreated: 2022-08-29T17:42:49.311Z
@@ -112,9 +112,9 @@ These are the default names of commands, they may have been modified by the serv
 |-----------------------|---------------------------------------------------------------------------------------------------------------------------------------------|------------------------|
 | `/mcctoggle [door]` | This is the base command that. (See [`Available Doors`](https://docs.sonoran.store/en/mcc/getting-started#available-doors) for all the possible doors)
 | `/togglem` | Toggle the MCC control menu
-| `camera` | Access the MCC camera system
-| `intlights` | Toggle the MCC interior lights
-| `mccradio` | Toggle the MCC radio repeater
+| `/camera` | Access the MCC camera system
+| `/intlights` | Toggle the MCC interior lights
+| `/mccradio` | Toggle the MCC radio repeater
 
 ## Available Doors
 | Name | Command  |
