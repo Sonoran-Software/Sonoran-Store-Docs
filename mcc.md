@@ -2,7 +2,7 @@
 title: Mobile Command Center
 description: Take command on scene like never before.
 published: false
-date: 2022-09-14T21:08:12.911Z
+date: 2022-09-14T21:41:51.270Z
 tags: 
 editor: markdown
 dateCreated: 2022-08-29T17:41:44.650Z
@@ -13,6 +13,8 @@ dateCreated: 2022-08-29T17:41:44.650Z
 
 ## Features 
 - Ability to operate standalone
+
+![control_menu.png](/control_menu.png)
 ![auto-update-feature.png](/speed-camera/auto-update-feature.png)
 
 ## Commands 
