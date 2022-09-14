@@ -1,8 +1,8 @@
 ---
 title: Mobile Command Center - Advanced Documentation
 description: Developer Documentation and other Advanced Configuration Topics for the Mobile Command Center.
-published: false
-date: 2022-09-14T22:47:14.735Z
+published: true
+date: 2022-09-14T22:52:34.919Z
 tags: 
 editor: markdown
 dateCreated: 2022-08-29T17:44:16.063Z
