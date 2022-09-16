@@ -2,7 +2,7 @@
 title: Mobile Command Center - Advanced Documentation
 description: Developer Documentation and other Advanced Configuration Topics for the Mobile Command Center.
 published: true
-date: 2022-09-16T03:27:39.740Z
+date: 2022-09-16T03:31:11.906Z
 tags: 
 editor: markdown
 dateCreated: 2022-08-29T17:44:16.063Z
@@ -27,6 +27,10 @@ WarMenu.OpenMenu('sonoranMccController')
 #### Plate Read
 When a plate is new **read** the event `Sonoran::mcc::plateRead` is fired to the **server**.
 
+| Parameter Name | Parameter Description  |
+|-----------------------|---------------------------------------------------------------------------------------------------------------------------------------------|------------------------|
+| `plate` | The plate currently read by the plate reader (`STRING`)
+
 Example Usage Of Event:
 ```lua
 RegisterNetEvent('Sonoran::mcc::plateRead', function(plate)
@@ -36,6 +40,11 @@ end)
 
 #### Plate Locked
 When a plate is **locked** the event `Sonoran::mcc::plateLocked` is fired to the **server**.
+
+| Parameter Name | Parameter Description  |
+|-----------------------|---------------------------------------------------------------------------------------------------------------------------------------------|------------------------|
+| `plate` | The plate currently locked by the plate reader (`STRING`)
+
 
 Example Usage Of Event:
 ```lua
