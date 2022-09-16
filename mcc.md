@@ -2,7 +2,7 @@
 title: Mobile Command Center
 description: Take command on scene like never before.
 published: true
-date: 2022-09-15T22:50:15.454Z
+date: 2022-09-16T03:23:20.389Z
 tags: 
 editor: markdown
 dateCreated: 2022-08-29T17:41:44.650Z
@@ -41,6 +41,7 @@ These are the default names of commands, they may have been modified by the serv
 | `/mcccamera` | Access the MCC camera system
 | `/intlights` | Toggle the MCC interior lights
 | `/mccradio` | Toggle the MCC radio repeater
+| `/mccplatelock` | Lock the current/ last plate from the ALPR
 
 ## Changelog
 ### v0.9.6
