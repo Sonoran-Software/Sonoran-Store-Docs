@@ -2,7 +2,7 @@
 title: Mobile Command Center - Getting Started
 description: This page will walk you through getting and installing the script.
 published: true
-date: 2022-09-14T22:53:20.976Z
+date: 2022-09-16T03:23:03.211Z
 tags: 
 editor: markdown
 dateCreated: 2022-08-29T17:42:49.311Z
@@ -87,6 +87,7 @@ config.language = {
 | `auto_update` | Would you like the script to automatically update to the newest version? | `True` or `False`
 | `debug_mode` | Would you like to enable debug prints? | `True` or `False`
 | `eBrakeWithSliders` | Would you like to enable/ disable the MCC's emergency brake when sliders are opened/ closed | `True` or `False`
+| `speedType` | How would you like to display the speed on the ALPR? | `'mph'` or `'kph'` 
 
 ### `config.keys` Breakdown
 | Config Option          | Option Description                                                                                                                         | Possible Values    |
@@ -106,6 +107,13 @@ config.language = {
 ### `config.language` Breakdown
 Here you can imput your own translations or change the wording of all text prompts and popups.
 
+### `config.alpr` Breakdown
+| Config Option          | Option Description                                                                                                                         | Possible Values    |
+|-----------------------|---------------------------------------------------------------------------------------------------------------------------------------------|------------------------|
+| `enabled` | Would you like to enable the MCC ALPR system? | `true` or `false`
+| `enableSonoranCad` | Would you like the ALPR to run plates through Sonoran CAD? | `true` or `false`
+| `scanAi` | Would you like the ALPR system to scan AI plates? | `true` or `false`
+
 ## Commands 
 These are the default names of commands, they may have been modified by the server owner.
 | Command Name | Command Description  |
@@ -115,6 +123,7 @@ These are the default names of commands, they may have been modified by the serv
 | `/mcccamera` | Access the MCC camera system
 | `/intlights` | Toggle the MCC interior lights
 | `/mccradio` | Toggle the MCC radio repeater
+| `/mccplatelock` | Lock the current/ last plate from the ALPR
 
 ## Available Doors
 | Name | Command  |
