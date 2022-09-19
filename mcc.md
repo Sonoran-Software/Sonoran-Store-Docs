@@ -2,14 +2,15 @@
 title: Mobile Command Center
 description: Take command on scene like never before.
 published: true
-date: 2022-09-16T03:23:20.389Z
+date: 2022-09-19T20:48:49.512Z
 tags: 
 editor: markdown
 dateCreated: 2022-08-29T17:41:44.650Z
 ---
 
 # THIS PRODUCT IS NOT YET RELEASED
-![v2-sale-wide.png](/v2-sale-wide.png)
+![mcc_promo_wide.png](/mcc_promo_wide.png)
+
 # Mobile Command Center
 
 ## Features 
