@@ -2,7 +2,7 @@
 title: Mobile Command Center - Getting Started
 description: This page will walk you through getting and installing the script.
 published: true
-date: 2022-09-16T03:23:03.211Z
+date: 2022-09-19T22:19:07.326Z
 tags: 
 editor: markdown
 dateCreated: 2022-08-29T17:42:49.311Z
@@ -79,6 +79,19 @@ config.language = {
 
 > There is no permission configuration required for this resource.
 {.is-info}
+
+## Integration Breakdown
+#### Sonoran CAD
+The Sonoran CAD integration can be turned either on or off in the [`config.alpr`](https://docs.sonoran.store/en/mcc/getting-started#configalpr-breakdown) section. In order for Sonoran CAD integraion to work properly you **MUST** have the [Wraith Radar](https://info.sonorancad.com/integration-plugins/integration-plugins/available-plugins/wraithv2) CAD plugin installed. 
+
+> Without the [Wraith Radar](https://info.sonorancad.com/integration-plugins/integration-plugins/available-plugins/wraithv2) plugin properly installed the ALPR **WILL NOT** work. 
+{.is-warning}
+
+#### Sonoran Radio
+The Sonoran Radio integration is both automatic and seamless. In order for this to work you **MUST** have the [Sonoran Radio FiveM Script](https://info.sonoranradio.com/tutorials/in-game-radio) properly installed and configured 
+> Without the [Sonoran Radio FiveM Script](https://info.sonoranradio.com/tutorials/in-game-radio) plugin properly installed the Sonoran Radio integration **WILL NOT** work. 
+{.is-warning}
+
 
 ## Config Breakdown
 | Config Option          | Option Description                                                                                                                         | Possible Values    |
