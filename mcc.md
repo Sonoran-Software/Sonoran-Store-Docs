@@ -2,7 +2,7 @@
 title: Mobile Command Center
 description: Take command on scene like never before.
 published: true
-date: 2022-09-19T20:48:49.512Z
+date: 2022-09-19T23:54:53.037Z
 tags: 
 editor: markdown
 dateCreated: 2022-08-29T17:41:44.650Z
@@ -32,6 +32,16 @@ dateCreated: 2022-08-29T17:41:44.650Z
 | `sonomcc.yft` | 4,800KB
 | `sonomcc_hi.yft` | 5,273KB
 | `sonomcc+hi.yft` | 702KB
+
+### LODs
+This model does include LODs. Counts are as follows, in polygons:
+| LOD | Count  |
+|-----------------------|---------------------------------------------------------------------------------------------------------------------------------------------|------------------------|
+| `L0` | 169,896
+| `L1` | 100,962
+| `L2` | 47,662
+| `L3` | 22,761
+| `L4` | 272
 
 ## Commands 
 These are the default names of commands, they may have been modified by the server owner.
