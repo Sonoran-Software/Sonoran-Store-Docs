@@ -2,7 +2,7 @@
 title: Mobile Command Center - Getting Started
 description: This page will walk you through getting and installing the script.
 published: true
-date: 2022-09-19T22:19:07.326Z
+date: 2022-09-20T19:35:04.761Z
 tags: 
 editor: markdown
 dateCreated: 2022-08-29T17:42:49.311Z
@@ -83,6 +83,8 @@ config.language = {
 ## Integration Breakdown
 #### Sonoran CAD
 The Sonoran CAD integration can be turned either on or off in the [`config.alpr`](https://docs.sonoran.store/en/mcc/getting-started#configalpr-breakdown) section. In order for Sonoran CAD integraion to work properly you **MUST** have the [Wraith Radar](https://info.sonorancad.com/integration-plugins/integration-plugins/available-plugins/wraithv2) CAD plugin installed. 
+
+Ensure that in the `config_wraithv2.lua` you have set `scanAi` to true or this resource may have issues locking and scanning AI plates plates
 
 > Without the [Wraith Radar](https://info.sonorancad.com/integration-plugins/integration-plugins/available-plugins/wraithv2) plugin properly installed the ALPR **WILL NOT** work. 
 {.is-warning}
