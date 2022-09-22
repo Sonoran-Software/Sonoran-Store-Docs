@@ -2,7 +2,7 @@
 title: Mobile Command Center - Getting Started
 description: This page will walk you through getting and installing the script.
 published: true
-date: 2022-09-20T21:14:01.527Z
+date: 2022-09-22T21:39:19.388Z
 tags: 
 editor: markdown
 dateCreated: 2022-08-29T17:42:49.311Z
@@ -31,16 +31,18 @@ add_ace resource.sonoran-mcc_helper command allow
 Default `config.lua`: 
 ```lua
 config = {}
-config.configuration_version = 1.1 -- Do NOT change unless updating whole config file. Used by updater to tell you when new config file options are available.
+config.configuration_version = 1.3 -- Do NOT change unless updating whole config file. Used by updater to tell you when new config file options are available.
 config.auto_update = true -- Toggle Auto Updater, requires ace permissions to function. See Install Docs: https://docs.sonoran.store
 config.debug_mode = false
-config.eBrakeWithSliders = true -- Should the vehicle activate the "E BRAKE" when the sliders are out
+config.eBrakeWithSliders = true -- Should the vehicle activate the "E-BRAKE" when the sliders are out
+config.speedType = 'mph' -- Which way should the alpr speed display? Options: 'mph' or 'kph'
 config.keys = {
     -- Use https://docs.fivem.net/docs/game-references/controls/#controls to find the name...
     -- and use https://docs.fivem.net/docs/game-references/input-mapper-parameter-ids/keyboard/ to find index parameters for the key options below...
-    cameraToggle = {cmd = 'camera', name = 'INPUT_PICKUP', indexParam = 'e', lang = 'Access MCC Cameras'}, -- Key to access cameras
-    interiorLightToggle = {cmd = 'intlights', name = 'INPUT_REPLAY_CYCLEMARKERRIGHT', indexParam = 'RBRACKET', lang = 'Toggle MCC Interior Lights'}, -- Key to toggle rear interior lighting
+    cameraToggle = {cmd = 'mcccamera', name = 'INPUT_PICKUP', indexParam = 'e', lang = 'Access MCC Cameras'}, -- Key to access cameras
+    interiorLightToggle = {cmd = 'mccintlights', name = 'INPUT_REPLAY_CYCLEMARKERRIGHT', indexParam = 'RBRACKET', lang = 'Toggle MCC Interior Lights'}, -- Key to toggle rear interior lighting
     radioRepeaterToggle = {cmd = 'mccradio', name = 'INPUT_REPLAY_CYCLEMARKERLEFT', indexParam = 'LBRACKET', lang = 'Toggle MCC Radio Repeater'}, -- Key to toggle Sonoran Radio repeater
+    alprLockPlate = {cmd = 'mccplatelock', name = 'INPUT_FRONTEND_ENDSCREEN_ACCEPT', indexParam = 'RETURN', lang = 'Lock the current plate in the MCC ALPR'},
     menuToggle = {name = 'INPUT_SCRIPTED_FLY_ZUP', indexParam = 'PAGEUP'} -- Keybind to open the door control menu, can be changed in FiveM settings
 }
 
@@ -73,7 +75,21 @@ config.language = {
     missingSonoranRadio = 'Sonoran Radio not running, feature unavailable...',
     antennaNotUp = 'You must raise the antenna first!\n Use "/mcctoggle antenna" do to so',
     slidersOut = 'The MCC sliders are moving out... E brake will now engage.',
-    slidersIn = 'The MCC sliders are now in... E brake will now disengange'
+    slidersIn = 'The MCC sliders are now in... E brake will now disengange',
+    intLightOn = 'The interior light has been toggled on!',
+    intLightOff = 'The interior light has been toggled off!',
+    alprLockPlate = 'Lock Plate'
+}
+
+config.alpr = {
+    enabled = true, -- Enable Autmatic License Plate Reader on MCC Cameras
+    enableSonoranCad = true, -- Enable sonorancad integration to alert on bolo/warrant/flag and be able to lock to force a CAD license plate lookup
+    scanAi = false -- Allow passive lookups of AI plates, will be lots of spam if you enable notifying on "no registration" in sonorancad wraithv2 plugin
+}
+
+config.radio = {
+    enabled = true, -- Enable MCC Mobile Repeater (requires sonoranradio resource and name must remain to be "sonoranradio")
+    range = 750 --MCC Mobile repeater 
 }
 ```
 
@@ -129,6 +145,12 @@ Here you can imput your own translations or change the wording of all text promp
 | `enableSonoranCad` | Would you like the ALPR to run plates through Sonoran CAD? | `true` or `false`
 | `scanAi` | Would you like the ALPR system to scan AI plates? | `true` or `false`
 
+### `config.radio` Breakdown
+| Config Option          | Option Description                                                                                                                         | Possible Values    |
+|-----------------------|---------------------------------------------------------------------------------------------------------------------------------------------|------------------------|
+| `enabled` | Would you like to enable the MCC ALPR system? | `true` or `false`
+| `range` | Would you like more or less mobile radio repeater range? | `true` or `false`
+
 ## Commands 
 These are the default names of commands, they may have been modified by the server owner.
 | Command Name | Command Description  |
@@ -136,7 +158,7 @@ These are the default names of commands, they may have been modified by the serv
 | `/mcctoggle [door]` | This is the base command that. (See [`Available Doors`](https://docs.sonoran.store/en/mcc/getting-started#available-doors) for all the possible doors)
 | `/togglem` | Toggle the MCC control menu
 | `/mcccamera` | Access the MCC camera system
-| `/intlights` | Toggle the MCC interior lights
+| `/mccintlights` | Toggle the MCC interior lights
 | `/mccradio` | Toggle the MCC radio repeater
 | `/mccplatelock` | Lock the current/ last plate from the ALPR
 
