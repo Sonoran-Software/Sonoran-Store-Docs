@@ -2,7 +2,7 @@
 title: Mobile Command Center - Getting Started
 description: This page will walk you through getting and installing the script.
 published: true
-date: 2022-09-22T21:49:22.769Z
+date: 2022-09-22T22:28:28.888Z
 tags: 
 editor: markdown
 dateCreated: 2022-08-29T17:42:49.311Z
@@ -18,8 +18,8 @@ After purchasing the script through the sonoran store you may [download the scri
 1. Inside the script package you just extracted will be two folders. Copy both to a folder in your server's resources folder called `[sonoranscripts]` note the `[]` in the name, without them it will not work.
 ![directory-example.png](/mcc/directory-example.png)
 2. In the `sonoran-mcc` folder there will be a folder called `config`, once inside that folder you should see a file called  `config.CHANGEME.lua` you should rename that to be `config.lua` and configure the settings inside as you would like them to be configured based on the configuration documentation below.
-
-3. Finally, in your `server.cfg` add the following:
+3. In the `sonoran-mcc` folder there is the file `sonomcc.ytd`, move that file into the `sonoran-mcc/stream/` folder. This allows our updater to not override any custom YTD edits like custom liveries.
+4. Finally, in your `server.cfg` add the following:
 ```
 ensure sonoran-mcc
 
