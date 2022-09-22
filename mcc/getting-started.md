@@ -2,7 +2,7 @@
 title: Mobile Command Center - Getting Started
 description: This page will walk you through getting and installing the script.
 published: true
-date: 2022-09-22T21:39:19.388Z
+date: 2022-09-22T21:46:56.017Z
 tags: 
 editor: markdown
 dateCreated: 2022-08-29T17:42:49.311Z
@@ -98,16 +98,18 @@ config.radio = {
 
 ## Integration Breakdown
 #### Sonoran CAD
-The Sonoran CAD integration can be turned either on or off in the [`config.alpr`](https://docs.sonoran.store/en/mcc/getting-started#configalpr-breakdown) section. In order for Sonoran CAD integraion to work properly you **MUST** have the [Wraith Radar](https://info.sonorancad.com/integration-plugins/integration-plugins/available-plugins/wraithv2) CAD plugin installed. 
-
-Ensure that in the `config_wraithv2.lua` you have set `scanAi` to true or this resource may have issues locking and scanning AI plates
+The Sonoran CAD integration can be turned either on or off in the [`config.alpr`](https://docs.sonoran.store/en/mcc/getting-started#configalpr-breakdown) section. In order for Sonoran CAD integraion to work properly you **MUST** have the [Wraith Radar](https://info.sonorancad.com/integration-plugins/integration-plugins/available-plugins/wraithv2) CAD plugin installed. This plugin is part of [Sonoran CAD's integration framework](https://info.sonorancad.com/integration-plugins/integration-plugins).
 
 > Without the [Wraith Radar](https://info.sonorancad.com/integration-plugins/integration-plugins/available-plugins/wraithv2) plugin properly installed the ALPR **WILL NOT** work. 
 {.is-warning}
 
 #### Sonoran Radio
-The Sonoran Radio integration is both automatic and seamless. In order for this to work you **MUST** have the [Sonoran Radio FiveM Script](https://info.sonoranradio.com/tutorials/in-game-radio) properly installed and configured 
-> Without the [Sonoran Radio FiveM Script](https://info.sonoranradio.com/tutorials/in-game-radio) plugin properly installed the Sonoran Radio integration **WILL NOT** work. 
+The Sonoran Radio integration is both automatic and seamless. In order for this to work you **MUST** have the [Sonoran Radio FiveM Script](https://info.sonoranradio.com/tutorials/in-game-radio) properly installed and configured.
+
+> Sonoran Radio's resource must remain named `sonoranradio` or integration **WILL NOT** work.
+{.is-info}
+
+> Without the [Sonoran Radio FiveM Script](https://info.sonoranradio.com/tutorials/in-game-radio) properly installed the Sonoran Radio integration **WILL NOT** work. 
 {.is-warning}
 
 
