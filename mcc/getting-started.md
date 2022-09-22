@@ -2,7 +2,7 @@
 title: Mobile Command Center - Getting Started
 description: This page will walk you through getting and installing the script.
 published: true
-date: 2022-09-22T22:28:28.888Z
+date: 2022-09-22T22:40:36.343Z
 tags: 
 editor: markdown
 dateCreated: 2022-08-29T17:42:49.311Z
@@ -96,14 +96,24 @@ config.radio = {
 > There is no permission configuration required for this resource.
 {.is-info}
 
-## Integration Breakdown
-#### Sonoran CAD
+## Sonoran CAD Integration
+### Functionality
+The mobile command center is equipped with surveillance cameras on top of the radio antenna. While looking at a vehicle, the license plate will be displayed on-screen.
+
+Additionally, with [Sonoran CAD's Wraith integration](https://info.sonorancad.com/integration-plugins/integration-plugins/available-plugins/wraithv2), a pNotify pop-up will display the vehicle's registration information from Sonoran CAD. Press `ENTER` to "lock" the plate and return a full search in your Sonoran CAD screen.
+![mcc_alpr.png](/mcc_alpr.png =50%x){.align-center}
+![mcc_alpr_locked.png](/mcc_alpr_locked.png =50%x){.align-center}
+### Configuration
 The Sonoran CAD integration can be turned either on or off in the [`config.alpr`](https://docs.sonoran.store/en/mcc/getting-started#configalpr-breakdown) section. In order for Sonoran CAD integraion to work properly you **MUST** have the [Wraith Radar](https://info.sonorancad.com/integration-plugins/integration-plugins/available-plugins/wraithv2) CAD plugin installed. This plugin is part of [Sonoran CAD's integration framework](https://info.sonorancad.com/integration-plugins/integration-plugins).
 
 > Without the [Wraith Radar](https://info.sonorancad.com/integration-plugins/integration-plugins/available-plugins/wraithv2) plugin properly installed the ALPR **WILL NOT** work. 
 {.is-warning}
 
-#### Sonoran Radio
+## Sonoran Radio Integration
+### Functionality
+The mobile command center is equipped with an extendable Sonoran Radio repeater. When extended, the mobile command center will function as a [Sonoran Radio tower](https://info.sonoranradio.com/en/why-choose-sonoran-radio#in-game-towers) to increase reception in the area.
+
+### Configuration
 The Sonoran Radio integration is both automatic and seamless. In order for this to work you **MUST** have the [Sonoran Radio FiveM Script](https://info.sonoranradio.com/tutorials/in-game-radio) properly installed and configured.
 
 > Sonoran Radio's resource must remain named `sonoranradio` or integration **WILL NOT** work.
