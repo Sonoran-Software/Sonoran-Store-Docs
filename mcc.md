@@ -2,16 +2,13 @@
 title: Mobile Command Center
 description: Take command on scene like never before.
 published: true
-date: 2022-09-19T23:54:53.037Z
+date: 2022-09-22T20:43:08.702Z
 tags: 
 editor: markdown
 dateCreated: 2022-08-29T17:41:44.650Z
 ---
 
-# THIS PRODUCT IS NOT YET RELEASED
 ![mcc_promo_wide.png](/mcc_promo_wide.png)
-
-# Mobile Command Center
 
 ## Features 
 - Ability to operate standalone
@@ -55,6 +52,14 @@ These are the default names of commands, they may have been modified by the serv
 | `/mccplatelock` | Lock the current/ last plate from the ALPR
 
 ## Changelog
+### v1.0.0 - Public Release
+#### Features
+- `feat: include lighting template in resource root`
+- `feat: config toggles for radio repeater and repeater range`
+- `feat: notification when toggling interior lights`
+- `feat: add sonorancad ALPR integration`
+#### Bug Fixes
+- `fix: texture issues with rear door`
 ### v0.9.6
 #### Features 
 - `Added ALPR`
@@ -72,5 +77,5 @@ These are the default names of commands, they may have been modified by the serv
 ### v0.9.1
 #### Bug Fixes
 - `Fix auto-updater bugs`
-### v0.9.0
-- `Initial Release`
+### v0.9.0 - Beta Release
+- `Initial Beta Release`
