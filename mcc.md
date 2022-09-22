@@ -2,7 +2,7 @@
 title: Mobile Command Center
 description: Take command on scene like never before.
 published: true
-date: 2022-09-22T20:43:08.702Z
+date: 2022-09-22T22:08:40.713Z
 tags: 
 editor: markdown
 dateCreated: 2022-08-29T17:41:44.650Z
@@ -39,17 +39,6 @@ This model does include LODs. Counts are as follows, in polygons:
 | `L2` | 47,662
 | `L3` | 22,761
 | `L4` | 272
-
-## Commands 
-These are the default names of commands, they may have been modified by the server owner.
-| Command Name | Command Description  |
-|-----------------------|---------------------------------------------------------------------------------------------------------------------------------------------|------------------------|
-| `/mcctoggle [door]` | This is the base command that. (See [`Available Doors`](https://docs.sonoran.store/en/mcc/getting-started#available-doors) for all the possible doors)
-| `/togglem` | Toggle the MCC control menu
-| `/mcccamera` | Access the MCC camera system
-| `/intlights` | Toggle the MCC interior lights
-| `/mccradio` | Toggle the MCC radio repeater
-| `/mccplatelock` | Lock the current/ last plate from the ALPR
 
 ## Changelog
 ### v1.0.0 - Public Release
