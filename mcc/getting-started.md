@@ -2,7 +2,7 @@
 title: Mobile Command Center - Getting Started
 description: This page will walk you through getting and installing the script.
 published: true
-date: 2022-09-22T22:40:36.343Z
+date: 2022-09-23T01:28:06.184Z
 tags: 
 editor: markdown
 dateCreated: 2022-08-29T17:42:49.311Z
@@ -19,7 +19,12 @@ After purchasing the script through the sonoran store you may [download the scri
 ![directory-example.png](/mcc/directory-example.png)
 2. In the `sonoran-mcc` folder there will be a folder called `config`, once inside that folder you should see a file called  `config.CHANGEME.lua` you should rename that to be `config.lua` and configure the settings inside as you would like them to be configured based on the configuration documentation below.
 3. In the `sonoran-mcc` folder there is the file `sonomcc.ytd`, move that file into the `sonoran-mcc/stream/` folder. This allows our updater to not override any custom YTD edits like custom liveries.
-4. Finally, in your `server.cfg` add the following:
+4. In the `sonoran-mcc/data/` folder there are 4 `.meta` files rename each file so that you remove`.CHANGEME` from the name. You should be left with the following 4 file names:
+- carcols.meta
+- carvariations.meta
+- vehiclelayouts.meta
+- vehicles.meta
+5. Finally, in your `server.cfg` add the following:
 ```
 ensure sonoran-mcc
 
