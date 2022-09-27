@@ -2,7 +2,7 @@
 title: Evidence Camera
 description: Easily take photos and upload them to CAD/ Discord 
 published: true
-date: 2022-07-20T23:13:29.267Z
+date: 2022-09-27T18:30:04.009Z
 tags: 
 editor: markdown
 dateCreated: 2022-07-06T21:41:55.238Z
@@ -22,6 +22,13 @@ dateCreated: 2022-07-06T21:41:55.238Z
 | `/ecam` | Toggle the evidence camera | None |
 
 ## Changelog
+### v1.2.0
+#### Bugfixes 
+- `Fixed numerous ESX bugs`
+
+#### Features 
+- `Added support for Ox Inventory`
+- `Added support for custom inventories`
 
 ### v1.1.3
 - `Standalone object duplication hot fix`
