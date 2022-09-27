@@ -2,7 +2,7 @@
 title: Evidence Camera - Getting Started
 description: This page will walk you through getting and installing the script.
 published: true
-date: 2022-07-11T23:16:30.941Z
+date: 2022-09-27T18:18:05.954Z
 tags: 
 editor: markdown
 dateCreated: 2022-07-06T21:52:03.851Z
@@ -21,7 +21,30 @@ After purchasing the script through the sonoran store you may [download the scri
 ![config-folder.png](/evidence-camera/config-folder.png)
 > **QBCore** Specific - Please follow `Step 3` to ensure inventory items have correct photos!{.is-warning}
 3. Drag the `cam.png` into the following folder: `\resources\[qb]\qb-inventory\html\images`
-4. Finally, in your `server.cfg` add the following:
+> **ESX Specific** Specific - Please follow `Step 4` to ensure inventory items work!{.is-warning}
+4. a.) Import the `ESX Installme.sql` file into your ESX database
+	 #### *If **NOT** using `ox_inventory` continue to step 5*
+	 b.) Add the following code to the `/ox_inventory/data/items.lua` file
+   ```lua
+   	['sonoran_evidence_camera'] = {
+		label = 'evidence camera',
+		weight = 1,
+		stack = true,
+		close = true,
+		description = nil
+	},
+	['sonoran_evidence_photo'] = {
+		label = 'Evidence Photo',
+		weight = 1,
+		stack = true,
+		close = true,
+		description = 'A sweet polaroid',
+		image_link = nil,
+		server = {
+			export = 'sonoran-evidencecam.sonoran_evidence_photo'
+		}
+	},
+5. Finally, in your `server.cfg` add the following:
 > **NEVER** add `ensure evidence-cam_helper` or `ensure [sonoranscripts]` to your server.cfg as this will lead to crashing under specific conditions. {.is-warning}
 ```
 ensure screenshot-basic
@@ -56,6 +79,8 @@ add_ace resource.evidence-cam_helper command allow
 | Config Option          | Option Description                                                                                                                         | Possible Values    |
 |-----------------------|---------------------------------------------------------------------------------------------------------------------------------------------|------------------------|
 | `use_esx` | Use the ESX framework | `true` or `false` 
+| `use_esx_ox_inventory` | Utilize OX Inventory for ESX | `true` or `false`
+| `use_custom_inventory` | Use your own custom inventory handling (See dev docs for more) | `true` or `false`
 | `use_qbcore` | Use the QBCore framework | `true` or `false` 
 
 ### CAD 
