@@ -2,7 +2,7 @@
 title: Evidence Camera - Getting Started
 description: This page will walk you through getting and installing the script.
 published: true
-date: 2022-10-05T20:53:59.201Z
+date: 2022-10-05T20:55:06.592Z
 tags: 
 editor: markdown
 dateCreated: 2022-07-06T21:52:03.851Z
@@ -20,7 +20,7 @@ After purchasing the script through the sonoran store you may [download the scri
 
 ![config-folder.png](/evidence-camera/config-folder.png)
 > **QBCore** Specific - Please follow `Step 3` to ensure inventory items have correct photos!{.is-warning}
-3. Drag the `cam.png` from `QB Core Inventory Images` into the following folder: `\resources\[qb]\qb-inventory\html\images`
+3. Drag the `cam.png` from `\sonoran-evidececam\config` into the following folder: `\resources\[qb]\qb-inventory\html\images`
 > **ESX Specific** Specific - Please follow `Step 4` to ensure inventory items work!{.is-warning}
 4. a.) Import the `ESX Installme.sql` file into your ESX database
 	 #### *If **NOT** using `ox_inventory` continue to step 5*
