@@ -2,7 +2,7 @@
 title: Evidence Camera - Getting Started
 description: This page will walk you through getting and installing the script.
 published: true
-date: 2022-10-06T11:34:09.396Z
+date: 2022-10-06T11:35:39.787Z
 tags: 
 editor: markdown
 dateCreated: 2022-07-06T21:52:03.851Z
@@ -55,7 +55,7 @@ add_ace resource.evidence-cam_helper command allow
 ```
 
 
-> Congrats! You have successfully installed Sonoran Shot Spotter. See the next section for configuration options.
+> Congrats! You have successfully installed Sonoran Evidence Camera. See the next section for configuration options.
 {.is-success}
 
 
