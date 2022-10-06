@@ -2,7 +2,7 @@
 title: Evidence Camera - Getting Started
 description: This page will walk you through getting and installing the script.
 published: true
-date: 2022-10-05T20:55:06.592Z
+date: 2022-10-06T11:34:09.396Z
 tags: 
 editor: markdown
 dateCreated: 2022-07-06T21:52:03.851Z
@@ -87,3 +87,11 @@ add_ace resource.evidence-cam_helper command allow
 | Config Option          | Option Description                                                                                                                         | Possible Values    |
 |-----------------------|---------------------------------------------------------------------------------------------------------------------------------------------|------------------------|
 | `use_cad` | Link with Sonoran CAD to send photos | `true` or `false` 
+
+## Objects
+| Framework          | Object          | Object Name
+|-----------------------|---------------------------------------------------------------------------------------------------------------------------------------------|------------------------|
+| `QB Core` | Camera | `sonoran_evidencecam`
+| `QB Core` | Photo | `sonoran_evidence_photo`
+| `ESX` | Camera | `sonoran_evidence_cam`
+| `ESX` | Photo | `sonoran_evidence_photo`
