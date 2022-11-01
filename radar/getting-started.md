@@ -2,7 +2,7 @@
 title: Radar Display - Getting Started
 description: This page will walk you through getting and installing the Radar Display script.
 published: true
-date: 2022-11-01T23:09:15.984Z
+date: 2022-11-01T23:29:02.833Z
 tags: 
 editor: markdown
 dateCreated: 2022-10-24T17:52:19.625Z
@@ -13,6 +13,21 @@ dateCreated: 2022-10-24T17:52:19.625Z
 ## Acquire the Script
 
 After purchasing the script through the sonoran store you may [download the script through the keymaster account](/tebex-assets) that purchased the script. Upon downloading extract the file to a safe place.
+
+## Install Prerequisite
+
+> You must use the Sonoran Fork of WK_Wars2x found [here](https://github.com/Sonoran-Software/wk_wars2x/releases/latest).
+>
+> Minimum version required: `v1.3.3-sonoran`
+{.is-warning}
+
+> If you are using the Sonoran CAD FiveM Integration, **DO NOT** install a second copy of WK_Wars2x, it is included and updated with the `sonorancad` resource.
+{.is-info}
+
+
+WK_Wars2x Radar script is required for this resource to function fully. Please ensure you are using the **Sonoran Fork** of WK_Wars2x. This is included with the [Sonoran CAD FiveM Integration](https://info.sonorancad.com/integration-plugins/integration-plugins/framework-installation) by default.
+
+You can also download the latest release of the resource [here](https://github.com/Sonoran-Software/wk_wars2x/releases/latest).
 
 ## Install the Script
 
@@ -99,13 +114,13 @@ You have two options for placing new radars:
 | `/addnewradar` | This command will inititate the radar spawning and attaching process | Admin or as configured |
 
 ## Default Vehicles
-| Vehicle Spawncode | Has Radar |
+| Vehicle Spawncode | Adds Radar by Default |
 |-----------------------|---------------------------------------------------------------------------------------------------------------------------------------------|
 | `FBI` | `yes`
 | `FBI2`| `yes`
 | `POLICE`| `yes`
 | `POLICE2`| `yes`
-| `POLICE3`| `BUGGED`
+| `POLICE3`| `BUGGED`(Investigating fix)
 | `POLICE4`| `yes`
 | `POLICEOLD1`| `no`
 | `POLICEOLD2`| `no`
