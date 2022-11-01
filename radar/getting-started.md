@@ -2,7 +2,7 @@
 title: Radar Display - Getting Started
 description: This page will walk you through getting and installing the Radar Display script.
 published: true
-date: 2022-10-24T18:09:14.259Z
+date: 2022-11-01T23:09:15.984Z
 tags: 
 editor: markdown
 dateCreated: 2022-10-24T17:52:19.625Z
@@ -105,7 +105,7 @@ You have two options for placing new radars:
 | `FBI2`| `yes`
 | `POLICE`| `yes`
 | `POLICE2`| `yes`
-| `POLICE3`| `yes`
+| `POLICE3`| `BUGGED`
 | `POLICE4`| `yes`
 | `POLICEOLD1`| `no`
 | `POLICEOLD2`| `no`
