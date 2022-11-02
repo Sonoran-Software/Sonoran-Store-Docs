@@ -2,7 +2,7 @@
 title: Radar Display 
 description: Run Radar Like Never Before
 published: true
-date: 2022-11-02T22:27:10.497Z
+date: 2022-11-02T22:33:14.968Z
 tags: 
 editor: markdown
 dateCreated: 2022-10-24T17:51:01.047Z
@@ -18,12 +18,12 @@ dateCreated: 2022-10-24T17:51:01.047Z
 ![highly_config_radar.png](/radar/highly_config_radar.png)
 ![auto-update-feature.png](/speed-camera/auto-update-feature.png)
 ## Changelog
-### v1.0.1
+### v1.0.2
 #### Hotfix
-- fix: "attempt to call a nil value (field 'SpawnItem')"
+- `fix: "attempt to call a nil value (field 'SpawnItem')"`
 
 ### v1.0.1
 #### Hotfix
-- fix: Escrow ignore config files
+- `fix: Escrow ignore config files`
 ### v1.0.0
-- Initial Release
+- `Initial Release`
