@@ -2,7 +2,7 @@
 title: Radar Display 
 description: Run Radar Like Never Before
 published: true
-date: 2022-10-28T03:58:32.666Z
+date: 2022-11-02T01:13:01.011Z
 tags: 
 editor: markdown
 dateCreated: 2022-10-24T17:51:01.047Z
@@ -18,5 +18,7 @@ dateCreated: 2022-10-24T17:51:01.047Z
 ![highly_config_radar.png](/radar/highly_config_radar.png)
 ![auto-update-feature.png](/speed-camera/auto-update-feature.png)
 ## Changelog
+#### v1.0.1
+- fix: Escrow ignore config files
 #### v1.0.0
 - Initial Release
