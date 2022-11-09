@@ -2,7 +2,7 @@
 title: Mobile Command Center
 description: Take command on scene like never before.
 published: true
-date: 2022-09-23T01:30:17.677Z
+date: 2022-11-09T20:30:40.444Z
 tags: 
 editor: markdown
 dateCreated: 2022-08-29T17:41:44.650Z
@@ -41,6 +41,9 @@ This model does include LODs. Counts are as follows, in polygons:
 | `L4` | 272
 
 ## Changelog
+### v1.0.2
+#### Bug Fixes
+- `chore: remove JQuery from HTML files`
 ### v1.0.1
 #### Bug Fixes
 - `fix: config variable capitalization`
