@@ -2,7 +2,7 @@
 title: Five Bundle
 description: Learn more about the Five Bundle partnership!
 published: true
-date: 2022-12-20T00:33:45.668Z
+date: 2022-12-20T00:39:35.239Z
 tags: 
 editor: markdown
 dateCreated: 2022-12-05T17:46:26.546Z
@@ -48,7 +48,6 @@ At time of writing this includes:
 All items listed on LondonStudios.net are included with the Five Bundle.
 
 At time of writing this includes:
-- Average Speed Cameras
 - Average Speed Cameras
 - Bike Hire
 - Bomb Disposal Robot (EOD)
