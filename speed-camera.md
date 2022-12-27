@@ -2,7 +2,7 @@
 title: Speed Cameras/ALPR
 description: Automated system to detect and warn when a vehicle with an active BOLO or a speeding vehicle is spotted.
 published: true
-date: 2022-11-02T22:18:21.371Z
+date: 2022-12-27T18:05:15.725Z
 tags: 
 editor: markdown
 dateCreated: 2022-03-31T18:53:58.629Z
@@ -49,6 +49,10 @@ These are the default names of commands, they may have been modified by the serv
 The model on the left is named `prop_traffic_cam` and the model is named `radar01`.
 
 ## Changelog
+### v2.1.3
+#### Hotfix
+- `Fix Ace permission issues`
+
 ### v2.1.2
 #### Hotfix
 - `Fix ESX depreciation notice`
