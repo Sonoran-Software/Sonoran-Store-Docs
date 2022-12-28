@@ -2,13 +2,15 @@
 title: ATM Robbery
 description: Steal and break into the ATM
 published: true
-date: 2022-12-27T23:19:18.105Z
+date: 2022-12-28T22:16:02.078Z
 tags: 
 editor: markdown
 dateCreated: 2022-12-21T23:43:16.899Z
 ---
 
 ![atm_large.png](/atm-robbery/atm_large.png)
+
+## [Watch the promotional video here!](https://youtu.be/2Z6FepWQM2E)
 ## Features
 ![atm_mini_games.png](/atm-robbery/atm_mini_games.png)
 ![model_interaction.png](/atm-robbery/model_interaction.png)
