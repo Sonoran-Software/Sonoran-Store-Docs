@@ -2,7 +2,7 @@
 title: ATM Robbery - Getting Started
 description: This page will walk you through getting and installing the ATM Robbery script.
 published: true
-date: 2023-01-03T23:18:48.985Z
+date: 2023-01-03T23:20:52.717Z
 tags: 
 editor: markdown
 dateCreated: 2022-12-22T00:07:47.214Z
@@ -229,27 +229,27 @@ add_ace group.hacker sonoran.theif allow
 
 ## ATM Location Config
 
-You have two options for placing new systems:
+You have two options for placing new ATMs:
 
-1. You can use the command `/spawnnewatm [label] [model]` to initiate spawning a new system and generate the relevant config data
+1. You can use the command `/spawnnewatm [label] [model]` to initiate spawning a new ATM and generate the relevant config data
     - After running this command you must pull out, aim, and shoot with a gun to confirm placement.
     - You may need to modify some of the rotation values manually to get that perfect placement you are looking for.
     - [Click here for more information.](/gun-placement)
-2. You can manually copy and paste an existing config and then modify the values to meet your needs for the new system
+2. You can manually copy and paste an existing config and then modify the values to meet your needs for the new ATM
 ### `atms.json` Property Explanation
 
 | Property Name | Example         | Notes                                                                |
 | ------------- | --------------- | -------------------------------------------------------------------- |
-| `ID`          | 2               | `ID` must be unique. No other power system can share this ID               |
+| `ID`          | 2               | `ID` must be unique. No other ATM can share this ID               |
 | `Type`        | `green` | Valid values are `old` and `blue`, `green`, `red`                    |
-| `Position`    |                 | This is a table that contains the x, y, and z coords of the power system   |
-| `Rotation`    |                 | This is a table that contains the x, y, and z rotation of the power system |
-| `Label`       | `Test 1`        | This is a human readable label for the power system, can have spaces       |
+| `Position`    |                 | This is a table that contains the x, y, and z coords of the ATM   |
+| `Rotation`    |                 | This is a table that contains the x, y, and z rotation of the ATM |
+| `Label`       | `Test 1`        | This is a human readable label for the ATM, can have spaces       |
 ## Commands
 
 These are the default names of commands, they may have been modified by the server owner.
 | Command Name | Command Description | Required Permission |
 |-----------------------|---------------------------------------------------------------------------------------------------------------------------------------------|------------------------|
-| `/spawnnewatm [label] [model]` | This command will allow an admin to spawn a new power system using a gun placement system where the name argument is the label for the new power system and the prop argument is the text name of the model to use | Admin or as configured |
+| `/spawnnewatm [label] [model]` | This command will allow an admin to spawn a new ATM using a gun placement system where the name argument is the label for the new ATM and the prop argument is the text name of the model to use | Admin or as configured |
 | `/attachrope` | This command is used to attach the rope between the ATM and your vehicle | Everyone or as configured
 | `/drillatm` | This command will initiate the final drilling into the ATM | Everyone or as configured
