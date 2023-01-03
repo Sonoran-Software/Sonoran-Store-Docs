@@ -2,7 +2,7 @@
 title: ATM Robbery - Advanced Documentation
 description: Developer Documentation and other advanced configuration options of the ATM Robbery system.
 published: true
-date: 2022-12-22T03:37:16.587Z
+date: 2023-01-03T23:13:44.457Z
 tags: 
 editor: markdown
 dateCreated: 2022-12-22T03:37:16.587Z
@@ -12,7 +12,7 @@ dateCreated: 2022-12-22T03:37:16.587Z
 
 ## Custom Permission Systems
 
-If you view your `config.lua` you will find a function to be defined with your permissions check. The same function is called to check for permission to receive notifications and to check if they are allowed to place new cameras. The requests are differentiated through the type argument. It will be equal to `0` if the permissions check is to see if they can place a camera, `1` to check if they can currently receive notifications, `2` to check if they are allowed to modify the standalone BOLO system, or `3` to check if they can enable and disable cameras. The permission check will be called on every attempted placement and every notification sent, so you can use a custom "on-duty" system if desired.
+If you view your `config.lua` you will find a function to be defined with your permissions check. The same function is called to check for permission to receive notifications and to check if they are allowed to place new ATMs. The requests are differentiated through the type argument. It will be equal to `0` if the permissions check is to see if they can place a ATM, `1` to check if they can currently receive notifications, or `2` to check if they are allowed to initiate the stealing of an ATM, The permission check will be called on every attempted placement, every notification sent, and every attempted robbery.
 
 ```lua
 Config.custom = {
@@ -22,9 +22,7 @@ Config.custom = {
             return true or false -- Return true if they have admin, return false if they don't
         elseif type == 1 then -- Check for notification perms
             return true or false -- Return true if they have permissions, return false if they don't
-        elseif type == 2 then -- Check for BOLO creation/deletion/view perms
-            return true or false -- Return true if they have permissions, return false if they don't
-        elseif type == 3 then -- Check for permissions to enable/disable cameras
+        elseif type == 2 then -- Check for perms to steal the ATM
             return true or false -- Return true if they have permissions, return false if they don't
         end
     end
@@ -35,8 +33,7 @@ If you need assistance setting this up you can hire a dev by going [here](https:
 
 ## Developer Documentation
 
-When a BOLO vehicle is caught events will be sent out. It will be sent to both the client that was caught and the server. It will contain a data argument, the table below contains the layout of this value. Events are named the same on both the client and server.
-
+When an ATM is being drilled initially, the `sonoran-atmrobbery::ATM::Drilling_s` event will fire to the `server`. The data table can be seen below. Upon completion of the final drilling, if `Config.permissionMode` is set to `ace`, the event `Sonoran::ATM::Payout` will be fired to the `server`. The data table can be seen below. Example event handlers can also be found below.
 #### Event List
 
 -   `Sonoran::ATM::Payout`
