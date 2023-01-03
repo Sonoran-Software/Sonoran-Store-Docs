@@ -2,13 +2,14 @@
 title: Evidence Camera
 description: Easily take photos and upload them to CAD/ Discord 
 published: true
-date: 2022-09-27T18:30:04.009Z
+date: 2023-01-03T23:06:04.077Z
 tags: 
 editor: markdown
 dateCreated: 2022-07-06T21:41:55.238Z
 ---
 
 ![sono_evidence_tebex_photo.png](/sono_evidence_tebex_photo.png)
+https://www.youtube.com/watch?v=jxTvYyDmJAE
 # Evidence Camera
 
 ## Features
