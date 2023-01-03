@@ -2,7 +2,7 @@
 title: ATM Robbery - Getting Started
 description: This page will walk you through getting and installing the ATM Robbery script.
 published: true
-date: 2023-01-03T23:18:35.679Z
+date: 2023-01-03T23:18:48.985Z
 tags: 
 editor: markdown
 dateCreated: 2022-12-22T00:07:47.214Z
@@ -185,8 +185,8 @@ Config.lang = {
         noVehNearby = 'There is no vehicle nearby!',
         noAtmNearby = 'There is no ATM nearby!',
         noAttachedAtm = 'There is no ATM attached!',
-        loadAtm = 'Press ~g~R ~w~to load the ATM into your vehicle',
-        unloadAtm = 'Press ~g~R ~w~to unload the ATM from your vehicle'
+        loadAtm = 'Press ~g~H ~w~to load the ATM into your vehicle',
+        unloadAtm = 'Press ~g~H ~w~to unload the ATM from your vehicle'
     },
     commands = {
         alrSpawning = '[Err] You are already spawning an ATM. Please cancel current spawn first!',
