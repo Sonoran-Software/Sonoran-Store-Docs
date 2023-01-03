@@ -2,7 +2,7 @@
 title: ATM Robbery - Getting Started
 description: This page will walk you through getting and installing the ATM Robbery script.
 published: true
-date: 2022-12-22T00:07:47.214Z
+date: 2023-01-03T23:18:35.679Z
 tags: 
 editor: markdown
 dateCreated: 2022-12-22T00:07:47.214Z
@@ -66,7 +66,7 @@ Config.permissionMode = "ace" -- Available Options: ace, framework, custom
 
 -- Ace Permissions Section --
 Config.acePerms = {
-    aceObjectPlace = "sonoran.atms", -- Select the ace for placing new ATM's and using admin repair
+    aceObjectPlace = "sonoran.atms", -- Select the ace for placing new ATM's
     aceObjectNotifications = "sonoran.police", -- Select the ace for receiving in-game notifications
     aceObjectCanSteal = "sonoran.theif", -- Select the ace for being allowed to steal ATM's
 }
@@ -75,8 +75,8 @@ Config.acePerms = {
 Config.framework = {
     frameworkType = "qb-core", -- This setting controls which framework is in use options are esx or qb-core
     policeJobNames = {"police"}, -- An array of job names that should receive notifications
-    allowedToPlaceGroups = {"admin"}, -- The permission group that should be allowed to place new systems
-    theifJobNames = {"unemployed"}, -- An array of job names that should receive notification_message
+    allowedToPlaceGroups = {"admin"}, -- The permission group that should be allowed to place new atms
+    theifJobNames = {"unemployed"}, -- An array of job names that should be allowed to initiate an ATM robbery
     useTheifJobListAsBlacklist = false, -- This will treat the theif job list as a blacklist rather than a whitelist
     reward = {
         amountRange = {10000, 20000}, -- The range of money they can recieve
@@ -90,15 +90,13 @@ Config.framework = {
 
 -- Configuration For Custom Permissions Handling --
 Config.custom = {
-    checkPermsServerSide = true, -- If true the permission event will be sent out to the server side resource, this is recommended
-    permissionCheck = function(_, type) -- This function will always be called server side.
+    check_perms_server_side = true, -- If true the permission event will be sent out to the server side resource, this is recommended
+    permissionCheck = function(source, type) -- This function will always be called server side.
         if type == 0 then -- Check for admin
             return true or false -- Return true if they have admin, return false if they don't
         elseif type == 1 then -- Check for notification perms
             return true or false -- Return true if they have permissions, return false if they don't
-        elseif type == 2 then -- Check for hacker perms
-            return true or false -- Return true if they have permissions, return false if they don't
-        elseif type == 3 then -- Check for repair perms
+        elseif type == 2 then -- Check for perms to steal the ATM
             return true or false -- Return true if they have permissions, return false if they don't
         end
     end
@@ -122,10 +120,10 @@ Config.commands = {
 
 -- Feature Settings That Don't Require Other Resources --
 Config.standaloneFeatures = {
-    showNotificationBlipsForPolice = true, -- Should police see a blip when a car is pinged?
+    showNotificationBlipsForPolice = true, -- Should police see a blip when an ATM is being stolen?
     blipsExpireAfterSeconds = 90, -- Number of seconds before the blip type above is removed
     enable_auto_update = true, -- Should the script automatically update itself, it will check for updates regardless
-    delayForNotifyingStealing = 10000, -- Time in miliseconds between a successful hack and notification going out, set to 0 to disable delay
+    delayForNotifyingStealing = 10000, -- Time in miliseconds between initial drilling initiation and notification going out, set to 0 to disable delay
     distToDrill = 10, -- The distance a player must be from the inital location of the ATM robbery to begin drilling into the atm
 }
 
@@ -141,8 +139,8 @@ Config.standaloneFeatures = {
 Config.integration = {
     SonoranCAD_integration = {
         use = true, -- Should any of the options below be used? Integration with this script requires at least a Plus subscription.
-        addLiveMapBlips = true, -- Should blips for the power systems be added to the live map? This requires the Pro SonoranCAD plan
-        enable911Calls = true, -- Should 911 calls be generated in the CAD when a BOLO vehicle or speeder is detected?
+        addLiveMapBlips = true, -- Should blips for the ATMs be added to the live map? This requires the Pro SonoranCAD plan
+        enable911Calls = true, -- Should 911 calls be generated in the CAD when a ATM is being stolen?
         ["911_caller"] = "Automated ATM Alerts", -- Who should the 911 call appear to be from?
         ["911_message"] = "{{EVENT_TYPE}} Alert at ATM with name {{ATM_NAME}}", -- Configurable 911 call description
         nearestPostalPlugin = "nearest-postal", -- If you want to use postals, what is the exact name of your postals script?
