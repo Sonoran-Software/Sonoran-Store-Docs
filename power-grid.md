@@ -2,7 +2,7 @@
 title: Power Grid
 description: 
 published: true
-date: 2022-08-04T18:55:00.162Z
+date: 2023-01-04T22:32:17.554Z
 tags: 
 editor: markdown
 dateCreated: 2022-05-11T21:57:17.341Z
@@ -44,10 +44,12 @@ These are the default names of commands, they may have been modified by the serv
 The model on the left is named `prop_street_light_solar_panel` and the model is named `prop_powerbox`.
 
 ## Changelog
-
-### v1.0.0
-- `Initial Release`
-### v1.0.1
-- `Fixed: discord.CHANGEME.lua file added to escrowignore (required config file for configuring discord webhooks)`
+### v1.0.7
+#### Feature
+- `Add color indicators to hacking mini game. Green numbers mean both the number entered is correct and in the correct position. Red numbers mean the number is either incorrect or not in the correct position`
 ### v1.0.3
 - `Includes a possible fix for higher than normal server timings on player join for certain ESX configurations`
+### v1.0.1
+- `Fixed: discord.CHANGEME.lua file added to escrowignore (required config file for configuring discord webhooks)`
+### v1.0.0
+- `Initial Release`
