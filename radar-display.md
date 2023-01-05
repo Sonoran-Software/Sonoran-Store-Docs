@@ -2,13 +2,15 @@
 title: Radar Display 
 description: Run Radar Like Never Before
 published: true
-date: 2022-11-02T22:33:14.968Z
+date: 2023-01-05T20:53:37.967Z
 tags: 
 editor: markdown
 dateCreated: 2022-10-24T17:51:01.047Z
 ---
 
 ![rada1.png](/radar/rada1.png)
+https://www.youtube.com/watch?v=mZqMl9oNQcQ
+
 ## Features
 - Ability to operate standalone
 ![in_game_prop_radar.png](/radar/in_game_prop_radar.png)
