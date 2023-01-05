@@ -2,7 +2,7 @@
 title: Shot Spotter
 description: Quickly be alerted when gunshots are detected around San Andreas
 published: true
-date: 2022-11-02T18:49:54.716Z
+date: 2023-01-05T20:56:31.263Z
 tags: 
 editor: markdown
 dateCreated: 2022-03-24T01:45:51.587Z
@@ -34,6 +34,10 @@ dateCreated: 2022-03-24T01:45:51.587Z
 | `togglespotter` | Toggle the spotter with the specified ID | Admin
 
 ## Changelog
+### v1.2.5
+#### Hotpatch
+- `Fixed a startup failure when the Sonoran CAD integration option was disabled`
+
 ### v1.2.4
 #### Hotpatch
 - `Fixed QB Core & ESX permissions on "spawnnewspotter" command`
