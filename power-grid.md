@@ -2,7 +2,7 @@
 title: Power Grid
 description: 
 published: true
-date: 2023-01-04T22:32:17.554Z
+date: 2023-01-05T20:48:09.991Z
 tags: 
 editor: markdown
 dateCreated: 2022-05-11T21:57:17.341Z
@@ -10,6 +10,7 @@ dateCreated: 2022-05-11T21:57:17.341Z
 
 # Power Grid
 ![power-grid.png](/power-system/power-grid.png)
+https://youtu.be/3JhmcqlOWv8
 ## Features
 
 -   Ability to operate standalone
