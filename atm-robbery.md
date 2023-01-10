@@ -2,7 +2,7 @@
 title: ATM Robbery
 description: Steal and break into the ATM
 published: true
-date: 2023-01-03T19:00:28.834Z
+date: 2023-01-10T19:27:36.605Z
 tags: 
 editor: markdown
 dateCreated: 2022-12-21T23:43:16.899Z
@@ -22,6 +22,9 @@ dateCreated: 2022-12-21T23:43:16.899Z
 ![gun_placement.png](/atm-robbery/gun_placement.png)
 ![auto-update-feature.png](/speed-camera/auto-update-feature.png)
 ## Changelog
+### v1.0.1
+#### Features
+- `feat: Add Ox_Inventory & Quasar Inventory support`
 ### v1.0.1
 #### Hotfix
 - `fix: Typo in config.lua`
