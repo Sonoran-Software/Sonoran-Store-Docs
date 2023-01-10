@@ -2,7 +2,7 @@
 title: Five Bundle
 description: Learn more about the Five Bundle partnership!
 published: true
-date: 2022-12-27T22:47:09.422Z
+date: 2023-01-10T23:52:10.531Z
 tags: 
 editor: markdown
 dateCreated: 2022-12-05T17:46:26.546Z
@@ -79,6 +79,9 @@ At time of writing this includes:
 - Vehicle Rescue
 - Water Monitor
 - Weapon Lanyard
+
+## Where can I find vehicle livery/lighting/texture templates?
+For templates available you will find a `Templates` folder in the keymaster resource download. If there is not a template for your desired vehicle, there is not one available for that vehicle at this time. All Redneck Mods vehicles have been updated on `January 10th, 2023` to have the complete list of available templates.
 
 ## Cancelations and Refunds
 ### Where can I cancel my subscription?
