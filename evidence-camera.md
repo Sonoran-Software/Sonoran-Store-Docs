@@ -2,7 +2,7 @@
 title: Evidence Camera
 description: Easily take photos and upload them to CAD/ Discord 
 published: true
-date: 2023-01-03T23:06:41.900Z
+date: 2023-01-10T19:08:31.584Z
 tags: 
 editor: markdown
 dateCreated: 2022-07-06T21:41:55.238Z
@@ -23,6 +23,9 @@ dateCreated: 2022-07-06T21:41:55.238Z
 | `/ecam` | Toggle the evidence camera | None |
 
 ## Changelog
+### v1.2.2
+#### Feature
+- `Added Quasar Inventory support`
 ### v1.2.0
 #### Bugfixes 
 - `Fixed numerous ESX bugs`
