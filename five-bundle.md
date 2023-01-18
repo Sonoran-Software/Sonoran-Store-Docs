@@ -2,7 +2,7 @@
 title: Five Bundle
 description: Learn more about the Five Bundle partnership!
 published: true
-date: 2023-01-18T00:26:14.210Z
+date: 2023-01-18T00:27:28.184Z
 tags: 
 editor: markdown
 dateCreated: 2022-12-05T17:46:26.546Z
@@ -83,7 +83,7 @@ At time of writing this includes:
 ## Where can I find vehicle livery/lighting/texture templates?
 For templates available you will find a `Templates` folder in the keymaster resource download. If there is not a template for your desired vehicle, there is not one available for that vehicle at this time. All Redneck Mods vehicles have been updated on `January 10th, 2023` to have the complete list of available templates.
 
-## Are Redneck Mods Developer Assets Included in Five Bundle?
+## Are Redneck Mods Developer Assets/Liveries Included in Five Bundle?
 Not currently, no. These are not considered FiveM™ specific assets and are not distributed via the CFX.re Keymaster/Escrow system. These assets may be purchased individually at [redneckmods.com](https://www.redneckmods.com/category/dev-assets).
 
 ## Cancelations and Refunds
