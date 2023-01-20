@@ -1,8 +1,8 @@
 ---
 title: Terms and Policies
-description: Terms of Service, Privacy Policy, Refund and Purchase Policy
+description: Frequently Asked Questions, Terms of Service, Privacy Policy, Refund and Purchase Policy for Sonoran Store and Five Bundle
 published: true
-date: 2023-01-20T23:07:01.697Z
+date: 2023-01-20T23:23:22.403Z
 tags: 
 editor: markdown
 dateCreated: 2023-01-20T23:07:01.697Z
