@@ -2,7 +2,7 @@
 title: Terms and Policies
 description: Frequently Asked Questions, Terms of Service, Privacy Policy, Refund and Purchase Policy for Sonoran Store and Five Bundle
 published: true
-date: 2023-01-20T23:24:47.993Z
+date: 2023-01-20T23:29:41.783Z
 tags: 
 editor: markdown
 dateCreated: 2023-01-20T23:07:01.697Z
@@ -20,16 +20,16 @@ Sonoran Store and Five Bundle share the same great Refund and Purchase Policy wi
 # FAQ
 ## Cancelations and Refunds
 ### Where can I cancel my subscription?
-Customers may cancel their Five Bundle subscription at anytime via [Tebex.io's System](https://checkout.tebex.io/payment-history/) or via cancellation link included in the original purchase and subscription renewal emails. All assets will remain available until the end of the current subscription term.
+Customers may cancel their Five Bundle or SonoranM subscription at anytime via [Tebex.io's System](https://checkout.tebex.io/payment-history/) or via cancellation link included in the original purchase and subscription renewal emails. All assets will remain available until the end of the current subscription term.
 
 ### If I cancel my subscription my purchase do I keep the content?
-All items in the Five Bundle are protected via Tebex and CFX's asset escrow encryption system. All assets will remain available until the end of the current subscription term.
+All items in the Five Bundle and SonoranM subscriptions are protected via Tebex and CFX's asset escrow encryption system. All assets will remain available until the end of the current subscription term.
 
 ### Where can I request a refund?
 [Refunds are offered within 48 hours of any purchase or renewal](https://sonoransoftware.com/assets/files/internal/purchase_policy.pdf). Refunds must be requested on the support.sonoransoftware.com portal. Requesting a refund will revoke access to all Five Bundle content immediately.
 
 ## Customer Support
-### Sonoran Store
+### Sonoran Store / SonoranM
 All support requests for purchases and items from Sonoran Store may be directed to:
 support.sonoransoftware.com
 
