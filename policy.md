@@ -2,7 +2,7 @@
 title: Terms and Policies
 description: Frequently Asked Questions, Terms of Service, Privacy Policy, Refund and Purchase Policy for Sonoran Store and Five Bundle
 published: true
-date: 2023-01-20T23:23:22.403Z
+date: 2023-01-20T23:24:47.993Z
 tags: 
 editor: markdown
 dateCreated: 2023-01-20T23:07:01.697Z
@@ -20,7 +20,7 @@ Sonoran Store and Five Bundle share the same great Refund and Purchase Policy wi
 # FAQ
 ## Cancelations and Refunds
 ### Where can I cancel my subscription?
-Customers may cancel the purchase at anytime via [FiveBundle.com](https://fivebundle.com). All assets will remain available until the end of the current subscription term.
+Customers may cancel their Five Bundle subscription at anytime via [Tebex.io's System](https://checkout.tebex.io/payment-history/) or via cancellation link included in the original purchase and subscription renewal emails. All assets will remain available until the end of the current subscription term.
 
 ### If I cancel my subscription my purchase do I keep the content?
 All items in the Five Bundle are protected via Tebex and CFX's asset escrow encryption system. All assets will remain available until the end of the current subscription term.
