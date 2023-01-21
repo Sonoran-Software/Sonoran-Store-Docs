@@ -2,7 +2,7 @@
 title: Shot Spotter - Getting Started
 description: This page will walk you through getting and installing the script.
 published: true
-date: 2022-05-24T02:47:13.804Z
+date: 2023-01-21T21:30:12.772Z
 tags: 
 editor: markdown
 dateCreated: 2022-03-24T01:46:37.738Z
@@ -15,7 +15,7 @@ After purchasing the script through the sonoran store you may [download the scri
 ## Install the Script
 1. Inside the script package you just extracted will be two folders. Copy both to a folder in your server's resources folder called `[sonoranscripts]` note the `[]` in the name, without them it will not work.
 ![directory-example.png](/shot-spotter/directory-example.png)
-2. In the `sonoran-shotspotter/config` folder there will be a file called `config.CHANGEME.lua` you should rename that to be config.lua and configure the settings inside as you would like them to be configured based on the configuration documentation below. In that same folder will also be a file called `spotters.CHANGEME.json` which you should rename to `spotters.json` and use to manually place cameras based on the existing template, note you can also use the gun placement system in game.
+2. In the `sonoran-shotspotter/config` folder there will be a file called `config.CHANGEME.lua` you should rename that to be config.lua and configure the settings inside as you would like them to be configured based on the configuration documentation below. In that same folder will also be a file called `spotters.CHANGEME.json` which you should rename to `spotters.json` and use to manually place cameras based on the existing template, note you can also use the gun placement system in game. You will also find a file called `discord.CHANGEME.lua`, this should be named to `discord.lua`
 ![files-example1.png](/shot-spotter/files-example1.png)
 ![files-example2.png](/shot-spotter/files-example2.png)
 3. Finally, in your `server.cfg` add the following:
