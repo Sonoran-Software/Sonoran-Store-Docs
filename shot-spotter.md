@@ -2,7 +2,7 @@
 title: Shot Spotter
 description: Quickly be alerted when gunshots are detected around San Andreas
 published: true
-date: 2023-01-05T20:56:31.263Z
+date: 2023-01-21T21:28:55.217Z
 tags: 
 editor: markdown
 dateCreated: 2022-03-24T01:45:51.587Z
@@ -34,6 +34,12 @@ dateCreated: 2022-03-24T01:45:51.587Z
 | `togglespotter` | Toggle the spotter with the specified ID | Admin
 
 ## Changelog
+### v1.2.6
+#### Hotpatch
+- `Fixed numerous bugs within the script`
+#### Feature
+- `Added discord.lua config file for security`
+
 ### v1.2.5
 #### Hotpatch
 - `Fixed a startup failure when the Sonoran CAD integration option was disabled`
