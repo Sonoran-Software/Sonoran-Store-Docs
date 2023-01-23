@@ -2,7 +2,7 @@
 title: Shot Spotter
 description: Quickly be alerted when gunshots are detected around San Andreas
 published: true
-date: 2023-01-21T21:28:55.217Z
+date: 2023-01-23T18:36:06.428Z
 tags: 
 editor: markdown
 dateCreated: 2022-03-24T01:45:51.587Z
@@ -35,10 +35,25 @@ dateCreated: 2022-03-24T01:45:51.587Z
 
 ## Changelog
 ### v1.2.6
-#### Hotpatch
-- `Fixed numerous bugs within the script`
-#### Feature
+#### Bug Fixes
+- `Fixed bug creating multiple 911 calls for single shooting event`
+- `Fixed blips not going away when toggling off shot spotting`
+- `Fixed core shot spotter not sending alerts to ALL on duty officers`
+- `Fixed core shot spotter sending alerts to shooting source`
+#### Refactor
 - `Added discord.lua config file for security`
+- `Removed Discord configuration from config.lua for security`
+- `Update FxManifest.lua to only pass discord.lua to server side`
+- `Revamped config.lua file (See key changes below)`
+- `Move Utilities to shared scripts`
+- `Optimize CAD API calls`
+- `Remove reduntant/ unused loops and threads`
+#### `config.lua` Changes
+- `Moved network_latency, notifications, commands, check_dispatch to standalone sections`
+- `Changed notifications.type to be string | Available types: native, pNotify, okokNotify`
+- `Remove all Discord options`
+- `Bump version to 1.3`
+
 
 ### v1.2.5
 #### Hotpatch
