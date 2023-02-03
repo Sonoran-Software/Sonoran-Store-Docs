@@ -2,7 +2,7 @@
 title: Five Bundle
 description: Learn more about the Five Bundle partnership!
 published: true
-date: 2023-01-20T23:07:00.152Z
+date: 2023-02-03T00:51:33.921Z
 tags: 
 editor: markdown
 dateCreated: 2022-12-05T17:46:26.546Z
@@ -107,7 +107,7 @@ support.sonoransoftware.com
 
 **Redneck Modifications Vehicles:**
 Discord role is granted via Tebex purchase.
-discord.redneckmods.com
+support.redneckmods.com
 
 **London Studios Scripts:**
 Discord role is granted via Tebex purchase.
