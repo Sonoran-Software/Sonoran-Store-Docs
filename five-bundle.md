@@ -2,7 +2,7 @@
 title: Five Bundle
 description: Learn more about the Five Bundle partnership!
 published: true
-date: 2023-02-03T00:51:33.921Z
+date: 2023-02-03T01:31:30.364Z
 tags: 
 editor: markdown
 dateCreated: 2022-12-05T17:46:26.546Z
@@ -91,7 +91,7 @@ Not currently, no. These are not considered FiveM™ specific assets and are not
 Customers may cancel their Five Bundle subscription at anytime via [Tebex.io's System](https://checkout.tebex.io/payment-history/) or via cancellation link included in the original purchase and subscription renewal emails. All assets will remain available until the end of the current subscription term.
 
 ### If I cancel my subscription do I keep the content?
-All items in the Five Bundle are protected via Tebex and CFX's asset escrow encryption system. All assets will remain available until the end of the current subscription term.
+All items in the Five Bundle are protected via Tebex and CFX's asset escrow encryption system. Due to Tebex limitations, all assets are immediately revoked upon cancellation and are not available for the remainder of the term.
 
 ### Where can I request a refund?
 [Refunds are offered within 48 hours of any purchase or renewal](https://sonoransoftware.com/assets/files/internal/purchase_policy.pdf). Refunds must be requested on the support.sonoransoftware.com portal. Requesting a refund will revoke access to all Five Bundle content immediately.
