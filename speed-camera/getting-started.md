@@ -2,7 +2,7 @@
 title: Speed Camera - Getting Started
 description: This page will walk you through getting and installing the Speed Camera script.
 published: true
-date: 2022-05-26T18:19:46.278Z
+date: 2023-02-06T19:27:59.881Z
 tags: 
 editor: markdown
 dateCreated: 2022-03-31T19:23:48.740Z
@@ -179,6 +179,9 @@ Config.notifications = {
     notification_message = "{{EVENT_TYPE}} Alert\nLicense Plate: {{PLATE}}\nSpeed: {{SPEED}} {{SPEED_UNIT}}\nCamera: {{CAMERA_NAME}}" -- The text of the notification
 }
 ```
+
+### Note
+In order for auto fines to function properly, Config.permission_mode **MUST** be "framework"
 
 ```lua
 DiscordConfig = {
