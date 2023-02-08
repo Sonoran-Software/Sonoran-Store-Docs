@@ -2,7 +2,7 @@
 title: Evidence Camera
 description: Easily take photos and upload them to CAD/ Discord 
 published: true
-date: 2023-01-17T20:12:11.521Z
+date: 2023-02-08T21:23:49.513Z
 tags: 
 editor: markdown
 dateCreated: 2022-07-06T21:41:55.238Z
@@ -23,6 +23,9 @@ dateCreated: 2022-07-06T21:41:55.238Z
 | `/ecam` | Toggle the evidence camera | None |
 
 ## Changelog
+### v1.2.4
+#### Security Update
+- `Move Discord webhook configuration to strictly server sided file to prevent client dumps`
 ### v1.2.3
 #### Hotfix
 - `Fix Ox_Inventory support with latest update`
