@@ -2,7 +2,7 @@
 title: Evidence Camera - Getting Started
 description: This page will walk you through getting and installing the script.
 published: true
-date: 2022-10-06T11:35:39.787Z
+date: 2023-02-08T21:23:04.778Z
 tags: 
 editor: markdown
 dateCreated: 2022-07-06T21:52:03.851Z
@@ -15,7 +15,7 @@ After purchasing the script through the sonoran store you may [download the scri
 ## Install the Script
 1. Inside the script package you just extracted will be two folders. Copy both to a folder in your server's resources folder called `[sonoranscripts]` note the `[]` in the name, without them it will not work.
 ![directory-example_(1).png](/evidence-camera/directory-example_(1).png)
-2. In the `evidence-cam/config` folder there will be a file called `config.CHANGEME.lua` you should rename that to be config.lua and configure the settings inside as you would like them to be configured based on the configuration documentation below. In that same folder will also be a file called `photos.CHANGEME.json` which is a storage file for all photos that are take and "printed". Change the name to `photos.json`.
+2. In the `evidence-cam/config` folder there will be a file called `config.CHANGEME.lua` you should rename that to be config.lua and configure the settings inside as you would like them to be configured based on the configuration documentation below. In that same folder will also be a file called `photos.CHANGEME.json` which is a storage file for all photos that are take and "printed". Change the name to `photos.json`. You will also find a file called `discord.CHANGEME.lua`, this will contain your needed Discord Webhook configuration, but will protect it from any client side dumps. Change this file name to `discord.lua`. 
 > Only ever change the name of the `photos.json` **ON INSTALL** not on subsequent updates. {.is-danger}
 
 ![config-folder.png](/evidence-camera/config-folder.png)
