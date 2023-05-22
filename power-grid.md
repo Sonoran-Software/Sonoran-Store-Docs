@@ -2,7 +2,7 @@
 title: Power Grid
 description: 
 published: true
-date: 2023-01-05T20:48:09.991Z
+date: 2023-05-22T21:34:32.018Z
 tags: 
 editor: markdown
 dateCreated: 2022-05-11T21:57:17.341Z
@@ -45,6 +45,10 @@ These are the default names of commands, they may have been modified by the serv
 The model on the left is named `prop_street_light_solar_panel` and the model is named `prop_powerbox`.
 
 ## Changelog
+### v1.0.9
+#### Hotpatch
+- `Add restart handling to prevent crashing`
+
 ### v1.0.7
 #### Feature
 - `Add color indicators to hacking mini game. Green numbers mean both the number entered is correct and in the correct position. Red numbers mean the number is either incorrect or not in the correct position`
