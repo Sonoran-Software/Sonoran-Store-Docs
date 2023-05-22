@@ -2,7 +2,7 @@
 title: Shot Spotter
 description: Quickly be alerted when gunshots are detected around San Andreas
 published: true
-date: 2023-01-23T18:36:06.428Z
+date: 2023-05-22T21:32:36.065Z
 tags: 
 editor: markdown
 dateCreated: 2022-03-24T01:45:51.587Z
@@ -54,6 +54,10 @@ dateCreated: 2022-03-24T01:45:51.587Z
 - `Remove all Discord options`
 - `Bump version to 1.3`
 
+
+### v1.2.8
+#### Hotpatch
+- `Add restart handling to prevent crashing`
 
 ### v1.2.5
 #### Hotpatch
