@@ -2,7 +2,7 @@
 title: Five Bundle
 description: Learn more about the Five Bundle partnership!
 published: true
-date: 2023-05-23T19:57:22.394Z
+date: 2023-05-23T20:02:55.561Z
 tags: 
 editor: markdown
 dateCreated: 2022-12-05T17:46:26.546Z
@@ -55,11 +55,9 @@ At time of writing this includes:
 - Custom Vinewood Sign
 - Decontamination Tent
 - Fire Supply Line
-- Fire Supply Line
 - Fire Tools
 - Helicopter Rescue
 - Police Grappler
-- Police Shields
 - Police Shields
 - Rescue Cushion
 - Rope Rescue Tripod & Basket Resource
@@ -105,10 +103,8 @@ support.sonoransoftware.com
 **Sonoran Store Items:**
 support.sonoransoftware.com
 
-**Redneck Modifications Vehicles:**
-Discord role is granted via Tebex purchase.
+**Redneck Modifications Items:**
 support.redneckmods.com
 
-**London Studios Scripts:**
-Discord role is granted via Tebex purchase.
-discord.londonstudios.net
+**London Studios Items:**
+support.londonstudios.net
