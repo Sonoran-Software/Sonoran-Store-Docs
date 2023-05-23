@@ -2,7 +2,7 @@
 title: Five Bundle
 description: Learn more about the Five Bundle partnership!
 published: true
-date: 2023-02-03T19:13:05.803Z
+date: 2023-05-23T19:57:22.394Z
 tags: 
 editor: markdown
 dateCreated: 2022-12-05T17:46:26.546Z
@@ -18,7 +18,7 @@ With nearly $6,000 in content value, [Five Bundle](https://fivebundle.com) grant
 - [Sonoran Store](https://sonoran.store)
 - [London Studios](https://londonstudios.net)
 
-Along with frequently new releases from Redneck, Sonoran, and London!
+Along with frequent new releases from Redneck, Sonoran, and London!
 
 Backed by our [48-hour money back guarantee](https://sonoransoftware.com/assets/files/internal/purchase_policy.pdf), Five Bundle is the ultimate content package for your FiveM™ community!
 
