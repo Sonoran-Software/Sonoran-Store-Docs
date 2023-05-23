@@ -2,7 +2,7 @@
 title: Five Bundle
 description: Learn more about the Five Bundle partnership!
 published: true
-date: 2023-05-23T20:02:55.561Z
+date: 2023-05-23T20:38:14.280Z
 tags: 
 editor: markdown
 dateCreated: 2022-12-05T17:46:26.546Z
@@ -108,3 +108,16 @@ support.redneckmods.com
 
 **London Studios Items:**
 support.londonstudios.net
+
+## Product Documentation
+You can find documentation on the products included in Five Bundle in the following locations:
+
+**Sonoran Store Itmes:**
+[docs.sonoran.store](https://docs.sonoran.store)
+
+**Redneck Modifications Items:**
+- Some items come with a PDF manual in the resource files (Note: many items do not and will not have manuals created for them).
+- Additional information may be available in the [Redneck Mods discord](https://discord.gg/redneckmods)
+
+**London Studios Items:**
+docs.londonstudios.net
