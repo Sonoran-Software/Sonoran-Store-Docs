@@ -2,7 +2,7 @@
 title: Radar Detector/ Jammer  - Getting Started
 description: This page will walk you through getting, installing and using the Radar Detector script.
 published: false
-date: 2023-06-05T22:11:30.931Z
+date: 2023-06-05T22:19:28.303Z
 tags: 
 editor: markdown
 dateCreated: 2023-06-05T22:05:11.281Z
@@ -76,8 +76,8 @@ Config.acePerms = {
 Config.framework = {
     frameworkType = "qb-core", -- This setting controls which framework is in use options are esx or qb-core
     inventoryType = "normal", -- Which inventory you would like to use normal, quasar, ox_inventory (OX Will only work for ESX Legacy as of now)
-    theifJobNames = {"unemployed"}, -- An array of job names that should be allowed to use the radar menu
-    useTheifJobListAsBlacklist = false, -- This will treat the theif job list as a blacklist rather than a whitelist
+    civilianJobNames = {"unemployed"}, -- An array of job names that should be allowed to use the radar menu
+    useCivilianJobListAsBlacklist = false, -- This will treat the theif job list as a blacklist rather than a whitelist
 }
 
 -- Configuration For Custom Permissions Handling --
@@ -125,8 +125,8 @@ Config.blacklistedCars = {
 | `aceObjectUseMenu` | Select the ace premission allowed to use the radar detector menu | `sonoran.radardetector` | String |
 | `frameworkType` | This setting controls which framework is in use options are esx or qb-core | `qb-core` | String |
 | `inventoryType` | Which inventory you would like to use normal, quasar, ox_inventory (OX Will only work for ESX Legacy as of now) | `normal` | String |
-| `theifJobNames` | An array of job names that should be allowed to use the radar menu | `{"unemployed"}` | Table |
-| `useTheifJobListAsBlacklist` | This will treat the theif job list as a blacklist rather than a whitelist | `false` | Boolean |
+| `civilianJobNames` | An array of job names that should be allowed to use the radar menu | `{"unemployed"}` | Table |
+| `useCivilianJobListAsBlacklist` | This will treat the civilian job list as a blacklist rather than a whitelist | `false` | Boolean |
 | `playRandomSounds` | Should random sounds be played when the radar is powered on? | `true` | Boolean |
 | `randomSounds` | An array of sounds that should be played randomly when the radar is powered on | `{"x_band", "k_band", "ka_band", "laser", "gps_connected"}` | Table |
 | `randomSoundInterval` | How often in minutes should a random sound be played if a radar is on? | `5` | Number |
