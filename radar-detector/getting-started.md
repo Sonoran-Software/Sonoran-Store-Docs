@@ -2,7 +2,7 @@
 title: Radar Detector/ Jammer  - Getting Started
 description: This page will walk you through getting, installing and using the Radar Detector script.
 published: false
-date: 2023-06-05T22:10:57.001Z
+date: 2023-06-05T22:11:30.931Z
 tags: 
 editor: markdown
 dateCreated: 2023-06-05T22:05:11.281Z
@@ -18,7 +18,7 @@ After purchasing the script through the sonoran store you may [download the scri
 
 > You must use the Sonoran Fork of WK_Wars2x found [here](https://github.com/Sonoran-Software/wk_wars2x/releases/latest).
 >
-> Minimum version required: `v1.3.3-sonoran`
+> Minimum version required: `v1.3.4-sonoran`
 {.is-warning}
 
 > If you are using the Sonoran CAD FiveM Integration, **DO NOT** install a second copy of WK_Wars2x, it is included and updated with the `sonorancad` resource.
