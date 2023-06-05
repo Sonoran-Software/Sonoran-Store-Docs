@@ -2,7 +2,7 @@
 title: Radar Detector/ Jammer  - Getting Started
 description: This page will walk you through getting, installing and using the Radar Detector script.
 published: true
-date: 2023-06-05T22:05:11.281Z
+date: 2023-06-05T22:08:06.377Z
 tags: 
 editor: markdown
 dateCreated: 2023-06-05T22:05:11.281Z
@@ -32,7 +32,7 @@ You can also download the latest release of the resource [here](https://github.c
 ## Install the Script
 
 1. Inside the script package you just extracted will be two folders. Copy both to a folder in your server's resources folder called `[sonoranscripts]` note the `[]` in the name, without them it will not work.
-![directory_example.png](/directory_example.png)
+![rcypcj7x.png](/radar-detector/rcypcj7x.png)
 2. In the `sonoran-radarddetector/config` folder there will be a file called `config.CHANGEME.lua` you should rename that to be `config.lua` and configure the settings inside as you would like them to be configured based on the configuration documentation below. In that same folder will also be a file called `detectors.CHANGEME.json` which you should rename to `detectors.json`.
 3. Finally, in your `server.cfg` add the following:
 
