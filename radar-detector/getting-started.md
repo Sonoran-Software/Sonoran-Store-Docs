@@ -2,7 +2,7 @@
 title: Radar Detector/ Jammer  - Getting Started
 description: This page will walk you through getting, installing and using the Radar Detector script.
 published: false
-date: 2023-06-05T22:19:28.303Z
+date: 2023-06-05T22:20:32.215Z
 tags: 
 editor: markdown
 dateCreated: 2023-06-05T22:05:11.281Z
@@ -77,7 +77,7 @@ Config.framework = {
     frameworkType = "qb-core", -- This setting controls which framework is in use options are esx or qb-core
     inventoryType = "normal", -- Which inventory you would like to use normal, quasar, ox_inventory (OX Will only work for ESX Legacy as of now)
     civilianJobNames = {"unemployed"}, -- An array of job names that should be allowed to use the radar menu
-    useCivilianJobListAsBlacklist = false, -- This will treat the theif job list as a blacklist rather than a whitelist
+    useCivilianJobListAsBlacklist = false, -- This will treat the civilian job list as a blacklist rather than a whitelist
 }
 
 -- Configuration For Custom Permissions Handling --
