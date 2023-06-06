@@ -2,7 +2,7 @@
 title: Radar Detector/ Jammer  - Getting Started
 description: This page will walk you through getting, installing and using the Radar Detector script.
 published: false
-date: 2023-06-05T22:20:32.215Z
+date: 2023-06-06T17:57:19.642Z
 tags: 
 editor: markdown
 dateCreated: 2023-06-05T22:05:11.281Z
@@ -32,9 +32,26 @@ You can also download the latest release of the resource [here](https://github.c
 ## Install the Script
 
 1. Inside the script package you just extracted will be two folders. Copy both to a folder in your server's resources folder called `[sonoranscripts]` note the `[]` in the name, without them it will not work.
-![rcypcj7x.png](/radar-detector/rcypcj7x.png)
+![directory_example.png](/radar-detector/directory_example.png)
 2. In the `sonoran-radarddetector/config` folder there will be a file called `config.CHANGEME.lua` you should rename that to be `config.lua` and configure the settings inside as you would like them to be configured based on the configuration documentation below. In that same folder will also be a file called `detectors.CHANGEME.json` which you should rename to `detectors.json`.
-3. Finally, in your `server.cfg` add the following:
+> Only ever change the name of the `detectors.json` **ON INSTALL** not on subsequent updates. {.is-danger}
+
+> **QBCore** Specific - Please follow `Step 3` to ensure inventory items have correct photos!{.is-warning}
+3. Drag the `radar_detector.png` from `\sonoran-radardetector\` into the following folder: `\resources\[qb]\qb-inventory\html\images`
+> **ESX Specific** Specific - Please follow `Step 4` to ensure inventory items work!{.is-warning}
+4. a.) Import the `ESX Installme.sql` file into your ESX database
+	 #### *If **NOT** using `ox_inventory` continue to step 5*
+	 b.) Add the following code to the `/ox_inventory/data/items.lua` file
+   ```lua
+   	['sonoran_radar_detector'] = {
+		label = 'Radar Detector/Jammer',
+		weight = 1,
+		stack = true,
+		close = true,
+		description = nil
+	},
+5. Finally, in your `server.cfg` add the following:
+> **NEVER** add `ensure sonoran-radardetector_helper` or `ensure [sonoranscripts]` to your server.cfg as this will lead to crashing under specific conditions. {.is-warning}
 
 ```
 ensure sonoran-radardetector
