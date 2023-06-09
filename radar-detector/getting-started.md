@@ -2,7 +2,7 @@
 title: Radar Detector/ Jammer  - Getting Started
 description: This page will walk you through getting, installing and using the Radar Detector script.
 published: false
-date: 2023-06-06T17:57:19.642Z
+date: 2023-06-09T07:38:42.798Z
 tags: 
 editor: markdown
 dateCreated: 2023-06-05T22:05:11.281Z
@@ -37,7 +37,7 @@ You can also download the latest release of the resource [here](https://github.c
 > Only ever change the name of the `detectors.json` **ON INSTALL** not on subsequent updates. {.is-danger}
 
 > **QBCore** Specific - Please follow `Step 3` to ensure inventory items have correct photos!{.is-warning}
-3. Drag the `radar_detector.png` from `\sonoran-radardetector\` into the following folder: `\resources\[qb]\qb-inventory\html\images`
+3. Drag the `radar_detector.png` from `/sonoran-radardetector/` into the following folder: `/resources/[qb]/qb-inventory/html/images`
 > **ESX Specific** Specific - Please follow `Step 4` to ensure inventory items work!{.is-warning}
 4. a.) Import the `ESX Installme.sql` file into your ESX database
 	 #### *If **NOT** using `ox_inventory` continue to step 5*
