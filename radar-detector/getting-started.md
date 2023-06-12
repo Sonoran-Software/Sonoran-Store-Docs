@@ -2,7 +2,7 @@
 title: Radar Detector/ Jammer  - Getting Started
 description: This page will walk you through getting, installing and using the Radar Detector script.
 published: false
-date: 2023-06-09T07:38:42.798Z
+date: 2023-06-12T03:23:21.592Z
 tags: 
 editor: markdown
 dateCreated: 2023-06-05T22:05:11.281Z
@@ -164,6 +164,9 @@ Config.blacklistedCars = {
 3. **Open the spawning menu**: In the radar detector menu, navigate to the "Spawning Menu" option and select it to open the spawning menu.
 
 4. **Spawn the prop**: Within the spawning menu, choose the desired prop and spawn it into the game world.
+> Note: If in framework mode you must have the `sonoran_radar_detector` object in your inventory to spawn
+{.is-warning}
+
 
 5. **Navigate to the attaching menu**: Use the "Backspace" or the designated key to go back in the menu and access the "Attaching Menu".
 
