@@ -2,7 +2,7 @@
 title: Radar Detector/ Jammer  - Getting Started
 description: This page will walk you through getting, installing and using the Radar Detector script.
 published: false
-date: 2023-06-13T20:31:14.187Z
+date: 2023-06-13T22:47:24.481Z
 tags: 
 editor: markdown
 dateCreated: 2023-06-05T22:05:11.281Z
@@ -34,7 +34,6 @@ You can also download the latest release of the resource [here](https://github.c
 1. Inside the script package you just extracted will be two folders. Copy both to a folder in your server's resources folder called `[sonoranscripts]` note the `[]` in the name, without them it will not work.
 ![directory_example.png](/radar-detector/directory_example.png)
 2. In the `sonoran-radarddetector/config` folder there will be a file called `config.CHANGEME.lua` you should rename that to be `config.lua` and configure the settings inside as you would like them to be configured based on the configuration documentation below.
-> Only ever change the name of the `detectors.json` **ON INSTALL** not on subsequent updates. {.is-danger}
 
 > **QBCore** Specific - Please follow `Step 3` to ensure inventory items have correct photos!{.is-warning}
 3. Drag the `radar_detector.png` from `/sonoran-radardetector/` into the following folder: `/resources/[qb]/qb-inventory/html/images`
