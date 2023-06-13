@@ -2,7 +2,7 @@
 title: Radar Detector/ Jammer  - Getting Started
 description: This page will walk you through getting, installing and using the Radar Detector script.
 published: false
-date: 2023-06-13T22:47:45.481Z
+date: 2023-06-13T22:47:54.888Z
 tags: 
 editor: markdown
 dateCreated: 2023-06-05T22:05:11.281Z
@@ -60,7 +60,7 @@ add_ace resource.sonoran-radardetector_helper command allow
 ```
 
 ## Configuring the Script
-Default config.lua:
+Default `config.lua`:
 ```lua
 Config = {}
 
