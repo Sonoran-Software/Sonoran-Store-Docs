@@ -2,7 +2,7 @@
 title: Radar Detector/ Jammer  - Getting Started
 description: This page will walk you through getting, installing and using the Radar Detector script.
 published: false
-date: 2023-06-12T03:23:47.994Z
+date: 2023-06-13T20:31:05.223Z
 tags: 
 editor: markdown
 dateCreated: 2023-06-05T22:05:11.281Z
@@ -33,7 +33,7 @@ You can also download the latest release of the resource [here](https://github.c
 
 1. Inside the script package you just extracted will be two folders. Copy both to a folder in your server's resources folder called `[sonoranscripts]` note the `[]` in the name, without them it will not work.
 ![directory_example.png](/radar-detector/directory_example.png)
-2. In the `sonoran-radarddetector/config` folder there will be a file called `config.CHANGEME.lua` you should rename that to be `config.lua` and configure the settings inside as you would like them to be configured based on the configuration documentation below. In that same folder will also be a file called `detectors.CHANGEME.json` which you should rename to `detectors.json`.
+2. In the `sonoran-radarddetector/config` folder there will be a file called `config.CHANGEME.lua` you should rename that to be `config.lua` and configure the settings inside as you would like them to be configured based on the configuration documentation below.
 > Only ever change the name of the `detectors.json` **ON INSTALL** not on subsequent updates. {.is-danger}
 
 > **QBCore** Specific - Please follow `Step 3` to ensure inventory items have correct photos!{.is-warning}
@@ -65,10 +65,9 @@ Default config.lua:
 ```lua
 Config = {}
 
-Config.debug_mode = true -- Enable debug mode
+Config.debug_mode = false -- Enable debug mode
 Config.configuration_version = 1.0
 Config.auto_update = true -- Enable auto updates
-Config.auto_config = false
 
 Config.lang = {
     addNewRadarHelp = 'Open the menu to begin spawning a new radar detector model',
