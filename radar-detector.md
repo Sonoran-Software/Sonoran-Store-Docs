@@ -2,13 +2,14 @@
 title: Radar Detector/ Jammer
 description: Detect and Jam Police Radar For A Smooth Getaway
 published: false
-date: 2023-06-13T22:11:41.897Z
+date: 2023-06-13T22:48:28.460Z
 tags: 
 editor: markdown
 dateCreated: 2023-06-05T21:43:30.132Z
 ---
 
 ![main_promov2.png](/radar-detector/main_promov2.png)
+https://www.youtube.com/watch?v=E3263PAPmfc
 ## Features
 - Ability to operate standalone
 ![in_game_prop.png](/radar-detector/in_game_prop.png)
