@@ -2,7 +2,7 @@
 title: Radar Detector/ Jammer  - Getting Started
 description: This page will walk you through getting, installing and using the Radar Detector script.
 published: false
-date: 2023-06-13T22:47:24.481Z
+date: 2023-06-13T22:47:45.481Z
 tags: 
 editor: markdown
 dateCreated: 2023-06-05T22:05:11.281Z
@@ -72,7 +72,43 @@ Config.lang = {
     addNewRadarHelp = 'Open the menu to begin spawning a new radar detector model',
     vehNotCompatible = 'This vehicle is not compatible with the radar detector placement system!',
     vehAlrRadar = 'This vehicle already has a valid radar!',
-    noItem = 'You do not have a radar detector in your inventory!'
+    noItem = 'You do not have a radar detector in your inventory!',
+    radarMenuHeader = 'Radar Detector',
+    creditsPanel = 'Made by',
+    spawningSubMenu = 'Radar Detector Spawning',
+    attachingSubMenu = 'Attaching',
+    deletionSubMenu = 'Are you sure?',
+    radarRemoteSubMenu = 'Radar Remote Menu',
+    radarRemoteMenuButton = "Radar Detector Remote",
+    radarAttachMenuButton = 'Attach Radar Detector',
+    deleteMenuButton = 'Delete Current Radar Detector',
+    spawnMenuButton = 'Spawn Radar Detector',
+    deletionConfirmationButton = 'Yes, I want to permanatly delete this radar detector',
+    deletionCancelButton = 'No, I want to keep this radar detector',
+    deletionCancelled = 'Radar detector deletion cancelled',
+    noDetectorFound = 'No Radar Detector is in this vehicle!',
+    toggleDetectionMode = 'Toggle Detection Mode',
+    detectionModeEnabled = 'Radar Detection Mode ~g~enabled~w~!',
+    detectionModeDisabled = 'Radar Detection Mode ~r~disabled~w~!',
+    toggleJammingMode = 'Toggle Jamming Mode',
+    jammingModeEnabled = 'Radar Jamming ~g~enabled~w~!',
+    jammingModeDisabled = 'Radar Jamming ~r~disabled~w~!',
+    toggleRadarPower = 'Toggle Radar Detector Power',
+    detectorPoweringUp = 'Radar Detector is powering ~g~up~w~!',
+    detectorPoweringDown = 'Radar Detector is powering ~r~down~w~!',
+    modelComboBox = 'Model:',
+    vehAlrRadarNoti = '~r~This vehicle already has a radar detector of this type',
+    notInVeh = '~r~You must be in a vehicle!',
+    objectName = 'Sonoran Laser/Radar Detector',
+    vehicleBone = 'Radar - Vehicle Bone',
+    radarNotInInv = '~r~You do not have a radar detector in your inventory!',
+    object = "Object:",
+    vehicleBoneComboBox = 'Vehicle Bone',
+    attachButton = 'Attach',
+    detachButton = 'Detach',
+    confirmPlacementButton = 'Confirm Placement',
+    cannotGoFaster = '~r~You cannot go any faster!',
+    cannotGoSlower = '~r~You cannot go any slower!',
 }
 
 Config.commands = {
