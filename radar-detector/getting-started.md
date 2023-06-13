@@ -2,7 +2,7 @@
 title: Radar Detector/ Jammer  - Getting Started
 description: This page will walk you through getting, installing and using the Radar Detector script.
 published: false
-date: 2023-06-13T22:47:54.888Z
+date: 2023-06-13T22:49:37.261Z
 tags: 
 editor: markdown
 dateCreated: 2023-06-05T22:05:11.281Z
@@ -190,6 +190,7 @@ Config.blacklistedCars = {
 | `/detectormenu` | This command will open the radar detector/jammer menu and allow you to configure and spawn your radar detector/jammer | Everyone or as configured |
 
 ## Usage 
+https://www.youtube.com/watch?v=eXGCLnaU-yg
 1. **Choose an eligible car**: Select a car that is compatible with the radar detector/jammer script.
 
 2. **Use the command `/detectormenu`**: Open the chatbox or console and type `/detectormenu` to bring up the radar detector menu.
