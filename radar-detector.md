@@ -1,8 +1,8 @@
 ---
 title: Radar Detector/ Jammer
 description: Detect and Jam Police Radar For A Smooth Getaway
-published: false
-date: 2023-06-13T22:48:28.460Z
+published: true
+date: 2023-06-13T22:51:55.910Z
 tags: 
 editor: markdown
 dateCreated: 2023-06-05T21:43:30.132Z
