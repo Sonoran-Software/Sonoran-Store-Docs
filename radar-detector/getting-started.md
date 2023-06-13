@@ -2,7 +2,7 @@
 title: Radar Detector/ Jammer  - Getting Started
 description: This page will walk you through getting, installing and using the Radar Detector script.
 published: false
-date: 2023-06-13T20:31:05.223Z
+date: 2023-06-13T20:31:14.187Z
 tags: 
 editor: markdown
 dateCreated: 2023-06-05T22:05:11.281Z
@@ -133,7 +133,6 @@ Config.blacklistedCars = {
 | `debug_mode` | Enable enhanced logging - typically for diagnosing issues | `false` | Boolean
 | `configuration_version` | The version your config file is currently set to. **DO NOT EDIT** | `1.0` | Int
 | `auto_update` | Enabled auto updates with our Sonoran Updater | `true` | Boolean
-| `auto_config` | For internal use only, do not edit | `false` | Boolean
 | `lang` | Here you will find our easy translations, simply edit if you would like to update the language used in the script | English | String
 | `radarDetectorMenu` | Command to open the radar detector menu | `detectormenu` | String |
 | `restricted` | Specifies if the detector menu should be restricted | `false` | Boolean |
