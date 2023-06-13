@@ -1,8 +1,8 @@
 ---
 title: Radar Detector/ Jammer  - Getting Started
 description: This page will walk you through getting, installing and using the Radar Detector script.
-published: false
-date: 2023-06-13T22:49:37.261Z
+published: true
+date: 2023-06-13T22:52:46.596Z
 tags: 
 editor: markdown
 dateCreated: 2023-06-05T22:05:11.281Z
