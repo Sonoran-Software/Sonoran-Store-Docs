@@ -2,7 +2,7 @@
 title: Five Bundle
 description: Learn more about the Five Bundle partnership!
 published: true
-date: 2023-05-23T20:38:14.280Z
+date: 2023-06-14T00:10:21.377Z
 tags: 
 editor: markdown
 dateCreated: 2022-12-05T17:46:26.546Z
@@ -38,6 +38,7 @@ At time of writing this includes:
 - [Mobile Command Center](https://www.sonoran.store/package/5287071)
 - [Radar Display](https://www.sonoran.store/package/5362825)
 - [ATM Robbery](https://www.sonoran.store/package/5441412)
+- [Radar Detector & Jammer](https://www.sonoran.store/package/5740634)
 
 ### **Redneck Modifications:**
 All **FiveM™** items listed on RedneckMods.com are included with the Five Bundle.
