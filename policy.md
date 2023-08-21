@@ -2,7 +2,7 @@
 title: Terms and Policies
 description: Frequently Asked Questions, Terms of Service, Privacy Policy, Refund and Purchase Policy for Sonoran Store and Five Bundle
 published: true
-date: 2023-08-21T22:31:56.063Z
+date: 2023-08-21T22:33:07.766Z
 tags: 
 editor: markdown
 dateCreated: 2023-01-20T23:07:01.697Z
@@ -47,3 +47,9 @@ support.redneckmods.com
 
 **London Studios Scripts:**
 support.londonstudios.net
+
+# Military and First Responder Discount
+![bannerbase.png](/bannerbase.png)
+As part of our commitment to serving the community, we deeply value the relentless effort and dedication displayed by our military and first responders, day in and day out. All U.S. military personnel, police officers, firefighters, and paramedics qualify for a 15% monthly discount.
+
+[Click here to learn more!](https://sonoran.link/service)
