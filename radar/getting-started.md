@@ -2,7 +2,7 @@
 title: Radar Display - Getting Started
 description: This page will walk you through getting and installing the Radar Display script.
 published: true
-date: 2022-11-01T23:29:02.833Z
+date: 2023-09-14T22:48:07.134Z
 tags: 
 editor: markdown
 dateCreated: 2022-10-24T17:52:19.625Z
@@ -33,14 +33,14 @@ You can also download the latest release of the resource [here](https://github.c
 
 1. Inside the script package you just extracted will be two folders. Copy both to a folder in your server's resources folder called `[sonoranscripts]` note the `[]` in the name, without them it will not work.
 ![directory_example.png](/directory_example.png)
-2. In the `sonoran-radardisplay/config` folder there will be a file called `config.CHANGEME.lua` you should rename that to be `config.lua` and configure the settings inside as you would like them to be configured based on the configuration documentation below. In that same folder will also be a file called `radars.CHANGEME.json` which you should rename to `radars.json` and use to manually place cameras based on the existing template, note you can also use the menu placement system in game. 
+2. In the `sonoran-radar/config` folder there will be a file called `config.CHANGEME.lua` you should rename that to be `config.lua` and configure the settings inside as you would like them to be configured based on the configuration documentation below. In that same folder will also be a file called `radars.CHANGEME.json` which you should rename to `radars.json` and use to manually place cameras based on the existing template, note you can also use the menu placement system in game. 
 3. Finally, in your `server.cfg` add the following:
 
 ```
-ensure sonoran-radardisplay
+ensure sonoran-radar
 
-add_ace resource.sonoran-radardisplay command allow
-add_ace resource.sonoran-radardisplay_helper command allow
+add_ace resource.sonoran-radar command allow
+add_ace resource.sonoran-radar_helper command allow
 ```
 ## Configuring the Script
 Default config.lua:
