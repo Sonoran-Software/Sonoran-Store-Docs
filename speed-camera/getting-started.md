@@ -2,7 +2,7 @@
 title: Speed Camera - Getting Started
 description: This page will walk you through getting and installing the Speed Camera script.
 published: true
-date: 2023-02-06T19:27:59.881Z
+date: 2023-11-02T20:48:24.605Z
 tags: 
 editor: markdown
 dateCreated: 2022-03-31T19:23:48.740Z
@@ -205,6 +205,8 @@ add_ace group.moderator sonoran.disablecam allow
 ```
 
 ## Camera Location Config
+
+> When using a camera mounted to a pole (such as traffic lights), if the pole is broken, the camera will be disabled. {.is-info}
 
 You have two options for placing new cameras:
 
