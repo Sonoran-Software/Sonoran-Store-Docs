@@ -2,7 +2,7 @@
 title: Shot Spotter - Getting Started
 description: This page will walk you through getting and installing the script.
 published: true
-date: 2023-01-21T21:30:12.772Z
+date: 2023-11-02T20:51:43.683Z
 tags: 
 editor: markdown
 dateCreated: 2022-03-24T01:46:37.738Z
@@ -94,7 +94,10 @@ The language section was created to make the script as universal as possible. Pl
 > Congrats! You have successfully configured Sonoran Shot Spotter. See Section III for spotter locations.
 {.is-success}
 
-## Spotter Locations 
+## Spotter Locations
+
+> For shot spotters mounted to a pole (such as traffic lights), if the pole is broken, the shot spotter will be disabled. {.is-info}
+
 These locations can be found and set in the `spotters.json` found within the `config` folder. To configure spotters follow this chart:
 
 | Config Option          | Option Description                                                                                                                         | Possible Values    | Notes | 
