@@ -2,7 +2,7 @@
 title: Shot Spotter
 description: Quickly be alerted when gunshots are detected around San Andreas
 published: true
-date: 2023-05-22T21:33:39.215Z
+date: 2023-11-03T00:26:15.908Z
 tags: 
 editor: markdown
 dateCreated: 2022-03-24T01:45:51.587Z
@@ -34,6 +34,10 @@ dateCreated: 2022-03-24T01:45:51.587Z
 | `togglespotter` | Toggle the spotter with the specified ID | Admin
 
 ## Changelog
+### v1.2.9
+#### Improvements
+- `Handle pole breaking and disabling of spotters`
+
 ### v1.2.8
 #### Hotpatch
 - `Add restart handling to prevent crashing`
