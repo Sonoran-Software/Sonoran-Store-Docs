@@ -2,7 +2,7 @@
 title: Mobile Command Center - Getting Started
 description: This page will walk you through getting and installing the script.
 published: true
-date: 2022-09-23T01:28:06.184Z
+date: 2023-11-09T22:44:38.175Z
 tags: 
 editor: markdown
 dateCreated: 2022-08-29T17:42:49.311Z
@@ -165,8 +165,8 @@ Here you can imput your own translations or change the wording of all text promp
 ### `config.radio` Breakdown
 | Config Option          | Option Description                                                                                                                         | Possible Values    |
 |-----------------------|---------------------------------------------------------------------------------------------------------------------------------------------|------------------------|
-| `enabled` | Would you like to enable the MCC ALPR system? | `true` or `false`
-| `range` | Would you like more or less mobile radio repeater range? | `true` or `false`
+| `enabled` | Would you like to enable the MCC Radio Repeater system? | `true` or `false`
+| `range` | Would you like more or less mobile radio repeater range? | int defualt: `750`
 
 ## Commands 
 These are the default names of commands, they may have been modified by the server owner.
