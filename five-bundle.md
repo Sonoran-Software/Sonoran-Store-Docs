@@ -2,7 +2,7 @@
 title: Five Bundle
 description: Learn more about the Five Bundle partnership!
 published: true
-date: 2023-09-06T00:14:51.359Z
+date: 2023-12-14T20:58:41.176Z
 tags: 
 editor: markdown
 dateCreated: 2022-12-05T17:46:26.546Z
@@ -50,7 +50,6 @@ At time of writing this includes:
 All items listed on LondonStudios.net are included with the Five Bundle.
 
 At time of writing this includes:
-- Average Speed Cameras
 - Bike Hire
 - Bomb Disposal Robot (EOD)
 - Custom Vinewood Sign
@@ -58,6 +57,7 @@ At time of writing this includes:
 - Fire Supply Line
 - Fire Tools
 - Helicopter Rescue
+- Mobile Spike
 - Police Grappler
 - Police Shields
 - Rescue Cushion
@@ -71,6 +71,7 @@ At time of writing this includes:
 - Smart Matrix
 - Smart Motorways
 - Smart Signs
+- Smart Speed Cameras
 - Smart Speed Signs
 - Smart Taser
 - Star Chase
