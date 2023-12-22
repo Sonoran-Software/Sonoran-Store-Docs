@@ -2,7 +2,7 @@
 title: Five Bundle
 description: Learn more about the Five Bundle partnership!
 published: true
-date: 2023-12-14T20:58:41.176Z
+date: 2023-12-22T23:37:07.956Z
 tags: 
 editor: markdown
 dateCreated: 2022-12-05T17:46:26.546Z
@@ -24,7 +24,7 @@ Backed by our [48-hour money back guarantee](https://sonoransoftware.com/assets/
 
 # FAQ
 ## Where can I purchase the Five Bundle?
-The Five Bundle subscription can be purchased for $49.99/MO USD on [FiveBundle.com](https://fivebundle.com).
+The Five Bundle subscription can be purchased for $29.99/MO or $69.69/Quarterly USD on [FiveBundle.com](https://fivebundle.com).
 
 ## What is included in the Five Bundle?
 ### **Sonoran Store:**
@@ -85,6 +85,9 @@ For templates available you will find a `Templates` folder in the keymaster reso
 
 ## Are Redneck Mods Developer Assets/Liveries Included in Five Bundle?
 Not currently, no. These are not considered FiveM™ specific assets and are not distributed via the CFX.re Keymaster/Escrow system. These assets may be purchased individually at [redneckmods.com](https://www.redneckmods.com/category/dev-assets).
+
+## My Five Bundle charges are still $49.99 after the price drop to $29.99. How can I get the lower price?
+Due to Tebex limitations, you'll need to re-subscribe to secure this new rate. To avoid any disruption, we recommend waiting until your current term ends before making the switch. Your uninterrupted access and satisfaction are our top priorities.
 
 ## Cancelations and Refunds
 ### Where can I cancel my subscription?
