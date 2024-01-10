@@ -2,7 +2,7 @@
 title: Five Bundle
 description: Learn more about the Five Bundle partnership!
 published: true
-date: 2023-12-22T23:37:07.956Z
+date: 2024-01-10T17:51:11.919Z
 tags: 
 editor: markdown
 dateCreated: 2022-12-05T17:46:26.546Z
@@ -50,6 +50,7 @@ At time of writing this includes:
 All items listed on LondonStudios.net are included with the Five Bundle.
 
 At time of writing this includes:
+- American Rearmount Ladder
 - Bike Hire
 - Bomb Disposal Robot (EOD)
 - Custom Vinewood Sign
