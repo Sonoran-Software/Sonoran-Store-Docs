@@ -2,7 +2,7 @@
 title: Five Bundle
 description: Learn more about the Five Bundle partnership!
 published: true
-date: 2024-01-10T17:51:11.919Z
+date: 2024-02-01T19:48:12.208Z
 tags: 
 editor: markdown
 dateCreated: 2022-12-05T17:46:26.546Z
@@ -50,6 +50,7 @@ At time of writing this includes:
 All items listed on LondonStudios.net are included with the Five Bundle.
 
 At time of writing this includes:
+- Advanced Recovery Truck
 - American Rearmount Ladder
 - Bike Hire
 - Bomb Disposal Robot (EOD)
@@ -64,6 +65,7 @@ At time of writing this includes:
 - Rescue Cushion
 - Rope Rescue Tripod & Basket Resource
 - Smart Airbags
+- Smart Clamp
 - Smart Defib
 - Smart Drone V2
 - Smart Fires
