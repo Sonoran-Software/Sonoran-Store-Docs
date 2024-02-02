@@ -2,7 +2,7 @@
 title: Evidence Camera - Getting Started
 description: This page will walk you through getting and installing the script.
 published: true
-date: 2023-02-08T21:23:04.778Z
+date: 2024-02-02T18:37:35.647Z
 tags: 
 editor: markdown
 dateCreated: 2022-07-06T21:52:03.851Z
@@ -81,6 +81,7 @@ add_ace resource.evidence-cam_helper command allow
 | `use_esx` | Use the ESX framework | `true` or `false` 
 | `use_esx_ox_inventory` | Utilize OX Inventory for ESX | `true` or `false`
 | `use_custom_inventory` | Use your own custom inventory handling (See dev docs for more) | `true` or `false`
+| `use_quasar_inventory` | Use Quasar Inventory | `true` or `false` 
 | `use_qbcore` | Use the QBCore framework | `true` or `false` 
 
 ### CAD 
