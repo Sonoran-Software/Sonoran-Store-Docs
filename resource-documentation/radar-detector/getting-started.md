@@ -14,15 +14,19 @@ description: >-
 
 ## Acquire the Script
 
-After purchasing the script through the sonoran store you may [download the script through the keymaster account](../../tebex-assets/) that purchased the script. Upon downloading extract the file to a safe place.
+After purchasing the script through the Sonoran store you may [download the script through the keymaster account](../../general/tebex-assets.md) that purchased the script. Upon downloading extract the file to a safe place.
 
 ## Install Prerequisite
 
-> You must use the Sonoran Fork of WK\_Wars2x found [here](https://github.com/Sonoran-Software/wk\_wars2x/releases/latest).
->
-> Minimum version required: `v1.3.4-sonoran` {.is-warning}
+{% hint style="warning" %}
+You must use the Sonoran Fork of WK\_Wars2x found [here](https://github.com/Sonoran-Software/wk\_wars2x/releases/latest).
 
-> If you are using the Sonoran CAD FiveM Integration, **DO NOT** install a second copy of WK\_Wars2x, it is included and updated with the `sonorancad` resource. {.is-info}
+Minimum version required: `v1.3.4-sonoran`
+{% endhint %}
+
+{% hint style="info" %}
+If you are using the Sonoran CAD FiveM Integration, **DO NOT** install a second copy of WK\_Wars2x, it is included and updated with the `sonorancad` resource.
+{% endhint %}
 
 WK\_Wars2x Radar script is required for this resource to function fully. Please ensure you are using the **Sonoran Fork** of WK\_Wars2x. This is included with the [Sonoran CAD FiveM Integration](https://info.sonorancad.com/integration-plugins/integration-plugins/framework-installation) by default.
 
@@ -30,14 +34,20 @@ You can also download the latest release of the resource [here](https://github.c
 
 ## Install the Script
 
-1. Inside the script package you just extracted will be two folders. Copy both to a folder in your server's resources folder called `[sonoranscripts]` note the `[]` in the name, without them it will not work. ![directory\_example.png](../../radar-detector/directory\_example.png)
+1.  Inside the script package you just extracted will be two folders. Copy both to a folder in your server's resources folder called `[sonoranscripts]` note the `[]` in the name, without them it will not work.&#x20;
+
+    <figure><img src="../../radar-detector/directory_example.png" alt=""><figcaption><p>Sonoran Software - Radar Detector - Folders</p></figcaption></figure>
 2. In the `sonoran-radarddetector/config` folder there will be a file called `config.CHANGEME.lua` you should rename that to be `config.lua` and configure the settings inside as you would like them to be configured based on the configuration documentation below.
 
-> **QBCore** Specific - Please follow `Step 3` to ensure inventory items have correct photos!{.is-warning}
+{% hint style="warning" %}
+**QBCore** Specific - Please follow `Step 3` to ensure inventory items have correct photos!
+{% endhint %}
 
 3. Drag the `radar_detector.png` from `/sonoran-radardetector/` into the following folder: `/resources/[qb]/qb-inventory/html/images`
 
-> **ESX Specific** Specific - Please follow `Step 4` to ensure inventory items work!{.is-warning}
+{% hint style="warning" %}
+**ESX Specific** Specific - Please follow `Step 4` to ensure inventory items work!
+{% endhint %}
 
 4.  a.) Import the `ESX Installme.sql` file into your ESX database
 
@@ -56,8 +66,6 @@ You can also download the latest release of the resource [here](https://github.c
     ```
 5. Finally, in your `server.cfg` add the following:
 
-> **NEVER** add `ensure sonoran-radardetector_helper` or `ensure [sonoranscripts]` to your server.cfg as this will lead to crashing under specific conditions. {.is-warning}
-
 ```
 ensure sonoran-radardetector
 
@@ -65,9 +73,15 @@ add_ace resource.sonoran-radardetector command allow
 add_ace resource.sonoran-radardetector_helper command allow
 ```
 
+{% hint style="danger" %}
+**NEVER** add `ensure sonoran-radardetector_helper` or `ensure [sonoranscripts]` to your server.cfg as this will lead to crashing under specific conditions.
+{% endhint %}
+
 ## Configuring the Script
 
-Default `config.lua`:
+<details>
+
+<summary>Default <code>config.lua</code></summary>
 
 ```lua
 Config = {}
@@ -171,7 +185,9 @@ Config.blacklistedCars = {
 }
 ```
 
-## Configuration Breakdown
+</details>
+
+### Configuration Breakdown
 
 | Config Option                   | Option Description                                                                                                | Default Value                                               | Type    |
 | ------------------------------- | ----------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------- | ------- |
@@ -202,14 +218,16 @@ Config.blacklistedCars = {
 
 ## Usage
 
-https://www.youtube.com/watch?v=eXGCLnaU-yg
+{% embed url="https://www.youtube.com/watch?v=eXGCLnaU-yg" %}
 
 1. **Choose an eligible car**: Select a car that is compatible with the radar detector/jammer script.
 2. **Use the command `/detectormenu`**: Open the chatbox or console and type `/detectormenu` to bring up the radar detector menu.
 3. **Open the spawning menu**: In the radar detector menu, navigate to the "Spawning Menu" option and select it to open the spawning menu.
 4. **Spawn the prop**: Within the spawning menu, choose the desired prop and spawn it into the game world.
 
-> **Note:** If in framework mode you must have the `sonoran_radar_detector` object in your inventory to spawn {.is-warning}
+{% hint style="warning" %}
+**Note:** If in framework mode you must have the `sonoran_radar_detector` object in your inventory to spawn
+{% endhint %}
 
 5. **Navigate to the attaching menu**: Use the "Backspace" or the designated key to go back in the menu and access the "Attaching Menu".
 6. **Attach the prop**: Select the "Attach" option in the attaching menu and use the on-screen controls to move the prop to the desired location on the vehicle.

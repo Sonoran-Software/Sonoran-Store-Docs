@@ -10,11 +10,27 @@ description: Run Radar Like Never Before
 
 # 📟 Radar Display
 
-![rada1.png](../../radar/rada1.png) https://www.youtube.com/watch?v=mZqMl9oNQcQ
+<figure><img src="../../radar/rada1.png" alt=""><figcaption><p>Sonoran Software - Radar Display Promotional Image</p></figcaption></figure>
+
+[Watch the promotional video here!](https://www.youtube.com/watch?v=mZqMl9oNQcQ)
+
+## Radar Display
 
 ### Features
 
-* Ability to operate standalone ![in\_game\_prop\_radar.png](../../radar/in\_game\_prop\_radar.png) ![wraith\_integration\_radar.png](../../radar/wraith\_integration\_radar.png) ![menu\_placement\_radar.png](../../radar/menu\_placement\_radar.png) ![easy\_translate\_radar.png](../../radar/easy\_translate\_radar.png) ![highly\_config\_radar.png](../../radar/highly\_config\_radar.png) ![auto-update-feature.png](../../speed-camera/auto-update-feature.png)
+* Ability to operate standalone     &#x20;
+
+<figure><img src="../../radar/in_game_prop_radar.png" alt=""><figcaption><p>Sonoran Software - Radar Display Promotional Image</p></figcaption></figure>
+
+<figure><img src="../../radar/wraith_integration_radar.png" alt=""><figcaption><p>Sonoran Software - Radar Display Promotional Image</p></figcaption></figure>
+
+<figure><img src="../../radar/menu_placement_radar.png" alt=""><figcaption><p>Sonoran Software - Radar Display Promotional Image</p></figcaption></figure>
+
+<figure><img src="../../radar/easy_translate_radar.png" alt=""><figcaption><p>Sonoran Software - Radar Display Promotional Image</p></figcaption></figure>
+
+<figure><img src="../../radar/highly_config_radar.png" alt=""><figcaption><p>Sonoran Software - Radar Display Promotional Image</p></figcaption></figure>
+
+<figure><img src="../../speed-camera/auto-update-feature.png" alt=""><figcaption><p>Sonoran Software - Radar Display Promotional Image</p></figcaption></figure>
 
 ### Changelog
 

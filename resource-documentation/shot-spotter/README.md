@@ -10,14 +10,28 @@ description: Quickly be alerted when gunshots are detected around San Andreas
 
 # 🔫 Shot Spotter
 
-![ss-final.png](../../ss-final.png)
+![Sonoran Software - Shot Spotter Promotional Image](../../ss-final.png)
+
+[Watch the promotional video here!](https://www.youtube.com/watch?v=ng12Pimxev0\&list=PLM88KLbdei-3aWVX7A1sPDA3Na94p0Gt5\&index=8\&pp=iAQB)
 
 ## Shot Spotter
 
 ### Features
 
 * Ability to operate standalone
-* Support for AcePerms, ESX, QBCore, and custom permissions systems ![ss-cad-integration.png](../../shot-spotter/ss-cad-integration.png) ![ss-in-game-blips.png](../../shot-spotter/ss-in-game-blips.png) ![ss-gun-placement-system.png](../../ss-gun-placement-system.png) ![ss-discord-webhooks.png](../../shot-spotter/ss-discord-webhooks.png) ![ss-translate-feature.png](../../shot-spotter/ss-translate-feature.png) ![ss-highly-configurable.png](../../shot-spotter/ss-highly-configurable.png)
+* Support for AcePerms, ESX, QBCore, and custom permissions systems
+
+<figure><img src="../../shot-spotter/ss-cad-integration.png" alt=""><figcaption><p>Sonoran Software - Shot Spotter Promotional Image</p></figcaption></figure>
+
+<figure><img src="../../shot-spotter/ss-in-game-blips.png" alt=""><figcaption><p>Sonoran Software - Shot Spotter Promotional Image</p></figcaption></figure>
+
+<figure><img src="../../ss-gun-placement-system.png" alt=""><figcaption><p>Sonoran Software - Shot Spotter Promotional Image</p></figcaption></figure>
+
+<figure><img src="../../shot-spotter/ss-discord-webhooks.png" alt=""><figcaption><p>Sonoran Software - Shot Spotter Promotional Image</p></figcaption></figure>
+
+<figure><img src="../../shot-spotter/ss-translate-feature.png" alt=""><figcaption><p>Sonoran Software - Shot Spotter Promotional Image</p></figcaption></figure>
+
+<figure><img src="../../shot-spotter/ss-highly-configurable.png" alt=""><figcaption><p>Sonoran Software - Shot Spotter Promotional Image</p></figcaption></figure>
 
 ### Commands
 

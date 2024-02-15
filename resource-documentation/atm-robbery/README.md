@@ -10,11 +10,11 @@ description: Steal and break into the ATM
 
 # 🏧 ATM Robbery
 
-
-
 ![Sonoran Software - ATM Robbery Promotional Iamge](../../atm-robbery/atm\_large.png)
 
-### [Watch the promotional video here!](https://youtu.be/2Z6FepWQM2E)
+[Watch the promotional video here!](https://youtu.be/2Z6FepWQM2E)
+
+## ATM Robbery
 
 ### Features
 

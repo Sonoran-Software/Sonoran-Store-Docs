@@ -1,25 +1,29 @@
 ---
 title: Speed Camera - Getting Started
-description: This page will walk you through getting and installing the Speed Camera script.
 published: true
 date: 2023-11-02T20:48:24.605Z
-tags: 
+tags: null
 editor: markdown
 dateCreated: 2022-03-31T19:23:48.740Z
+description: >-
+  This page will walk you through getting and installing the Speed Camera
+  script.
 ---
 
 # Getting Started
 
 ## Acquire the Script
 
-After purchasing the script through the sonoran store you may [download the script through the keymaster account](/tebex-assets) that purchased the script. Upon downloading extract the file to a safe place.
+After purchasing the script through the sonoran store you may [download the script through the keymaster account](../../general/tebex-assets.md) that purchased the script. Upon downloading extract the file to a safe place.
 
 ## Install the Script
 
-1. Inside the script package you just extracted will be two folders. Copy both to a folder in your server's resources folder called `[sonoranscripts]` note the `[]` in the name, without them it will not work.
-![directory-example.png](/speed-camera/directory-example.png)
-2. In the `sonoran-trafficcam` folder there will be a file called `config.CHANGEME.lua` you should rename that to be `config.lua` and configure the settings inside as you would like them to be configured based on the configuration documentation below. In that same folder will also be a file called `cameras.CHANGEME.json` which you should rename to `cameras.json` and use to manually place cameras based on the existing template, note you can also use the gun placement system in game. Finally there is a file called `discord.CHANGEME.lua` in the folder which should be renamed to `discord.lua`, this file contains all of your Discord webhook related settings.
-![files-example.png](/speed-camera/files-example.png)
+1.  Inside the script package you just extracted will be two folders. Copy both to a folder in your server's resources folder called `[sonoranscripts]` note the `[]` in the name, without them it will not work.&#x20;
+
+    <figure><img src="../../speed-camera/directory-example.png" alt=""><figcaption><p>Sonoran Software - Speed Cameras - Folders</p></figcaption></figure>
+2.  In the `sonoran-trafficcam` folder there will be a file called `config.CHANGEME.lua` you should rename that to be `config.lua` and configure the settings inside as you would like them to be configured based on the configuration documentation below. In that same folder will also be a file called `cameras.CHANGEME.json` which you should rename to `cameras.json` and use to manually place cameras based on the existing template, note you can also use the gun placement system in game. Finally there is a file called `discord.CHANGEME.lua` in the folder which should be renamed to `discord.lua`, this file contains all of your Discord webhook related settings.&#x20;
+
+    <figure><img src="../../speed-camera/files-example.png" alt=""><figcaption><p>Sonoran Software - Speed Cameras - Remove .CHANGEMEs</p></figcaption></figure>
 3. Finally, in your `server.cfg` add the following:
 
 ```
@@ -31,9 +35,13 @@ add_ace resource.sonoran-trafficcam_helper command allow
 
 ## Configuring the Script
 
-> As of `v2.0.2` this script utilizes two separate Lua configs. This is for security reasons. Having a separate config for your Discord Configuration keeps them server side only and safer from malicious clients {.is-danger}
+{% hint style="info" %}
+As of `v2.0.2` this script utilizes two separate Lua configs. This is for security reasons. Having a separate config for your Discord Configuration keeps them server side only and safer from malicious clients
+{% endhint %}
 
-Default config.lua:
+<details>
+
+<summary>Default <code>config.lua</code></summary>
 
 ```lua
 Config = {}
@@ -180,8 +188,11 @@ Config.notifications = {
 }
 ```
 
+</details>
+
 ### Note
-In order for auto fines to function properly, Config.permission_mode **MUST** be "framework"
+
+In order for auto fines to function properly, Config.permission\_mode **MUST** be "framework"
 
 ```lua
 DiscordConfig = {
@@ -197,6 +208,7 @@ DiscordConfig = {
 To use this script you must assign the permissions object to the groups which you would like to have permissions. You can find the objects needed in the config under `Config.ace_perms` section in the config. To assign these perms you must add the lines to your `server.cfg` or where ever you setup permissions on your server. You can learn more about Ace Permissions [here](https://forum.cfx.re/t/basic-aces-principals-overview-guide/90917).
 
 Example:
+
 ```lua
 add_ace group.admin sonoran.trafficcam allow
 add_ace group.leo sonoran.police allow
@@ -206,15 +218,17 @@ add_ace group.moderator sonoran.disablecam allow
 
 ## Camera Location Config
 
-> When using a camera mounted to a pole (such as traffic lights), if the pole is broken, the camera will be disabled. {.is-info}
+{% hint style="info" %}
+When using a camera mounted to a pole (such as traffic lights), if the pole is broken, the camera will be disabled.
+{% endhint %}
 
 You have two options for placing new cameras:
 
 1. You can use the command `/spawnnewcam [prop] [name]` to initiate spawning a new camera and generate the relevant config data
-    - After running this command you must pull out, aim, and shoot with a gun to confirm placement.
-    - You may need to modify some of the rotation values manually to get that perfect placement you are looking for.
-    - If you aren't using the speed limit display integration you will need to manually go into the config file to change the set speed limit. You will also need to change the view radius to be the way you want it.
-    - [Click here for more information.](/gun-placement)
+   * After running this command you must pull out, aim, and shoot with a gun to confirm placement.
+   * You may need to modify some of the rotation values manually to get that perfect placement you are looking for.
+   * If you aren't using the speed limit display integration you will need to manually go into the config file to change the set speed limit. You will also need to change the view radius to be the way you want it.
+   * [Click here for more information.](../../general/gun-placement.md)
 2. You can manually copy and paste an existing config and then modify the values to meet your needs for the new camera
 
 ### `camera.json` Property Explanation
@@ -230,23 +244,26 @@ You have two options for placing new cameras:
 | `ViewRadius`  | 10        | How far away this camera can see in GTA units, default is 10         |
 
 ## Commands
-| Command Name | Command Description | Required Permission |
-|-----------------------|---------------------------------------------------------------------------------------------------------------------------------------------|------------------------|
+
+| Command Name                 | Command Description                                                                                                                                                                                    | Required Permission    |
+| ---------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------------------- |
 | `/spawnnewcam [prop] [name]` | This command will allow an admin to spawn a new camera using a gun placement system where the name argument is the label for the new camera and the prop argument is the text name of the model to use | Admin or as configured |
-| `/addplate [plate]` | This command will add a plate to the standalone BOLO system when in use. | LEO or as configured |
-| `/delplate [plate]` | This command will remove a plate from the standalone BOLO system when in use. | LEO or as configured |
-| `/listplates` | This command will list the plates currently configured in the standalone BOLO system when in use | LEO or as configured |
-| `/showcamid` | This command will draw the ID of cameras which you are in the radius of with 3D text near the camera | N/A |
-| `/getpositiondata` | This command will print the current positional data of the camera to the chat | Admin or as configured |
-| `/changepositiondata` | This command will change the value which you specify of the camera you specify, run this command without arguments for example usage. All changes made with this command will be immediately saved | Admin or as configured |
-| `/reloadcameras` | This command will completely reload the cameras.json from the server's storage | Admin or as configured |
-| `/disablecamera` | This command will disable the camera with the ID specified as an argument, this will prevent that camera from flagging vehicles | LEO or as configured |
-| `/enablecamera` | This command will enable the camera with the ID specified as an argument, this resume that camera's ability to flag vehicles | LEO or as configured |
-| `/cancelcamplacement` | This command will cancel the current camera placement if one is currently in progress. | N/A |
+| `/addplate [plate]`          | This command will add a plate to the standalone BOLO system when in use.                                                                                                                               | LEO or as configured   |
+| `/delplate [plate]`          | This command will remove a plate from the standalone BOLO system when in use.                                                                                                                          | LEO or as configured   |
+| `/listplates`                | This command will list the plates currently configured in the standalone BOLO system when in use                                                                                                       | LEO or as configured   |
+| `/showcamid`                 | This command will draw the ID of cameras which you are in the radius of with 3D text near the camera                                                                                                   | N/A                    |
+| `/getpositiondata`           | This command will print the current positional data of the camera to the chat                                                                                                                          | Admin or as configured |
+| `/changepositiondata`        | This command will change the value which you specify of the camera you specify, run this command without arguments for example usage. All changes made with this command will be immediately saved     | Admin or as configured |
+| `/reloadcameras`             | This command will completely reload the cameras.json from the server's storage                                                                                                                         | Admin or as configured |
+| `/disablecamera`             | This command will disable the camera with the ID specified as an argument, this will prevent that camera from flagging vehicles                                                                        | LEO or as configured   |
+| `/enablecamera`              | This command will enable the camera with the ID specified as an argument, this resume that camera's ability to flag vehicles                                                                           | LEO or as configured   |
+| `/cancelcamplacement`        | This command will cancel the current camera placement if one is currently in progress.                                                                                                                 | N/A                    |
 
 ## Model Options
-![promo-models.png](/speed-camera/promo-models.png)
-The model on the left is named `prop_traffic_cam` and the model is named `radar01`.
+
+&#x20;The model on the left is named `prop_traffic_cam` and the model is named `radar01`.
+
+<figure><img src="../../speed-camera/promo-models.png" alt=""><figcaption><p>Sonoran Software - Speed Cameras Promotional Image</p></figcaption></figure>
 
 ## Needed Changes for Speed Display
 

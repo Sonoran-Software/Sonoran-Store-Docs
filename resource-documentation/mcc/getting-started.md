@@ -12,7 +12,7 @@ description: This page will walk you through getting and installing the script.
 
 ## Acquire the Script
 
-After purchasing the script through the Sonoran store you may [download the script through the keymaster account](../../tebex-assets/) that purchased the script. Upon downloading extract the file to a safe place.
+After purchasing the script through the Sonoran store you may [download the script through the keymaster account](../../general/tebex-assets.md) that purchased the script. Upon downloading extract the file to a safe place.
 
 ## Install the Script
 

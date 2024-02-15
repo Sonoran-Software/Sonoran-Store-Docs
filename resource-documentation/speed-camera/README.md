@@ -10,16 +10,36 @@ description: >-
   speeding vehicle is spotted.
 ---
 
-# 📹 Speed Cameras/ALPR
+# 📹 Speed Cameras / ALPR
 
-![1920x1080-speedcam.png](../../speed-camera/1920x1080-speedcam.png)
+<figure><img src="../../.gitbook/assets/1920x1080-speedcam.png" alt=""><figcaption><p>Sonoran Software - Speed Cameras Promotional Image</p></figcaption></figure>
 
-## Speed Cameras/ALPR
+[Watch the Promotional video Here](https://www.youtube.com/watch?v=qfBXvV287pc\&list=PLM88KLbdei-3aWVX7A1sPDA3Na94p0Gt5\&index=7\&pp=iAQB)
+
+## Speed Cameras / ALPR
 
 ### Features
 
 * Ability to operate standalone
-* Support for AcePerms, ESX, QBCore, and custom permissions systems ![notification-feature.png](../../speed-camera/notification-feature.png) ![cad-integration-feature.png](../../speed-camera/cad-integration-feature.png) ![in-game-blip.png](../../speed-camera/in-game-blip.png) ![auto-fine.png](../../speed-camera/auto-fine.png) ![auto-update-feature.png](../../speed-camera/auto-update-feature.png) ![gun-placement-feature.png](../../speed-camera/gun-placement-feature.png) ![discord-webhook-feature.png](../../speed-camera/discord-webhook-feature.png) ![configurable-feature.png](../../speed-camera/configurable-feature.png) ![translate-feature.png](../../speed-camera/translate-feature.png)
+* Support for AcePerms, ESX, QBCore, and custom permissions systems        &#x20;
+
+<figure><img src="../../speed-camera/notification-feature.png" alt=""><figcaption><p>Sonoran Software - Speed Cameras Promotional Image</p></figcaption></figure>
+
+<figure><img src="../../speed-camera/cad-integration-feature.png" alt=""><figcaption><p>Sonoran Software - Speed Cameras Promotional Image</p></figcaption></figure>
+
+<figure><img src="../../speed-camera/in-game-blip.png" alt=""><figcaption><p>Sonoran Software - Speed Cameras Promotional Image</p></figcaption></figure>
+
+<figure><img src="../../speed-camera/auto-fine.png" alt=""><figcaption><p>Sonoran Software - Speed Cameras Promotional Image</p></figcaption></figure>
+
+<figure><img src="../../speed-camera/auto-update-feature.png" alt=""><figcaption><p>Sonoran Software - Speed Cameras Promotional Image</p></figcaption></figure>
+
+<figure><img src="../../speed-camera/gun-placement-feature.png" alt=""><figcaption><p>Sonoran Software - Speed Cameras Promotional Image</p></figcaption></figure>
+
+<figure><img src="../../speed-camera/discord-webhook-feature.png" alt=""><figcaption><p>Sonoran Software - Speed Cameras Promotional Image</p></figcaption></figure>
+
+<figure><img src="../../speed-camera/configurable-feature.png" alt=""><figcaption><p>Sonoran Software - Speed Cameras Promotional Image</p></figcaption></figure>
+
+<figure><img src="../../speed-camera/translate-feature.png" alt=""><figcaption><p>Sonoran Software - Speed Cameras Promotional Image</p></figcaption></figure>
 
 ### Commands
 
@@ -41,7 +61,9 @@ These are the default names of commands, they may have been modified by the serv
 
 ### Model Options
 
-![promo-models.png](../../speed-camera/promo-models.png) The model on the left is named `prop_traffic_cam` and the model is named `radar01`.
+&#x20;The model on the left is named `prop_traffic_cam` and the model is named `radar01`.
+
+<figure><img src="../../speed-camera/promo-models.png" alt=""><figcaption><p>Sonoran Software - Speed Cameras Promotional Image</p></figcaption></figure>
 
 ### Changelog
 

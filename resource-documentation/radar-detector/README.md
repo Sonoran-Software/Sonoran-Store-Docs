@@ -8,13 +8,27 @@ dateCreated: 2023-06-05T21:43:30.132Z
 description: Detect and Jam Police Radar For A Smooth Getaway
 ---
 
-# 📶 Radar Detector/ Jammer
+# 📶 Radar Detector / Jammer
 
-![main\_promov2.png](../../radar-detector/main\_promov2.png) https://www.youtube.com/watch?v=E3263PAPmfc
+<figure><img src="../../radar-detector/main_promov2.png" alt=""><figcaption><p>Sonoran Software - Radar Detector Promotional Image</p></figcaption></figure>
+
+[Watch the promotional video here!](https://www.youtube.com/watch?v=E3263PAPmfc)
+
+## Radar Detector / Jammer
 
 ### Features
 
-* Ability to operate standalone ![in\_game\_prop.png](../../radar-detector/in\_game\_prop.png) ![real\_time\_textures.png](../../radar-detector/real\_time\_textures.png) ![highly\_configurable.png](../../radar-detector/highly\_configurable.png) ![translate.png](../../radar-detector/translate.png) ![auto-update-feature.png](../../radar-detector/auto-update-feature.png)
+* Ability to operate standalone    &#x20;
+
+<figure><img src="../../radar-detector/in_game_prop.png" alt=""><figcaption><p>Sonoran Software - Radar Detector Promotional Image</p></figcaption></figure>
+
+<figure><img src="../../radar-detector/real_time_textures.png" alt=""><figcaption><p>Sonoran Software - Radar Detector Promotional Image</p></figcaption></figure>
+
+<figure><img src="../../radar-detector/highly_configurable.png" alt=""><figcaption><p>Sonoran Software - Radar Detector Promotional Image</p></figcaption></figure>
+
+<figure><img src="../../radar-detector/translate.png" alt=""><figcaption><p>Sonoran Software - Radar Detector Promotional Image</p></figcaption></figure>
+
+<figure><img src="../../radar-detector/auto-update-feature.png" alt=""><figcaption><p>Sonoran Software - Radar Detector Promotional Image</p></figcaption></figure>
 
 ### Changelog
 

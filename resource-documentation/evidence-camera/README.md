@@ -12,7 +12,7 @@ description: Easily take photos and upload them to CAD/ Discord
 
 ![Sonoran Software - Evidence Camera Promotional Image](../../sono\_evidence\_tebex\_photo.png)
 
-### [Watch the promotional video here!](https://www.youtube.com/watch?v=jxTvYyDmJAE)
+[Watch the promotional video here!](https://www.youtube.com/watch?v=jxTvYyDmJAE)
 
 ## Evidence Camera
 

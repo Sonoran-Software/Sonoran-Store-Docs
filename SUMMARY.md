@@ -26,14 +26,15 @@
 * [⚡ Power Grid](resource-documentation/power-grid/README.md)
   * [Getting Started](resource-documentation/power-grid/getting-started.md)
   * [Advanced Documentation](resource-documentation/power-grid/advanced-documentation.md)
-* [📶 Radar Detector/ Jammer](resource-documentation/radar-detector/README.md)
+* [📶 Radar Detector / Jammer](resource-documentation/radar-detector/README.md)
   * [Getting Started](resource-documentation/radar-detector/getting-started.md)
 * [📟 Radar Display](resource-documentation/radar-display/README.md)
   * [Getting Started](resource-documentation/radar-display/getting-started.md)
 * [🔫 Shot Spotter](resource-documentation/shot-spotter/README.md)
   * [Getting Started](resource-documentation/shot-spotter/getting-started.md)
   * [Shot Spotter - Advanced Documentation](resource-documentation/shot-spotter/advanced-docs.md)
-* [📹 Speed Cameras/ALPR](resource-documentation/speed-camera/README.md)
+* [🛣 Smart Signs](https://info.sonorancad.com/integration-plugins/integration-plugins/available-plugins/smart-signs)
+* [📹 Speed Cameras / ALPR](resource-documentation/speed-camera/README.md)
   * [Getting Started](resource-documentation/speed-camera/getting-started.md)
   * [Advanced Documentation](resource-documentation/speed-camera/advanced-docs.md)
 
@@ -49,4 +50,11 @@
 
 ## Other
 
+* [👨💻 Internal Development Knowledgebase](other/internal-development-knowledgebase/README.md)
+  * [5⃣ GTA V / CFX Development](other/internal-development-knowledgebase/gta-v-cfx-development/README.md)
+    * [🪴 Prop Development](other/internal-development-knowledgebase/gta-v-cfx-development/prop-development.md)
+    * [🚶♂ Ped & Clothing Development](other/internal-development-knowledgebase/gta-v-cfx-development/ped-and-clothing-development/README.md)
+      * [🖼 Addon Overlays](other/internal-development-knowledgebase/gta-v-cfx-development/ped-and-clothing-development/addon-overlays.md)
+    * [🏙 Mapping (MLO/YMAP)](other/internal-development-knowledgebase/gta-v-cfx-development/mapping-mlo-ymap.md)
+    * [🚗 Vehicle Development](other/internal-development-knowledgebase/gta-v-cfx-development/vehicle-development.md)
 * [📜 Terms and Policies](other/policy.md)

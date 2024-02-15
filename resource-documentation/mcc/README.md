@@ -12,7 +12,7 @@ description: Take command on scene like never before.
 
 <figure><img src="../../mcc_promo_wide.png" alt=""><figcaption><p>Sonoran Software - MCC Promotional Image</p></figcaption></figure>
 
-### [Watch the promotional video here!](https://www.youtube.com/watch?v=lli0z3V--TI)
+[Watch the promotional video here!](https://www.youtube.com/watch?v=lli0z3V--TI)
 
 ## Mobile Command Center
 

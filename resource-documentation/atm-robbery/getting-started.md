@@ -12,13 +12,13 @@ description: This page will walk you through getting and installing the ATM Robb
 
 ## Acquire the Script
 
-After purchasing the script through the sonoran store you may [download the script through the keymaster account](../../tebex-assets/) that purchased the script. Upon downloading extract the file to a safe place.
+After purchasing the script through the sonoran store you may [download the script through the keymaster account](../../general/tebex-assets.md) that purchased the script. Upon downloading extract the file to a safe place.
 
 ## Install the Script
 
 1.  Inside the script package you just extracted will be two folders. Copy both to a folder in your server's resources folder called `[sonoranscripts]` note the `[]` in the name, without them it will not work.&#x20;
 
-    <figure><img src="../../atm-robbery/atm_file.png" alt=""><figcaption><p>Sonoran Software - ATM Robbery - Folder</p></figcaption></figure>
+    <figure><img src="../../atm-robbery/atm_file.png" alt=""><figcaption><p>Sonoran Software - ATM Robbery - Folders</p></figcaption></figure>
 2. In the `sonoran-atmrobbery/config` folder there will be a file called `config.CHANGEME.lua` you should rename that to be `config.lua` and configure the settings inside as you would like them to be configured based on the configuration documentation below. In that same folder will also be a file called `atms.CHANGEME.json` which is a storage file for all ATMs placed using the placement gun. Change the name to `atms.json`. You can also edit the `discord.CHANGEME.lua` file to add discord webhook updates for when the state of the ATM changes. Change the name to `discord.lua`.
 
 {% hint style="danger" %}
@@ -273,7 +273,7 @@ You have two options for placing new ATMs:
 1. You can use the command `/spawnnewatm [label] [model]` to initiate spawning a new ATM and generate the relevant config data
    * After running this command you must pull out, aim, and shoot with a gun to confirm placement.
    * You may need to modify some of the rotation values manually to get that perfect placement you are looking for.
-   * [Click here for more information.](../../gun-placement/)
+   * [Click here for more information.](../../general/gun-placement.md)
 2. You can manually copy and paste an existing config and then modify the values to meet your needs for the new ATM
 
 ### `atms.json` Property Explanation

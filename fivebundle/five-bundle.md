@@ -51,7 +51,7 @@ At time of writing this includes:
 
 #### **Redneck Modifications:**
 
-All **FiveM™** items listed on RedneckMods.com are included with the Five Bundle.
+All FiveM vehicles and scripts listed on [RedneckMods.com](https://www.redneckmods.com/) are included with the Five Bundle. Please note that this **does not include** any EUP or Sirens.
 
 At time of writing this includes:
 
@@ -100,7 +100,7 @@ At time of writing this includes:
 
 For templates available you will find a `Templates` folder in the keymaster resource download. If there is not a template for your desired vehicle, there is not one available for that vehicle at this time. All Redneck Mods vehicles have been updated on `January 10th, 2023` to have the complete list of available templates.
 
-### Are Redneck Mods Developer Assets/Liveries Included in Five Bundle?
+### Are Redneck Mods Liveries/EUP/Sirens Included in Five Bundle?
 
 Not currently, no. These are not considered FiveM™ specific assets and are not distributed via the CFX.re Keymaster/Escrow system. These assets may be purchased individually at [redneckmods.com](https://www.redneckmods.com/category/dev-assets).
 
