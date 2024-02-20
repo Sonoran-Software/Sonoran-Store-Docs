@@ -55,7 +55,7 @@ All FiveM vehicles and scripts listed on [RedneckMods.com](https://www.redneckmo
 
 At time of writing this includes:
 
-{% embed url="https://docs.google.com/spreadsheets/d/1fbT7ekcmkyl1B8-eQz1KzGEeRW9puz2rTUrf0QvH-UM/" %}
+{% embed url="https://docs.google.com/spreadsheets/d/1fbT7ekcmkyl1B8-eQz1KzGEeRW9puz2rTUrf0QvH-UM/" fullWidth="true" %}
 Redneck Mods Pack Breakdown
 {% endembed %}
 
