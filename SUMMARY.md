@@ -48,13 +48,6 @@
 * [⚔ Sonoran Discord Server](https://discord.sonoran.software/)
 * [💬 Customer Support](http://support.sonoransoftware.com/)
 
-## Other
+***
 
-* [👨💻 Internal Development Knowledgebase](other/internal-development-knowledgebase/README.md)
-  * [5⃣ GTA V / CFX Development](other/internal-development-knowledgebase/gta-v-cfx-development/README.md)
-    * [🪴 Prop Development](other/internal-development-knowledgebase/gta-v-cfx-development/prop-development.md)
-    * [🚶♂ Ped & Clothing Development](other/internal-development-knowledgebase/gta-v-cfx-development/ped-and-clothing-development/README.md)
-      * [🖼 Addon Overlays](other/internal-development-knowledgebase/gta-v-cfx-development/ped-and-clothing-development/addon-overlays.md)
-    * [🏙 Mapping (MLO/YMAP)](other/internal-development-knowledgebase/gta-v-cfx-development/mapping-mlo-ymap.md)
-    * [🚗 Vehicle Development](other/internal-development-knowledgebase/gta-v-cfx-development/vehicle-development.md)
-* [📜 Terms and Policies](other/policy.md)
+* [📜 Terms and Policies](policy.md)
