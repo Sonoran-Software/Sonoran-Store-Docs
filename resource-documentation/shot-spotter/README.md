@@ -44,7 +44,7 @@ Sonoran Software - Shot Spotter Promotional Video
 | `/showspotterpos`         | Show the position of the shot spotters                                                                              | Admin                |
 | `/changepositiondata`     | Change the position data of the shot spotter                                                                        | Admin                |
 | `/reloadspotters`         | Reload all spotters and positions                                                                                   | Admin                |
-| `/spawnnewspotter`        | Activate the placement gun [SEE HERE](https://docs.sonoran.store/en/gun-placement)                                  | Admin                |
+| `/spawnnewspotter`        | Activate the placement gun [SEE HERE](../../general/gun-placement.md)                                               | Admin                |
 | `/cancelspotterplacement` | Cancels the placement gun                                                                                           | Admin                |
 | `togglespotter`           | Toggle the spotter with the specified ID                                                                            | Admin                |
 
