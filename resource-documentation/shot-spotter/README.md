@@ -12,7 +12,9 @@ description: Quickly be alerted when gunshots are detected around San Andreas
 
 ![Sonoran Software - Shot Spotter Promotional Image](../../ss-final.png)
 
-[Watch the promotional video here!](https://www.youtube.com/watch?v=ng12Pimxev0\&list=PLM88KLbdei-3aWVX7A1sPDA3Na94p0Gt5\&index=8\&pp=iAQB)
+{% embed url="https://www.youtube.com/watch?v=ng12Pimxev0" %}
+Sonoran Software - Shot Spotter Promotional Video
+{% endembed %}
 
 ## Shot Spotter
 

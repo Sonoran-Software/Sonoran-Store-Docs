@@ -12,7 +12,9 @@ description: Run Radar Like Never Before
 
 <figure><img src="../../radar/rada1.png" alt=""><figcaption><p>Sonoran Software - Radar Display Promotional Image</p></figcaption></figure>
 
-[Watch the promotional video here!](https://www.youtube.com/watch?v=mZqMl9oNQcQ)
+{% embed url="https://www.youtube.com/watch?v=mZqMl9oNQcQ" %}
+Sonoran Software - Radar Display Promotional Video
+{% endembed %}
 
 ## Radar Display
 

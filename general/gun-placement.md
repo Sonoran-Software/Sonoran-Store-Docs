@@ -17,11 +17,11 @@ dateCreated: 2022-04-21T21:22:21.450Z
 
 <summary>Links to Commands</summary>
 
-* [Shot Spotter](../shot-spotter/#commands)&#x20;
+* [Shot Spotter](../resource-documentation/shot-spotter/#commands)&#x20;
 
 <!---->
 
-* [Traffic Cameras](../speed-camera/#commands)
+* [Traffic Cameras](../resource-documentation/speed-camera/#commands)
 
 </details>
 

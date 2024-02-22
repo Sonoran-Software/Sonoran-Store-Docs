@@ -12,7 +12,9 @@ description: Detect and Jam Police Radar For A Smooth Getaway
 
 <figure><img src="../../radar-detector/main_promov2.png" alt=""><figcaption><p>Sonoran Software - Radar Detector Promotional Image</p></figcaption></figure>
 
-[Watch the promotional video here!](https://www.youtube.com/watch?v=E3263PAPmfc)
+{% embed url="https://www.youtube.com/watch?v=E3263PAPmfc" %}
+Sonoran Software - Radar Detector Promotional Video
+{% endembed %}
 
 ## Radar Detector / Jammer
 

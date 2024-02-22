@@ -14,14 +14,16 @@ description: >-
 
 <figure><img src="../../.gitbook/assets/1920x1080-speedcam.png" alt=""><figcaption><p>Sonoran Software - Speed Cameras Promotional Image</p></figcaption></figure>
 
-[Watch the Promotional video Here](https://www.youtube.com/watch?v=qfBXvV287pc\&list=PLM88KLbdei-3aWVX7A1sPDA3Na94p0Gt5\&index=7\&pp=iAQB)
+{% embed url="https://www.youtube.com/watch?v=qfBXvV287pc" %}
+Sonoran Software - Speed Cameras Promotional Video
+{% endembed %}
 
 ## Speed Cameras / ALPR
 
 ### Features
 
 * Ability to operate standalone
-* Support for AcePerms, ESX, QBCore, and custom permissions systems        &#x20;
+* Support for Ace Perms, ESX, QBCore, and custom permissions systems        &#x20;
 
 <figure><img src="../../speed-camera/notification-feature.png" alt=""><figcaption><p>Sonoran Software - Speed Cameras Promotional Image</p></figcaption></figure>
 

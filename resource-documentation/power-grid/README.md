@@ -11,7 +11,9 @@ dateCreated: 2022-05-11T21:57:17.341Z
 
 <figure><img src="../../power-system/power-grid.png" alt=""><figcaption><p>Sonoran Software - Power Grid Promotional Image</p></figcaption></figure>
 
-[Watch the promotional video here!](https://youtu.be/3JhmcqlOWv8)
+{% embed url="https://www.youtube.com/watch?v=3JhmcqlOWv8" %}
+Sonoran Software - Power Grid Promotional Video
+{% endembed %}
 
 ## Power Grid
 
