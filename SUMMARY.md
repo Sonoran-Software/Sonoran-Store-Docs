@@ -4,7 +4,7 @@
 
 ## General
 
-* [ℹ Information](general/information.md)
+* [ℹ️ Information](general/information.md)
 * [✅ Accessing Tebex Assets](general/tebex-assets.md)
 * [🔫 Gun Placement System Guide](general/gun-placement.md)
 
@@ -33,19 +33,19 @@
 * [🔫 Shot Spotter](resource-documentation/shot-spotter/README.md)
   * [Getting Started](resource-documentation/shot-spotter/getting-started.md)
   * [Shot Spotter - Advanced Documentation](resource-documentation/shot-spotter/advanced-docs.md)
-* [🛣 Smart Signs](https://info.sonorancad.com/integration-plugins/integration-plugins/available-plugins/smart-signs)
+* [🛣️ Smart Signs](https://info.sonorancad.com/integration-plugins/integration-plugins/available-plugins/smart-signs)
 * [📹 Speed Cameras / ALPR](resource-documentation/speed-camera/README.md)
   * [Getting Started](resource-documentation/speed-camera/getting-started.md)
   * [Advanced Documentation](resource-documentation/speed-camera/advanced-docs.md)
 
 ## Our Products & Links
 
-* [🖥 Sonoran CAD](https://info.sonorancad.com/why-choose-sonoran-cad/about)
-* [🗃 Sonoran CMS](https://info.sonorancms.com/why-choose-sonoran-cms/why-choose-sonoran-cms)
+* [🖥️ Sonoran CAD](https://info.sonorancad.com/why-choose-sonoran-cad/about)
+* [🗃️ Sonoran CMS](https://info.sonorancms.com/why-choose-sonoran-cms/why-choose-sonoran-cms)
 * [📻 Sonoran Radio](https://info.sonoranradio.com/en/why-choose-sonoran-radio)
-* [🗄 Sonoran Servers](https://sonoranservers.com/)
-* [👨💻 Sonoran Software Website](https://sonoran.software/)
-* [⚔ Sonoran Discord Server](https://discord.sonoran.software/)
+* [🗄️ Sonoran Servers](https://sonoranservers.com/)
+* [👨‍💻 Sonoran Software Website](https://sonoran.software/)
+* [⚔️ Sonoran Discord Server](https://discord.sonoran.software/)
 * [💬 Customer Support](http://support.sonoransoftware.com/)
 
 ## Other

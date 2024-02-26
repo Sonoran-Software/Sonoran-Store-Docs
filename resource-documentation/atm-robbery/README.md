@@ -40,6 +40,10 @@ ATM Robbery Promotional Video
 
 ### Changelog
 
+#### v1.0.4
+
+* `fix: Fixed permission check for QB Core to check on character login`
+
 #### v1.0.2
 
 **Features**
