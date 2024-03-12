@@ -12,20 +12,20 @@ description: This page will walk you through getting and installing the ATM Robb
 
 ## Acquire the Script
 
-After purchasing the script through the sonoran store you may [download the script through the keymaster account](../../general/tebex-assets.md) that purchased the script. Upon downloading extract the file to a safe place.
+After purchasing the script through the sonoran store you may [download the script through the keymaster account](../general/tebex-assets.md) that purchased the script. Upon downloading extract the file to a safe place.
 
 ## Install the Script
 
 1.  Inside the script package you just extracted will be two folders. Copy both to a folder in your server's resources folder called `[sonoranscripts]` note the `[]` in the name, without them it will not work.&#x20;
 
-    <figure><img src="../../atm-robbery/atm_file.png" alt=""><figcaption><p>Sonoran Software - ATM Robbery - Folders</p></figcaption></figure>
+    <figure><img src="atm_file.png" alt=""><figcaption><p>Sonoran Software - ATM Robbery - Folders</p></figcaption></figure>
 2. In the `sonoran-atmrobbery/config` folder there will be a file called `config.CHANGEME.lua` you should rename that to be `config.lua` and configure the settings inside as you would like them to be configured based on the configuration documentation below. In that same folder will also be a file called `atms.CHANGEME.json` which is a storage file for all ATMs placed using the placement gun. Change the name to `atms.json`. You can also edit the `discord.CHANGEME.lua` file to add discord webhook updates for when the state of the ATM changes. Change the name to `discord.lua`.
 
 {% hint style="danger" %}
 Only ever change the name of the `atms.json` **ON INSTALL**, not on subsequent updates!
 {% endhint %}
 
-![Sonoran Software - ATM Robbery - Config folder](../../evidence-camera/config-folder.png)
+![Sonoran Software - ATM Robbery - Config folder](../evidence-camera/config-folder.png)
 
 {% hint style="warning" %}
 **QBCore** Specific - Please follow `Step 3` to ensure inventory items have correct photos!
@@ -270,10 +270,10 @@ add_ace group.hacker sonoran.theif allow
 
 You have two options for placing new ATMs:
 
-1. You can use the command `/spawnnewatm [label] [model]` to initiate spawning a new ATM and generate the relevant config data
+1. You can use the command `/spawnnewatm [model] [label]` to initiate spawning a new ATM and generate the relevant config data
    * After running this command you must pull out, aim, and shoot with a gun to confirm placement.
    * You may need to modify some of the rotation values manually to get that perfect placement you are looking for.
-   * [Click here for more information.](../../general/gun-placement.md)
+   * [Click here for more information.](../general/gun-placement.md)
 2. You can manually copy and paste an existing config and then modify the values to meet your needs for the new ATM
 
 ### `atms.json` Property Explanation
@@ -284,4 +284,4 @@ These are the default names of commands, they may have been modified by the serv
 
 ### Commands
 
-<table><thead><tr><th width="199">Command Name</th><th width="325.3333333333333">Command Description</th><th>Required Permission</th></tr></thead><tbody><tr><td><code>/spawnnewatm [label] [model]</code></td><td>This command will allow an admin to spawn a new ATM using a gun placement system where the name argument is the label for the new ATM and the prop argument is the text name of the model to use</td><td>Admin or as configured</td></tr><tr><td><code>/attachrope</code></td><td>This command is used to attach the rope between the ATM and your vehicle</td><td>Everyone or as configured</td></tr><tr><td><code>/drillatm</code></td><td>This command will initiate the final drilling into the ATM</td><td>Everyone or as configured</td></tr></tbody></table>
+<table><thead><tr><th width="199">Command Name</th><th width="325.3333333333333">Command Description</th><th>Required Permission</th></tr></thead><tbody><tr><td><code>/spawnnewatm  [model] [label]</code></td><td>This command will allow an admin to spawn a new ATM using a gun placement system where the name argument is the label for the new ATM and the prop argument is the text name of the model to use</td><td>Admin or as configured</td></tr><tr><td><code>/attachrope</code></td><td>This command is used to attach the rope between the ATM and your vehicle</td><td>Everyone or as configured</td></tr><tr><td><code>/drillatm</code></td><td>This command will initiate the final drilling into the ATM</td><td>Everyone or as configured</td></tr></tbody></table>
