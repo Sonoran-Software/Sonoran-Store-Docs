@@ -69,6 +69,7 @@ At time of writing this includes:
 * American Rearmount Ladder
 * Bike Hire
 * Bomb Disposal Robot (EOD)
+* Car Sale Sign
 * Custom Vinewood Sign
 * Decontamination Tent
 * Fire Supply Line
