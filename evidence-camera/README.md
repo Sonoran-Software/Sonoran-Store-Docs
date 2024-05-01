@@ -10,7 +10,7 @@ description: Easily take photos and upload them to CAD/ Discord
 
 # 📸 Evidence Camera
 
-![Sonoran Software - Evidence Camera Promotional Image](../../sono\_evidence\_tebex\_photo.png)
+![Sonoran Software - Evidence Camera Promotional Image](../sono\_evidence\_tebex\_photo.png)
 
 {% embed url="https://www.youtube.com/watch?v=jxTvYyDmJAE" %}
 Sonoran Software - Evidence Camera Promotional Video
@@ -23,17 +23,17 @@ Sonoran Software - Evidence Camera Promotional Video
 * Ability to operate standalone
 * Support for ESX, QBCore, and Sonoran CAD &#x20;
 
-<figure><img src="../../evidence-camera/simple_e_config.png" alt=""><figcaption><p>Sonoran Software - Evidence Camera Promotional Image</p></figcaption></figure>
+<figure><img src="simple_e_config.png" alt=""><figcaption><p>Sonoran Software - Evidence Camera Promotional Image</p></figcaption></figure>
 
-<figure><img src="../../evidence-camera/ingame_objects.png" alt=""><figcaption><p>Sonoran Software - Evidence Camera Promotional Image</p></figcaption></figure>
+<figure><img src="ingame_objects.png" alt=""><figcaption><p>Sonoran Software - Evidence Camera Promotional Image</p></figcaption></figure>
 
-<figure><img src="../../evidence-camera/auto_update.png" alt=""><figcaption><p>Sonoran Software - Evidence Camera Promotional Image</p></figcaption></figure>
+<figure><img src="auto_update.png" alt=""><figcaption><p>Sonoran Software - Evidence Camera Promotional Image</p></figcaption></figure>
 
-<figure><img src="../../evidence-camera/discord_webhooks.png" alt=""><figcaption><p>Sonoran Software - Evidence Camera Promotional Image</p></figcaption></figure>
+<figure><img src="discord_webhooks.png" alt=""><figcaption><p>Sonoran Software - Evidence Camera Promotional Image</p></figcaption></figure>
 
-<figure><img src="../../evidence-camera/cad_integration.png" alt=""><figcaption><p>Sonoran Software - Evidence Camera Promotional Image</p></figcaption></figure>
+<figure><img src="cad_integration.png" alt=""><figcaption><p>Sonoran Software - Evidence Camera Promotional Image</p></figcaption></figure>
 
-<figure><img src="../../framework_item.png" alt=""><figcaption><p>Sonoran Software - Evidence Camera Promotional Image</p></figcaption></figure>
+<figure><img src="../framework_item.png" alt=""><figcaption><p>Sonoran Software - Evidence Camera Promotional Image</p></figcaption></figure>
 
 ### Commands
 
@@ -42,6 +42,13 @@ Sonoran Software - Evidence Camera Promotional Video
 | `/ecam`      | Toggle the evidence camera | None                |
 
 ### Changelog
+
+#### v.1.2.6
+
+**Feature Request**
+
+* `Add config for capture button`
+* `Move all English text to translation config in config.lua`
 
 #### v1.2.5
 
