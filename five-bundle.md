@@ -99,6 +99,10 @@ At time of writing this includes:
 * Water Monitor
 * Weapon Lanyard
 
+{% hint style="info" %}
+Please be aware that "Smart Speed Cameras" is listed in keymaster as "Average Speed"
+{% endhint %}
+
 ### Where can I find vehicle livery/lighting/texture templates?
 
 For templates available you will find a `Templates` folder in the keymaster resource download. If there is not a template for your desired vehicle, there is not one available for that vehicle at this time. All Redneck Mods vehicles have been updated on `January 10th, 2023` to have the complete list of available templates.
