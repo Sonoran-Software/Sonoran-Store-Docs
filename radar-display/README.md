@@ -10,7 +10,7 @@ description: Run Radar Like Never Before
 
 # 📟 Radar Display
 
-<figure><img src="../../radar/rada1.png" alt=""><figcaption><p>Sonoran Software - Radar Display Promotional Image</p></figcaption></figure>
+<figure><img src="../radar/rada1.png" alt=""><figcaption><p>Sonoran Software - Radar Display Promotional Image</p></figcaption></figure>
 
 {% embed url="https://www.youtube.com/watch?v=mZqMl9oNQcQ" %}
 Sonoran Software - Radar Display Promotional Video
@@ -22,19 +22,25 @@ Sonoran Software - Radar Display Promotional Video
 
 * Ability to operate standalone     &#x20;
 
-<figure><img src="../../radar/in_game_prop_radar.png" alt=""><figcaption><p>Sonoran Software - Radar Display Promotional Image</p></figcaption></figure>
+<figure><img src="../radar/in_game_prop_radar.png" alt=""><figcaption><p>Sonoran Software - Radar Display Promotional Image</p></figcaption></figure>
 
-<figure><img src="../../radar/wraith_integration_radar.png" alt=""><figcaption><p>Sonoran Software - Radar Display Promotional Image</p></figcaption></figure>
+<figure><img src="../radar/wraith_integration_radar.png" alt=""><figcaption><p>Sonoran Software - Radar Display Promotional Image</p></figcaption></figure>
 
-<figure><img src="../../radar/menu_placement_radar.png" alt=""><figcaption><p>Sonoran Software - Radar Display Promotional Image</p></figcaption></figure>
+<figure><img src="../radar/menu_placement_radar.png" alt=""><figcaption><p>Sonoran Software - Radar Display Promotional Image</p></figcaption></figure>
 
-<figure><img src="../../radar/easy_translate_radar.png" alt=""><figcaption><p>Sonoran Software - Radar Display Promotional Image</p></figcaption></figure>
+<figure><img src="../radar/easy_translate_radar.png" alt=""><figcaption><p>Sonoran Software - Radar Display Promotional Image</p></figcaption></figure>
 
-<figure><img src="../../radar/highly_config_radar.png" alt=""><figcaption><p>Sonoran Software - Radar Display Promotional Image</p></figcaption></figure>
+<figure><img src="../radar/highly_config_radar.png" alt=""><figcaption><p>Sonoran Software - Radar Display Promotional Image</p></figcaption></figure>
 
-<figure><img src="../../speed-camera/auto-update-feature.png" alt=""><figcaption><p>Sonoran Software - Radar Display Promotional Image</p></figcaption></figure>
+<figure><img src="../speed-camera/auto-update-feature.png" alt=""><figcaption><p>Sonoran Software - Radar Display Promotional Image</p></figcaption></figure>
 
 ### Changelog
+
+#### v1.0.3
+
+#### Feature
+
+* `Add ability to delete currently spawned radars from vehicle and radar database`
 
 #### v1.0.2
 
