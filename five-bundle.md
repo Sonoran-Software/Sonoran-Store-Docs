@@ -78,6 +78,7 @@ At time of writing this includes:
 * Mobile Spike
 * Police Grappler
 * Police Shields
+* Police Tracker
 * Rescue Cushion
 * Rope Rescue Tripod & Basket Resource
 * Smart Airbags
@@ -93,7 +94,6 @@ At time of writing this includes:
 * Smart Speed Cameras
 * Smart Speed Signs
 * Smart Taser
-* Star Chase
 * Throw Bag
 * Vehicle Rescue
 * Water Monitor
