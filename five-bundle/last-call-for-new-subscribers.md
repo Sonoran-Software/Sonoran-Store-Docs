@@ -16,13 +16,13 @@ Please note that content updates will continue through November 15, but no furth
 
 ## I am an existing subscriber, what happens to me?
 
-All current Five Bundle subscribers will retain full access to their existing content indefinitely, as long as they maintain an active subscription. However, no new content from Sonoran Store, Redneck Modifications, or London Studios will be added to this existing bundle beyond the 15th of November.
+**All current Five Bundle subscribers will retain full access to their existing content indefinitely**, as long as they maintain an active subscription. **Content for existing subscribers will not change nor be removed**. However, no new content from Sonoran Store, Redneck Modifications, or London Studios will be added to this existing bundle beyond the 15th of November.
 
 For new subscribers past the 15th of November, a refreshed Five Bundle offering will be announced in the coming weeks. Stay tuned for more details!
 
 ## What happens to the Five Bundle?
 
-We’re thrilled to announce an upcoming refresh of the Five Bundle partnership, featuring new content creators and even more value for your community!
+We’re thrilled to announce an upcoming refresh of the Five Bundle partnership, featuring a NEW bundle with new content creators and even more value for your community!
 
 Stay tuned for exciting updates on the all-new Five Bundle release—big things are coming!
 
