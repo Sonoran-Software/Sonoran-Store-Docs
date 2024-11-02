@@ -10,7 +10,8 @@
 
 ***
 
-* [💥 Five Bundle](five-bundle.md)
+* [💥 Five Bundle](five-bundle/README.md)
+  * [Last Call For New Subscribers](five-bundle/last-call-for-new-subscribers.md)
 
 ## Resource Documentation
 

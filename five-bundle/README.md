@@ -10,6 +10,12 @@ description: Learn more about the Five Bundle partnership!
 
 # 💥 Five Bundle
 
+{% hint style="danger" %}
+Five Bundle subscriptions under the existing partnership will be closed at EOD November 15th, 2024.
+
+[Learn more about this upcoming change HERE.](last-call-for-new-subscribers.md)
+{% endhint %}
+
 ## Five Bundle
 
 &#x20;Get the ultimate content package for your FiveM™ community!
