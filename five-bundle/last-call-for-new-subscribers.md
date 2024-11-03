@@ -4,7 +4,7 @@ description: Important notice about Five Bundle subscriptions and pending change
 
 # Last Call For New Subscribers
 
-## New Subscriptions ENDING 10/15/2024
+## New Subscriptions ENDING 11/15/2024
 
 **Last Chance to Subscribe to the Five Bundle Package!**
 
