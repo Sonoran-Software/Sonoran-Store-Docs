@@ -11,9 +11,9 @@ description: Learn more about the Five Bundle partnership!
 # 💥 Five Bundle
 
 {% hint style="danger" %}
-Five Bundle subscriptions under the existing partnership will be closed at EOD November 15th, 2024.
+All new subscriptions for the Five Bundle package were closed on **November 15, 2024**. As of this date the bundle is no longer be available for new subscriptions.
 
-[Learn more about this upcoming change HERE.](last-call-for-new-subscribers.md)
+[Learn more about this change HERE.](last-call-for-new-subscribers.md)
 {% endhint %}
 
 ## Five Bundle
