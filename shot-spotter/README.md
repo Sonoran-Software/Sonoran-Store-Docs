@@ -10,7 +10,7 @@ description: Quickly be alerted when gunshots are detected around San Andreas
 
 # 🔫 Shot Spotter
 
-![Sonoran Software - Shot Spotter Promotional Image](../../ss-final.png)
+![Sonoran Software - Shot Spotter Promotional Image](../ss-final.png)
 
 {% embed url="https://www.youtube.com/watch?v=ng12Pimxev0" %}
 Sonoran Software - Shot Spotter Promotional Video
@@ -23,17 +23,17 @@ Sonoran Software - Shot Spotter Promotional Video
 * Ability to operate standalone
 * Support for AcePerms, ESX, QBCore, and custom permissions systems
 
-<figure><img src="../../shot-spotter/ss-cad-integration.png" alt=""><figcaption><p>Sonoran Software - Shot Spotter Promotional Image</p></figcaption></figure>
+<figure><img src="ss-cad-integration.png" alt=""><figcaption><p>Sonoran Software - Shot Spotter Promotional Image</p></figcaption></figure>
 
-<figure><img src="../../shot-spotter/ss-in-game-blips.png" alt=""><figcaption><p>Sonoran Software - Shot Spotter Promotional Image</p></figcaption></figure>
+<figure><img src="ss-in-game-blips.png" alt=""><figcaption><p>Sonoran Software - Shot Spotter Promotional Image</p></figcaption></figure>
 
-<figure><img src="../../ss-gun-placement-system.png" alt=""><figcaption><p>Sonoran Software - Shot Spotter Promotional Image</p></figcaption></figure>
+<figure><img src="../ss-gun-placement-system.png" alt=""><figcaption><p>Sonoran Software - Shot Spotter Promotional Image</p></figcaption></figure>
 
-<figure><img src="../../shot-spotter/ss-discord-webhooks.png" alt=""><figcaption><p>Sonoran Software - Shot Spotter Promotional Image</p></figcaption></figure>
+<figure><img src="ss-discord-webhooks.png" alt=""><figcaption><p>Sonoran Software - Shot Spotter Promotional Image</p></figcaption></figure>
 
-<figure><img src="../../shot-spotter/ss-translate-feature.png" alt=""><figcaption><p>Sonoran Software - Shot Spotter Promotional Image</p></figcaption></figure>
+<figure><img src="ss-translate-feature.png" alt=""><figcaption><p>Sonoran Software - Shot Spotter Promotional Image</p></figcaption></figure>
 
-<figure><img src="../../shot-spotter/ss-highly-configurable.png" alt=""><figcaption><p>Sonoran Software - Shot Spotter Promotional Image</p></figcaption></figure>
+<figure><img src="ss-highly-configurable.png" alt=""><figcaption><p>Sonoran Software - Shot Spotter Promotional Image</p></figcaption></figure>
 
 ### Commands
 
@@ -44,11 +44,23 @@ Sonoran Software - Shot Spotter Promotional Video
 | `/showspotterpos`         | Show the position of the shot spotters                                                                              | Admin                |
 | `/changepositiondata`     | Change the position data of the shot spotter                                                                        | Admin                |
 | `/reloadspotters`         | Reload all spotters and positions                                                                                   | Admin                |
-| `/spawnnewspotter`        | Activate the placement gun [SEE HERE](../../general/gun-placement.md)                                               | Admin                |
+| `/spawnnewspotter`        | Activate the placement gun [SEE HERE](../general/gun-placement.md)                                                  | Admin                |
 | `/cancelspotterplacement` | Cancels the placement gun                                                                                           | Admin                |
 | `togglespotter`           | Toggle the spotter with the specified ID                                                                            | Admin                |
 
 ### Changelog
+
+#### v1.3.1
+
+**Bug Fix**
+
+* `Fixed "TRIGGER_CLIENT_INTERNAL" bug on player joining`
+
+#### v1.3.0
+
+**Feature**
+
+* `Add postals to shot spotter 911 calls`
 
 #### v1.2.9
 
