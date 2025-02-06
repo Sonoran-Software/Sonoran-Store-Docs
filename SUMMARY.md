@@ -33,6 +33,7 @@
   * [Getting Started](radar-detector/getting-started.md)
 * [📟 Radar Display](radar-display/README.md)
   * [Getting Started](radar-display/getting-started.md)
+* [📻 Radio Display](https://info.sonoranradio.com/tutorials/integrations/vehicle-radio-display)
 * [🔫 Shot Spotter](shot-spotter/README.md)
   * [Getting Started](shot-spotter/getting-started.md)
   * [Shot Spotter - Advanced Documentation](shot-spotter/advanced-docs.md)
