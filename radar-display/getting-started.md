@@ -14,12 +14,12 @@ description: >-
 
 ## Acquire the Script
 
-After purchasing the script through the Sonoran store you may [download the script through the keymaster account](../../general/tebex-assets.md) that purchased the script. Upon downloading extract the file to a safe place.
+After purchasing the script through the Sonoran store you may [download the script through the keymaster account](../general/tebex-assets.md) that purchased the script. Upon downloading extract the file to a safe place.
 
 ## Install Prerequisite
 
 {% hint style="warning" %}
-You must use the Sonoran Fork of WK\_Wars2x found [here](https://github.com/Sonoran-Software/wk\_wars2x/releases/latest).
+You must use the Sonoran Fork of WK\_Wars2x found [here](https://github.com/Sonoran-Software/wk_wars2x/releases/latest).
 
 Minimum version required: `v1.3.3-sonoran`
 {% endhint %}
@@ -30,13 +30,13 @@ If you are using the Sonoran CAD FiveM Integration, **DO NOT** install a second 
 
 WK\_Wars2x Radar script is required for this resource to function fully. Please ensure you are using the **Sonoran Fork** of WK\_Wars2x. This is included with the [Sonoran CAD FiveM Integration](https://info.sonorancad.com/integration-plugins/integration-plugins/framework-installation) by default.
 
-You can also download the latest release of the resource [here](https://github.com/Sonoran-Software/wk\_wars2x/releases/latest).
+You can also download the latest release of the resource [here](https://github.com/Sonoran-Software/wk_wars2x/releases/latest).
 
 ## Install the Script
 
 1.  Inside the script package you just extracted will be two folders. Copy both to a folder in your server's resources folder called `[sonoranscripts]` note the `[]` in the name, without them it will not work.&#x20;
 
-    <figure><img src="../../directory_example.png" alt=""><figcaption><p>Sonoran Software - Radar Display - Folders</p></figcaption></figure>
+    <figure><img src="../directory_example.png" alt=""><figcaption><p>Sonoran Software - Radar Display - Folders</p></figcaption></figure>
 2. In the `sonoran-radar/config` folder there will be a file called `config.CHANGEME.lua` you should rename that to be `config.lua` and configure the settings inside as you would like them to be configured based on the configuration documentation below. In that same folder will also be a file called `radars.CHANGEME.json` which you should rename to `radars.json` and use to manually place cameras based on the existing template, note you can also use the menu placement system in game.
 3. Finally, in your `server.cfg` add the following:
 
@@ -112,13 +112,14 @@ You have two options for placing new radars:
 
 ### `radars.json` Property Explanation
 
-| Property Name | Example | Notes                                                               |
-| ------------- | ------- | ------------------------------------------------------------------- |
-| `ID`          | `2`     | `ID` must be unique. No other radar can share this ID               |
-| `Position`    |         | This is a table that contains the x, y, and z coords of the radar   |
-| `Rotation`    |         | This is a table that contains the x, y, and z rotation of the radar |
-| `Vehicle`     | `FBI`   | This is the vehicles spawn code                                     |
-| `Bone`        | `-1`    | This is the index of the bone you would like to attach the radar to |
+| Property Name | Example | Notes                                                                                                                                 |
+| ------------- | ------- | ------------------------------------------------------------------------------------------------------------------------------------- |
+| `ID`          | `2`     | `ID` must be unique. No other radar can share this ID                                                                                 |
+| `Position`    |         | This is a table that contains the x, y, and z coords of the radar                                                                     |
+| `Rotation`    |         | This is a table that contains the x, y, and z rotation of the radar                                                                   |
+| `Vehicle`     | `FBI`   | This is the vehicles spawn code                                                                                                       |
+| `Bone`        | `-1`    | This is the index of the bone you would like to attach the radar to                                                                   |
+| `type`        | `1`     | Enum: `1` - Radar model with front and rear antennas \| `2`- Radar model with only front antenna \| `3`- Radar model with no antennas |
 
 ## Commands
 

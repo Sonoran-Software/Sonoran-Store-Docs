@@ -36,6 +36,12 @@ Sonoran Software - Radar Display Promotional Video
 
 ### Changelog
 
+#### v1.0.4
+
+**Feature**
+
+* `Add additional radar models`
+
 #### v1.0.3
 
 #### Feature
