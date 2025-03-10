@@ -112,14 +112,14 @@ You have two options for placing new radars:
 
 ### `radars.json` Property Explanation
 
-| Property Name | Example | Notes                                                                                                                                 |
-| ------------- | ------- | ------------------------------------------------------------------------------------------------------------------------------------- |
-| `ID`          | `2`     | `ID` must be unique. No other radar can share this ID                                                                                 |
-| `Position`    |         | This is a table that contains the x, y, and z coords of the radar                                                                     |
-| `Rotation`    |         | This is a table that contains the x, y, and z rotation of the radar                                                                   |
-| `Vehicle`     | `FBI`   | This is the vehicles spawn code                                                                                                       |
-| `Bone`        | `-1`    | This is the index of the bone you would like to attach the radar to                                                                   |
-| `type`        | `1`     | Enum: `1` - Radar model with front and rear antennas \| `2`- Radar model with only front antenna \| `3`- Radar model with no antennas |
+| Property Name | Example | Notes                                                                                                                                                                                 |
+| ------------- | ------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `ID`          | `2`     | `ID` must be unique. No other radar can share this ID                                                                                                                                 |
+| `Position`    |         | This is a table that contains the x, y, and z coords of the radar                                                                                                                     |
+| `Rotation`    |         | This is a table that contains the x, y, and z rotation of the radar                                                                                                                   |
+| `Vehicle`     | `FBI`   | This is the vehicles spawn code                                                                                                                                                       |
+| `Bone`        | `-1`    | This is the index of the bone you would like to attach the radar to                                                                                                                   |
+| `type`        | `1`     | <p>Enum:</p><p><code>1</code> Radar model with front and rear antennas</p><p><code>2</code> Radar model with only front antenna</p><p><code>3</code> Radar model with no antennas</p> |
 
 ## Commands
 
