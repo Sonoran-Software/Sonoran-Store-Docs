@@ -1,5 +1,6 @@
 ---
 description: Important notice about Five Bundle subscriptions and pending changes.
+hidden: true
 ---
 
 # Last Call For New Subscribers
