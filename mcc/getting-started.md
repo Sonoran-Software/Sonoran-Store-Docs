@@ -12,13 +12,13 @@ description: This page will walk you through getting and installing the script.
 
 ## Acquire the Script
 
-After purchasing the script through the Sonoran store you may [download the script through the keymaster account](../../general/tebex-assets.md) that purchased the script. Upon downloading extract the file to a safe place.
+After purchasing the script through the Sonoran store you may [download the script through the keymaster account](../general/tebex-assets.md) that purchased the script. Upon downloading extract the file to a safe place.
 
 ## Install the Script
 
 1.  Inside the script package you just extracted will be two folders. Copy both to a folder in your server's resources folder called `[sonoranscripts]` note the `[]` in the name, without them it will not work.&#x20;
 
-    <figure><img src="../../mcc/directory-example.png" alt=""><figcaption><p>Sonoran Software -  MCC - Folders</p></figcaption></figure>
+    <figure><img src="directory-example.png" alt=""><figcaption><p>Sonoran Software -  MCC - Folders</p></figcaption></figure>
 2. In the `sonoran-mcc` folder there will be a folder called `config`, once inside that folder you should see a file called `config.CHANGEME.lua` you should rename that to be `config.lua` and configure the settings inside as you would like them to be configured based on the configuration documentation below.
 3. In the `sonoran-mcc` folder there is the file `sonomcc.ytd`, move that file into the `sonoran-mcc/stream/` folder. This allows our updater to not override any custom YTD edits like custom liveries.
 4. In the `sonoran-mcc/data/` folder there are 4 `.meta` files rename each file so that you remove`.CHANGEME` from the name. You should be left with the following 4 file names:
@@ -121,9 +121,9 @@ The mobile command center is equipped with surveillance cameras on top of the ra
 
 Additionally, with [Sonoran CAD's Wraith integration](https://info.sonorancad.com/integration-plugins/integration-plugins/available-plugins/wraithv2), a pNotify pop-up will display the vehicle's registration information from Sonoran CAD. Press `ENTER` to "lock" the plate and return a full search in your Sonoran CAD screen.
 
-<figure><img src="../../.gitbook/assets/mcc_alpr.png" alt=""><figcaption><p>Sonoran Software - MCC - ALPR</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/mcc_alpr.png" alt=""><figcaption><p>Sonoran Software - MCC - ALPR</p></figcaption></figure>
 
-<figure><img src="../../.gitbook/assets/mcc_alpr_locked.png" alt=""><figcaption><p>Sonoran Software - MCC - ALRP Locked</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/mcc_alpr_locked.png" alt=""><figcaption><p>Sonoran Software - MCC - ALRP Locked</p></figcaption></figure>
 
 ### Configuration
 
@@ -214,3 +214,14 @@ These are the default names of commands, they may have been modified by the serv
 | Driver's Door    | `frontleft`  |
 | Passenger's Door | `frontright` |
 | All Doors        | `all`        |
+
+## Troubleshooting
+
+### Crashing when spawning or enterning the MCC
+
+1. Ensure you have removed the `CHANGEME` from the configuration files.
+2. Ensure you have removed the `CHANGEME` from all four of the `.meta`  files in `/sonoran-mcc/data/`
+3. Ensure you are **NOT** ensuring/starting the `sonoran-mcc_helper` resource and are only ensuring the `sonoran-mcc` resource.
+4. Ensure you are not restarting the MCC resource live on the server. It should only be ran on server startup from your `server.cfg` file.
+5. Clear your FiveM `server-data/cache` folder.
+6. Some users have reported crashing when spawning the vehicle via TxAdmin, try only using the vMenu.
