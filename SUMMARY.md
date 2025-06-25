@@ -42,16 +42,6 @@
   * [Getting Started](speed-camera/getting-started.md)
   * [Advanced Documentation](speed-camera/advanced-docs.md)
 
-## Our Products & Links
-
-* [🖥️ Sonoran CAD](https://info.sonorancad.com/why-choose-sonoran-cad/about)
-* [🗃️ Sonoran CMS](https://info.sonorancms.com/why-choose-sonoran-cms/why-choose-sonoran-cms)
-* [📻 Sonoran Radio](https://info.sonoranradio.com/en/why-choose-sonoran-radio)
-* [🗄️ Sonoran Servers](https://sonoranservers.com/)
-* [👨‍💻 Sonoran Software Website](https://sonoran.software/)
-* [⚔️ Sonoran Discord Server](https://discord.sonoran.software/)
-* [💬 Customer Support](http://support.sonoransoftware.com/)
-
 ## Other
 
 * [📜 Terms and Policies](other/policy.md)
