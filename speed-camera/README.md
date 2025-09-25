@@ -12,7 +12,7 @@ description: >-
 
 # 📹 Speed Cameras / ALPR
 
-<figure><img src="../../.gitbook/assets/1920x1080-speedcam.png" alt=""><figcaption><p>Sonoran Software - Speed Cameras Promotional Image</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/1920x1080-speedcam.png" alt=""><figcaption><p>Sonoran Software - Speed Cameras Promotional Image</p></figcaption></figure>
 
 {% embed url="https://www.youtube.com/watch?v=qfBXvV287pc" %}
 Sonoran Software - Speed Cameras Promotional Video
@@ -25,23 +25,23 @@ Sonoran Software - Speed Cameras Promotional Video
 * Ability to operate standalone
 * Support for Ace Perms, ESX, QBCore, and custom permissions systems        &#x20;
 
-<figure><img src="../../speed-camera/notification-feature.png" alt=""><figcaption><p>Sonoran Software - Speed Cameras Promotional Image</p></figcaption></figure>
+<figure><img src="notification-feature.png" alt=""><figcaption><p>Sonoran Software - Speed Cameras Promotional Image</p></figcaption></figure>
 
-<figure><img src="../../speed-camera/cad-integration-feature.png" alt=""><figcaption><p>Sonoran Software - Speed Cameras Promotional Image</p></figcaption></figure>
+<figure><img src="cad-integration-feature.png" alt=""><figcaption><p>Sonoran Software - Speed Cameras Promotional Image</p></figcaption></figure>
 
-<figure><img src="../../speed-camera/in-game-blip.png" alt=""><figcaption><p>Sonoran Software - Speed Cameras Promotional Image</p></figcaption></figure>
+<figure><img src="in-game-blip.png" alt=""><figcaption><p>Sonoran Software - Speed Cameras Promotional Image</p></figcaption></figure>
 
-<figure><img src="../../speed-camera/auto-fine.png" alt=""><figcaption><p>Sonoran Software - Speed Cameras Promotional Image</p></figcaption></figure>
+<figure><img src="auto-fine.png" alt=""><figcaption><p>Sonoran Software - Speed Cameras Promotional Image</p></figcaption></figure>
 
-<figure><img src="../../speed-camera/auto-update-feature.png" alt=""><figcaption><p>Sonoran Software - Speed Cameras Promotional Image</p></figcaption></figure>
+<figure><img src="auto-update-feature.png" alt=""><figcaption><p>Sonoran Software - Speed Cameras Promotional Image</p></figcaption></figure>
 
-<figure><img src="../../speed-camera/gun-placement-feature.png" alt=""><figcaption><p>Sonoran Software - Speed Cameras Promotional Image</p></figcaption></figure>
+<figure><img src="gun-placement-feature.png" alt=""><figcaption><p>Sonoran Software - Speed Cameras Promotional Image</p></figcaption></figure>
 
-<figure><img src="../../speed-camera/discord-webhook-feature.png" alt=""><figcaption><p>Sonoran Software - Speed Cameras Promotional Image</p></figcaption></figure>
+<figure><img src="discord-webhook-feature.png" alt=""><figcaption><p>Sonoran Software - Speed Cameras Promotional Image</p></figcaption></figure>
 
-<figure><img src="../../speed-camera/configurable-feature.png" alt=""><figcaption><p>Sonoran Software - Speed Cameras Promotional Image</p></figcaption></figure>
+<figure><img src="configurable-feature.png" alt=""><figcaption><p>Sonoran Software - Speed Cameras Promotional Image</p></figcaption></figure>
 
-<figure><img src="../../speed-camera/translate-feature.png" alt=""><figcaption><p>Sonoran Software - Speed Cameras Promotional Image</p></figcaption></figure>
+<figure><img src="translate-feature.png" alt=""><figcaption><p>Sonoran Software - Speed Cameras Promotional Image</p></figcaption></figure>
 
 ### Commands
 
@@ -65,9 +65,19 @@ These are the default names of commands, they may have been modified by the serv
 
 &#x20;The model on the left is named `prop_traffic_cam` and the model is named `radar01`.
 
-<figure><img src="../../speed-camera/promo-models.png" alt=""><figcaption><p>Sonoran Software - Speed Cameras Promotional Image</p></figcaption></figure>
+<figure><img src="promo-models.png" alt=""><figcaption><p>Sonoran Software - Speed Cameras Promotional Image</p></figcaption></figure>
 
 ### Changelog
+
+#### v2.2.4
+
+**Bug Fixes**
+
+* `Fixed SonoranCAD bolo & warrant checks`
+
+**Feature**
+
+* `Added option to add "warrant" type plates to standalone bolo system`
 
 #### v2.1.9
 

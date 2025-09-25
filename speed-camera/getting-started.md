@@ -14,16 +14,16 @@ description: >-
 
 ## Acquire the Script
 
-After purchasing the script through the sonoran store you may [download the script through the keymaster account](../../general/tebex-assets.md) that purchased the script. Upon downloading extract the file to a safe place.
+After purchasing the script through the sonoran store you may [download the script through the keymaster account](../general/tebex-assets.md) that purchased the script. Upon downloading extract the file to a safe place.
 
 ## Install the Script
 
 1.  Inside the script package you just extracted will be two folders. Copy both to a folder in your server's resources folder called `[sonoranscripts]` note the `[]` in the name, without them it will not work.&#x20;
 
-    <figure><img src="../../speed-camera/directory-example.png" alt=""><figcaption><p>Sonoran Software - Speed Cameras - Folders</p></figcaption></figure>
+    <figure><img src="directory-example.png" alt=""><figcaption><p>Sonoran Software - Speed Cameras - Folders</p></figcaption></figure>
 2.  In the `sonoran-trafficcam` folder there will be a file called `config.CHANGEME.lua` you should rename that to be `config.lua` and configure the settings inside as you would like them to be configured based on the configuration documentation below. In that same folder will also be a file called `cameras.CHANGEME.json` which you should rename to `cameras.json` and use to manually place cameras based on the existing template, note you can also use the gun placement system in game. Finally there is a file called `discord.CHANGEME.lua` in the folder which should be renamed to `discord.lua`, this file contains all of your Discord webhook related settings.&#x20;
 
-    <figure><img src="../../speed-camera/files-example.png" alt=""><figcaption><p>Sonoran Software - Speed Cameras - Remove .CHANGEMEs</p></figcaption></figure>
+    <figure><img src="files-example.png" alt=""><figcaption><p>Sonoran Software - Speed Cameras - Remove .CHANGEMEs</p></figcaption></figure>
 3. Finally, in your `server.cfg` add the following:
 
 ```
@@ -228,7 +228,7 @@ You have two options for placing new cameras:
    * After running this command you must pull out, aim, and shoot with a gun to confirm placement.
    * You may need to modify some of the rotation values manually to get that perfect placement you are looking for.
    * If you aren't using the speed limit display integration you will need to manually go into the config file to change the set speed limit. You will also need to change the view radius to be the way you want it.
-   * [Click here for more information.](../../general/gun-placement.md)
+   * [Click here for more information.](../general/gun-placement.md)
 2. You can manually copy and paste an existing config and then modify the values to meet your needs for the new camera
 
 ### `camera.json` Property Explanation
@@ -248,7 +248,7 @@ You have two options for placing new cameras:
 | Command Name                 | Command Description                                                                                                                                                                                    | Required Permission    |
 | ---------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------------------- |
 | `/spawnnewcam [prop] [name]` | This command will allow an admin to spawn a new camera using a gun placement system where the name argument is the label for the new camera and the prop argument is the text name of the model to use | Admin or as configured |
-| `/addplate [plate]`          | This command will add a plate to the standalone BOLO system when in use.                                                                                                                               | LEO or as configured   |
+| `/addplate [type] [plate]`   | This command will add a plate to the standalone BOLO system when in use.                                                                                                                               | LEO or as configured   |
 | `/delplate [plate]`          | This command will remove a plate from the standalone BOLO system when in use.                                                                                                                          | LEO or as configured   |
 | `/listplates`                | This command will list the plates currently configured in the standalone BOLO system when in use                                                                                                       | LEO or as configured   |
 | `/showcamid`                 | This command will draw the ID of cameras which you are in the radius of with 3D text near the camera                                                                                                   | N/A                    |
@@ -263,7 +263,7 @@ You have two options for placing new cameras:
 
 &#x20;The model on the left is named `prop_traffic_cam` and the model is named `radar01`.
 
-<figure><img src="../../speed-camera/promo-models.png" alt=""><figcaption><p>Sonoran Software - Speed Cameras Promotional Image</p></figcaption></figure>
+<figure><img src="promo-models.png" alt=""><figcaption><p>Sonoran Software - Speed Cameras Promotional Image</p></figcaption></figure>
 
 ## Needed Changes for Speed Display
 
