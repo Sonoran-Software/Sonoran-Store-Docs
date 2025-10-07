@@ -69,7 +69,7 @@ These are the default names of commands, they may have been modified by the serv
 
 ### Changelog
 
-#### v2.2.4
+#### v2.2.5
 
 **Bug Fixes**
 
