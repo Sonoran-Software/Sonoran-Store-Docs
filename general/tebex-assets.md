@@ -15,7 +15,7 @@ There are two ways you can access your assets after you've purchased them throug
 
 After completing your purchase you should receive an email similar to the following.  From this email you can simply click the `Download Your Asset` button to download the zip file containing your asset. After you've downloaded your asset please proceed to the install documentation for the script you've downloaded.
 
-<figure><img src="../email-example.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/email-example.png" alt=""><figcaption></figcaption></figure>
 
 ### Keymaster
 

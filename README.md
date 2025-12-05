@@ -18,7 +18,7 @@ With industry leading software in [Sonoran CAD](https://info.sonorancad.com/why-
 
 &#x20;Get the entire Sonoran store for just $19.99/mo! Purchase at [SonoranM.com](https://sonoranm.com)!
 
-<figure><img src="sonoranm_wide.png" alt=""><figcaption><p>SonoranM Promotional Image</p></figcaption></figure>
+<figure><img src=".gitbook/assets/sonoranm_wide.png" alt=""><figcaption><p>SonoranM Promotional Image</p></figcaption></figure>
 
 ## Connect with us!
 

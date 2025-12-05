@@ -11,19 +11,19 @@ dateCreated: 2022-05-11T21:58:21.146Z
 
 ## Acquire the Script
 
-After purchasing the script through the sonoran store you may [download the script through the keymaster account](../../general/tebex-assets.md) that purchased the script. Upon downloading extract the file to a safe place.
+After purchasing the script through the sonoran store you may [download the script through the keymaster account](../general/tebex-assets.md) that purchased the script. Upon downloading extract the file to a safe place.
 
 ## Install the Script
 
 1.  Inside the script package you just extracted will be two folders. Copy both to a folder in your server's resources folder called `[sonoranscripts]` note the `[]` in the name, without them it will not work.&#x20;
 
-    <figure><img src="../../power-system/kaicwrm.png" alt=""><figcaption><p>Sonoran Software - Power Grid - Folders</p></figcaption></figure>
+    <figure><img src="../.gitbook/assets/kaicwrm.png" alt=""><figcaption><p>Sonoran Software - Power Grid - Folders</p></figcaption></figure>
 2. In the `sonoran-powergrid` folder are three files you must change and configure:&#x20;
    1. `config.CHANGEME.lua` needs to be renamed to `config.lua`&#x20;
    2. `discord.CHANGEME.lua` renamed to `discord.lua`&#x20;
    3. And finally `systems.CHANGEME.json` renamed to `systems.json`.
 
-<figure><img src="../../power-system/w2oim4j.png" alt=""><figcaption><p>Sonoran Software - Power Grid - Remove .CHANGEMEs</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/w2oim4j.png" alt=""><figcaption><p>Sonoran Software - Power Grid - Remove .CHANGEMEs</p></figcaption></figure>
 
 3. You can open and edit the `config.lua` file to change the settings for the power grid script. You can also edit the `discord.lua` file to add discord webhook updates for when the state of the power grid changes. For more advanced users, you can add custom power grid stations in the `systems.json` file by following the template
 4. Finally, in your `server.cfg` add the following:
@@ -189,7 +189,7 @@ You have two options for placing new systems:
 1. You can use the command `/spawnnewsystem [prop] [name]` to initiate spawning a new system and generate the relevant config data
    * After running this command you must pull out, aim, and shoot with a gun to confirm placement.
    * You may need to modify some of the rotation values manually to get that perfect placement you are looking for.
-   * [Click here for more information.](../../general/gun-placement.md)
+   * [Click here for more information.](../general/gun-placement.md)
 2. You can manually copy and paste an existing config and then modify the values to meet your needs for the new system
 
 ### `systems.json` Property Explanation

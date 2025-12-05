@@ -10,7 +10,7 @@ description: Take command on scene like never before.
 
 # 🚛 Mobile Command Center
 
-<figure><img src="../../mcc_promo_wide.png" alt=""><figcaption><p>Sonoran Software - MCC Promotional Image</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/mcc_promo_wide.png" alt=""><figcaption><p>Sonoran Software - MCC Promotional Image</p></figcaption></figure>
 
 {% embed url="https://www.youtube.com/watch?v=lli0z3V--TI" %}
 Sonoran Software - MCC Promotional Video
@@ -20,21 +20,21 @@ Sonoran Software - MCC Promotional Video
 
 * Ability to operate standalone       &#x20;
 
-<figure><img src="../../feat-slides.png" alt=""><figcaption><p>Sonoran Software - MCC Promotional Image</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/feat-slides.png" alt=""><figcaption><p>Sonoran Software - MCC Promotional Image</p></figcaption></figure>
 
-<figure><img src="../../feat-sonoradio.png" alt=""><figcaption><p>Sonoran Software - MCC Promotional Image</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/feat-sonoradio.png" alt=""><figcaption><p>Sonoran Software - MCC Promotional Image</p></figcaption></figure>
 
-<figure><img src="../../feat-cameras-a.png" alt=""><figcaption><p>Sonoran Software - MCC Promotional Image</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/feat-cameras-a.png" alt=""><figcaption><p>Sonoran Software - MCC Promotional Image</p></figcaption></figure>
 
-<figure><img src="../../feat-interior_lights.png" alt=""><figcaption><p>Sonoran Software - MCC Promotional Image</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/feat-interior_lights.png" alt=""><figcaption><p>Sonoran Software - MCC Promotional Image</p></figcaption></figure>
 
-<figure><img src="../../control_menu.png" alt=""><figcaption><p>Sonoran Software - MCC Promotional Image</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/control_menu.png" alt=""><figcaption><p>Sonoran Software - MCC Promotional Image</p></figcaption></figure>
 
-<figure><img src="../../livery_options.png" alt=""><figcaption><p>Sonoran Software - MCC Promotional Image</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/livery_options.png" alt=""><figcaption><p>Sonoran Software - MCC Promotional Image</p></figcaption></figure>
 
-<figure><img src="../../speed-camera/auto-update-feature.png" alt=""><figcaption><p>Sonoran Software - MCC Promotional Image</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/auto-update-feature (1).png" alt=""><figcaption><p>Sonoran Software - MCC Promotional Image</p></figcaption></figure>
 
-<figure><img src="../../easy_translations_mcc.png" alt=""><figcaption><p>Sonoran Software - MCC Promotional Image</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/easy_translations_mcc.png" alt=""><figcaption><p>Sonoran Software - MCC Promotional Image</p></figcaption></figure>
 
 ### Metrics
 

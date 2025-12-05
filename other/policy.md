@@ -22,7 +22,7 @@ Both Sonoran Store and Five Bundle are hosted on and use the Privacy Policy of T
 
 ## Refund and Purchase Policy
 
-Sonoran Store and Five Bundle share the same great Refund and Purchase Policy with Sonoran Software hosted software products, backed by our 48-hour money back guarantee. You can view the [full policy here](https://sonoransoftware.com/assets/files/internal/purchase\_policy.pdf)
+Sonoran Store and Five Bundle share the same great Refund and Purchase Policy with Sonoran Software hosted software products, backed by our 48-hour money back guarantee. You can view the [full policy here](https://sonoransoftware.com/assets/files/internal/purchase_policy.pdf)
 
 ## FAQ
 
@@ -38,7 +38,7 @@ All items in the Five Bundle and SonoranM subscriptions are protected via Tebex 
 
 #### Where can I request a refund?
 
-[Refunds are offered within 48 hours of any purchase or renewal](https://sonoransoftware.com/assets/files/internal/purchase\_policy.pdf). Refunds must be requested on the support.sonoransoftware.com portal. Requesting a refund will revoke access to all Five Bundle content immediately.
+[Refunds are offered within 48 hours of any purchase or renewal](https://sonoransoftware.com/assets/files/internal/purchase_policy.pdf). Refunds must be requested on the support.sonoransoftware.com portal. Requesting a refund will revoke access to all Five Bundle content immediately.
 
 ### Customer Support
 
@@ -70,6 +70,6 @@ Five Bundle customers may receive customer support via the following methods:
 
 &#x20;As part of our commitment to serving the community, we deeply value the relentless effort and dedication displayed by our military and first responders, day in and day out. All U.S. military personnel, police officers, firefighters, and paramedics qualify for a 15% monthly discount.
 
-<figure><img src="../bannerbase.png" alt=""><figcaption><p>First Responder &#x26; Military Discount Promotional Image </p></figcaption></figure>
+<figure><img src="../.gitbook/assets/bannerbase.png" alt=""><figcaption><p>First Responder &#x26; Military Discount Promotional Image </p></figcaption></figure>
 
 [Click here to learn more!](https://sonoran.link/service)

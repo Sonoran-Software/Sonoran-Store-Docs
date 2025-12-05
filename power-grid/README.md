@@ -9,7 +9,7 @@ dateCreated: 2022-05-11T21:57:17.341Z
 
 # ⚡ Power Grid
 
-<figure><img src="../power-system/power-grid.png" alt=""><figcaption><p>Sonoran Software - Power Grid Promotional Image</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/power-grid.png" alt=""><figcaption><p>Sonoran Software - Power Grid Promotional Image</p></figcaption></figure>
 
 {% embed url="https://www.youtube.com/watch?v=3JhmcqlOWv8" %}
 Sonoran Software - Power Grid Promotional Video
@@ -22,23 +22,23 @@ Sonoran Software - Power Grid Promotional Video
 * Ability to operate standalone
 * Support for AcePerms, ESX, QBCore, and custom permissions systems        &#x20;
 
-<figure><img src="../power-system/ps-minigame.png" alt=""><figcaption><p>Sonoran Software - Power Grid Promotional Image</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/ps-minigame.png" alt=""><figcaption><p>Sonoran Software - Power Grid Promotional Image</p></figcaption></figure>
 
-<figure><img src="../speed-camera/notification-feature.png" alt=""><figcaption><p>Sonoran Software - Power Grid Promotional Image</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/notification-feature.png" alt=""><figcaption><p>Sonoran Software - Power Grid Promotional Image</p></figcaption></figure>
 
-<figure><img src="../power-system/ps-cad-integration.png" alt=""><figcaption><p>Sonoran Software - Power Grid Promotional Image</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/ps-cad-integration.png" alt=""><figcaption><p>Sonoran Software - Power Grid Promotional Image</p></figcaption></figure>
 
-<figure><img src="../power-system/ps-in-game-blips.png" alt=""><figcaption><p>Sonoran Software - Power Grid Promotional Image</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/ps-in-game-blips.png" alt=""><figcaption><p>Sonoran Software - Power Grid Promotional Image</p></figcaption></figure>
 
-<figure><img src="../speed-camera/auto-update-feature.png" alt=""><figcaption><p>Sonoran Software - Power Grid Promotional Image</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/auto-update-feature (1).png" alt=""><figcaption><p>Sonoran Software - Power Grid Promotional Image</p></figcaption></figure>
 
-<figure><img src="../power-system/ps-gun-placement-system.png" alt=""><figcaption><p>Sonoran Software - Power Grid Promotional Image</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/ps-gun-placement-system.png" alt=""><figcaption><p>Sonoran Software - Power Grid Promotional Image</p></figcaption></figure>
 
-<figure><img src="../power-system/ps-discord-webhooks.png" alt=""><figcaption><p>Sonoran Software - Power Grid Promotional Image</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/ps-discord-webhooks.png" alt=""><figcaption><p>Sonoran Software - Power Grid Promotional Image</p></figcaption></figure>
 
-<figure><img src="../power-system/ps-highly-configurable.png" alt=""><figcaption><p>Sonoran Software - Power Grid Promotional Image</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/ps-highly-configurable.png" alt=""><figcaption><p>Sonoran Software - Power Grid Promotional Image</p></figcaption></figure>
 
-<figure><img src="../speed-camera/translate-feature.png" alt=""><figcaption><p>Sonoran Software - Power Grid Promotional Image</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/translate-feature.png" alt=""><figcaption><p>Sonoran Software - Power Grid Promotional Image</p></figcaption></figure>
 
 ### Commands
 
@@ -50,7 +50,7 @@ These are the default names of commands, they may have been modified by the serv
 
 &#x20;The model on the left is named `prop_street_light_solar_panel` and the model is named `prop_powerbox`.
 
-<figure><img src="../power-system/ps-model-options-feature.png" alt=""><figcaption><p>Sonoran Software - Power Grid Promotional Image</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/ps-model-options-feature.png" alt=""><figcaption><p>Sonoran Software - Power Grid Promotional Image</p></figcaption></figure>
 
 ### Changelog
 

@@ -12,18 +12,18 @@ description: This page will walk you through getting and installing the script.
 
 ## Acquire the Script
 
-After purchasing the script through the sonoran store you may [download the script through the keymaster account](../../general/tebex-assets.md) that purchased the script. Upon downloading extract the file to a safe place.
+After purchasing the script through the sonoran store you may [download the script through the keymaster account](../general/tebex-assets.md) that purchased the script. Upon downloading extract the file to a safe place.
 
 ## Install the Script
 
 1.  Inside the script package you just extracted will be two folders. Copy both to a folder in your server's resources folder called `[sonoranscripts]` note the `[]` in the name, without them it will not work.&#x20;
 
-    <figure><img src="../../shot-spotter/directory-example.png" alt=""><figcaption><p>Sonoran Software - Shot Spotter - Folders</p></figcaption></figure>
+    <figure><img src="../.gitbook/assets/directory-example (1).png" alt=""><figcaption><p>Sonoran Software - Shot Spotter - Folders</p></figcaption></figure>
 2.  In the `sonoran-shotspotter/config` folder there will be a file called `config.CHANGEME.lua` you should rename that to be config.lua and configure the settings inside as you would like them to be configured based on the configuration documentation below. In that same folder will also be a file called `spotters.CHANGEME.json` which you should rename to `spotters.json` and use to manually place cameras based on the existing template, note you can also use the gun placement system in game. You will also find a file called `discord.CHANGEME.lua`, this should be named to `discord.lua` &#x20;
 
-    <figure><img src="../../shot-spotter/files-example1.png" alt=""><figcaption><p>Sonoran Software - Shot Spotter - Config Folder</p></figcaption></figure>
+    <figure><img src="../.gitbook/assets/files-example1.png" alt=""><figcaption><p>Sonoran Software - Shot Spotter - Config Folder</p></figcaption></figure>
 
-    <figure><img src="../../shot-spotter/files-example2.png" alt=""><figcaption><p>Sonoran Software - Shot Spotter - Remove .CHANGEMEs</p></figcaption></figure>
+    <figure><img src="../.gitbook/assets/files-example2.png" alt=""><figcaption><p>Sonoran Software - Shot Spotter - Remove .CHANGEMEs</p></figcaption></figure>
 3. Finally, in your `server.cfg` add the following:
 
 ```

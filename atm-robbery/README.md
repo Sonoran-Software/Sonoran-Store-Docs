@@ -10,7 +10,7 @@ description: Steal and break into the ATM
 
 # 🏧 ATM Robbery
 
-![Sonoran Software - ATM Robbery Promotional Iamge](../../atm-robbery/atm\_large.png)
+![Sonoran Software - ATM Robbery Promotional Iamge](../.gitbook/assets/atm_large.png)
 
 {% embed url="https://youtu.be/2Z6FepWQM2E" %}
 ATM Robbery Promotional Video
@@ -20,23 +20,23 @@ ATM Robbery Promotional Video
 
 ### Features
 
-![Sonoran Software - ATM Robbery Promotional Iamge](../../atm-robbery/atm\_mini\_games.png)
+![Sonoran Software - ATM Robbery Promotional Iamge](../.gitbook/assets/atm_mini_games.png)
 
-![Sonoran Software - ATM Robbery Promotional Iamge](../../atm-robbery/model\_interaction.png)
+![Sonoran Software - ATM Robbery Promotional Iamge](../.gitbook/assets/model_interaction.png)
 
-![Sonoran Software - ATM Robbery Promotional Iamge](../../atm-robbery/livemap\_integration\_1.png)
+![Sonoran Software - ATM Robbery Promotional Iamge](../.gitbook/assets/livemap_integration_1.png)
 
-![Sonoran Software - ATM Robbery Promotional Iamge](../../atm-robbery/cad\_911\_int.png)
+![Sonoran Software - ATM Robbery Promotional Iamge](../.gitbook/assets/cad_911_int.png)
 
-![Sonoran Software - ATM Robbery Promotional Iamge](../../atm-robbery/in\_game\_blips.png)
+![Sonoran Software - ATM Robbery Promotional Iamge](../.gitbook/assets/in_game_blips.png)
 
-![Sonoran Software - ATM Robbery Promotional Iamge](../../atm-robbery/discord\_webhooks.png)
+![Sonoran Software - ATM Robbery Promotional Iamge](../.gitbook/assets/discord_webhooks.png)
 
-![Sonoran Software - ATM Robbery Promotional Iamge](../../atm-robbery/easy\_to\_translate.png)
+![Sonoran Software - ATM Robbery Promotional Iamge](../.gitbook/assets/easy_to_translate.png)
 
-![Sonoran Software - ATM Robbery Promotional Iamge](../../atm-robbery/gun\_placement.png)
+![Sonoran Software - ATM Robbery Promotional Iamge](../.gitbook/assets/gun_placement.png)
 
-![Sonoran Software - ATM Robbery Promotional Iamge](../../speed-camera/auto-update-feature.png)
+![Sonoran Software - ATM Robbery Promotional Iamge](<../.gitbook/assets/auto-update-feature (1).png>)
 
 ### Changelog
 

@@ -25,23 +25,23 @@ Sonoran Software - Speed Cameras Promotional Video
 * Ability to operate standalone
 * Support for Ace Perms, ESX, QBCore, and custom permissions systems        &#x20;
 
-<figure><img src="notification-feature.png" alt=""><figcaption><p>Sonoran Software - Speed Cameras Promotional Image</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/notification-feature.png" alt=""><figcaption><p>Sonoran Software - Speed Cameras Promotional Image</p></figcaption></figure>
 
-<figure><img src="cad-integration-feature.png" alt=""><figcaption><p>Sonoran Software - Speed Cameras Promotional Image</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/cad-integration-feature.png" alt=""><figcaption><p>Sonoran Software - Speed Cameras Promotional Image</p></figcaption></figure>
 
-<figure><img src="in-game-blip.png" alt=""><figcaption><p>Sonoran Software - Speed Cameras Promotional Image</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/in-game-blip.png" alt=""><figcaption><p>Sonoran Software - Speed Cameras Promotional Image</p></figcaption></figure>
 
-<figure><img src="auto-fine.png" alt=""><figcaption><p>Sonoran Software - Speed Cameras Promotional Image</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/auto-fine.png" alt=""><figcaption><p>Sonoran Software - Speed Cameras Promotional Image</p></figcaption></figure>
 
-<figure><img src="auto-update-feature.png" alt=""><figcaption><p>Sonoran Software - Speed Cameras Promotional Image</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/auto-update-feature (1).png" alt=""><figcaption><p>Sonoran Software - Speed Cameras Promotional Image</p></figcaption></figure>
 
-<figure><img src="gun-placement-feature.png" alt=""><figcaption><p>Sonoran Software - Speed Cameras Promotional Image</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/gun-placement-feature.png" alt=""><figcaption><p>Sonoran Software - Speed Cameras Promotional Image</p></figcaption></figure>
 
-<figure><img src="discord-webhook-feature.png" alt=""><figcaption><p>Sonoran Software - Speed Cameras Promotional Image</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/discord-webhook-feature.png" alt=""><figcaption><p>Sonoran Software - Speed Cameras Promotional Image</p></figcaption></figure>
 
-<figure><img src="configurable-feature.png" alt=""><figcaption><p>Sonoran Software - Speed Cameras Promotional Image</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/configurable-feature.png" alt=""><figcaption><p>Sonoran Software - Speed Cameras Promotional Image</p></figcaption></figure>
 
-<figure><img src="translate-feature.png" alt=""><figcaption><p>Sonoran Software - Speed Cameras Promotional Image</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/translate-feature.png" alt=""><figcaption><p>Sonoran Software - Speed Cameras Promotional Image</p></figcaption></figure>
 
 ### Commands
 
@@ -65,7 +65,7 @@ These are the default names of commands, they may have been modified by the serv
 
 &#x20;The model on the left is named `prop_traffic_cam` and the model is named `radar01`.
 
-<figure><img src="promo-models.png" alt=""><figcaption><p>Sonoran Software - Speed Cameras Promotional Image</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/promo-models.png" alt=""><figcaption><p>Sonoran Software - Speed Cameras Promotional Image</p></figcaption></figure>
 
 ### Changelog
 

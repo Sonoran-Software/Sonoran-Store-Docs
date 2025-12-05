@@ -18,14 +18,14 @@ After purchasing the script through the sonoran store you may [download the scri
 
 1.  Inside the script package you just extracted will be two folders. Copy both to a folder in your server's resources folder called `[sonoranscripts]` note the `[]` in the name, without them it will not work.&#x20;
 
-    <figure><img src="atm_file.png" alt=""><figcaption><p>Sonoran Software - ATM Robbery - Folders</p></figcaption></figure>
+    <figure><img src="../.gitbook/assets/atm_file.png" alt=""><figcaption><p>Sonoran Software - ATM Robbery - Folders</p></figcaption></figure>
 2. In the `sonoran-atmrobbery/config` folder there will be a file called `config.CHANGEME.lua` you should rename that to be `config.lua` and configure the settings inside as you would like them to be configured based on the configuration documentation below. In that same folder will also be a file called `atms.CHANGEME.json` which is a storage file for all ATMs placed using the placement gun. Change the name to `atms.json`. You can also edit the `discord.CHANGEME.lua` file to add discord webhook updates for when the state of the ATM changes. Change the name to `discord.lua`.
 
 {% hint style="danger" %}
 Only ever change the name of the `atms.json` **ON INSTALL**, not on subsequent updates!
 {% endhint %}
 
-![Sonoran Software - ATM Robbery - Config folder](../evidence-camera/config-folder.png)
+![Sonoran Software - ATM Robbery - Config folder](../.gitbook/assets/config-folder.png)
 
 {% hint style="warning" %}
 **QBCore** Specific - Please follow `Step 3` to ensure inventory items have correct photos!
@@ -39,7 +39,7 @@ Only ever change the name of the `atms.json` **ON INSTALL**, not on subsequent u
 
 4.  a.) Import the `ESX Installme.sql` file into your ESX database
 
-    _**If NOT using**** ****`ox_inventory`**** ****continue to step 5**_
+    _**If NOT using****&#x20;****`ox_inventory`****&#x20;****continue to step 5**_
 
     b.) Add the following code to the `/ox_inventory/data/items.lua` file
 

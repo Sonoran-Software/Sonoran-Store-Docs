@@ -10,7 +10,7 @@ description: Detect and Jam Police Radar For A Smooth Getaway
 
 # 📶 Radar Detector / Jammer
 
-<figure><img src="../../radar-detector/main_promov2.png" alt=""><figcaption><p>Sonoran Software - Radar Detector Promotional Image</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/main_promov2.png" alt=""><figcaption><p>Sonoran Software - Radar Detector Promotional Image</p></figcaption></figure>
 
 {% embed url="https://www.youtube.com/watch?v=E3263PAPmfc" %}
 Sonoran Software - Radar Detector Promotional Video
@@ -22,17 +22,21 @@ Sonoran Software - Radar Detector Promotional Video
 
 * Ability to operate standalone    &#x20;
 
-<figure><img src="../../radar-detector/in_game_prop.png" alt=""><figcaption><p>Sonoran Software - Radar Detector Promotional Image</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/in_game_prop.png" alt=""><figcaption><p>Sonoran Software - Radar Detector Promotional Image</p></figcaption></figure>
 
-<figure><img src="../../radar-detector/real_time_textures.png" alt=""><figcaption><p>Sonoran Software - Radar Detector Promotional Image</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/real_time_textures.png" alt=""><figcaption><p>Sonoran Software - Radar Detector Promotional Image</p></figcaption></figure>
 
-<figure><img src="../../radar-detector/highly_configurable.png" alt=""><figcaption><p>Sonoran Software - Radar Detector Promotional Image</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/highly_configurable.png" alt=""><figcaption><p>Sonoran Software - Radar Detector Promotional Image</p></figcaption></figure>
 
-<figure><img src="../../radar-detector/translate.png" alt=""><figcaption><p>Sonoran Software - Radar Detector Promotional Image</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/translate.png" alt=""><figcaption><p>Sonoran Software - Radar Detector Promotional Image</p></figcaption></figure>
 
-<figure><img src="../../radar-detector/auto-update-feature.png" alt=""><figcaption><p>Sonoran Software - Radar Detector Promotional Image</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/auto-update-feature.png" alt=""><figcaption><p>Sonoran Software - Radar Detector Promotional Image</p></figcaption></figure>
 
 ### Changelog
+
+**v.1.0.2**
+
+* `fix: jQuery script source leading to some users encountering a Mixed Sources error in their client console`
 
 **v1.0.1**
 

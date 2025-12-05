@@ -8,7 +8,7 @@ dateCreated: 2022-03-30T21:56:19.361Z
 description: Learn more about the Sonoran Store!
 ---
 
-# ℹ Information
+# ℹ️ Information
 
 ## Our Company
 
@@ -18,7 +18,7 @@ Learn more about Sonoran Software, who we are, and what we do.
 
 ### SonoranM for FiveM™️
 
-<figure><img src="../sonoranm_wide.png" alt=""><figcaption><p>SonoranM Promotional Image</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/sonoranm_wide.png" alt=""><figcaption><p>SonoranM Promotional Image</p></figcaption></figure>
 
 Get the entire Sonoran store for just $19.99/mo! Purchase at [SonoranM.com](https://sonoranm.com)!
 
@@ -38,13 +38,13 @@ Gain access to our `#customer-lobby` channel when you purchase an item from the 
 
 When you purchase an item from the Sonoran Store, a CFX (FiveM) login is required. You'll need to copy your CFX username. This can be found by logging into the [CFX forums](https://forum.cfx.re/).&#x20;
 
-<figure><img src="../cfx_username.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/cfx_username.png" alt=""><figcaption></figcaption></figure>
 
 #### 2. Copy your Discord Username
 
 Left-click on your Discord username to copy it.
 
-<figure><img src="../discord_username.png" alt=""><figcaption><p>Copy Discord Username</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/discord_username.png" alt=""><figcaption><p>Copy Discord Username</p></figcaption></figure>
 
 #### 3. Claim your Role
 

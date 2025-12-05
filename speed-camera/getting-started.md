@@ -20,10 +20,10 @@ After purchasing the script through the sonoran store you may [download the scri
 
 1.  Inside the script package you just extracted will be two folders. Copy both to a folder in your server's resources folder called `[sonoranscripts]` note the `[]` in the name, without them it will not work.&#x20;
 
-    <figure><img src="directory-example.png" alt=""><figcaption><p>Sonoran Software - Speed Cameras - Folders</p></figcaption></figure>
+    <figure><img src="../.gitbook/assets/directory-example (2).png" alt=""><figcaption><p>Sonoran Software - Speed Cameras - Folders</p></figcaption></figure>
 2.  In the `sonoran-trafficcam` folder there will be a file called `config.CHANGEME.lua` you should rename that to be `config.lua` and configure the settings inside as you would like them to be configured based on the configuration documentation below. In that same folder will also be a file called `cameras.CHANGEME.json` which you should rename to `cameras.json` and use to manually place cameras based on the existing template, note you can also use the gun placement system in game. Finally there is a file called `discord.CHANGEME.lua` in the folder which should be renamed to `discord.lua`, this file contains all of your Discord webhook related settings.&#x20;
 
-    <figure><img src="files-example.png" alt=""><figcaption><p>Sonoran Software - Speed Cameras - Remove .CHANGEMEs</p></figcaption></figure>
+    <figure><img src="../.gitbook/assets/files-example.png" alt=""><figcaption><p>Sonoran Software - Speed Cameras - Remove .CHANGEMEs</p></figcaption></figure>
 3. Finally, in your `server.cfg` add the following:
 
 ```
@@ -263,7 +263,7 @@ You have two options for placing new cameras:
 
 &#x20;The model on the left is named `prop_traffic_cam` and the model is named `radar01`.
 
-<figure><img src="promo-models.png" alt=""><figcaption><p>Sonoran Software - Speed Cameras Promotional Image</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/promo-models.png" alt=""><figcaption><p>Sonoran Software - Speed Cameras Promotional Image</p></figcaption></figure>
 
 ## Needed Changes for Speed Display
 

@@ -10,7 +10,7 @@ description: Run Radar Like Never Before
 
 # 📟 Radar Display
 
-<figure><img src="../radar/rada1.png" alt=""><figcaption><p>Sonoran Software - Radar Display Promotional Image</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/rada1.png" alt=""><figcaption><p>Sonoran Software - Radar Display Promotional Image</p></figcaption></figure>
 
 {% embed url="https://www.youtube.com/watch?v=mZqMl9oNQcQ" %}
 Sonoran Software - Radar Display Promotional Video
@@ -22,17 +22,17 @@ Sonoran Software - Radar Display Promotional Video
 
 * Ability to operate standalone     &#x20;
 
-<figure><img src="../radar/in_game_prop_radar.png" alt=""><figcaption><p>Sonoran Software - Radar Display Promotional Image</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/in_game_prop_radar.png" alt=""><figcaption><p>Sonoran Software - Radar Display Promotional Image</p></figcaption></figure>
 
-<figure><img src="../radar/wraith_integration_radar.png" alt=""><figcaption><p>Sonoran Software - Radar Display Promotional Image</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/wraith_integration_radar.png" alt=""><figcaption><p>Sonoran Software - Radar Display Promotional Image</p></figcaption></figure>
 
-<figure><img src="../radar/menu_placement_radar.png" alt=""><figcaption><p>Sonoran Software - Radar Display Promotional Image</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/menu_placement_radar.png" alt=""><figcaption><p>Sonoran Software - Radar Display Promotional Image</p></figcaption></figure>
 
-<figure><img src="../radar/easy_translate_radar.png" alt=""><figcaption><p>Sonoran Software - Radar Display Promotional Image</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/easy_translate_radar.png" alt=""><figcaption><p>Sonoran Software - Radar Display Promotional Image</p></figcaption></figure>
 
-<figure><img src="../radar/highly_config_radar.png" alt=""><figcaption><p>Sonoran Software - Radar Display Promotional Image</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/highly_config_radar.png" alt=""><figcaption><p>Sonoran Software - Radar Display Promotional Image</p></figcaption></figure>
 
-<figure><img src="../speed-camera/auto-update-feature.png" alt=""><figcaption><p>Sonoran Software - Radar Display Promotional Image</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/auto-update-feature (1).png" alt=""><figcaption><p>Sonoran Software - Radar Display Promotional Image</p></figcaption></figure>
 
 ### Changelog
 

@@ -18,7 +18,7 @@ After purchasing the script through the Sonoran store you may [download the scri
 
 1.  Inside the script package you just extracted will be two folders. Copy both to a folder in your server's resources folder called `[sonoranscripts]` note the `[]` in the name, without them it will not work.&#x20;
 
-    <figure><img src="directory-example.png" alt=""><figcaption><p>Sonoran Software -  MCC - Folders</p></figcaption></figure>
+    <figure><img src="../.gitbook/assets/directory-example.png" alt=""><figcaption><p>Sonoran Software -  MCC - Folders</p></figcaption></figure>
 2. In the `sonoran-mcc` folder there will be a folder called `config`, once inside that folder you should see a file called `config.CHANGEME.lua` you should rename that to be `config.lua` and configure the settings inside as you would like them to be configured based on the configuration documentation below.
 3. In the `sonoran-mcc` folder there is the file `sonomcc.ytd`, move that file into the `sonoran-mcc/stream/` folder. This allows our updater to not override any custom YTD edits like custom liveries.
 4. In the `sonoran-mcc/data/` folder there are 4 `.meta` files rename each file so that you remove`.CHANGEME` from the name. You should be left with the following 4 file names:

@@ -10,7 +10,7 @@ description: Quickly be alerted when gunshots are detected around San Andreas
 
 # 🔫 Shot Spotter
 
-![Sonoran Software - Shot Spotter Promotional Image](../ss-final.png)
+![Sonoran Software - Shot Spotter Promotional Image](../.gitbook/assets/ss-final.png)
 
 {% embed url="https://www.youtube.com/watch?v=ng12Pimxev0" %}
 Sonoran Software - Shot Spotter Promotional Video
@@ -23,17 +23,17 @@ Sonoran Software - Shot Spotter Promotional Video
 * Ability to operate standalone
 * Support for AcePerms, ESX, QBCore, and custom permissions systems
 
-<figure><img src="ss-cad-integration.png" alt=""><figcaption><p>Sonoran Software - Shot Spotter Promotional Image</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/ss-cad-integration.png" alt=""><figcaption><p>Sonoran Software - Shot Spotter Promotional Image</p></figcaption></figure>
 
-<figure><img src="ss-in-game-blips.png" alt=""><figcaption><p>Sonoran Software - Shot Spotter Promotional Image</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/ss-in-game-blips.png" alt=""><figcaption><p>Sonoran Software - Shot Spotter Promotional Image</p></figcaption></figure>
 
-<figure><img src="../ss-gun-placement-system.png" alt=""><figcaption><p>Sonoran Software - Shot Spotter Promotional Image</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/ss-gun-placement-system.png" alt=""><figcaption><p>Sonoran Software - Shot Spotter Promotional Image</p></figcaption></figure>
 
-<figure><img src="ss-discord-webhooks.png" alt=""><figcaption><p>Sonoran Software - Shot Spotter Promotional Image</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/ss-discord-webhooks.png" alt=""><figcaption><p>Sonoran Software - Shot Spotter Promotional Image</p></figcaption></figure>
 
-<figure><img src="ss-translate-feature.png" alt=""><figcaption><p>Sonoran Software - Shot Spotter Promotional Image</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/ss-translate-feature.png" alt=""><figcaption><p>Sonoran Software - Shot Spotter Promotional Image</p></figcaption></figure>
 
-<figure><img src="ss-highly-configurable.png" alt=""><figcaption><p>Sonoran Software - Shot Spotter Promotional Image</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/ss-highly-configurable.png" alt=""><figcaption><p>Sonoran Software - Shot Spotter Promotional Image</p></figcaption></figure>
 
 ### Commands
 

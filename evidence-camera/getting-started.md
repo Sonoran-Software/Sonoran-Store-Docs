@@ -12,20 +12,20 @@ description: This page will walk you through getting and installing the script.
 
 ## Acquire the Script
 
-After purchasing the script through the sonoran store you may [download the script through the keymaster account](../../general/tebex-assets.md) that purchased the script. Upon downloading extract the file to a safe place.
+After purchasing the script through the sonoran store you may [download the script through the keymaster account](../general/tebex-assets.md) that purchased the script. Upon downloading extract the file to a safe place.
 
 ## Install the Script
 
 1.  Inside the script package you just extracted will be two folders. Copy both to a folder in your server's resources folder called `[sonoranscripts]`. Note the brackets `[]` in the name, without them it will not work.&#x20;
 
-    <figure><img src="../../evidence-camera/directory-example_(1).png" alt=""><figcaption><p>Sonoran Software - Evidence Camera - Folders</p></figcaption></figure>
+    <figure><img src="../.gitbook/assets/directory-example_(1).png" alt=""><figcaption><p>Sonoran Software - Evidence Camera - Folders</p></figcaption></figure>
 2. In the `evidence-cam/config` folder there will be a file called `config.CHANGEME.lua` you should rename that to be `config.lua` and configure the settings inside as you would like them to be configured based on the configuration documentation below. In that same folder will also be a file called `photos.CHANGEME.json` which is a storage file for all photos that are take and "printed". Change the name to `photos.json`. You will also find a file called `discord.CHANGEME.lua`, this will contain your needed Discord Webhook configuration, but will protect it from any client side dumps. Change this file name to `discord.lua`.
 
 {% hint style="danger" %}
 Only ever change the name of the `photos.json` **ON INSTALL**, not on subsequent updates!
 {% endhint %}
 
-![Sonoran Software - Evidence Camera - Config folder](../../evidence-camera/config-folder.png)
+![Sonoran Software - Evidence Camera - Config folder](../.gitbook/assets/config-folder.png)
 
 {% hint style="warning" %}
 **QBCore** Specific - Please follow `Step 3` to ensure inventory items have correct photos!
@@ -39,7 +39,7 @@ Only ever change the name of the `photos.json` **ON INSTALL**, not on subsequent
 
 4.  a.) Import the `ESX Installme.sql` file into your ESX database
 
-    _**If NOT using**** ****`ox_inventory`**** ****continue to step 5**_
+    _**If NOT using****&#x20;****`ox_inventory`****&#x20;****continue to step 5**_
 
     b.) Add the following code to the `/ox_inventory/data/items.lua` file
 

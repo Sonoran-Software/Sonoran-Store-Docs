@@ -10,7 +10,7 @@ description: Easily take photos and upload them to CAD/ Discord
 
 # 📸 Evidence Camera
 
-![Sonoran Software - Evidence Camera Promotional Image](../sono\_evidence\_tebex\_photo.png)
+![Sonoran Software - Evidence Camera Promotional Image](../.gitbook/assets/sono_evidence_tebex_photo.png)
 
 {% embed url="https://www.youtube.com/watch?v=jxTvYyDmJAE" %}
 Sonoran Software - Evidence Camera Promotional Video
@@ -23,17 +23,17 @@ Sonoran Software - Evidence Camera Promotional Video
 * Ability to operate standalone
 * Support for ESX, QBCore, and Sonoran CAD &#x20;
 
-<figure><img src="simple_e_config.png" alt=""><figcaption><p>Sonoran Software - Evidence Camera Promotional Image</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/simple_e_config.png" alt=""><figcaption><p>Sonoran Software - Evidence Camera Promotional Image</p></figcaption></figure>
 
-<figure><img src="ingame_objects.png" alt=""><figcaption><p>Sonoran Software - Evidence Camera Promotional Image</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/ingame_objects.png" alt=""><figcaption><p>Sonoran Software - Evidence Camera Promotional Image</p></figcaption></figure>
 
-<figure><img src="auto_update.png" alt=""><figcaption><p>Sonoran Software - Evidence Camera Promotional Image</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/auto_update.png" alt=""><figcaption><p>Sonoran Software - Evidence Camera Promotional Image</p></figcaption></figure>
 
-<figure><img src="discord_webhooks.png" alt=""><figcaption><p>Sonoran Software - Evidence Camera Promotional Image</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/discord_webhooks (1).png" alt=""><figcaption><p>Sonoran Software - Evidence Camera Promotional Image</p></figcaption></figure>
 
-<figure><img src="cad_integration.png" alt=""><figcaption><p>Sonoran Software - Evidence Camera Promotional Image</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/cad_integration.png" alt=""><figcaption><p>Sonoran Software - Evidence Camera Promotional Image</p></figcaption></figure>
 
-<figure><img src="../framework_item.png" alt=""><figcaption><p>Sonoran Software - Evidence Camera Promotional Image</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/framework_item.png" alt=""><figcaption><p>Sonoran Software - Evidence Camera Promotional Image</p></figcaption></figure>
 
 ### Commands
 

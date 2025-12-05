@@ -36,7 +36,7 @@ You can also download the latest release of the resource [here](https://github.c
 
 1.  Inside the script package you just extracted will be two folders. Copy both to a folder in your server's resources folder called `[sonoranscripts]` note the `[]` in the name, without them it will not work.&#x20;
 
-    <figure><img src="../directory_example.png" alt=""><figcaption><p>Sonoran Software - Radar Display - Folders</p></figcaption></figure>
+    <figure><img src="../.gitbook/assets/directory_example (1).png" alt=""><figcaption><p>Sonoran Software - Radar Display - Folders</p></figcaption></figure>
 2. In the `sonoran-radar/config` folder there will be a file called `config.CHANGEME.lua` you should rename that to be `config.lua` and configure the settings inside as you would like them to be configured based on the configuration documentation below. In that same folder will also be a file called `radars.CHANGEME.json` which you should rename to `radars.json` and use to manually place cameras based on the existing template, note you can also use the menu placement system in game.
 3. Finally, in your `server.cfg` add the following:
 
