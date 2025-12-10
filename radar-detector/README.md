@@ -34,6 +34,11 @@ Sonoran Software - Radar Detector Promotional Video
 
 ### Changelog
 
+**v1.0.3**
+
+* `feat: Framework garage persistence`
+  * Vehicles equipped with radar detectors will now retain their exact detector placement when stored and retrieved from your garage in QBCore or QBox. Simply park the vehicle, store it, and when you take it back out, your radar detector will be restored exactly as you configured it—ready to hit the road instantly.
+
 **v.1.0.2**
 
 * `fix: jQuery script source leading to some users encountering a Mixed Sources error in their client console`
