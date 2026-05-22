@@ -2,29 +2,47 @@
 title: Accessing Tebex Assets
 published: true
 date: 2022-04-18T19:35:03.547Z
-tags: null
 editor: markdown
 dateCreated: 2022-04-18T19:35:03.547Z
+description: Download your new files after purchasing an asset from the Sonoran Store.
 ---
 
 # ✅ Accessing Tebex Assets
 
-There are two ways you can access your assets after you've purchased them through Tebex.
+All Sonoran Store FiveM assets are processed via Tebex and are available for download on the CFX portal.
+
+### Purchase Confirmation Page
+
+<details>
+
+<summary>Purchase Confirmation Page</summary>
+
+After completing the purchase on Tebex, you will be redirected to a Sonoran Store confirmation screen.
+
+This screen provides helpful links for documentation, customer support, and file downloads.
+
+<figure><img src="../.gitbook/assets/image (2).png" alt=""><figcaption></figcaption></figure>
+
+</details>
 
 ### Initial Purchase Receipt Email
 
-After completing your purchase you should receive an email similar to the following.  From this email you can simply click the `Download Your Asset` button to download the zip file containing your asset. After you've downloaded your asset please proceed to the install documentation for the script you've downloaded.
+<details>
 
-<figure><img src="../.gitbook/assets/email-example.png" alt=""><figcaption></figcaption></figure>
+<summary>Email Receipt</summary>
 
-### Keymaster
+After completing your purchase you should receive an email similar to the following.
 
-First you'll need to access and sign in to Keymaster with the account that is associated with the CFX name you provided during Tebex checkout. [You can access Keymaster here.](https://keymaster.fivem.net)
+Select **Open Cfx.re Asset Manager** to open the portal.
 
-After you've logged in click on the `Granted Assets` button on the sidebar.
+<figure><img src="../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="../.gitbook/assets/Keymaster_GrantedAssets.png" alt=""><figcaption><p>Keymaster - Granted Assets</p></figcaption></figure>
+</details>
 
-On that page you can simply click download next to the asset which you wish to download. After downloading proceed to your assets install instructions.
+### Download from the CFX Portal
 
-<figure><img src="../.gitbook/assets/Keymaster_DownloadAsset.png" alt=""><figcaption><p>Keymaster - Download Asset</p></figcaption></figure>
+Click the link in the email or open up [portal.cfx.re](https://portal.cfx.rehttps/portal.cfx.re/) to login to your CFX account.
+
+Once logged in navigate to **Assets** > **Granted Assets** > **Search** and **Download** the new asset for your FiveM server.
+
+<figure><img src="../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
