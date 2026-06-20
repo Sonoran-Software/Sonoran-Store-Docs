@@ -12,11 +12,6 @@
 
 * [💥 Five Bundle](five-bundle/README.md)
   * [Last Call For New Subscribers](five-bundle/last-call-for-new-subscribers.md)
-
-## Resource Documentation
-
-***
-
 * [🏧 ATM Robbery](atm-robbery/README.md)
   * [Getting Started](atm-robbery/getting-started.md)
   * [Advanced Documentation](atm-robbery/advanced-docs.md)
@@ -41,6 +36,9 @@
 * [📹 Speed Cameras / ALPR](speed-camera/README.md)
   * [Getting Started](speed-camera/getting-started.md)
   * [Advanced Documentation](speed-camera/advanced-docs.md)
+* [🚗 Traffic Engine](traffic-engine/README.md)
+  * [Getting Started](traffic-engine/getting-started.md)
+  * [Advanced Documentation](traffic-engine/advanced-documentation.md)
 
 ## Other
 
