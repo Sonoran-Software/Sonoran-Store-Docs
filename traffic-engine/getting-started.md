@@ -31,7 +31,7 @@ TODO
 Ensure and start Traffic Engine to your server's `server.cfg` file.
 
 ```
-ensure traffic_engine
+ensure sonoran-trafficengine
 ```
 
 TODO
