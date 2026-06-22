@@ -356,6 +356,24 @@ Because Traffic Engine will conflict with any existing Calm AI script, these fea
 
 Go to config.lua and find this value to apply Override or not depending on what traffic manager you use.&#x20;
 
-![](<../.gitbook/assets/image (15).png>)
+
+
+```lua
+Config.CalmAI = {
+    -- MASTER TOGGLE FOR CALM AI POPULATION OVERRIDES. | BOOLEAN | TRUE OR FALSE
+    enabled = true,
+    -- HOW MANY VEHICLES ARE DRIVING AROUND THE MAP. LOWER = LESS MOVING TRAFFIC. | NUMBER | 0.0 TO 3.0
+    VehDensity = 0.85,
+    -- HOW MANY RANDOMLY SPAWNED TRAFFIC VEHICLES ARE AROUND. LOWER = LESS RANDOM TRAFFIC. | NUMBER | 0.0 TO 3.0
+    RanVehDensity = 0.65,
+    -- HOW MANY PARKED CARS ARE AROUND THE MAP. LOWER = FEWER PARKED CARS. | NUMBER | 0.0 TO 3.0
+    ParkCarDensity = 0.95,
+    -- HOW MANY WALKING/STREET AI PEDS ARE AROUND. LOWER = FEWER PEDS. | NUMBER | 0.0 TO 1.0
+    PedDensity = 0.75,
+    -- HOW MANY SCENARIO PEDS ARE RUNNING EMOTES/TASKS. LOWER = FEWER SCENE PEDS. | NUMBER | 0.0 TO 1.0
+    ScenePedDensity = 0.35,
+    -- TRUE DISABLES VANILLA AI DISPATCH. FALSE LEAVES VANILLA DISPATCH ON. | BOOLEAN | TRUE OR FALSE
+    DispatchDead = true
+```
 
 </details>
