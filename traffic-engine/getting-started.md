@@ -144,14 +144,9 @@ Evening Rush Multiplier
 
 <div><figure><img src="../.gitbook/assets/image (6).png" alt=""><figcaption></figcaption></figure> <figure><img src="../.gitbook/assets/image (7).png" alt=""><figcaption></figcaption></figure> <figure><img src="../.gitbook/assets/image (8).png" alt=""><figcaption></figcaption></figure></div>
 
-
-
 4. Place Nodes
 
 * Add nodes by placing them down by pressing E to draw out your zone. Press Enter to confirm&#x20;
-
-
-
 *   &#x20;Regions are substantially taller and deeper than a zone.
 
     <figure><img src="../.gitbook/assets/image (9).png" alt=""><figcaption></figcaption></figure>
@@ -180,14 +175,12 @@ Debris Allowance
 
     <figure><img src="../.gitbook/assets/image (11).png" alt=""><figcaption></figcaption></figure>
 
-
-
 4. Place Spawn Zones
 
 * Configure spawn points for the breakdowns and debris by pressing **E**, to save press **Enter**.
 *   When blue nodes appear those are temporary locations, you can remove or save their location by going to a new area then press E
 
-    <figure><img src="../.gitbook/assets/image (12).png" alt=""><figcaption></figcaption></figure>
+    <figure><img src="../.gitbook/assets/image (12).png" alt="" width="375"><figcaption></figcaption></figure>
 
 </details>
 
@@ -195,17 +188,15 @@ Debris Allowance
 
 <summary>Region and Zone Deletion</summary>
 
+Delete zones or regions from the in-game menu.
 
+Note that any changes will be saved automatically, save a backup file if you wish to revert your changes.
 
 *
 
     <figure><img src="../.gitbook/assets/image (21).png" alt=""><figcaption></figcaption></figure>
-* From the in-game menu you will find a Delete section, click on the delete segment to see the Regions and zones,  \
-  From there you can delete  Zones and Regions at will, do note "make a backup" before making any changes the changes will save automatically as you make these in game.&#x20;
 
 </details>
-
-Zones will talk to the Region as a Parent to get the data to influence an area for its traffic and events like breakdowns and debris
 
 ### Debris
 
@@ -213,39 +204,39 @@ Zones will talk to the Region as a Parent to get the data to influence an area f
 
 <summary>Configuring Debris Spawning</summary>
 
+Debris will automatically spawn inside the zone depending on the maximum amount of debris allowance set when [first creating the zone](getting-started.md#zone-creation).
 
+Debris spawn frequency will be based on the `config.Debris` `chance` value.
 
-* Steps (Manual + Automatic)
-*   If you want to manually add new Debris nodes in a zone, you can press the prompt to spawn node (Yellow) and the Zone will direct its RNG chance to spawn a debris event in that area before the rest of the road.  Heading shows the direction where the debris is facing.
+Users can also manually spawn debris at a specific location in a zone via the in-game menu. To manually spawn a debris, navigate to **Spawn Category** > **Debris**.
 
-    <figure><img src="../.gitbook/assets/image (14).png" alt=""><figcaption></figcaption></figure>
-*
+<div><figure><img src="../.gitbook/assets/image (13).png" alt="" width="298"><figcaption></figcaption></figure> <figure><img src="../.gitbook/assets/image (14).png" alt="" width="272"><figcaption></figcaption></figure></div>
 
-    <figure><img src="../.gitbook/assets/image (17).png" alt=""><figcaption></figcaption></figure>
+The `Config.Debris` values can be tweaked for further customization.
 
-    `tickIntervalMs` - How often the breakdown system checks whether it should try to spawn one.
+<figure><img src="../.gitbook/assets/image (17).png" alt=""><figcaption></figcaption></figure>
 
-    `spawnCooldownMs` - Cooldown after a successful breakdown before another normal spawn can happen.
+`tickIntervalMs` - How often the breakdown system checks whether it should try to spawn one.
 
-    `guaranteedSpawnIntervalMs` - Maximum time allowed without a breakdown before the system forces a guaranteed attempt.
+`spawnCooldownMs` - Cooldown after a successful breakdown before another normal spawn can happen.
 
-    `eventActiveSeconds` - How long a breakdown stays active before expiring.
+`guaranteedSpawnIntervalMs` - Maximum time allowed without a breakdown before the system forces a guaranteed attempt.
 
-    `nodeGracePeriodSeconds` - How long a used breakdown node stays locked before it can be reused.
+`eventActiveSeconds` - How long a breakdown stays active before expiring.
 
-    `minPlayerDistance` - Minimum distance a player must be from the node for a breakdown to spawn.
+`nodeGracePeriodSeconds` - How long a used breakdown node stays locked before it can be reused.
 
-    `cleanupTimeMs` - Cleanup timer used to remove the breakdown scene after it expires.
+`minPlayerDistance` - Minimum distance a player must be from the node for a breakdown to spawn.
 
-    `cleanupWhenPlayersFar` - If enabled, cleans up breakdowns early when players move far enough away.
+`cleanupTimeMs` - Cleanup timer used to remove the breakdown scene after it expires.
 
-    `useRoadBlockingFallback` - If enabled, blocks road pathing around the breakdown when needed.
+`cleanupWhenPlayersFar` - If enabled, cleans up breakdowns early when players move far enough away.
 
-    `allowPedSpawnWithBreakdown` - If enabled, allows a stranded ped to spawn with the breakdown vehicle.&#x20;
+`useRoadBlockingFallback` - If enabled, blocks road pathing around the breakdown when needed.
+
+`allowPedSpawnWithBreakdown` - If enabled, allows a stranded ped to spawn with the breakdown vehicle.&#x20;
 
 </details>
-
-<figure><img src="../.gitbook/assets/image (13).png" alt=""><figcaption></figcaption></figure>
 
 <details>
 
@@ -265,21 +256,23 @@ This allows law enforcement, sanitation, DOT, civilians, or anyone else to clear
 
 <summary>Vehicle Breakdowns</summary>
 
-
+Breakdowns will automatically spawn inside the zone depending on the maximum amount of breakdown allowance set when [first creating the zone](getting-started.md#zone-creation).
 
 * ![](<../.gitbook/assets/image (18).png>) ![](<../.gitbook/assets/image (19).png>)
 
 
 
-* How to manually spawn a breakdown\
-  \
-  ![](<../.gitbook/assets/image (20).png>)\
-  \
-  Each Breakdown node has its own severity with how many cars and emergency services spawn based on chance in config file. &#x20;
-* Breakdown nodes manually placed must be inside a zone to be able to spawn.&#x20;
-* Breakdowns do slow the speed of traffic substantially. These will cause traffic jams if players are in the area.&#x20;
+Breakdown spawn frequency will be based on the `config.Breakdowns` `chance` value.
 
-Config.Lua for Breakdowns
+Users can also manually spawn breakdowns at a specific location in a zone via the in-game menu. To manually spawn a breakdown, navigate to **Spawn Category** > **Breakdown**.
+
+<figure><img src="../.gitbook/assets/image (20).png" alt="" width="300"><figcaption></figcaption></figure>
+
+When a breakdown spawns, it can be one of several severity scenarios. Higher level breakdowns can also spawn [emergency services](getting-started.md#emergency-response) that will respond to it.
+
+Breakdowns slow the speed of traffic substantially, causing traffic jams if players are in the area.&#x20;
+
+Config.Breakdowns:
 
 ```
 enabled = true,
@@ -337,12 +330,11 @@ Distance around the breakdown where AI traffic will react and avoid the scene.
 
 <summary>Breakdown Emergency Response</summary>
 
-Vehicle breakdowns can optionally have fire and EMS emergency vehicles respond for added realism.
+When a high level [vehicle breakdown](getting-started.md#breakdowns) spawns, fire and EMS vehicles can also spawn nearby for added realism.
 
-Emergency Nodes will show up in blue when manually placed.
+Users can also manually spawn emergency vehicles at a specific location in a zone via the in-game menu. To manually spawn an emergency vehicle, navigate to **Spawn Category** > **Emergency**. Emergency Nodes will show up in blue when manually placed.
 
-* ![](<../.gitbook/assets/image (16).png>)
-* How to configure emergency response (just config options?)
+<figure><img src="../.gitbook/assets/image (16).png" alt="" width="262"><figcaption></figcaption></figure>
 
 </details>
 
