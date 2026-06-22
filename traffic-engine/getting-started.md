@@ -15,12 +15,11 @@ Place the Traffic Engine resource into your server's resources folder.
 Example:
 
 ```
-resources/[traffic]/traffic_engine
+resources/[trafficengine]/sonoran-trafficengine
+
 ```
 
-TODO
-
-* Image of install
+* ![](<../.gitbook/assets/image (23).png>)
 
 </details>
 
@@ -34,9 +33,7 @@ Ensure and start Traffic Engine to your server's `server.cfg` file.
 ensure sonoran-trafficengine
 ```
 
-TODO
-
-* Image of ensure line in CFG?
+* ![](<../.gitbook/assets/image (22).png>)
 
 </details>
 
@@ -136,12 +133,14 @@ To create a region:
 Morning Rush Multiplier
 
 * How dense will the traffic in this region become during the morning rush hour time?
-* TODO: config.what? property
+*   These values can be edited as a baseline in the config.lua as a blanket while the regions in game can have their own values.&#x20;
+
+    <figure><img src="../.gitbook/assets/image (24).png" alt=""><figcaption></figcaption></figure>
 
 Evening Rush Multiplier
 
 * How dense will the traffic in this region become during the morning rush hour time?
-* TODO: config.what? property
+* &#x20;These values can be edited as a baseline in the config.lua as a blanket while the regions in game can have their own values.  As seen as above.&#x20;
 
 <div><figure><img src="../.gitbook/assets/image (6).png" alt=""><figcaption></figcaption></figure> <figure><img src="../.gitbook/assets/image (7).png" alt=""><figcaption></figcaption></figure> <figure><img src="../.gitbook/assets/image (8).png" alt=""><figcaption></figcaption></figure></div>
 
@@ -151,9 +150,11 @@ Evening Rush Multiplier
 
 * Add nodes by placing them down by pressing E to draw out your zone. Press Enter to confirm&#x20;
 
-TODO
 
-* Image of drawing the region
+
+*   &#x20;Regions are substantially taller and deeper than a zone.
+
+    <figure><img src="../.gitbook/assets/image (9).png" alt=""><figcaption></figcaption></figure>
 
 </details>
 
@@ -169,18 +170,24 @@ To create zones inside of the region:
 
 Breakdown Allowance
 
-* TODO: Image
+*
+
+    <figure><img src="../.gitbook/assets/image (10).png" alt=""><figcaption></figcaption></figure>
 
 Debris Allowance
 
-* TODO Image
+*
+
+    <figure><img src="../.gitbook/assets/image (11).png" alt=""><figcaption></figcaption></figure>
 
 
 
 4. Place Spawn Zones
 
 * Configure spawn points for the breakdowns and debris by pressing **E**, to save press **Enter**.
-* TODO images of menu to place spawn points, placing points, etc.
+*   When blue nodes appear those are temporary locations, you can remove or save their location by going to a new area then press E
+
+    <figure><img src="../.gitbook/assets/image (12).png" alt=""><figcaption></figcaption></figure>
 
 </details>
 
@@ -188,10 +195,13 @@ Debris Allowance
 
 <summary>Region and Zone Deletion</summary>
 
-TODO
 
-* Images of zone delete
-* Images of region delete
+
+*
+
+    <figure><img src="../.gitbook/assets/image (21).png" alt=""><figcaption></figcaption></figure>
+* From the in-game menu you will find a Delete section, click on the delete segment to see the Regions and zones,  \
+  From there you can delete  Zones and Regions at will, do note "make a backup" before making any changes the changes will save automatically as you make these in game.&#x20;
 
 </details>
 
@@ -203,13 +213,23 @@ Zones will talk to the Region as a Parent to get the data to influence an area f
 
 <summary>Configuring Debris Spawning</summary>
 
-TODO
+
 
 * Steps (Manual + Automatic)
-* Images (menu + in-game points)
-* Config options to tweak chances
+*   If you want to manually add new Debris nodes in a zone, you can press the prompt to spawn node (Yellow) and the Zone will direct its RNG chance to spawn a debris event in that area before the rest of the road.  Heading shows the direction where the debris is facing.
+
+    <figure><img src="../.gitbook/assets/image (14).png" alt=""><figcaption></figcaption></figure>
+*
+
+    <figure><img src="../.gitbook/assets/image (17).png" alt=""><figcaption></figcaption></figure>
+
+    Chance = 1.0 This is 100% chance to spawn,  Lower this to have a baseline of how common to see them.\
+    \
+    Chanceincreasepermiss : This is for when the server does a in game timer to spawn as a cooldown, every 100 seconds in game it rolls a chance to spawn, if the timer game rejects the spawn chance, adds a 10% chance to the spawn,  chance the Chance to .10 for 10% then add .10 for 10% added chance for new spawns in the region for derbis.&#x20;
 
 </details>
+
+<figure><img src="../.gitbook/assets/image (13).png" alt=""><figcaption></figcaption></figure>
 
 <details>
 
@@ -219,7 +239,7 @@ TODO
 
 Roadway debris can be cleaned up and removed by interacting and holding **E** on the debris.
 
-This allows law enforcement, santiation, DOT, civilians, or anyone else to clear debris from the roadways.
+This allows law enforcement, sanitation, DOT, civilians, or anyone else to clear debris from the roadways.
 
 </details>
 
@@ -229,11 +249,19 @@ This allows law enforcement, santiation, DOT, civilians, or anyone else to clear
 
 <summary>Vehicle Breakdowns</summary>
 
-TODO:
 
-* Image(s) of breakdowns
-* How to configure a breakdown zone - steps + images of menu and in-game points
-* How to manually spawn a breakdown
+
+* ![](<../.gitbook/assets/image (18).png>) ![](<../.gitbook/assets/image (19).png>)
+
+
+
+* How to manually spawn a breakdown\
+  \
+  ![](<../.gitbook/assets/image (20).png>)\
+  \
+  Each Breakdown node has its own severity with how many cars and emergency services spawn based on chance in config file. &#x20;
+* Breakdown nodes manually placed must be inside a zone to be able to spawn.&#x20;
+* Breakdowns do slow the speed of traffic substantially. These will cause traffic jams if players are in the area.&#x20;
 
 </details>
 
@@ -245,9 +273,9 @@ TODO:
 
 Vehicle breakdowns can optionally have fire and EMS emergency vehicles respond for added realism.
 
-TODO
+Emergency Nodes will show up in blue when manually placed.
 
-* Image(s) of emergency response
+* ![](<../.gitbook/assets/image (16).png>)
 * How to configure emergency response (just config options?)
 
 </details>
@@ -268,8 +296,8 @@ Many communities use traffic and AI management systems like "Calm AI". These scr
 
 Because Traffic Engine will conflict with any existing Calm AI script, these features are built in.
 
-TODO
+Go to config.lua and find this value to apply Override or not depending on what traffic manager you use.&#x20;
 
-* Config options/names for this
+![](<../.gitbook/assets/image (15).png>)
 
 </details>
