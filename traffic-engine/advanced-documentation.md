@@ -6,8 +6,8 @@ description: >-
 
 # Advanced Documentation
 
-TODO
+Will be updated as time goes on.
 
 * Exports
 * Events
-* Other functions or dev information?
+*
