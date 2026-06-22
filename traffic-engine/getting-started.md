@@ -223,9 +223,25 @@ Zones will talk to the Region as a Parent to get the data to influence an area f
 
     <figure><img src="../.gitbook/assets/image (17).png" alt=""><figcaption></figcaption></figure>
 
-    Chance = 1.0 This is 100% chance to spawn,  Lower this to have a baseline of how common to see them.\
-    \
-    Chanceincreasepermiss : This is for when the server does a in game timer to spawn as a cooldown, every 100 seconds in game it rolls a chance to spawn, if the timer game rejects the spawn chance, adds a 10% chance to the spawn,  chance the Chance to .10 for 10% then add .10 for 10% added chance for new spawns in the region for derbis.&#x20;
+    `tickIntervalMs` - How often the breakdown system checks whether it should try to spawn one.
+
+    `spawnCooldownMs` - Cooldown after a successful breakdown before another normal spawn can happen.
+
+    `guaranteedSpawnIntervalMs` - Maximum time allowed without a breakdown before the system forces a guaranteed attempt.
+
+    `eventActiveSeconds` - How long a breakdown stays active before expiring.
+
+    `nodeGracePeriodSeconds` - How long a used breakdown node stays locked before it can be reused.
+
+    `minPlayerDistance` - Minimum distance a player must be from the node for a breakdown to spawn.
+
+    `cleanupTimeMs` - Cleanup timer used to remove the breakdown scene after it expires.
+
+    `cleanupWhenPlayersFar` - If enabled, cleans up breakdowns early when players move far enough away.
+
+    `useRoadBlockingFallback` - If enabled, blocks road pathing around the breakdown when needed.
+
+    `allowPedSpawnWithBreakdown` - If enabled, allows a stranded ped to spawn with the breakdown vehicle.&#x20;
 
 </details>
 
