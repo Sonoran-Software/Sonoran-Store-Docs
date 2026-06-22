@@ -10,7 +10,7 @@ Will be updated as time goes on.
 
 * Exports
 * Events
-*   To change the vehicles for Police, Ambulance and firetruk are found in the config.lua
+*   To change EMS vehicles for Police, Ambulance and Firetrucks are found in the config.lua to change EMS responses at breakdowns.
 
     ```lua
     responseVehicles = {
