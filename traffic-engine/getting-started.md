@@ -279,6 +279,56 @@ This allows law enforcement, sanitation, DOT, civilians, or anyone else to clear
 * Breakdown nodes manually placed must be inside a zone to be able to spawn.&#x20;
 * Breakdowns do slow the speed of traffic substantially. These will cause traffic jams if players are in the area.&#x20;
 
+Config.Lua for Breakdowns
+
+```
+enabled = true,
+```
+
+Turns the breakdown system on or off.
+
+```
+chance = 1.00,
+```
+
+Base chance for a breakdown event to occur when the system rolls.
+
+```
+chanceIncreasePerMiss = 0.08,
+```
+
+Adds 8% to the breakdown chance after each failed roll.
+
+```
+rushHourChanceIncreaseBonus = 0.20,
+```
+
+Adds an extra 20% chance during configured rush-hour periods.
+
+```
+maxActive = 500,
+```
+
+Maximum number of active breakdowns allowed server-wide.
+
+```
+maxActivePerZone = 10,
+```
+
+Maximum number of active breakdowns allowed in a single zone.
+
+```
+maxActivePerRegion = 30,
+```
+
+Maximum number of active breakdowns allowed in a single region.
+
+```
+trafficBlockRadius = 30.0,
+```
+
+Distance around the breakdown where AI traffic will react and avoid the scene.
+
 </details>
 
 ### Emergency Response
