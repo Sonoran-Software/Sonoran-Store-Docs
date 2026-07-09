@@ -2,7 +2,6 @@
 title: Power Grid
 published: true
 date: 2023-05-22T21:34:32.018Z
-tags: null
 editor: markdown
 dateCreated: 2022-05-11T21:57:17.341Z
 ---
@@ -20,7 +19,7 @@ Sonoran Software - Power Grid Promotional Video
 ### Features
 
 * Ability to operate standalone
-* Support for AcePerms, ESX, QBCore, and custom permissions systems        &#x20;
+* Support for AcePerms, ESX, QBCore, and custom permissions systems
 
 <figure><img src="../.gitbook/assets/ps-minigame.png" alt=""><figcaption><p>Sonoran Software - Power Grid Promotional Image</p></figcaption></figure>
 
@@ -30,7 +29,7 @@ Sonoran Software - Power Grid Promotional Video
 
 <figure><img src="../.gitbook/assets/ps-in-game-blips.png" alt=""><figcaption><p>Sonoran Software - Power Grid Promotional Image</p></figcaption></figure>
 
-<figure><img src="../.gitbook/assets/auto-update-feature (1).png" alt=""><figcaption><p>Sonoran Software - Power Grid Promotional Image</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/auto-update-feature.png" alt=""><figcaption><p>Sonoran Software - Power Grid Promotional Image</p></figcaption></figure>
 
 <figure><img src="../.gitbook/assets/ps-gun-placement-system.png" alt=""><figcaption><p>Sonoran Software - Power Grid Promotional Image</p></figcaption></figure>
 
@@ -48,7 +47,7 @@ These are the default names of commands, they may have been modified by the serv
 
 ### Model Options
 
-&#x20;The model on the left is named `prop_street_light_solar_panel` and the model is named `prop_powerbox`.
+The model on the left is named `prop_street_light_solar_panel` and the model is named `prop_powerbox`.
 
 <figure><img src="../.gitbook/assets/ps-model-options-feature.png" alt=""><figcaption><p>Sonoran Software - Power Grid Promotional Image</p></figcaption></figure>
 

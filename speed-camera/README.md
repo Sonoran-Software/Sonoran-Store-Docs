@@ -2,7 +2,6 @@
 title: Speed Cameras/ALPR
 published: true
 date: 2023-11-03T00:26:13.432Z
-tags: null
 editor: markdown
 dateCreated: 2022-03-31T18:53:58.629Z
 description: >-
@@ -23,7 +22,7 @@ Sonoran Software - Speed Cameras Promotional Video
 ### Features
 
 * Ability to operate standalone
-* Support for Ace Perms, ESX, QBCore, and custom permissions systems        &#x20;
+* Support for Ace Perms, ESX, QBCore, and custom permissions systems
 
 <figure><img src="../.gitbook/assets/notification-feature.png" alt=""><figcaption><p>Sonoran Software - Speed Cameras Promotional Image</p></figcaption></figure>
 
@@ -33,7 +32,7 @@ Sonoran Software - Speed Cameras Promotional Video
 
 <figure><img src="../.gitbook/assets/auto-fine.png" alt=""><figcaption><p>Sonoran Software - Speed Cameras Promotional Image</p></figcaption></figure>
 
-<figure><img src="../.gitbook/assets/auto-update-feature (1).png" alt=""><figcaption><p>Sonoran Software - Speed Cameras Promotional Image</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/auto-update-feature.png" alt=""><figcaption><p>Sonoran Software - Speed Cameras Promotional Image</p></figcaption></figure>
 
 <figure><img src="../.gitbook/assets/gun-placement-feature.png" alt=""><figcaption><p>Sonoran Software - Speed Cameras Promotional Image</p></figcaption></figure>
 
@@ -63,7 +62,7 @@ These are the default names of commands, they may have been modified by the serv
 
 ### Model Options
 
-&#x20;The model on the left is named `prop_traffic_cam` and the model is named `radar01`.
+The model on the left is named `prop_traffic_cam` and the model is named `radar01`.
 
 <figure><img src="../.gitbook/assets/promo-models.png" alt=""><figcaption><p>Sonoran Software - Speed Cameras Promotional Image</p></figcaption></figure>
 

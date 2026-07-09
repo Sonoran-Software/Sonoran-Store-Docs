@@ -2,7 +2,6 @@
 title: Mobile Command Center
 published: true
 date: 2023-01-05T20:53:11.098Z
-tags: null
 editor: markdown
 dateCreated: 2022-08-29T17:41:44.650Z
 description: Take command on scene like never before.
@@ -18,7 +17,7 @@ Sonoran Software - MCC Promotional Video
 
 ## Mobile Command Center
 
-* Ability to operate standalone       &#x20;
+* Ability to operate standalone
 
 <figure><img src="../.gitbook/assets/feat-slides.png" alt=""><figcaption><p>Sonoran Software - MCC Promotional Image</p></figcaption></figure>
 
@@ -32,7 +31,7 @@ Sonoran Software - MCC Promotional Video
 
 <figure><img src="../.gitbook/assets/livery_options.png" alt=""><figcaption><p>Sonoran Software - MCC Promotional Image</p></figcaption></figure>
 
-<figure><img src="../.gitbook/assets/auto-update-feature (1).png" alt=""><figcaption><p>Sonoran Software - MCC Promotional Image</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/auto-update-feature.png" alt=""><figcaption><p>Sonoran Software - MCC Promotional Image</p></figcaption></figure>
 
 <figure><img src="../.gitbook/assets/easy_translations_mcc.png" alt=""><figcaption><p>Sonoran Software - MCC Promotional Image</p></figcaption></figure>
 

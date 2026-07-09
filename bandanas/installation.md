@@ -1,4 +1,4 @@
-# Bandanas: Installation & In-Game Location
+# Installation
 
 This guide covers downloading, installing, and locating the Sonoran Bandanas EUP accessory pack.
 
@@ -15,7 +15,7 @@ You will need:
 * Access to your server's `server.cfg` file.
 * A way to restart the server after installation.
 
-> **Screenshot placeholder — Cfx.re Portal:** Show the purchased Bandanas asset in the Cfx.re Portal and the download button.
+> **Screenshot Placeholder — Purchase:** Show the package on https://sonoran.store&#x20;
 
 ## Download the Resource
 
@@ -23,55 +23,46 @@ You will need:
 2. Open the purchased assets or packages area for the account that owns the Bandanas pack.
 3. Download the Bandanas `.zip` file to your computer.
 
-> **Screenshot placeholder — Download:** Show the Bandanas `.zip` download in the Cfx.re Portal.
-
-> **Screenshot placeholder — Downloaded file:** Show the downloaded `.zip` file in the computer's Downloads folder.
+<div><figure><img src="../.gitbook/assets/image (27).png" alt=""><figcaption><p>CFX Portal - Download</p></figcaption></figure> <figure><img src="../.gitbook/assets/image (28).png" alt=""><figcaption><p>Windows - Downloaded ZIP File</p></figcaption></figure></div>
 
 ## Install the Resource
 
-1. Extract or unzip the downloaded file.
+1.  Extract or unzip the downloaded file.
 
-   > **Screenshot placeholder — Extract ZIP:** Show the context menu or extraction window used to unzip the downloaded package.
+    <div><figure><img src="../.gitbook/assets/image (29).png" alt=""><figcaption><p>Windows - Extract Zip File</p></figcaption></figure> <figure><img src="../.gitbook/assets/image (30).png" alt=""><figcaption><p>Windows - Choose Extract Location</p></figcaption></figure></div>
+2.  Open the extracted package and locate the resource folder. The folder should be named exactly:
 
-2. Open the extracted package and locate the resource folder. The folder should be named exactly:
+    ```
+    sonoran-bandanas
+    ```
 
-   ```text
-   sonoran-bandanas
-   ```
+    <figure><img src="../.gitbook/assets/image (32).png" alt=""><figcaption></figcaption></figure>
+3.  Copy the complete `sonoran-bandanas` folder into your server's `resources` directory. A typical layout is:
 
-   > **Screenshot placeholder — Extracted folder:** Show the extracted `sonoran-bandanas` folder before it is moved to the server.
+    ```
+    server-data/
+    └── resources/
+        └── sonoran-bandanas/
+    ```
 
-3. Copy the complete `sonoran-bandanas` folder into your server's `resources` directory. A typical layout is:
+    Do not put the folder inside an additional nested folder. The resource manifest should be directly inside `resources/sonoran-bandanas/`.
 
-   ```text
-   server-data/
-   └── resources/
-       └── sonoran-bandanas/
-   ```
+    <div><figure><img src="../.gitbook/assets/image (33).png" alt=""><figcaption><p>Pterodactyl - Uploaded FIle</p></figcaption></figure> <figure><img src="../.gitbook/assets/image (34).png" alt=""><figcaption><p>Pterodactyl - <code>sonoran-bandanas</code> folder</p></figcaption></figure></div>
+4.  Open your `server.cfg` and add the following line:
 
-   Do not put the folder inside an additional nested folder. The resource manifest should be directly inside `resources/sonoran-bandanas/`.
+    ```cfg
+    ensure sonoran-bandanas
+    ```
 
-   > **Screenshot placeholder — Server resources:** Show `sonoran-bandanas` alongside the server's other resources.
+    Place it with the other resources that are started when the server boots.
 
-   > **Screenshot placeholder — Correct nesting:** Show the resource manifest inside `resources/sonoran-bandanas/`, with no extra `sonoran-bandanas/sonoran-bandanas/` layer.
+    <figure><img src="../.gitbook/assets/image (35).png" alt=""><figcaption></figcaption></figure>
+5.  Save `server.cfg` and fully restart the FiveM server.
 
-4. Open your `server.cfg` and add the following line:
+    <figure><img src="../.gitbook/assets/image (37).png" alt=""><figcaption></figcaption></figure>
+6.  Check the server console during startup. You should not see a missing resource, manifest, or file error for `sonoran-bandanas`.
 
-   ```cfg
-   ensure sonoran-bandanas
-   ```
-
-   Place it with the other resources that are started when the server boots.
-
-   > **Screenshot placeholder — server.cfg:** Show the `ensure sonoran-bandanas` line in the server configuration.
-
-5. Save `server.cfg` and fully restart the FiveM server.
-
-   > **Screenshot placeholder — Server restart:** Show the server being restarted in the host panel, txAdmin, or terminal.
-
-6. Check the server console during startup. You should not see a missing resource, manifest, or file error for `sonoran-bandanas`.
-
-   > **Screenshot placeholder — Startup console:** Show a successful server startup with the Bandanas resource loading.
+    <figure><img src="../.gitbook/assets/image (36).png" alt=""><figcaption></figcaption></figure>
 
 ## Locate the Bandanas In-Game
 

@@ -2,7 +2,6 @@
 title: ATM Robbery
 published: true
 date: 2023-01-10T19:32:27.445Z
-tags: null
 editor: markdown
 dateCreated: 2022-12-21T23:43:16.899Z
 description: Steal and break into the ATM
@@ -36,7 +35,7 @@ ATM Robbery Promotional Video
 
 ![Sonoran Software - ATM Robbery Promotional Iamge](../.gitbook/assets/gun_placement.png)
 
-![Sonoran Software - ATM Robbery Promotional Iamge](<../.gitbook/assets/auto-update-feature (1).png>)
+![Sonoran Software - ATM Robbery Promotional Iamge](../.gitbook/assets/auto-update-feature.png)
 
 ### Changelog
 
