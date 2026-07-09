@@ -99,7 +99,7 @@ If the resource starts but the Bandanas do not appear, appear invisible, or caus
 * Confirm the server was fully restarted after the resource was added.
 * Confirm the server console does not report a missing manifest or failed file load.
 
-> **Screenshot placeholder — Resource structure check:** Show the correct folder name and location after troubleshooting.
+<figure><img src="../.gitbook/assets/image (38).png" alt=""><figcaption></figcaption></figure>
 
 ### 2. Check your Cfx.re Element Club subscription
 
@@ -110,7 +110,7 @@ Some EUP streamed assets require an active Cfx.re **Element Club** subscription.
 3. Confirm the subscription is active on the account associated with the server's Cfx.re license/key.
 4. Restart the server after the subscription or account association is corrected.
 
-> **Screenshot placeholder — Element Club status:** Show an active Element Club subscription in the Cfx.re Portal. Hide account IDs, payment details, and other private information.
+<figure><img src="../.gitbook/assets/image (39).png" alt=""><figcaption></figcaption></figure>
 
 {% hint style="warning" %}
 Do not post private license keys, account information, or payment details in support channels or screenshots.
@@ -126,9 +126,7 @@ sv_maxclients 10
 
 Then fully restart the server and test the Bandanas again.
 
-> **Screenshot placeholder — Max players:** Show `sv_maxclients 10` in `server.cfg`.
-
-> **Screenshot placeholder — txAdmin player limit:** If your server is managed through txAdmin or a hosting panel, show the matching maximum-player setting set to 10.
+<div><figure><img src="../.gitbook/assets/image (40).png" alt=""><figcaption><p>TxAdmin - Setting Max Players to 10</p></figcaption></figure> <figure><img src="../.gitbook/assets/image (41).png" alt=""><figcaption><p>RocketNode Panel - Setting Max Players to 10 </p></figcaption></figure></div>
 
 {% hint style="info" %}
 Use the 10-player limit as a troubleshooting step while testing streamed EUP assets. Once the assets are working, you can test a higher player count again if your server setup and Cfx.re requirements support it.
@@ -143,13 +141,9 @@ After changing streamed assets or server settings:
 3. Restart FiveM and reconnect to the server.
 4. Open vMenu and check **Neck and Scarves**, slots **200–208**, again.
 
-> **Screenshot placeholder — Client cache:** Show the cache location or the cache-cleaning step used by your server's support procedure.
-
 ### 5. Test for resource conflicts
 
 Temporarily test with other recently added EUP or clothing resources disabled. If the Bandanas appear after another resource is disabled, re-enable resources one at a time to identify the conflict.
-
-> **Screenshot placeholder — Resource isolation:** Show the server resource list with other EUP resources disabled for a test restart.
 
 ### 6. Review the client and server logs
 
@@ -162,8 +156,6 @@ Look for errors mentioning:
 * texture or drawable loading
 
 When requesting support, include the relevant error text, your FiveM build, vMenu version, and a list of other EUP resources. Remove license keys and personal account information first.
-
-> **Screenshot placeholder — Error log:** Show the relevant client or server error with private information redacted.
 
 ## Quick Verification Checklist
 
