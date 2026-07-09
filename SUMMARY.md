@@ -15,6 +15,8 @@
 * [🏧 ATM Robbery](atm-robbery/README.md)
   * [Getting Started](atm-robbery/getting-started.md)
   * [Advanced Documentation](atm-robbery/advanced-docs.md)
+* [🧣 Bandanas](bandanas/README.md)
+  * [Installation](bandanas/installation.md)
 * [📸 Evidence Camera](evidence-camera/README.md)
   * [Getting Started](evidence-camera/getting-started.md)
   * [Advanced Documentation](evidence-camera/advanced-docs.md)
