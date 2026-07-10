@@ -12,6 +12,10 @@ This guide covers downloading, installing, and locating the Sonoran Bandanas EUP
 The resource must be named `sonoran-bandanas` and the resource must be started with `ensure sonoran-bandanas`.
 {% endhint %}
 
+{% hint style="info" %}
+This EUP asset is escrow protected by Tebex. [Learn more about what this means.](installation.md#texture-customization)
+{% endhint %}
+
 ## Download the Resource
 
 1. Sign in to the [Cfx.re Portal](https://portal.cfx.re/).
