@@ -1,13 +1,12 @@
 ---
 description: Pocket bandanas with real movement — built to flow naturally with every step.
-hidden: true
 ---
 
 # 🧣 Bandanas
 
 ## Small detail. Big improvement to your outfits.
 
-Give your characters a more complete, lived-in look with the Sonoran Bandanas EUP accessory pack. These pocket bandanas are designed to move naturally with the player, adding personality and realism to patrol uniforms, gang clothing, civilian outfits, and custom EUP loadouts.
+Give your characters a more complete, lived-in look with the Sonoran Bandanas EUP accessory pack. These pocket bandanas are designed to move naturally with the player, adding personality and realism for gang clothing, civilian outfits, and custom EUP loadouts.
 
 <figure><img src="../.gitbook/assets/image (42).png" alt=""><figcaption></figcaption></figure>
 
