@@ -1,3 +1,9 @@
+---
+description: >-
+  Install Sonoran's pocket bandanas with real movement — built to flow naturally
+  with every step.
+---
+
 # Installation
 
 This guide covers downloading, installing, and locating the Sonoran Bandanas EUP accessory pack.
@@ -5,17 +11,6 @@ This guide covers downloading, installing, and locating the Sonoran Bandanas EUP
 {% hint style="info" %}
 The resource must be named `sonoran-bandanas` and the resource must be started with `ensure sonoran-bandanas`.
 {% endhint %}
-
-## Before You Begin
-
-You will need:
-
-* Access to the Cfx.re Portal account that purchased the product.
-* Access to your FiveM server's `resources` folder.
-* Access to your server's `server.cfg` file.
-* A way to restart the server after installation.
-
-> **Screenshot Placeholder — Purchase:** Show the package on https://sonoran.store&#x20;
 
 ## Download the Resource
 
@@ -74,14 +69,6 @@ The Bandanas pack is available as an EUP accessory through vMenu.
 4. Open the **Neck and Scarves** category.
 5. Scroll to the end of the category. The Bandanas are located in slots **200–208** on vMenu.
 6. Select a slot to preview and equip the bandana. Use the texture/variation controls to cycle through the available designs.
-
-> **Screenshot placeholder — Open vMenu:** Show the vMenu clothing or player appearance menu.
-
-> **Screenshot placeholder — Neck and Scarves:** Show the **Neck and Scarves** category selected.
-
-> **Screenshot placeholder — Slots 200–208:** Show the end of the category with slots 200 through 208 visible.
-
-> **Screenshot placeholder — Equipped bandana:** Show the bandana equipped on a player character in-game.
 
 {% hint style="info" %}
 The exact appearance of the menu can vary slightly depending on your vMenu version and other EUP resources installed on the server. The Bandanas should still be at the end of **Neck and Scarves**, in slots **200–208**.
