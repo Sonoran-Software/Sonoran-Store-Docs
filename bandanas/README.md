@@ -6,6 +6,10 @@ description: Pocket bandanas with real movement — built to flow naturally with
 
 ## Small detail. Big improvement to your outfits.
 
+{% hint style="info" %}
+This EUP asset is escrow protected by Tebex. Learn more about what this means.
+{% endhint %}
+
 Give your characters a more complete, lived-in look with the Sonoran Bandanas EUP accessory pack. These pocket bandanas are designed to move naturally with the player, adding personality and realism for gang clothing, civilian outfits, and custom EUP loadouts.
 
 <figure><img src="../.gitbook/assets/image (42).png" alt=""><figcaption></figcaption></figure>

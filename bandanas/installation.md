@@ -157,3 +157,19 @@ Use this checklist after installation:
 * [ ] **Neck and Scarves** is available in the EUP menu.
 * [ ] The Bandanas are visible in slots **200–208**.
 * [ ] If assets do not stream, Element Club status was checked and `sv_maxclients 10` was tested.
+
+## Escrow Protection
+
+Sonoran’s Bandana EUP is protected through Tebex and Cfx.re Asset Escrow. This helps prevent unauthorized redistribution, leaks, and resale.
+
+#### Runs as a Separate Resource
+
+Because the asset is escrow-protected, the Bandana EUP must run as its own separate resource and cannot be merged into an existing clothing pack.
+
+The resource is heavily optimized for smooth performance, and textures can still be customized.
+
+#### Texture Customization
+
+This EUP cannot be edited through Durty Cloth Tool due to Asset Escrow restrictions.
+
+Textures can still be modified by opening the included `.ytd` file in OpenIV.
