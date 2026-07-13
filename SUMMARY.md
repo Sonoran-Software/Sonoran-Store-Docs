@@ -17,6 +17,8 @@
   * [Advanced Documentation](atm-robbery/advanced-docs.md)
 * [🧣 Bandanas](bandanas/README.md)
   * [Installation](bandanas/installation.md)
+* [🦺 Sonoran Safety Vests](safety-vests/README.md)
+  * [Installation](safety-vests/installation.md)
 * [📸 Evidence Camera](evidence-camera/README.md)
   * [Getting Started](evidence-camera/getting-started.md)
   * [Advanced Documentation](evidence-camera/advanced-docs.md)
