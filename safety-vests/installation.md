@@ -6,6 +6,10 @@ This guide covers downloading, installing, and locating the Sonoran Safety Vests
 The resource folder should be named `sonoran-safetyvest` and started with `ensure sonoran-safetyvest`.
 {% endhint %}
 
+{% hint style="info" %}
+This EUP asset is escrow protected by Tebex. [Learn more about what this means.](installation.md#texture-customization)
+{% endhint %}
+
 ## Before You Begin
 
 You will need:
