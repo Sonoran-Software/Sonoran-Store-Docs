@@ -56,10 +56,10 @@ The Safety Vests are accessed through vMenu's EUP clothing options.
 
 ## Simple installation
 
-Download the ZIP from the Cfx.re Portal, unzip it, place the `sonoran-safety-vests` folder in your server's `resources` directory, and add it to `server.cfg`:
+Download the ZIP from the Cfx.re Portal, unzip it, place the `sonoran-safetyvest` folder in your server's `resources` directory, and add it to `server.cfg`:
 
 ```cfg
-ensure sonoran-safety-vests
+ensure sonoran-safetyvest
 ```
 
 For the complete installation process, screenshot placeholders, and EUP streamed-asset troubleshooting, see:
