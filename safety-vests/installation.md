@@ -78,21 +78,17 @@ The Safety Vests are accessed as EUP clothing through vMenu.
 1. Join the server with a character that can access vMenu's clothing options.
 2. Open **vMenu**.
 3. Open **EUP / Player Appearance**.
-4. Navigate to the confirmed clothing category for the Safety Vests.
-5. Scroll to the confirmed slot range and select a vest.
+4. Open **Shirt and Accessory**.
+5. Scroll all the way to the end of the category and select slot **217**.
 6. Use the texture/variation controls to preview the available options.
 
 > **Screenshot placeholder — Open vMenu:** Show the vMenu clothing or player appearance menu.
 
-> **Screenshot placeholder — Clothing category:** Show the exact category where the Safety Vests appear.
+> **Screenshot placeholder — Shirt and Accessory:** Show the **Shirt and Accessory** category selected.
 
-> **Screenshot placeholder — Vest slots:** Show the exact slot range with the Safety Vests visible.
+> **Screenshot placeholder — Slot 217:** Show slot **217** at the very end of the category with the Safety Vest visible.
 
 > **Screenshot placeholder — Equipped vest:** Show the vest equipped on a player character.
-
-{% hint style="warning" %}
-The exact category and slot numbers were not present in the current documentation package. Confirm them in-game with the current resource version, then replace the placeholders in this section and on the landing page.
-{% endhint %}
 
 ## EUP Streamed-Asset Troubleshooting
 
@@ -148,7 +144,7 @@ After changing streamed assets or server settings:
 1. Stop FiveM.
 2. Clear the FiveM client cache using your normal cache-cleaning procedure. Do not delete the entire FiveM installation.
 3. Restart FiveM and reconnect to the server.
-4. Open vMenu and check the confirmed Safety Vest category and slots again.
+4. Open vMenu and check **Player Appearance → Shirt and Accessory**, slot **217**, again.
 
 > **Screenshot placeholder — Client cache:** Show the cache-cleaning step used by your support procedure.
 
@@ -180,6 +176,6 @@ When requesting support, include the relevant error text, your FiveM build, vMen
 * [ ] The server was fully restarted.
 * [ ] The resource has no startup errors.
 * [ ] vMenu opens successfully.
-* [ ] The confirmed EUP clothing category is available.
-* [ ] The Safety Vests are visible in the confirmed slot range.
+* [ ] **Player Appearance → Shirt and Accessory** is available.
+* [ ] The Safety Vest is visible at slot **217**, at the end of the category.
 * [ ] If assets do not stream, Element Club status was checked and `sv_maxclients 10` was tested.

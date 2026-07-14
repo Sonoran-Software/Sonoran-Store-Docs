@@ -9,7 +9,7 @@ description: Physics-enabled safety vests for more realistic FiveM EUP outfits.
 Give your characters a more practical, polished look with Sonoran Safety Vests. These EUP accessories are designed to fit naturally into public-safety, roadside, construction, event, and civilian roleplay outfits while moving with the player in-game.
 
 {% hint style="info" %}
-Sonoran Safety Vests are physics-enabled EUP items. The exact vMenu clothing category and slot range should be confirmed against the current product package before publishing the final screenshots.
+Sonoran Safety Vests are physics-enabled EUP items available in vMenu under **Player Appearance → Shirt and Accessory → 217**.
 {% endhint %}
 
 > **Screenshot placeholder — Hero image:** Add a wide promotional image showing a character wearing a Sonoran Safety Vest in-game.
@@ -56,21 +56,17 @@ The Safety Vests are accessed through vMenu's EUP clothing options.
 
 1. Open **vMenu**.
 2. Open the **EUP / Player Appearance** clothing menu.
-3. Navigate to the product's confirmed clothing category.
-4. Scroll to the confirmed Safety Vest slots.
+3. Open **Shirt and Accessory**.
+4. Scroll all the way to the end of the category and select slot **217**.
 5. Select a vest and use the texture/variation controls to preview the available options.
 
 > **Screenshot placeholder — vMenu path:** Show the path from vMenu to the EUP clothing menu.
 
-> **Screenshot placeholder — Category:** Show the confirmed clothing category containing the Safety Vests.
+> **Screenshot placeholder — Shirt and Accessory:** Show the **Shirt and Accessory** category selected.
 
-> **Screenshot placeholder — Slot range:** Show the Safety Vest slots with the exact slot numbers visible.
+> **Screenshot placeholder — Slot 217:** Show slot **217** at the very end of the category with the Safety Vest visible.
 
 > **Screenshot placeholder — Equipped vest:** Show a character wearing a vest in-game.
-
-{% hint style="warning" %}
-Replace the category and slot placeholders above with the confirmed location from the current resource package before publishing the final customer-facing version.
-{% endhint %}
 
 ## Simple installation
 
