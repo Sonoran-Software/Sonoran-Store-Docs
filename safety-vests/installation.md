@@ -1,4 +1,4 @@
-# Sonoran Safety Vests: Installation & In-Game Location
+# Installation
 
 This guide covers downloading, installing, and locating the Sonoran Safety Vests EUP items.
 
@@ -15,61 +15,52 @@ You will need:
 * Access to your server's `server.cfg` file.
 * A way to fully restart the server after installation.
 
-> **Screenshot placeholder — Cfx.re Portal:** Show the purchased Safety Vests asset and download button.
-
 ## Download the Resource
 
 1. Sign in to the [Cfx.re Portal](https://portal.cfx.re/).
 2. Open the purchased assets or packages area for the account that owns the Safety Vests.
 3. Download the Safety Vests `.zip` file.
 
-> **Screenshot placeholder — Download:** Show the Safety Vests ZIP download in the Cfx.re Portal.
-
-> **Screenshot placeholder — Downloaded ZIP:** Show the downloaded ZIP file on the computer.
+<div><figure><img src="../.gitbook/assets/image (49).png" alt=""><figcaption><p>CFX Portal - Download</p></figcaption></figure> <figure><img src="../.gitbook/assets/image (50).png" alt=""><figcaption><p>Windows - Downloaded ZIP File</p></figcaption></figure></div>
 
 ## Install the Resource
 
 1. Extract or unzip the downloaded file.
 
-   > **Screenshot placeholder — Extract ZIP:** Show the extraction menu or window.
+<div><figure><img src="../.gitbook/assets/image (48).png" alt=""><figcaption><p>Windows - Extract Zip File</p></figcaption></figure> <figure><img src="../.gitbook/assets/image (51).png" alt=""><figcaption></figcaption></figure></div>
 
-2. Locate the extracted resource folder. It should be named exactly:
+1.  Locate the extracted resource folder. It should be named exactly:
 
-   ```text
-   sonoran-safety-vests
-   ```
+    ```
+    sonoran-safetyvest
+    ```
 
-   > **Screenshot placeholder — Extracted resource:** Show the extracted `sonoran-safety-vests` folder.
+    <figure><img src="../.gitbook/assets/image (52).png" alt=""><figcaption></figcaption></figure>
+2.  Copy the complete folder directly into your server's `resources` directory:
 
-3. Copy the complete folder directly into your server's `resources` directory:
+    ```
+    server-data/
+    └── resources/
+        └── sonoran-safetyvest/
+    ```
 
-   ```text
-   server-data/
-   └── resources/
-       └── sonoran-safety-vests/
-   ```
+    Do not create an extra nested folder such as `sonoran-safetyvest/sonoran-safetyvest/`. The resource manifest should be directly inside the resource folder.
 
-   Do not create an extra nested folder such as `sonoran-safety-vests/sonoran-safety-vests/`. The resource manifest should be directly inside the resource folder.
+<div><figure><img src="../.gitbook/assets/image (53).png" alt=""><figcaption><p>Pterodactyl - Uploaded FIle</p></figcaption></figure> <figure><img src="../.gitbook/assets/image (55).png" alt=""><figcaption><p>Pterodactly - <code>sonoran-safetyvest</code> folder</p></figcaption></figure></div>
 
-   > **Screenshot placeholder — Resources folder:** Show `sonoran-safety-vests` alongside the server's other resources.
+1.  Open `server.cfg` and add:
 
-   > **Screenshot placeholder — Correct nesting:** Show the resource manifest inside `resources/sonoran-safety-vests/`.
+    ```cfg
+    ensure sonoran-safetyvest
+    ```
 
-4. Open `server.cfg` and add:
+    <figure><img src="../.gitbook/assets/image (57).png" alt=""><figcaption></figcaption></figure>
+2.  Save the file and fully restart the FiveM server.
 
-   ```cfg
-   ensure sonoran-safety-vests
-   ```
+    <figure><img src="../.gitbook/assets/image (58).png" alt=""><figcaption></figcaption></figure>
+3.  Check the startup console for resource errors.
 
-   > **Screenshot placeholder — server.cfg:** Show the `ensure sonoran-safety-vests` line.
-
-5. Save the file and fully restart the FiveM server.
-
-   > **Screenshot placeholder — Server restart:** Show the server being restarted in txAdmin, a hosting panel, or a terminal.
-
-6. Check the startup console for resource errors.
-
-   > **Screenshot placeholder — Startup console:** Show the Safety Vests resource loading without errors.
+    <figure><img src="../.gitbook/assets/image (59).png" alt=""><figcaption></figcaption></figure>
 
 ## Locate the Safety Vests In-Game
 
@@ -81,14 +72,6 @@ The Safety Vests are accessed as EUP clothing through vMenu.
 4. Open **Shirt and Accessory**.
 5. Scroll all the way to the end of the category and select slot **217**.
 6. Use the texture/variation controls to preview the available options.
-
-> **Screenshot placeholder — Open vMenu:** Show the vMenu clothing or player appearance menu.
-
-> **Screenshot placeholder — Shirt and Accessory:** Show the **Shirt and Accessory** category selected.
-
-> **Screenshot placeholder — Slot 217:** Show slot **217** at the very end of the category with the Safety Vest visible.
-
-> **Screenshot placeholder — Equipped vest:** Show the vest equipped on a player character.
 
 ## EUP Streamed-Asset Troubleshooting
 
@@ -113,7 +96,7 @@ Some EUP streamed assets require an active Cfx.re **Element Club** subscription.
 3. Confirm the subscription is active for the account associated with the server license/key.
 4. Restart the server after correcting the subscription or account association.
 
-> **Screenshot placeholder — Element Club status:** Show an active Element Club subscription. Redact account IDs, license keys, payment details, and other private information.
+<figure><img src="../.gitbook/assets/image (44).png" alt=""><figcaption></figcaption></figure>
 
 {% hint style="warning" %}
 Never post private license keys, account information, or payment details in support screenshots.
@@ -129,9 +112,7 @@ sv_maxclients 10
 
 Fully restart the server and test the Safety Vests again.
 
-> **Screenshot placeholder — Max players in server.cfg:** Show `sv_maxclients 10` in the configuration file.
-
-> **Screenshot placeholder — txAdmin limit:** If applicable, show the matching maximum-player setting set to 10 in txAdmin or your hosting panel.
+<div><figure><img src="../.gitbook/assets/image (45).png" alt=""><figcaption><p>TxAdmin - Setting Max Players to 10</p></figcaption></figure> <figure><img src="../.gitbook/assets/image (46).png" alt=""><figcaption><p>RocketNode Panel - Setting Max Players to 10</p></figcaption></figure></div>
 
 {% hint style="info" %}
 Use the 10-player limit as a troubleshooting step. After the streamed assets work correctly, test a higher player count again if your server setup and Cfx.re requirements support it.
@@ -146,13 +127,9 @@ After changing streamed assets or server settings:
 3. Restart FiveM and reconnect to the server.
 4. Open vMenu and check **Player Appearance → Shirt and Accessory**, slot **217**, again.
 
-> **Screenshot placeholder — Client cache:** Show the cache-cleaning step used by your support procedure.
-
 ### 5. Test for EUP resource conflicts
 
 Temporarily disable other recently added EUP or clothing resources and restart the server. If the Safety Vests appear, re-enable the other resources one at a time to identify the conflict.
-
-> **Screenshot placeholder — Resource isolation:** Show the server resource list with other EUP resources disabled for a test restart.
 
 ### 6. Review client and server logs
 
@@ -165,8 +142,6 @@ Look for errors mentioning:
 * texture or drawable loading
 
 When requesting support, include the relevant error text, your FiveM build, vMenu version, and a list of other EUP resources. Redact license keys and personal account information first.
-
-> **Screenshot placeholder — Error log:** Show the relevant client or server error with private information redacted.
 
 ## Quick Verification Checklist
 
