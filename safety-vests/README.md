@@ -36,8 +36,8 @@ Safety Vests are a natural fit for:
 | Item type     | EUP safety vest accessory                          |
 | Movement      | Moves naturally with your character                |
 | Compatibility | Optimized for FiveM EUP / vMenu clothing workflows |
-| Variants      | **\[Add confirmed variant count]**                 |
-| Positions     | **\[Add confirmed position count]**                |
+| Variants      | 2 Colors, 4 Textures (clean and dirty)             |
+| Positions     | 1 Position                                         |
 | Textures      | 4 textures                                         |
 | Polygons      | 1,740 polygons                                     |
 | Performance   | Optimized for FiveM                                |
