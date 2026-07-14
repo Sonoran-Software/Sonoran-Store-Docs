@@ -6,6 +6,10 @@ description: 'FREE: Physics-enabled safety vests for more realistic FiveM EUP ou
 
 ## Add visibility and movement to your EUP outfits
 
+{% hint style="info" %}
+This EUP asset is escrow protected by Tebex. [Learn more about what this means.](./#texture-customization)
+{% endhint %}
+
 Give your characters a more practical, polished look with Sonoran Safety Vests. These EUP accessories are designed to fit naturally into public-safety, roadside, construction, event, and civilian roleplay outfits while moving with the player in-game.
 
 <figure><img src="../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
