@@ -159,11 +159,11 @@ When requesting support, include the relevant error text, your FiveM build, vMen
 
 ## Escrow Protection
 
-Sonoran’s Bandana EUP is protected through Tebex and Cfx.re Asset Escrow. This helps prevent unauthorized redistribution, leaks, and resale.
+Sonoran’s Safety Vest EUP is protected through Tebex and Cfx.re Asset Escrow. This helps prevent unauthorized redistribution, leaks, and resale.
 
 #### Runs as a Separate Resource
 
-Because the asset is escrow-protected, the Bandana EUP must run as its own separate resource and cannot be merged into an existing clothing pack.
+Because the asset is escrow-protected, the Safety Vest EUP must run as its own separate resource and cannot be merged into an existing clothing pack.
 
 The resource is heavily optimized for smooth performance, and textures can still be customized.
 
