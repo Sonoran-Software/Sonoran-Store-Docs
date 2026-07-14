@@ -3,7 +3,7 @@
 This guide covers downloading, installing, and locating the Sonoran Safety Vests EUP items.
 
 {% hint style="info" %}
-The resource folder should be named `sonoran-safety-vests` and started with `ensure sonoran-safety-vests`.
+The resource folder should be named `sonoran-safetyvest` and started with `ensure sonoran-safetyvest`.
 {% endhint %}
 
 ## Before You Begin
@@ -79,13 +79,11 @@ If the resource starts but the Safety Vests do not appear, appear invisible, or 
 
 ### 1. Confirm the resource installation
 
-* Confirm the folder is named `sonoran-safety-vests`.
+* Confirm the folder is named `sonoran-safetyvest`.
 * Confirm it is directly inside the server's `resources` folder.
-* Confirm `server.cfg` contains `ensure sonoran-safety-vests`.
+* Confirm `server.cfg` contains `ensure sonoran-safetyvest`.
 * Confirm the server was fully restarted after installation.
 * Confirm the startup console does not report a missing manifest or failed file load.
-
-> **Screenshot placeholder — Resource structure check:** Show the correct folder name and location.
 
 ### 2. Check the Cfx.re Element Club subscription
 
@@ -135,7 +133,7 @@ Temporarily disable other recently added EUP or clothing resources and restart t
 
 Look for errors mentioning:
 
-* `sonoran-safety-vests`
+* `sonoran-safetyvest`
 * streamed assets
 * EUP clothing components
 * asset or archetype limits
@@ -145,9 +143,9 @@ When requesting support, include the relevant error text, your FiveM build, vMen
 
 ## Quick Verification Checklist
 
-* [ ] The folder is named `sonoran-safety-vests`.
+* [ ] The folder is named `sonoran-safetyvest`.
 * [ ] The folder is directly inside the server's `resources` directory.
-* [ ] `server.cfg` contains `ensure sonoran-safety-vests`.
+* [ ] `server.cfg` contains `ensure sonoran-safetyvest`.
 * [ ] The server was fully restarted.
 * [ ] The resource has no startup errors.
 * [ ] vMenu opens successfully.
