@@ -6,6 +6,10 @@ This guide covers downloading, installing, and locating the Sonoran Short Slip D
 The resource folder should be named `sonoran-shortdress` and started with `ensure sonoran-shortdress`. If the downloaded ZIP uses a different folder name, use that exact name instead.
 {% endhint %}
 
+{% hint style="info" %}
+This EUP asset is escrow protected by Tebex. [Learn more about what this means.](../safety-vests/installation.md#texture-customization)
+{% endhint %}
+
 ## Before You Begin
 
 You will need:
@@ -153,3 +157,19 @@ When requesting support, include the relevant error text, your FiveM build, vMen
 * [ ] The Short Slip Dress is visible at item **633**, at the end of the category.
 * [ ] The 22 textures can be previewed.
 * [ ] If the asset does not stream, Element Club status was checked and `sv_maxclients 10` was tested.
+
+## Escrow Protection
+
+Sonoran’s Safety Vest EUP is protected through Tebex and Cfx.re Asset Escrow. This helps prevent unauthorized redistribution, leaks, and resale.
+
+#### Runs as a Separate Resource
+
+Because the asset is escrow-protected, the Safety Vest EUP must run as its own separate resource and cannot be merged into an existing clothing pack.
+
+The resource is heavily optimized for smooth performance, and textures can still be customized.
+
+#### Texture Customization
+
+This EUP cannot be edited through Durty Cloth Tool due to Asset Escrow restrictions.
+
+Textures can still be modified by opening the included `.ytd` file in OpenIV.

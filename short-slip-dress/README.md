@@ -6,19 +6,17 @@ description: A physics-enabled short slip dress for female FiveM EUP outfits.
 
 ## A simple silhouette with natural movement
 
-Add an elegant, lightweight outfit option to your female character wardrobe with the Sonoran Short Slip Dress. This camisole-style short dress is designed to move naturally with the player, making it a polished choice for civilian characters, nightlife outfits, resort looks, and custom EUP collections.
-
 {% hint style="info" %}
-The Short Slip Dress is available in vMenu under **Player Appearance → Shirt overlay / Jackets → 633**.
+This EUP asset is escrow protected by Tebex. [Learn more about what this means.](../safety-vests/installation.md#texture-customization)
 {% endhint %}
 
-> **Screenshot placeholder — Hero image:** Add a wide promotional screenshot showing the Short Slip Dress in-game.
+Add an elegant, lightweight outfit option to your female character wardrobe with the Sonoran Short Slip Dress. This camisole-style short dress is designed to move naturally with the player, making it a polished choice for civilian characters, nightlife outfits, resort looks, and custom EUP collections.
+
+<figure><img src="../.gitbook/assets/image (67).png" alt=""><figcaption></figcaption></figure>
 
 ## Made to move
 
 The dress uses physics-enabled movement so it responds naturally as your character walks, runs, turns, and moves through the world. The result is a more believable garment with movement that complements the outfit instead of looking static.
-
-> **Screenshot placeholder — Movement showcase:** Add an in-game action screenshot or short sequence showing the dress moving while the character walks or turns.
 
 ## Product details
 
@@ -31,10 +29,6 @@ The dress uses physics-enabled movement so it responds naturally as your charact
 | Polygons      | 8,196 polygons                              |
 | Performance   | Optimized for FiveM                         |
 
-> **Screenshot placeholder — Texture overview:** Add a grid or collage showing the 22 available textures.
-
-> **Screenshot placeholder — Detail close-up:** Add a close-up showing the dress fabric, straps, neckline, and hem.
-
 ## Built for character customization
 
 The Short Slip Dress is a flexible addition to:
@@ -45,7 +39,9 @@ The Short Slip Dress is a flexible addition to:
 * Date-night and formal-casual looks
 * Custom female EUP collections
 
-> **Screenshot placeholder — Outfit lineup:** Add several characters or outfit variations using different textures.
+<figure><img src="../.gitbook/assets/image (69).png" alt=""><figcaption></figcaption></figure>
+
+<figure><img src="../.gitbook/assets/image (68).png" alt=""><figcaption></figcaption></figure>
 
 ## In-game location
 
