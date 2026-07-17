@@ -31,7 +31,7 @@ You will need:
 
 1. Extract or unzip the downloaded file.
 
-<div><figure><img src="../.gitbook/assets/image (48).png" alt=""><figcaption><p>Windows - Extract Zip File</p></figcaption></figure> <figure><img src="../.gitbook/assets/image (51).png" alt=""><figcaption></figcaption></figure></div>
+<div><figure><img src="../.gitbook/assets/image (47).png" alt=""><figcaption><p>Windows - Extract Zip File</p></figcaption></figure> <figure><img src="../.gitbook/assets/image (51).png" alt=""><figcaption></figcaption></figure></div>
 
 1.  Locate the extracted resource folder. It should be named exactly:
 
@@ -58,7 +58,7 @@ You will need:
     ensure sonoran-safetyvest
     ```
 
-    <figure><img src="../.gitbook/assets/image (57).png" alt=""><figcaption></figcaption></figure>
+    <figure><img src="../.gitbook/assets/image (56).png" alt=""><figcaption></figcaption></figure>
 2.  Save the file and fully restart the FiveM server.
 
     <figure><img src="../.gitbook/assets/image (58).png" alt=""><figcaption></figcaption></figure>

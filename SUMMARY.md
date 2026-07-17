@@ -17,7 +17,7 @@
   * [Advanced Documentation](atm-robbery/advanced-docs.md)
 * [🧣 Bandanas](bandanas/README.md)
   * [Installation](bandanas/installation.md)
-* [🦺 Sonoran Safety Vests](safety-vests/README.md)
+* [🦺 Safety Vests](safety-vests/README.md)
   * [Installation](safety-vests/installation.md)
 * [👗 Short Slip Dress](short-slip-dress/README.md)
   * [Installation](short-slip-dress/installation.md)

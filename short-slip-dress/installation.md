@@ -1,4 +1,4 @@
-# Sonoran Short Slip Dress: Installation & In-Game Location
+# Installation
 
 This guide covers downloading, installing, and locating the Sonoran Short Slip Dress EUP item.
 
@@ -15,8 +15,6 @@ You will need:
 * Access to your server's `server.cfg` file.
 * A way to fully restart the server after installation.
 
-> **Screenshot placeholder — Cfx.re Portal:** Show the purchased Short Slip Dress asset and download button.
-
 ## Download the Resource
 
 1. Sign in to the [Cfx.re Portal](https://portal.cfx.re/).
@@ -29,51 +27,44 @@ You will need:
 
 ## Install the Resource
 
-1. Extract or unzip the downloaded file.
+1.  Extract or unzip the downloaded file.
 
-   > **Screenshot placeholder — Extract ZIP:** Show the extraction menu or window.
+    > **Screenshot placeholder — Extract ZIP:** Show the extraction menu or window.
+2.  Locate the extracted resource folder. It should be named:
 
-2. Locate the extracted resource folder. It should be named:
+    ```
+    sonoran-slipdress
+    ```
 
-   ```text
-   sonoran-slipdress
-   ```
+    If the package uses a different folder name, keep that exact name and use it in the `ensure` line below.
 
-   If the package uses a different folder name, keep that exact name and use it in the `ensure` line below.
+    > **Screenshot placeholder — Extracted resource:** Show the extracted resource folder.
+3.  Copy the complete resource folder directly into your server's `resources` directory:
 
-   > **Screenshot placeholder — Extracted resource:** Show the extracted resource folder.
+    ```
+    server-data/
+    └── resources/
+        └── sonoran-slipdress/
+    ```
 
-3. Copy the complete resource folder directly into your server's `resources` directory:
+    Do not create an extra nested folder such as `sonoran-slipdress/sonoran-slipdress/`. The resource manifest should be directly inside the resource folder.
 
-   ```text
-   server-data/
-   └── resources/
-       └── sonoran-slipdress/
-   ```
+    > **Screenshot placeholder — Resources folder:** Show the dress resource alongside the server's other resources.
 
-   Do not create an extra nested folder such as `sonoran-slipdress/sonoran-slipdress/`. The resource manifest should be directly inside the resource folder.
+    > **Screenshot placeholder — Correct nesting:** Show the resource manifest inside `resources/sonoran-slipdress/`.
+4.  Open `server.cfg` and add:
 
-   > **Screenshot placeholder — Resources folder:** Show the dress resource alongside the server's other resources.
+    ```cfg
+    ensure sonoran-slipdress
+    ```
 
-   > **Screenshot placeholder — Correct nesting:** Show the resource manifest inside `resources/sonoran-slipdress/`.
+    <figure><img src="../.gitbook/assets/image (61).png" alt=""><figcaption></figcaption></figure>
+5.  Save the file and fully restart the FiveM server.
 
-4. Open `server.cfg` and add:
+    <figure><img src="../.gitbook/assets/image (62).png" alt=""><figcaption></figcaption></figure>
+6.  Check the startup console for resource errors.
 
-   ```cfg
-   ensure sonoran-slipdress
-   ```
-
-   If your ZIP uses a different resource folder name, replace `sonoran-slipdress` with that name.
-
-   > **Screenshot placeholder — server.cfg:** Show the `ensure sonoran-slipdress` line.
-
-5. Save the file and fully restart the FiveM server.
-
-   > **Screenshot placeholder — Server restart:** Show the server being restarted in txAdmin, a hosting panel, or a terminal.
-
-6. Check the startup console for resource errors.
-
-   > **Screenshot placeholder — Startup console:** Show the Short Slip Dress resource loading without errors.
+    <figure><img src="../.gitbook/assets/image (63).png" alt=""><figcaption></figcaption></figure>
 
 ## Locate the Short Slip Dress In-Game
 
@@ -87,16 +78,6 @@ The Short Slip Dress is accessed as female EUP clothing through vMenu.
 6. Select item **633**.
 7. Use the texture/variation controls to preview the 22 available textures.
 
-> **Screenshot placeholder — Open vMenu:** Show the vMenu clothing or Player Appearance menu.
-
-> **Screenshot placeholder — Player Appearance:** Show **Player Appearance** selected.
-
-> **Screenshot placeholder — Shirt overlay / Jackets:** Show the clothing category selected.
-
-> **Screenshot placeholder — Item 633:** Show item **633** at the end of the category.
-
-> **Screenshot placeholder — Equipped dress:** Show the Short Slip Dress equipped on a female character.
-
 ## EUP Streamed-Asset Troubleshooting
 
 If the resource starts but the Short Slip Dress does not appear, appears invisible, or causes players to disconnect or crash when selected, the issue may be related to FiveM streamed EUP assets or server limits.
@@ -109,8 +90,6 @@ If the resource starts but the Short Slip Dress does not appear, appears invisib
 * Confirm the server was fully restarted after installation.
 * Confirm the startup console does not report a missing manifest or failed file load.
 
-> **Screenshot placeholder — Resource structure check:** Show the correct folder name and location.
-
 ### 2. Check the Cfx.re Element Club subscription
 
 Some EUP streamed assets require an active Cfx.re **Element Club** subscription. If the dress is installed correctly but the streamed clothing asset does not load, verify that the server owner's Element Club subscription is active and associated with the account used for the server's Cfx.re license/key.
@@ -120,7 +99,7 @@ Some EUP streamed assets require an active Cfx.re **Element Club** subscription.
 3. Confirm the subscription is active for the account associated with the server license/key.
 4. Restart the server after correcting the subscription or account association.
 
-> **Screenshot placeholder — Element Club status:** Show an active Element Club subscription. Redact account IDs, license keys, payment details, and other private information.
+<figure><img src="../.gitbook/assets/image (48).png" alt=""><figcaption></figcaption></figure>
 
 {% hint style="warning" %}
 Never post private license keys, account information, or payment details in support screenshots.
@@ -136,9 +115,7 @@ sv_maxclients 10
 
 Fully restart the server and test the Short Slip Dress again.
 
-> **Screenshot placeholder — Max players in server.cfg:** Show `sv_maxclients 10` in the configuration file.
-
-> **Screenshot placeholder — txAdmin limit:** If applicable, show the matching maximum-player setting set to 10 in txAdmin or your hosting panel.
+<div><figure><img src="../.gitbook/assets/image (57).png" alt=""><figcaption><p>TxAdmin - Setting Max Players to 10</p></figcaption></figure> <figure><img src="../.gitbook/assets/image (60).png" alt=""><figcaption><p>RocketNode Panel - Setting Max Players to 10</p></figcaption></figure></div>
 
 {% hint style="info" %}
 Use the 10-player limit as a troubleshooting step. After the streamed asset works correctly, test a higher player count again if your server setup and Cfx.re requirements support it.
@@ -153,13 +130,9 @@ After changing streamed assets or server settings:
 3. Restart FiveM and reconnect to the server.
 4. Open vMenu and check **Player Appearance → Shirt overlay / Jackets**, item **633**, again.
 
-> **Screenshot placeholder — Client cache:** Show the cache-cleaning step used by your support procedure.
-
 ### 5. Test for EUP resource conflicts
 
 Temporarily disable other recently added EUP or clothing resources and restart the server. If the dress appears, re-enable the other resources one at a time to identify the conflict.
-
-> **Screenshot placeholder — Resource isolation:** Show the server resource list with other EUP resources disabled for a test restart.
 
 ### 6. Review client and server logs
 
@@ -172,8 +145,6 @@ Look for errors mentioning:
 * Texture or drawable loading
 
 When requesting support, include the relevant error text, your FiveM build, vMenu version, and a list of other EUP resources. Redact license keys and personal account information first.
-
-> **Screenshot placeholder — Error log:** Show the relevant client or server error with private information redacted.
 
 ## Quick Verification Checklist
 
