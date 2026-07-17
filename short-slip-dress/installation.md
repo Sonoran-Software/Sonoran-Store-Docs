@@ -21,15 +21,13 @@ You will need:
 2. Open the purchased assets or packages area for the account that owns the Short Slip Dress.
 3. Download the Short Slip Dress `.zip` file.
 
-> **Screenshot placeholder — Download:** Show the Short Slip Dress ZIP download in the Cfx.re Portal.
-
-> **Screenshot placeholder — Downloaded ZIP:** Show the downloaded ZIP file on the computer.
+<div><figure><img src="../.gitbook/assets/image (57).png" alt=""><figcaption></figcaption></figure> <figure><img src="../.gitbook/assets/image (60).png" alt=""><figcaption></figcaption></figure></div>
 
 ## Install the Resource
 
 1.  Extract or unzip the downloaded file.
 
-    > **Screenshot placeholder — Extract ZIP:** Show the extraction menu or window.
+    <div><figure><img src="../.gitbook/assets/image (64).png" alt=""><figcaption></figcaption></figure> <figure><img src="../.gitbook/assets/image (65).png" alt=""><figcaption></figcaption></figure></div>
 2.  Locate the extracted resource folder. It should be named:
 
     ```
@@ -38,7 +36,7 @@ You will need:
 
     If the package uses a different folder name, keep that exact name and use it in the `ensure` line below.
 
-    > **Screenshot placeholder — Extracted resource:** Show the extracted resource folder.
+    <figure><img src="../.gitbook/assets/image (66).png" alt=""><figcaption></figcaption></figure>
 3.  Copy the complete resource folder directly into your server's `resources` directory:
 
     ```
@@ -49,9 +47,7 @@ You will need:
 
     Do not create an extra nested folder such as `sonoran-shortdress/sonoran-shortdress/`. The resource manifest should be directly inside the resource folder.
 
-    > **Screenshot placeholder — Resources folder:** Show the dress resource alongside the server's other resources.
-
-    > **Screenshot placeholder — Correct nesting:** Show the resource manifest inside `resources/sonoran-shortdress/`.
+    <figure><img src="../.gitbook/assets/image (48).png" alt=""><figcaption></figcaption></figure>
 4.  Open `server.cfg` and add:
 
     ```cfg
@@ -99,7 +95,7 @@ Some EUP streamed assets require an active Cfx.re **Element Club** subscription.
 3. Confirm the subscription is active for the account associated with the server license/key.
 4. Restart the server after correcting the subscription or account association.
 
-<figure><img src="../.gitbook/assets/image (48).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (44).png" alt=""><figcaption></figcaption></figure>
 
 {% hint style="warning" %}
 Never post private license keys, account information, or payment details in support screenshots.
@@ -115,7 +111,7 @@ sv_maxclients 10
 
 Fully restart the server and test the Short Slip Dress again.
 
-<div><figure><img src="../.gitbook/assets/image (57).png" alt=""><figcaption><p>TxAdmin - Setting Max Players to 10</p></figcaption></figure> <figure><img src="../.gitbook/assets/image (60).png" alt=""><figcaption><p>RocketNode Panel - Setting Max Players to 10</p></figcaption></figure></div>
+<div><figure><img src="../.gitbook/assets/image (45).png" alt=""><figcaption><p>TxAdmin - Setting Max Players to 10</p></figcaption></figure> <figure><img src="../.gitbook/assets/image (46).png" alt=""><figcaption><p>RocketNode Panel - Setting Max Players to 10</p></figcaption></figure></div>
 
 {% hint style="info" %}
 Use the 10-player limit as a troubleshooting step. After the streamed asset works correctly, test a higher player count again if your server setup and Cfx.re requirements support it.
