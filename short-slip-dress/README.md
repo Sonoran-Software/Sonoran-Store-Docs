@@ -18,6 +18,8 @@ Add an elegant, lightweight outfit option to your female character wardrobe with
 
 The dress uses physics-enabled movement so it responds naturally as your character walks, runs, turns, and moves through the world. The result is a more believable garment with movement that complements the outfit instead of looking static.
 
+<figure><img src="../.gitbook/assets/ezgif-779d8503af8772c5.gif" alt=""><figcaption></figcaption></figure>
+
 ## Product details
 
 | Feature       | Details                                     |
