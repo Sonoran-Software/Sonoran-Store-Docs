@@ -3,7 +3,7 @@
 This guide covers downloading, installing, and locating the Sonoran Short Slip Dress EUP item.
 
 {% hint style="info" %}
-The resource folder should be named `sonoran-short-slip-dress` and started with `ensure sonoran-short-slip-dress`. If the downloaded ZIP uses a different folder name, use that exact name instead.
+The resource folder should be named `sonoran-slipdress` and started with `ensure sonoran-slipdress`. If the downloaded ZIP uses a different folder name, use that exact name instead.
 {% endhint %}
 
 ## Before You Begin
@@ -36,7 +36,7 @@ You will need:
 2. Locate the extracted resource folder. It should be named:
 
    ```text
-   sonoran-short-slip-dress
+   sonoran-slipdress
    ```
 
    If the package uses a different folder name, keep that exact name and use it in the `ensure` line below.
@@ -48,24 +48,24 @@ You will need:
    ```text
    server-data/
    └── resources/
-       └── sonoran-short-slip-dress/
+       └── sonoran-slipdress/
    ```
 
-   Do not create an extra nested folder such as `sonoran-short-slip-dress/sonoran-short-slip-dress/`. The resource manifest should be directly inside the resource folder.
+   Do not create an extra nested folder such as `sonoran-slipdress/sonoran-slipdress/`. The resource manifest should be directly inside the resource folder.
 
    > **Screenshot placeholder — Resources folder:** Show the dress resource alongside the server's other resources.
 
-   > **Screenshot placeholder — Correct nesting:** Show the resource manifest inside `resources/sonoran-short-slip-dress/`.
+   > **Screenshot placeholder — Correct nesting:** Show the resource manifest inside `resources/sonoran-slipdress/`.
 
 4. Open `server.cfg` and add:
 
    ```cfg
-   ensure sonoran-short-slip-dress
+   ensure sonoran-slipdress
    ```
 
-   If your ZIP uses a different resource folder name, replace `sonoran-short-slip-dress` with that name.
+   If your ZIP uses a different resource folder name, replace `sonoran-slipdress` with that name.
 
-   > **Screenshot placeholder — server.cfg:** Show the `ensure sonoran-short-slip-dress` line.
+   > **Screenshot placeholder — server.cfg:** Show the `ensure sonoran-slipdress` line.
 
 5. Save the file and fully restart the FiveM server.
 
