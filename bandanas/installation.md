@@ -22,7 +22,7 @@ This EUP asset is escrow protected by Tebex. [Learn more about what this means.]
 2. Open the purchased assets or packages area for the account that owns the Bandanas pack.
 3. Download the Bandanas `.zip` file to your computer.
 
-<div><figure><img src="../.gitbook/assets/image (27).png" alt=""><figcaption><p>CFX Portal - Download</p></figcaption></figure> <figure><img src="../.gitbook/assets/image (28).png" alt=""><figcaption><p>Windows - Downloaded ZIP File</p></figcaption></figure></div>
+<div><figure><img src="../.gitbook/assets/image (26).png" alt=""><figcaption><p>CFX Portal - Download</p></figcaption></figure> <figure><img src="../.gitbook/assets/image (28).png" alt=""><figcaption><p>Windows - Downloaded ZIP File</p></figcaption></figure></div>
 
 ## Install the Resource
 
@@ -35,7 +35,7 @@ This EUP asset is escrow protected by Tebex. [Learn more about what this means.]
     sonoran-bandanas
     ```
 
-    <figure><img src="../.gitbook/assets/image (32).png" alt=""><figcaption></figcaption></figure>
+    <figure><img src="../.gitbook/assets/image (31).png" alt=""><figcaption></figcaption></figure>
 3.  Copy the complete `sonoran-bandanas` folder into your server's `resources` directory. A typical layout is:
 
     ```
@@ -117,7 +117,7 @@ sv_maxclients 10
 
 Then fully restart the server and test the Bandanas again.
 
-<div><figure><img src="../.gitbook/assets/image (40).png" alt=""><figcaption><p>TxAdmin - Setting Max Players to 10</p></figcaption></figure> <figure><img src="../.gitbook/assets/image (41).png" alt=""><figcaption><p>RocketNode Panel - Setting Max Players to 10 </p></figcaption></figure></div>
+<div><figure><img src="../.gitbook/assets/image (40).png" alt=""><figcaption><p>TxAdmin - Setting Max Players to 10</p></figcaption></figure> <figure><img src="../.gitbook/assets/image (41).png" alt=""><figcaption><p>RocketNode Panel - Setting Max Players to 10</p></figcaption></figure></div>
 
 {% hint style="info" %}
 Use the 10-player limit as a troubleshooting step while testing streamed EUP assets. Once the assets are working, you can test a higher player count again if your server setup and Cfx.re requirements support it.

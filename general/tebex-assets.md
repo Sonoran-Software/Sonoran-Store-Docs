@@ -35,7 +35,7 @@ After completing your purchase you should receive an email similar to the follow
 
 Select **Open Cfx.re Asset Manager** to open the portal.
 
-<figure><img src="../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
 
 </details>
 
@@ -45,4 +45,4 @@ Click the link in the email or open up [portal.cfx.re](https://portal.cfx.rehttp
 
 Once logged in navigate to **Assets** > **Granted Assets** > **Search** and **Download** the new asset for your FiveM server.
 
-<figure><img src="../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (1) (1).png" alt=""><figcaption></figcaption></figure>
