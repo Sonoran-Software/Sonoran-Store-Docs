@@ -22,14 +22,14 @@ The dress uses physics-enabled movement so it responds naturally as your charact
 
 ## Product details
 
-| Feature | Details |
-| --- | --- |
-| Style | Short slip dress / camisole-style dress |
-| Movement | Moves naturally with your character |
+| Feature       | Details                                     |
+| ------------- | ------------------------------------------- |
+| Style         | Short slip dress / camisole-style dress     |
+| Movement      | Moves naturally with your character         |
 | Compatibility | Female FiveM EUP / vMenu clothing workflows |
-| Textures | 22 textures |
-| Polygons | 8,196 polygons |
-| Performance | Optimized for FiveM |
+| Textures      | 22 textures                                 |
+| Polygons      | 8,196 polygons                              |
+| Performance   | Optimized for FiveM                         |
 
 > **Screenshot placeholder — Texture overview:** Add a grid or collage showing the 22 available textures.
 
@@ -58,14 +58,6 @@ Finding the dress in vMenu is quick:
 5. Select item **633**.
 6. Use the texture/variation controls to preview the 22 textures.
 
-> **Screenshot placeholder — Open Player Appearance:** Show the vMenu Player Appearance menu.
-
-> **Screenshot placeholder — Shirt overlay / Jackets:** Show the clothing category selected.
-
-> **Screenshot placeholder — Item 633:** Show item **633** at the end of the category.
-
-> **Screenshot placeholder — Equipped dress:** Show the dress equipped on a female character in-game.
-
 ## Simple installation
 
 Download the ZIP from the Cfx.re Portal, unzip it, place the resource folder in your server's `resources` directory, and add the resource to `server.cfg`.
@@ -83,11 +75,3 @@ For the complete installation process and EUP streamed-asset troubleshooting, se
 {% content-ref url="installation.md" %}
 [installation.md](installation.md)
 {% endcontent-ref %}
-
-> **Screenshot placeholder — Installation preview:** Show the resource folder inside `resources` and the matching `server.cfg` entry.
-
-## Add a more complete wardrobe
-
-Bring natural movement and more outfit variety to your female character lineup with the Sonoran Short Slip Dress.
-
-> **Screenshot placeholder — Final promotional image:** Add a clean final banner or in-game image showing the dress in use.
