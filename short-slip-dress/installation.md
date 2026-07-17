@@ -3,7 +3,7 @@
 This guide covers downloading, installing, and locating the Sonoran Short Slip Dress EUP item.
 
 {% hint style="info" %}
-The resource folder should be named `sonoran-slipdress` and started with `ensure sonoran-slipdress`. If the downloaded ZIP uses a different folder name, use that exact name instead.
+The resource folder should be named `sonoran-shortdress` and started with `ensure sonoran-shortdress`. If the downloaded ZIP uses a different folder name, use that exact name instead.
 {% endhint %}
 
 ## Before You Begin
@@ -33,7 +33,7 @@ You will need:
 2.  Locate the extracted resource folder. It should be named:
 
     ```
-    sonoran-slipdress
+    sonoran-shortdress
     ```
 
     If the package uses a different folder name, keep that exact name and use it in the `ensure` line below.
@@ -44,18 +44,18 @@ You will need:
     ```
     server-data/
     └── resources/
-        └── sonoran-slipdress/
+        └── sonoran-shortdress/
     ```
 
-    Do not create an extra nested folder such as `sonoran-slipdress/sonoran-slipdress/`. The resource manifest should be directly inside the resource folder.
+    Do not create an extra nested folder such as `sonoran-shortdress/sonoran-shortdress/`. The resource manifest should be directly inside the resource folder.
 
     > **Screenshot placeholder — Resources folder:** Show the dress resource alongside the server's other resources.
 
-    > **Screenshot placeholder — Correct nesting:** Show the resource manifest inside `resources/sonoran-slipdress/`.
+    > **Screenshot placeholder — Correct nesting:** Show the resource manifest inside `resources/sonoran-shortdress/`.
 4.  Open `server.cfg` and add:
 
     ```cfg
-    ensure sonoran-slipdress
+    ensure sonoran-shortdress
     ```
 
     <figure><img src="../.gitbook/assets/image (61).png" alt=""><figcaption></figcaption></figure>

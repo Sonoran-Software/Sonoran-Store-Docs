@@ -63,11 +63,11 @@ Finding the dress in vMenu is quick:
 Download the ZIP from the Cfx.re Portal, unzip it, place the resource folder in your server's `resources` directory, and add the resource to `server.cfg`.
 
 ```cfg
-ensure sonoran-slipdress
+ensure sonoran-shortdress
 ```
 
 {% hint style="warning" %}
-The guide assumes the resource folder is named `sonoran-slipdress`. If the downloaded package uses a different folder name, use that exact folder name in both the `resources` directory and the `ensure` line.
+The guide assumes the resource folder is named `sonoran-shortdress`. If the downloaded package uses a different folder name, use that exact folder name in both the `resources` directory and the `ensure` line.
 {% endhint %}
 
 For the complete installation process and EUP streamed-asset troubleshooting, see:
