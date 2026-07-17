@@ -1,0 +1,93 @@
+---
+description: A physics-enabled short slip dress for female FiveM EUP outfits.
+---
+
+# 👗 Short Slip Dress
+
+## A simple silhouette with natural movement
+
+Add an elegant, lightweight outfit option to your female character wardrobe with the Sonoran Short Slip Dress. This camisole-style short dress is designed to move naturally with the player, making it a polished choice for civilian characters, nightlife outfits, resort looks, and custom EUP collections.
+
+{% hint style="info" %}
+The Short Slip Dress is available in vMenu under **Player Appearance → Shirt overlay / Jackets → 633**.
+{% endhint %}
+
+> **Screenshot placeholder — Hero image:** Add a wide promotional screenshot showing the Short Slip Dress in-game.
+
+## Made to move
+
+The dress uses physics-enabled movement so it responds naturally as your character walks, runs, turns, and moves through the world. The result is a more believable garment with movement that complements the outfit instead of looking static.
+
+> **Screenshot placeholder — Movement showcase:** Add an in-game action screenshot or short sequence showing the dress moving while the character walks or turns.
+
+## Product details
+
+| Feature | Details |
+| --- | --- |
+| Style | Short slip dress / camisole-style dress |
+| Movement | Moves naturally with your character |
+| Compatibility | Female FiveM EUP / vMenu clothing workflows |
+| Textures | 22 textures |
+| Polygons | 8,196 polygons |
+| Performance | Optimized for FiveM |
+
+> **Screenshot placeholder — Texture overview:** Add a grid or collage showing the 22 available textures.
+
+> **Screenshot placeholder — Detail close-up:** Add a close-up showing the dress fabric, straps, neckline, and hem.
+
+## Built for character customization
+
+The Short Slip Dress is a flexible addition to:
+
+* Civilian and casual outfits
+* Nightlife and social roleplay
+* Resort, hotel, and vacation characters
+* Date-night and formal-casual looks
+* Custom female EUP collections
+
+> **Screenshot placeholder — Outfit lineup:** Add several characters or outfit variations using different textures.
+
+## In-game location
+
+Finding the dress in vMenu is quick:
+
+1. Open **vMenu**.
+2. Open **Player Appearance**.
+3. Select **Shirt overlay / Jackets**.
+4. Scroll to the end of the category.
+5. Select item **633**.
+6. Use the texture/variation controls to preview the 22 textures.
+
+> **Screenshot placeholder — Open Player Appearance:** Show the vMenu Player Appearance menu.
+
+> **Screenshot placeholder — Shirt overlay / Jackets:** Show the clothing category selected.
+
+> **Screenshot placeholder — Item 633:** Show item **633** at the end of the category.
+
+> **Screenshot placeholder — Equipped dress:** Show the dress equipped on a female character in-game.
+
+## Simple installation
+
+Download the ZIP from the Cfx.re Portal, unzip it, place the resource folder in your server's `resources` directory, and add the resource to `server.cfg`.
+
+```cfg
+ensure sonoran-short-slip-dress
+```
+
+{% hint style="warning" %}
+The guide assumes the resource folder is named `sonoran-short-slip-dress`. If the downloaded package uses a different folder name, use that exact folder name in both the `resources` directory and the `ensure` line.
+{% endhint %}
+
+For the complete installation process and EUP streamed-asset troubleshooting, see:
+
+{% content-ref url="installation.md" %}
+[installation.md](installation.md)
+{% endcontent-ref %}
+
+> **Screenshot placeholder — Installation preview:** Show the resource folder inside `resources` and the matching `server.cfg` entry.
+
+## Add a more complete wardrobe
+
+Bring natural movement and more outfit variety to your female character lineup with the Sonoran Short Slip Dress.
+
+> **Screenshot placeholder — Final promotional image:** Add a clean final banner or in-game image showing the dress in use.

@@ -19,6 +19,8 @@
   * [Installation](bandanas/installation.md)
 * [🦺 Sonoran Safety Vests](safety-vests/README.md)
   * [Installation](safety-vests/installation.md)
+* [👗 Short Slip Dress](short-slip-dress/README.md)
+  * [Installation](short-slip-dress/installation.md)
 * [📸 Evidence Camera](evidence-camera/README.md)
   * [Getting Started](evidence-camera/getting-started.md)
   * [Advanced Documentation](evidence-camera/advanced-docs.md)
