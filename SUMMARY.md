@@ -21,6 +21,8 @@
   * [Installation](safety-vests/installation.md)
 * [👗 Short Slip Dress](short-slip-dress/README.md)
   * [Installation](short-slip-dress/installation.md)
+* [🧣 Scarf](scarf/README.md)
+  * [Installation](scarf/installation.md)
 * [📸 Evidence Camera](evidence-camera/README.md)
   * [Getting Started](evidence-camera/getting-started.md)
   * [Advanced Documentation](evidence-camera/advanced-docs.md)
