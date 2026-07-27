@@ -59,7 +59,7 @@ If that occurs, move the inner `sonoran-stationdisplay` folder into the resource
 
 ## 3. Install or update SonoranCADFiveM
 
-Install SonoranCADFiveM according to the [SonoranCADFiveM installation guide](https://info.sonorancad.com/integration-plugins/integration-plugins/installation).
+Install SonoranCADFiveM according to the [SonoranCADFiveM installation guide](https://info.sonorancad.com/integration-plugins/in-game-integration/fivem-installation).
 
 The default dependency resource name is:
 
@@ -75,12 +75,14 @@ If your CAD resource has another folder name, change `Config.SonoranCADResource`
 
 Add:
 
-```cfg
+```ini
 ensure sonorancad
 ensure sonoran-stationdisplay
 ```
 
 Start SonoranCADFiveM first. Sonoran Station Displays can remain started if CAD stops; displays change to a disconnected state and retry automatically when CAD returns.
+
+The current preconfigured SonoranCADFiveM bundle may instruct you to use `exec @sonorancad/sonorancad.cfg` instead of manually ensuring its resources. In that installation, place the `exec` line before `ensure sonoran-stationdisplay`; the required core resource must still start as `sonorancad`.
 
 Do not add `ensure radio_fivem` for this product unless your server separately uses Sonoran Radio. The radio resource is not a dependency.
 
@@ -88,7 +90,7 @@ Do not add `ensure radio_fivem` for this product unless your server separately u
 
 For an administrator group:
 
-```cfg
+```ini
 add_ace group.admin sonoran.display.view allow
 add_ace group.admin sonoran.display.place allow
 add_ace group.admin sonoran.display.edit allow

@@ -23,7 +23,7 @@ The resource does not implement QBCore or ESX job modes.
 | --- | --- | --- |
 | `view` | `sonoran.display.view` | Receives saved display configurations and shared CAD cache data; opens the menu and views displays. |
 | `place` | `sonoran.display.place` | Creates a display after server validation and proximity checks. |
-| `edit` | `sonoran.display.edit` | Changes settings, moves/renames displays, requests a selected-display refresh, and changes broadcast runtime pages through supported server APIs. |
+| `edit` | `sonoran.display.edit` | Changes settings, moves/renames displays, and requests a selected-display refresh. |
 | `delete` | `sonoran.display.delete` | Deletes a nearby display. |
 | `diagnostics` | `sonoran.display.diagnostics` | Opens display diagnostics or runs the server diagnostic command as a player. |
 
@@ -33,7 +33,7 @@ There is no separate force-refresh ACE. Force refresh uses `edit`.
 
 ## Administrator example
 
-```cfg
+```ini
 add_ace group.admin sonoran.display.view allow
 add_ace group.admin sonoran.display.place allow
 add_ace group.admin sonoran.display.edit allow
@@ -45,7 +45,7 @@ add_ace group.admin sonoran.display.diagnostics allow
 
 This group can view, edit, and diagnose displays, but cannot place or delete them:
 
-```cfg
+```ini
 add_ace group.dispatchmanagement sonoran.display.view allow
 add_ace group.dispatchmanagement sonoran.display.edit allow
 add_ace group.dispatchmanagement sonoran.display.diagnostics allow
@@ -55,7 +55,7 @@ add_ace group.dispatchmanagement sonoran.display.diagnostics allow
 
 This group can view and edit nearby displays, but cannot delete them or open diagnostics:
 
-```cfg
+```ini
 add_ace group.departmentsupervisor sonoran.display.view allow
 add_ace group.departmentsupervisor sonoran.display.edit allow
 ```
@@ -64,7 +64,7 @@ add_ace group.departmentsupervisor sonoran.display.edit allow
 
 Use `add_principal` when one group should inherit another group's grants:
 
-```cfg
+```ini
 add_principal group.admin group.dispatchmanagement
 add_ace group.admin sonoran.display.place allow
 add_ace group.admin sonoran.display.delete allow
