@@ -1,92 +1,93 @@
 ---
 title: Persistence
 published: true
-date: 2026-07-27T00:00:00.000Z
+date: 2026-07-28T00:00:00.000Z
 tags: [json persistence, backup, display data]
 editor: markdown
 dateCreated: 2026-07-27T00:00:00.000Z
-description: Back up, restore, and understand the JSON persistence used by Sonoran Station Displays.
+description: Understand verified JSON persistence, backup, restore, and console repair.
 ---
 
 # Persistence
 
-## Storage
-
-Sonoran Station Displays uses JSON and has no database dependency.
+Station Displays uses JSON and has no database dependency.
 
 | File | Purpose |
 | --- | --- |
-| `data/displays.DEFAULT.json` | Shipped empty template (`[]`) |
-| `data/displays.json` | Generated runtime display data |
+| `data/displays.DEFAULT.json` | Shipped template, normally `[]` |
+| `data/displays.json` | Generated active runtime data |
 
-On first start, the server copies the default template to `data/displays.json`.
+## First start
 
-## When data is saved
+Only when `data/displays.json` is missing, the server:
 
-The resource writes the full display array after:
+1. Reads and validates the default as a JSON array.
+2. Writes it to the active path.
+3. Reads the active path back.
+4. Verifies that it is a decodable array.
 
-* Creating a display
-* Saving display settings
-* Moving or renaming a display
-* Deleting a display
-* Changing a service filter through the server export
+An existing active file is never silently overwritten by the default. If initialization finds an invalid existing file, it leaves it in place and reports `SSD-PERSIST-INIT-005`.
 
-Runtime next/previous page changes and server `SetDisplayPage` broadcasts are not persisted.
+## Saves
 
-## Display IDs
+The complete normalized display array is saved after create, settings/name/transform changes, delete, and the server `SetDisplayServiceFilter` export.
 
-New IDs use:
+Runtime page changes, nearby viewer controls, map pan, bodycam feed state, preview state, and `SetDisplayPage` are not persisted.
 
-```text
-ssd-<eight hexadecimal time characters>-<six random hexadecimal characters>
-```
+Because the underlying write function does not provide a reliable success result on every runtime, the resource treats readback as authoritative. A save succeeds only after the file is non-empty, decodes as an array, and exactly matches the normalized state that was written.
 
-Example:
+`SSD-PERSIST-003` reports one of these reasons:
 
 ```text
-ssd-67a12f30-09bcde
+ENCODE_FAILED
+WRITE_FAILED
+READBACK_FAILED
+READBACK_INVALID
+READBACK_MISMATCH
 ```
 
-Treat IDs as opaque strings. Do not derive authorization or location from an ID.
+Client synchronization occurs after persistence. If the file was saved but a broadcast fails, the audit reports `CLIENT_BROADCAST_FAILED`; that is not a persistence failure.
 
 ## Restart behavior
 
-On resource start:
+At startup, each decoded record is normalized and validated. Valid entries keep their opaque ID/timestamps; invalid entries are skipped with `SSD-PERSIST-002`. There is no explicit `schemaVersion` field in the persisted array and no hot-reload command.
 
-1. The JSON file is decoded.
-2. Every display is run through current validation.
-3. Valid entries load with their original ID and timestamps.
-4. Invalid entries are skipped with `SSD-PERSIST-002`.
-5. Authorized clients receive the loaded set when they request synchronization.
+Defaults in `config.lua` do not overwrite valid saved per-display values. Current normalization provides the load-time compatibility boundary, including legacy theme fallback.
 
-There is no hot-reload command for the persistence file.
-
-## Backup
-
-Before an update or major display change:
+## Backup and restore
 
 1. Stop `sonoran-stationdisplay`.
-2. Copy `data/displays.json` to a safe backup location.
-3. Back up `config.lua` and any edited locale files.
-4. Perform the update.
-5. Restore or migrate the saved files as directed by the release notes.
-6. Start the resource and review the loaded display count.
+2. Copy `data/displays.json`, `config.lua`, locale changes, and server webhook configuration to a protected backup.
+3. Replace/update the resource as directed.
+4. Merge customer configuration into the new schema.
+5. Restore `data/displays.json`.
+6. Start the resource and confirm the loaded display count.
 
-Do not edit generated display data while the server is running. A later in-game save can overwrite manual changes.
+Do not edit the active file while the resource is running; the next supported save can overwrite it. Manual editing is not a supported workflow because a syntactically valid change can still fail model, enum, page, range, or world-context validation.
 
-## Manual editing
+## Console repair
 
-Manual editing is not a supported customer workflow. The server validates the file, but a syntactically valid change can still move a display, select an invalid model, reset values to defaults, or make an entry fail loading.
+When the active file is unreadable and no good backup is available, run from the server console:
 
-Use the management menu or supported server exports. If support asks for the file, remove player identifiers or other server-specific information before sharing it.
+```text
+stationdisplay_repair_persistence
+```
 
-## Corrupt data
+The command is console-only. It copies the invalid file to:
 
-| Code | Meaning | Recovery |
-| --- | --- | --- |
-| `SSD-PERSIST-001` | The JSON document could not be decoded or was not a table. | Stop the resource, preserve the bad file for diagnostics, then restore a backup or replace it with `[]`. |
-| `SSD-PERSIST-002` | One entry failed display validation. | Review the logged index, restore that entry from backup, or recreate it in-game. Other valid entries still load. |
-| `SSD-PERSIST-003` | The display array could not be JSON encoded. | Preserve console logs and the current file, then contact support. |
+```text
+data/displays.invalid.<epoch>.json
+```
 
-The resource does not automatically rewrite a corrupt file or run a database migration. Current validation acts as the version 1.0.0 load-time migration boundary.
+then restores the validated default. Restart the resource afterward. The backup can contain server locations and other operational data; protect it accordingly.
 
+## Codes
+
+| Code | Meaning |
+| --- | --- |
+| `SSD-PERSIST-INIT-*` | Default/active file initialization failure; `005` means an invalid existing active file was preserved. |
+| `SSD-PERSIST-001` | Active JSON cannot be decoded as the required array. |
+| `SSD-PERSIST-002` | One saved entry failed validation and was skipped. |
+| `SSD-PERSIST-003` | Encode, write, readback, validation, or exact-state verification failed. |
+
+Use the in-game/server [Diagnostics](diagnostics.md) snapshot and local audit ID when contacting support.

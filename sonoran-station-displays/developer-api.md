@@ -1,7 +1,7 @@
 ---
 title: Developer API
 published: true
-date: 2026-07-27T00:00:00.000Z
+date: 2026-07-28T00:00:00.000Z
 tags: [lua exports, events, developer api]
 editor: markdown
 dateCreated: 2026-07-27T00:00:00.000Z
@@ -76,7 +76,7 @@ local ok = exports["sonoran-stationdisplay"]:SetDisplayPage(
 | --- | --- |
 | Side | Server |
 | `displayId` | string |
-| `pageId` | `ACTIVE_UNITS`, `EMERGENCY_CALLS`, `DISPATCH_CALLS`, or `LIVE_MAP` |
+| `pageId` | `ACTIVE_UNITS`, `EMERGENCY_CALLS`, `DISPATCH_CALLS`, `LIVE_MAP`, or `BODYCAMS` |
 | Returns | boolean |
 | Failure | `false` for an unknown display or page ID |
 | Behavior | Broadcasts a runtime page request; does not persist current page |
@@ -208,7 +208,7 @@ This local event is safe for another client resource to trigger. It performs the
 ### Runtime page broadcast
 
 ```lua
-AddEventHandler("sonoranDisplays:client:setPage", function(displayId, pageId)
+AddEventHandler("sonoranDisplays:client:setPage", function(displayId, pageId, holdMs, elapsedMs)
     -- Observe a server-authorized runtime page broadcast.
 end)
 ```
@@ -216,7 +216,7 @@ end)
 | Property | Value |
 | --- | --- |
 | Direction | Server → authorized client |
-| Payload | Display ID string, page ID string |
+| Payload | Display ID string, page ID string, hold milliseconds, elapsed milliseconds |
 | Fires | After the server `SetDisplayPage` export broadcasts a valid request |
 | Safe external use | Safe to listen to; use the server export rather than triggering this event directly |
 
@@ -227,10 +227,10 @@ The receiving renderer still requires the page to exist in the display's saved `
 Persisted display fields include:
 
 ```text
-id, name, model, position, rotation, serviceFilter,
+id, name, model, position, rotation, serviceFilter, theme,
 enabledPages, pageOrder, defaultPage, rotationEnabled,
 rotationInterval, grouping, sorting, hideUnavailable,
-maxUnitsPerPage, maxCallsPerPage, map, renderDistance,
+maxUnitsPerPage, maxCallsPerPage, map, bodycams, renderDistance,
 interactionDistance, routingBucket, interiorId, createdBy,
 createdAt, updatedAt
 ```

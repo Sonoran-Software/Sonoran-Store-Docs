@@ -1,120 +1,108 @@
 ---
 title: Localized Live Map
 published: true
-date: 2026-07-27T00:00:00.000Z
+date: 2026-07-28T00:00:00.000Z
 tags: [live map, coordinates, markers]
 editor: markdown
 dateCreated: 2026-07-27T00:00:00.000Z
-description: Configure the localized coordinate map, modes, markers, filtering, performance, and limitations.
+description: Configure the calibrated GTA V satellite map, modes, markers, interaction, and debugging.
 ---
 
 # Localized Live Map
 
-The `LIVE_MAP` page is a lightweight in-game operational overview. It plots cached GTA world coordinates on a grid and does not load external map tiles or require an API key.
+The `LIVE_MAP` page plots cached GTA world coordinates over a bundled GTA V satellite image. It uses no external map service, API key, or runtime tile requests.
 
-<figure><img src="../.gitbook/assets/station-displays-live-map-sample.png" alt="Sonoran Station Displays localized live map rendered with sample unit, call, and station coordinates"><figcaption><p>The shipped localized map interface rendered with sample data.</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/station-displays-live-map-auto-fit.webp" alt="Sonoran Station Displays live map in Auto Fit mode"><figcaption><p>Auto Fit with controlled unit, call, and station markers.</p></figcaption></figure>
 
-## Coordinate sources
+<figure><img src="../.gitbook/assets/station-displays-live-map-full-island.webp" alt="Sonoran Station Displays full-island map view"><figcaption><p>A sparse dataset expands to a full-island operational view.</p></figcaption></figure>
 
-| Marker | Source |
+## Bundled asset and calibration
+
+The production asset is `web/assets/gtav-satellite-z4.webp`, derived from the MIT-licensed CreepPork GTAV-Maps project. Station Displays crops the source image to its useful play-area rectangle and projects world coordinates into that cropped rectangle before fitting it into the 16:9 map viewport.
+
+The calibrated bounds are:
+
+| Axis | Minimum | Maximum |
+| --- | ---: | ---: |
+| GTA world X | `-4230` | `4970` |
+| GTA world Y | `-5170` | `8420` |
+
+World X increases east/right. World Y increases north/up; image Y is inverted during projection because browser pixels increase downward. The renderer also accounts for letterboxing so markers remain aligned with the visible image instead of the unused side bands.
+
+Calibration was checked against representative locations including LSIA, Mission Row, Del Perro, Sandy Shores, Grapeseed, Paleto Bay, Fort Zancudo, Mount Chiliad, Humane Labs, and Terminal.
+
+## Marker sources
+
+| Marker | Source | Appearance |
+| --- | --- | --- |
+| LEO unit | Normalized unit coordinates | Blue circle and callsign |
+| Fire/EMS unit | Normalized unit coordinates | Orange circle and callsign |
+| Call | Call `metaData` X/Y | Red diamond and call label |
+| Station | Saved display position | White square labeled `STATION` |
+
+The display's service filter is applied before map state is built. Calls without usable coordinates remain on their list page but have no map marker. Stale unit markers use reduced opacity and a dashed outline.
+
+## Modes
+
+### Auto Fit - `AUTO_FIT`
+
+Fits all valid visible unit, call, and enabled station points. The configured padding and minimum/maximum spans keep extremely tight or wide datasets usable.
+
+### Follow Units - `FOLLOW_UNITS`
+
+Fits valid unit points and ignores calls/station when choosing the viewport. It follows the visible unit group rather than one selected officer. In the current release, a normal dataset can look identical to Auto Fit.
+
+<figure><img src="../.gitbook/assets/station-displays-live-map-follow-units.webp" alt="Sonoran Station Displays Follow Units map mode"><figcaption><p>Follow Units using the same dense controlled unit dataset as Auto Fit; the matching viewport is expected for this dataset.</p></figcaption></figure>
+
+### Fixed Region - `FIXED_REGION`
+
+Uses the saved center and zoom:
+
+* Center X/Y: `-20000` to `20000`
+* Zoom: `0.1` to `10.0`
+* Default center: `215, -810`
+* Default zoom: `1.0`
+
+<figure><img src="../.gitbook/assets/station-displays-live-map-fixed-region.webp" alt="Sonoran Station Displays live map in Fixed Region mode"><figcaption><p>A saved fixed-region viewport.</p></figcaption></figure>
+
+## Nearby map controls
+
+When `Config.MapInteraction.enabled` is true and the targeted display is currently on Live Map:
+
+| Default key | Action |
 | --- | --- |
-| LEO unit | Normalized `unit.coordinates` or `unit.coords` |
-| Fire/EMS unit | Normalized `unit.coordinates` or `unit.coords` |
-| Call | X/Y values from call `metaData` |
-| Station | Saved mounted display position |
+| Numpad 8 / 2 | Pan north / south |
+| Numpad 4 / 6 | Pan west / east |
+| Numpad 5 | Reset temporary pan |
 
-X increases to the right. Y increases upward. Z is accepted and normalized but is not used by the 2D projection.
+Panning is temporary and synchronized to authorized nearby viewers. It is not written to `data/displays.json`. Leaving the Live Map page or using reset restores the display's saved map mode.
 
-## Markers
+Target selection uses each display's interaction distance, camera angle, line of sight, routing bucket, and interior. All bindings are rebindable in FiveM settings.
 
-| Marker | Appearance |
-| --- | --- |
-| LEO | Blue circle with callsign |
-| Fire/EMS | Orange circle with callsign |
-| Call | Red diamond with code/title |
-| Station | White square labeled `STATION` |
+## Configuration
 
-An assigned call ID can appear below a unit label.
-
-The display service filter is applied before map state is built. A LEO display does not receive Fire/EMS markers, and a Fire/EMS display does not receive LEO markers.
-
-## Map modes
-
-### Auto Fit — `AUTO_FIT`
-
-Continuously calculates a viewport from visible unit coordinates. If there are no unit markers, it fits all available points. When units exist, call and station markers do not expand the primary fit and may fall outside the viewport.
-
-The renderer enforces a minimum span of 600 world units horizontally and 420 vertically, then adjusts for the display aspect ratio.
-
-### Follow Units — `FOLLOW_UNITS`
-
-Version 1.0.0 uses the same continuously recalculated unit fit as Auto Fit. It does not follow a selected unit.
-
-### Fixed Region — `FIXED_REGION`
-
-Uses the saved X/Y center and zoom:
-
-* Center range: `-20000` to `20000`
-* Zoom range: `0.1` to `10.0`
-* Horizontal span: `3000 / zoom`
-
-Use this when a station should always show a known district.
-
-## Configure a display
-
-Open:
+Per-display options are under:
 
 ```text
-Display Configuration → Map Behavior
+Display Configuration > Map Behavior
 ```
 
-Options:
+Global defaults live in `Config.Map`: mode, center, zoom, minimum/maximum span, padding, call visibility, station-marker visibility, and the debug overlay.
 
-* Map Mode
-* Show Calls
-* Show Station Marker
-* Map Zoom
-* Map Center X/Y in Fixed Region
+Map state follows shared cache changes. Unit polling defaults to 2 seconds and call polling to 3 seconds. `Config.MapRefreshInterval` exists for compatibility but is not read by the current renderer.
 
-Map settings are saved per display.
+## Debug overlay
 
-## Empty map
+Set `Config.Map.debug = true` only while calibrating or troubleshooting. The overlay reports asset and crop dimensions, configured bounds, clipping, selected viewport points, and projection values.
 
-If no coordinate records are available, the grid still renders with a default center/span. The unit count can be zero. A station marker appears if enabled, because every saved display has a world position.
+<figure><img src="../.gitbook/assets/station-displays-live-map-debug.webp" alt="Live Map projection debug overlay"><figcaption><p>Projection diagnostics rendered over the production map.</p></figcaption></figure>
 
-If the page is completely blank rather than an empty grid, investigate DUI readiness and client errors.
-
-## Update and staleness
-
-Map markers update when normalized cache state changes. Unit coordinates are covered by the central unit poll, which defaults to 2 seconds. Call coordinates follow the central call poll, which defaults to 3 seconds.
-
-The renderer sends changed display state and redraws the canvas. It does not run a separate map-coordinate network loop.
-
-`Config.MapRefreshInterval` is not read in version 1.0.0. Lowering it does not increase map freshness.
-
-Per-record stale flags are not drawn. If the CAD cache becomes unavailable, the disconnected overlay appears.
-
-## Performance
-
-Map cost is mainly:
-
-* One canvas redraw when display state changes
-* Projection and label placement for visible markers
-* The existing DUI resolution
-
-Reduce nearby active displays or render distance before reducing CAD poll intervals. Call markers can be disabled per display if they add unnecessary visual density.
-
-## Custom map assets
-
-Version 1.0.0 has no customer configuration for tiles, images, or custom map assets. Do not embed a paid map provider, external URL, or API key in the resource.
+Debug data can reveal coordinates and is visually noisy; disable it after testing.
 
 ## Limitations
 
-The localized map:
-
-* Has no roads, street names, terrain, routing, or navigation
-* Does not reproduce the full Sonoran CAD map
-* Does not show records without coordinates
-* Does not prevent label overlap in very dense clusters, although it offsets nearby labels
-* Uses identical behavior for Auto Fit and Follow Units in version 1.0.0
-* Can leave call markers outside the viewport when unit markers define the fit
+* Raster imagery and GTA coordinate sources have finite positional accuracy.
+* Dense labels can overlap even though the renderer offsets nearby labels.
+* Records outside the calibrated bounds are excluded from production rendering; debug mode reports clipping.
+* The map has no routing, navigation, external layers, or customer-selectable tile source.
+* `FOLLOW_UNITS` follows the visible group, not a selected unit.

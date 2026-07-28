@@ -1,7 +1,7 @@
 ---
 title: SonoranCADFiveM Integration
 published: true
-date: 2026-07-27T00:00:00.000Z
+date: 2026-07-28T00:00:00.000Z
 tags: [sonoran cad, cache, integration]
 editor: markdown
 dateCreated: 2026-07-27T00:00:00.000Z
@@ -14,8 +14,7 @@ description: Understand how Sonoran Station Displays reads and classifies Sonora
 
 | Item | Value |
 | --- | --- |
-| Resource setting | `Config.SonoranCADResource` |
-| Default resource name | `sonorancad` |
+| Required resource name | `sonorancad` |
 | Minimum version | `4.0.72` |
 | Authentication | Uses local exports; no additional API key |
 
@@ -29,6 +28,8 @@ exports["sonorancad"]:GetEmergencyCache()
 ```
 
 `GetUnitByPlayerId` associates a cached CAD unit with a connected server player when possible. Player connection alone does not create an on-duty unit.
+
+The optional Bodycams page also calls `GetBodycamRuntime()` and observes `SonoranCAD::bodycam::RuntimeChanged`. This newer bridge is an additional capability check, not part of the claim that the base cache interface starts at `4.0.72`. Diagnostics report whether it is detected and whether it can supply `PEER_STREAM` video.
 
 ## Unit classification
 
@@ -125,6 +126,8 @@ SonoranCAD::pushevents:UnitDetach
 
 An event requests an early refresh. The server also polls units every 2 seconds and calls every 3 seconds by default to catch coordinate changes and older CAD behavior. One shared normalized cache and incremental client deltas are used regardless of display count.
 
+Bodycam runtime updates are event-driven with a 1-second polling fallback. They are not merged into either call cache and do not start a Station Displays capture loop.
+
 ## CAD restart and unavailable cache
 
 When `sonorancad` stops, the adapter marks the connection unavailable and authorized clients show the full `CAD CONNECTION UNAVAILABLE` overlay. When it starts, the resource waits one second, redetects the exports, and requests refreshed caches.
@@ -143,4 +146,3 @@ It does not:
 * Require a Sonoran Radio resource name
 * Require radio start order
 * Modify a customer's radio resource
-

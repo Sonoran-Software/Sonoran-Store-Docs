@@ -1,7 +1,7 @@
 ---
 title: Updating
 published: true
-date: 2026-07-27T00:00:00.000Z
+date: 2026-07-28T00:00:00.000Z
 tags: [update, backup, rollback]
 editor: markdown
 dateCreated: 2026-07-27T00:00:00.000Z
@@ -10,17 +10,22 @@ description: Back up, replace, verify, and roll back Sonoran Station Displays sa
 
 # Updating
 
-Sonoran Station Displays checks the official version endpoint in packaged builds and logs `SSD-UPDATE-003` when a newer version is available. It does not automatically overwrite customer files.
+Sonoran Station Displays checks the standard Sonoran packaging endpoint at startup and
+every six hours in official packaged builds, then logs `SSD-UPDATE-003` when a newer
+version is available. No customer configuration is required. Source/development builds
+retain the packaging token and safely skip the request. The checker is informational
+and does not automatically overwrite customer files.
 
 ## Before updating
 
-1. Read the product changelog on the [overview](README.md#changelog).
+1. Read the product [Changelog](changelog.md).
 1. Record the installed resource version from `fxmanifest.lua`.
 1. Stop `sonoran-stationdisplay`.
 1. Back up:
 
 ```text
 sonoran-stationdisplay/config.lua
+sonoran-stationdisplay/server/admin_webhook_config.lua
 sonoran-stationdisplay/locales/
 sonoran-stationdisplay/data/displays.json
 ```
@@ -47,6 +52,11 @@ Do not copy only protected Lua files into an older resource. The manifest, brows
 {% hint style="warning" %}
 Do not blindly overwrite a new `config.lua` with an old copy. Preserve your values while also adding any new settings from the release.
 {% endhint %}
+
+Older configs may contain update-check, dependency, DUI lifecycle/resolution, or event
+rate-limit settings that are now managed internally. Delete those obsolete entries and
+merge only documented customer-facing settings. The resource ignores old copies safely,
+but protected implementation values always take precedence.
 
 ## Asset Escrow considerations
 
@@ -87,8 +97,8 @@ Restart the full server for an update when practical. This avoids leaving old DU
 1. Run `stationdisplay_serverdiag`.
 1. Open in-game diagnostics.
 1. Visit at least one LEO, Fire/EMS, and Both display.
-1. Test Active Units, both call pages, and Live Map.
-1. Verify 30-second rotation and manual next/previous.
+1. Test Active Units, both call pages, all three Live Map modes, and configured Bodycams.
+1. Verify main rotation, synchronized manual next/previous, map pan/reset, and bodycam pagination.
 1. Test place, edit, move, refresh, and delete with the intended groups.
 1. Confirm custom models remain aligned and independent.
 1. Check server and client logs.
@@ -104,6 +114,7 @@ Check for:
 * New required fields
 * Model registry changes
 * Supported SonoranCADFiveM minimum-version changes
+* Bodycam runtime bridge/mode changes
 
 ## Roll back
 

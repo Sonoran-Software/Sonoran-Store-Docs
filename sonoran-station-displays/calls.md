@@ -1,7 +1,7 @@
 ---
 title: Calls
 published: true
-date: 2026-07-27T00:00:00.000Z
+date: 2026-07-28T00:00:00.000Z
 tags: [emergency calls, dispatch calls, privacy]
 editor: markdown
 dateCreated: 2026-07-27T00:00:00.000Z
@@ -22,7 +22,7 @@ exports["sonorancad"]:GetEmergencyCache()
 
 Emergency entries are normalized as `EMERGENCY_CALL` while they remain in the cache. The default title is `Emergency Call` when `isEmergency` is true, otherwise `Incoming Call`. Default priority is `1` for an emergency and `0` for another incoming call.
 
-<figure><img src="../.gitbook/assets/station-displays-emergency-calls-sample.png" alt="Sonoran Station Displays Emergency Calls page rendered with sample call data"><figcaption><p>The shipped Emergency Calls interface rendered with sample data.</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/station-displays-emergency-calls.webp" alt="Sonoran Station Displays Emergency Calls page rendered with sample data"><figcaption><p>The production Emergency Calls renderer using controlled sample data.</p></figcaption></figure>
 
 ## Dispatch Calls
 
@@ -34,7 +34,7 @@ exports["sonorancad"]:GetCallCache()
 
 Dispatch entries are normalized as `DISPATCH_CALL`. Status `2` (`CLOSED`) is removed from the display cache. Default title is `Dispatch Call`.
 
-<figure><img src="../.gitbook/assets/station-displays-dispatch-calls-sample.png" alt="Sonoran Station Displays Dispatch Calls page rendered with sample call data"><figcaption><p>The shipped Dispatch Calls interface rendered with sample data.</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/station-displays-dispatch-calls.webp" alt="Sonoran Station Displays Dispatch Calls page rendered with sample data"><figcaption><p>The production Dispatch Calls renderer using controlled sample data.</p></figcaption></figure>
 
 ## Normalized fields
 
@@ -69,6 +69,8 @@ Current renderer limitations:
 * Status is normalized and sent but is not displayed.
 * `VisibleCallFields.postal` is not an independent switch; postal follows the address block.
 * Caller text is not rendered even if normalization is enabled.
+
+These are implementation limitations, not hidden fields elsewhere in the customer UI.
 
 Keep `VisibleCallFields.caller = false`.
 

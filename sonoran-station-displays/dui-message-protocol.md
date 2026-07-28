@@ -1,16 +1,16 @@
 ---
 title: DUI Message Protocol
 published: true
-date: 2026-07-27T00:00:00.000Z
+date: 2026-07-28T00:00:00.000Z
 tags: [dui, nui, message protocol]
 editor: markdown
 dateCreated: 2026-07-27T00:00:00.000Z
-description: Reference the implemented browser readiness callback and full display-state message.
+description: Reference the implemented browser readiness, state, clock, weather, map, and bodycam DUI messages.
 ---
 
 # DUI Message Protocol
 
-This page documents the implemented boundary between the Lua client and the bundled browser interface. It is intended for developers maintaining the resource.
+This page documents the internal boundary between the Lua client and the bundled browser. It is useful to maintainers but is not a promise that third-party browser replacements will remain compatible across versions.
 
 The DUI URL is fixed:
 
@@ -18,32 +18,35 @@ The DUI URL is fixed:
 https://cfx-nui-sonoran-stationdisplay/web/index.html?dui=1&displayId=<id>
 ```
 
-Display configuration cannot supply a URL.
+Display configuration cannot provide a browser or stream URL.
 
-## Browser to Lua: `duiReady`
+## Browser to Lua
 
-The browser posts the NUI callback after loading:
+### `duiReady`
+
+After initialization:
 
 ```json
-{
-  "displayId": "ssd-12345678-abcdef"
-}
+{"displayId": "ssd-12345678-abcdef"}
 ```
 
-| Property | Value |
-| --- | --- |
-| Direction | Browser → Lua NUI callback |
-| Callback name | `duiReady` |
-| Required field | `displayId` string |
-| Optional fields | None |
-| Sent | Once after the bundled app initializes |
-| Response | `{"ok": true}` when the renderer exists, otherwise `{"ok": false}` |
+Lua accepts it only for an existing renderer, marks the DUI ready, and forces the current state, game time, and weather. A renderer that does not become ready within the internal 10-second timeout is destroyed and retried after the internal delay.
 
-Lua marks that renderer ready and sends a forced full state. A delayed initial send also occurs after 500 milliseconds for FiveM builds where the callback is unavailable or delayed.
+### `bodycamFeedStatus`
 
-## Lua to browser: `DISPLAY_STATE_UPDATE`
+The bodycam viewer can report:
 
-This is the only implemented Lua-to-DUI action:
+```json
+{"displayId": "ssd-...", "unitId": "unit-id", "status": "unavailable"}
+```
+
+The client acknowledges the callback and increments its diagnostic load-failure counter for `unavailable`. It does not trust the callback to change server runtime state.
+
+## Lua to browser
+
+### `DISPLAY_STATE_UPDATE`
+
+This is the primary state message:
 
 ```json
 {
@@ -51,6 +54,7 @@ This is the only implemented Lua-to-DUI action:
   "payload": {
     "displayId": "ssd-12345678-abcdef",
     "displayName": "Mission Row Briefing",
+    "theme": "MODERN",
     "page": "ACTIVE_UNITS",
     "serviceFilter": "LEO",
     "grouping": "SERVICE",
@@ -58,14 +62,36 @@ This is the only implemented Lua-to-DUI action:
     "units": [],
     "emergencyCalls": [],
     "dispatchCalls": [],
+    "bodycams": [],
+    "bodycamConfig": {
+      "layout": "AUTO",
+      "maximumFeeds": 4,
+      "rotationInterval": 15
+    },
+    "bodycamIntegration": {
+      "available": true,
+      "enabled": true,
+      "mode": "PEER_STREAM"
+    },
+    "bodycamPresentation": {
+      "delayedAfterSeconds": 8,
+      "unavailableAfterSeconds": 30,
+      "loadFailures": 0
+    },
     "map": {
       "mode": "AUTO_FIT",
-      "center": null,
+      "center": {"x": 215, "y": -810},
       "zoom": 1,
       "showCalls": true,
       "showStationMarker": true
     },
-    "station": {"x": 425.0, "y": -980.0, "z": 30.0},
+    "mapPresentation": {
+      "minimumSpan": 600,
+      "maximumSpan": 24000,
+      "padding": 0.12,
+      "debug": false
+    },
+    "station": {"x": 425, "y": -980, "z": 30},
     "maximumUnitsPerPage": 12,
     "maximumCallsPerPage": 8,
     "visibleCallFields": {
@@ -94,101 +120,70 @@ This is the only implemented Lua-to-DUI action:
 }
 ```
 
-### Required state fields
+Lua sends a changed state after readiness, cache/display/bodycam changes, explicit refresh, and runtime page changes. It also checks rotation progress at most once per second. Identical encoded state is suppressed unless forced; the browser animates progress between messages.
 
-| Field | Type | Purpose |
-| --- | --- | --- |
-| `displayId` | string | Renderer/display key |
-| `displayName` | string | Header title |
-| `page` | page ID | Page to render |
-| `serviceFilter` | service filter | Header label and already-filtered state |
-| `grouping` | grouping ID | Unit groups |
-| `sorting` | sorting ID | Unit row ordering |
-| `units` | array | Normalized visible units |
-| `emergencyCalls` | array | Normalized visible emergency calls |
-| `dispatchCalls` | array | Normalized visible dispatch calls |
-| `map` | object | Mode, center, zoom, and marker toggles |
-| `station` | vector | Display position used by the station marker |
-| `maximumUnitsPerPage` | integer | Unit list budget |
-| `maximumCallsPerPage` | integer | Call list budget |
-| `visibleCallFields` | object | Call-card field switches |
-| `rotation` | object | Progress and ordered page state |
-| `connected` | boolean | CAD live/disconnected overlay |
-| `revision` | integer | Shared client cache revision |
+Important unit fields include ID, callsign, name, status/status code, service, agency, subdivision, location/postal, coordinates, assigned call, panic, update time, and stale state.
 
-`staleAfterSeconds` and `serverTime` are included for freshness context but are not currently rendered as per-record badges.
+Important call fields include ID, kind, title/code, priority/status, address/postal, description, assigned IDs/callsigns, optional emergency caller, coordinates, timestamps, and classified service.
 
-### Unit shape
+A bodycam feed includes the joined unit metadata plus a nested runtime record with active/mode/peer/stream readiness, reason, activation/update values, and sequence. The peer ID is not an arbitrary URL.
 
-Important fields:
+### `GAME_TIME_UPDATE`
 
 ```json
 {
-  "id": "unit-id",
-  "callsign": "1A-12",
-  "name": "A. Rivera",
-  "status": "AVAILABLE",
-  "statusCode": 2,
-  "service": "LEO",
-  "agency": "Police Department",
-  "subdivision": "Patrol",
-  "location": "Mission Row",
-  "postal": "125",
-  "coordinates": {"x": 425.0, "y": -980.0, "z": 30.0},
-  "assignedCallId": null,
-  "panic": false,
-  "updatedAt": 1785182400,
-  "stale": false
+  "action": "GAME_TIME_UPDATE",
+  "payload": {
+    "hours": 21,
+    "minutes": 42,
+    "seconds": 5,
+    "format": 12,
+    "showSeconds": false
+  }
 }
 ```
 
-### Call shape
+The client sends only when the formatted GTA/FiveM time changes, or when forced after readiness.
 
-Important fields:
+### `WEATHER_UPDATE`
 
 ```json
 {
-  "id": "C-1042",
-  "kind": "DISPATCH_CALL",
-  "title": "Traffic Collision",
-  "code": "11-79",
-  "priority": 2,
-  "status": "ACTIVE",
-  "address": "Vespucci Blvd",
-  "postal": "134",
-  "description": "Two vehicles blocking lanes.",
-  "assignedUnitIds": ["unit-id"],
-  "assignedUnits": ["1A-12"],
-  "caller": null,
-  "coordinates": {"x": 310.0, "y": -1120.0, "z": 0.0},
-  "createdAt": 1785182300,
-  "updatedAt": 1785182400,
-  "service": "LEO"
+  "action": "WEATHER_UPDATE",
+  "payload": {
+    "weatherType": "CLEAR",
+    "temperature": 78,
+    "unit": "F"
+  }
 }
 ```
 
-## Send behavior
+Weather values describe the GTA world and an estimated temperature.
 
-The Lua client serializes and sends state:
+### `MAP_PAN`
 
-* After DUI readiness
-* When filtered display/cache state changes
-* On explicit refresh
-* On page changes
-* At most once per second while updating rotation progress state
+```json
+{
+  "action": "MAP_PAN",
+  "payload": {"direction": "LEFT", "step": 0.2}
+}
+```
 
-Identical encoded state is not sent again unless forced. The browser animates the progress bar locally.
+It is accepted only for an available local renderer currently on Live Map. The Lua side clamps the step to `0.05` through `0.5`. Reset is represented by the allowed reset direction used by the browser handler.
 
-## No granular browser messages
+### `BODYCAM_NAVIGATE`
 
-Version 1.0.0 does not send `UNIT_ADDED`, `CALL_UPDATED`, `FULL_SYNC`, `SET_PAGE`, `PAUSE_ROTATION`, or similar browser actions. Lua may receive granular network cache deltas, but it builds and sends one `DISPLAY_STATE_UPDATE` message to the DUI.
+```json
+{
+  "action": "BODYCAM_NAVIGATE",
+  "payload": {"direction": "NEXT"}
+}
+```
 
-## Administration messages
-
-The bundled browser source contains dormant administration markup/message handlers, but the Lua resource does not send `ADMIN_OPEN`/`ADMIN_CLOSE` or register the related NUI callbacks in version 1.0.0. They are not supported public protocol.
-
-The customer management interface is the self-contained WarMenu.
+It is accepted only for an available local renderer currently on Bodycams and changes that DUI's bodycam feed page.
 
 ## Versioning
 
-There is no explicit protocol version field in 1.0.0. Treat new required fields or action names as a resource-version change and update Lua and browser files together. Do not replace only `web/app.js` during an update.
+There is no explicit protocol-version field. Update Lua and all `web/` files together. Do not replace only `web/app.js` or copy browser files between resource releases.
+
+The web source also contains dormant administration markup/handlers. The current Lua resource does not open that NUI or register its administrative callbacks; the supported customer interface is WarMenu.

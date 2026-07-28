@@ -1,110 +1,66 @@
 ---
 title: Display Pages and Rotation
 published: true
-date: 2026-07-27T00:00:00.000Z
-tags: [page rotation, active units, live map]
+date: 2026-07-28T00:00:00.000Z
+tags: [page rotation, active units, live map, bodycams]
 editor: markdown
 dateCreated: 2026-07-27T00:00:00.000Z
-description: Configure Sonoran Station Displays pages, ordering, defaults, automatic rotation, and manual controls.
+description: Configure display pages, ordering, synchronized runtime changes, and automatic rotation.
 ---
 
 # Display Pages and Rotation
 
 ## Page IDs
 
-Use these exact IDs in `config.lua` and developer APIs:
-
-| Page | ID | Data |
+| Page | ID | Source |
 | --- | --- | --- |
-| Active Units | `ACTIVE_UNITS` | On-duty normalized units matching the display service filter |
-| Emergency Calls | `EMERGENCY_CALLS` | Incoming entries from `GetEmergencyCache()` |
+| Active Units | `ACTIVE_UNITS` | Normalized on-duty units |
+| Emergency Calls | `EMERGENCY_CALLS` | `GetEmergencyCache()` |
 | Dispatch Calls | `DISPATCH_CALLS` | Non-closed entries from `GetCallCache()` |
-| Live Map | `LIVE_MAP` | Unit, call, and station coordinate markers |
+| Live Map | `LIVE_MAP` | Unit, call, and station coordinates |
+| Bodycams | `BODYCAMS` | Compatible SonoranCADFiveM bodycam runtime |
 
-Emergency and Dispatch Calls are genuine separate pages backed by different SonoranCADFiveM caches.
+Emergency and dispatch calls remain separate because they come from different caches.
 
-## Select and order pages
+## Select, order, and default
 
-1. Open a new or existing display's **Display Configuration**.
-2. Select **Display Pages**.
-3. Enable one or more pages.
-4. Choose **Default Page**.
-5. Open **Reorder Display Pages**.
-6. Select a page and move it up or down.
-7. Save the display.
+Open a new or existing display's **Display Pages** menu. Enable one or more pages, choose a default, and use **Reorder Display Pages** to set rotation order.
 
-At least one page must remain enabled. Invalid IDs, duplicates, and an invalid default page are corrected by server validation.
+The server removes invalid IDs and duplicates. At least one page is required. If the saved default is not enabled, validation selects a valid page.
 
 ## Automatic rotation
 
-Each display saves:
+Each display saves `rotationEnabled`, `rotationInterval`, ordered `pageOrder`, and `defaultPage`. The default interval is 30 seconds; the accepted range is 5 to 300 seconds.
 
-* `rotationEnabled`
-* `rotationInterval`
-* Ordered `pageOrder`
-* `defaultPage`
+The footer shows a dot for every enabled page, highlights the current page, and animates progress. Rotation is unnecessary with one enabled page.
 
-The server default is:
+## Runtime synchronization
 
-```lua
-Config.DefaultRotationInterval = 30
-```
-
-Allowed saved range:
-
-```text
-5–300 seconds
-```
-
-Example:
-
-```text
-Page order: ACTIVE_UNITS → EMERGENCY_CALLS → LIVE_MAP
-Default page: ACTIVE_UNITS
-Rotation: enabled
-Interval: 30 seconds
-```
-
-The footer shows one dot for each enabled page, highlights the current page, and animates a rotation progress bar.
-
-## Rotation behavior
+The server maintains runtime page state for a display. Clients rotate locally from that state, while an authorized nearby manual page change is validated by the server and broadcast to authorized viewers. After a manual change, the default hold is 10 seconds before normal rotation resumes.
 
 | Situation | Behavior |
 | --- | --- |
-| More than one page and rotation enabled | Advances at the saved interval. |
-| One page enabled | Remains on that page; no automatic advance is needed. |
-| Rotation disabled | Remains on the current/default page. |
-| Current page has no matching data | Shows that page's empty state and continues normal rotation. |
-| DUI is recreated after leaving render distance | Starts from the saved default page. |
-| Resource/client restart | Runtime page resets to the saved default page. |
-| Settings change removes the current page | Moves to the first valid page. |
+| Rotation enabled with multiple pages | Advances at the saved interval. |
+| Rotation disabled or one page | Remains on the current runtime page. |
+| Empty page | Shows its empty state and continues normal rotation. |
+| Nearby next/previous | Broadcast runtime page; hold rotation; do not persist. |
+| Server `SetDisplayPage` export | Broadcast runtime page; do not persist. |
+| DUI recreated after leaving range | Restores the current runtime snapshot. |
+| Resource restart | Initializes runtime state from the saved default page. |
+| Current page removed by settings | Selects the saved default or first valid page. |
 
-Rotation timing is client-local. Multiple clients can be at different points in the same display's cycle after joining or manually changing pages.
+Right and Left Arrow are the default next/previous mappings. The server checks view permission, display proximity (with a small network tolerance), routing bucket, page validity, and cooldown.
 
-## Manual next and previous
+## Independent list and bodycam pagination
 
-The nearest display within the global interaction distance can be controlled with:
+Page rotation is separate from content pagination:
 
-| Default key | Command |
-| --- | --- |
-| Right Arrow | `stationdisplay_next` |
-| Left Arrow | `stationdisplay_previous` |
+* Active-unit groups and call lists advance every 10 seconds when their data exceeds the saved limit.
+* Bodycam feed pages advance at the display's bodycam interval, default 15 seconds.
+* Page Down/Page Up changes bodycam feed pages while the display is on `BODYCAMS`.
 
-These commands change only the local DUI state and reset its rotation timer. They do not persist the current page.
-
-The server `SetDisplayPage` export can broadcast a runtime page to all authorized clients, but that runtime page also is not persisted.
+Lowering a rotation interval does not make CAD data fresher. Cache refresh settings control data freshness.
 
 ## Pause and resume
 
-The internal renderer implements `PAUSE` and `RESUME` actions. Version 1.0.0 does not expose them through the shipped WarMenu, a command, an event, or a public export. Customers can enable or disable automatic rotation in saved display settings, but there is no supported temporary pause control.
-
-## List pagination
-
-Large unit and call collections paginate independently every 10 seconds:
-
-* The Active Units row budget is divided across visible groups.
-* Call pages use the saved calls-per-page limit.
-* Pagination is automatic and has no manual page control.
-* A page's list pagination is separate from display-page rotation.
-
-Lowering the display rotation interval does not make CAD data fresher. Data freshness comes from cache events and the unit/call refresh intervals.
+The browser implements internal `PAUSE` and `RESUME` behavior, but the current customer menu, commands, events, and public exports do not expose temporary pause/resume. Disable saved page rotation when a display should remain fixed.

@@ -1,7 +1,7 @@
 ---
 title: Installation
 published: true
-date: 2026-07-27T00:00:00.000Z
+date: 2026-07-28T00:00:00.000Z
 tags: [fivem, installation, tebex]
 editor: markdown
 dateCreated: 2026-07-27T00:00:00.000Z
@@ -15,7 +15,7 @@ description: Install Sonoran Station Displays, SonoranCADFiveM, permissions, and
 You need:
 
 * A current FXServer with OneSync
-* SonoranCADFiveM version `4.0.72` or newer
+* SonoranCADFiveM version `4.0.72` or newer for units and calls
 * Access to the CFX account that owns the Tebex asset
 * Permission to add resources and ACE entries to the server
 
@@ -69,7 +69,9 @@ sonorancad
 
 Sonoran Station Displays requires version `4.0.72` or newer and the local `GetUnitCache`, `GetCallCache`, and `GetEmergencyCache` exports. It does not require a second CAD API key.
 
-If your CAD resource has another folder name, change `Config.SonoranCADResource` and use that same name in `server.cfg`.
+The optional Bodycams page additionally needs a package/build that exposes `GetBodycamRuntime()` and the runtime event in `PEER_STREAM` mode. The base `4.0.72` cache requirement does not guarantee that every package with that version contains the newer bodycam bridge.
+
+The dependency name is managed internally and must remain `sonorancad`.
 
 ## 4. Configure start order
 
@@ -96,6 +98,7 @@ add_ace group.admin sonoran.display.place allow
 add_ace group.admin sonoran.display.edit allow
 add_ace group.admin sonoran.display.delete allow
 add_ace group.admin sonoran.display.diagnostics allow
+add_ace group.admin sonoran.display.webhook.test allow
 ```
 
 Grant `sonoran.display.view` to each group that should receive display configuration and CAD cache data. See [Permissions](permissions.md) for least-privilege examples and custom permission mode.
@@ -104,13 +107,14 @@ Grant `sonoran.display.view` to each group that should receive display configura
 
 Open `sonoran-stationdisplay/config.lua` and confirm:
 
-* `Config.SonoranCADResource = "sonorancad"`
-* `Config.RequireSonoranCADVersion = "4.0.72"`
 * `Config.PermissionMode = "ace"`
-* Default pages, service filter, rotation interval, and render distance
+* Default pages, service filter, theme, rotation, clock/weather, and distances
+* Live Map and bodycam defaults
 * The included display model registry
 
-Do not place API keys, Tebex credentials, or license credentials in this file.
+Update checks, the dependency name/minimum version, DUI lifecycle, and security rate
+limits require no customer configuration. Do not place API keys, Tebex credentials, or
+license credentials in this file, and do not modify protected implementation files.
 
 ## 7. Restart and verify startup
 
@@ -131,7 +135,7 @@ If CAD is missing, old, or incompatible, the server prints an `SSD-CAD-*` error.
 
 ## 8. Place a test display
 
-1. Join with the five administrator ACE permissions.
+1. Join with the administrator ACE permissions.
 2. Confirm at least one unit is on duty in Sonoran CAD.
 3. Run `/stationdisplay`.
 4. Select **Mounted Displays**.
@@ -140,7 +144,7 @@ If CAD is missing, old, or incompatible, the server prints an `SSD-CAD-*` error.
 7. Leave the rotation interval at the default 30 seconds.
 8. Select **Continue to Placement**.
 9. Position the preview within 15 meters, then select **Confirm Placement**.
-10. Walk within the display's render distance and confirm the interface shows `CAD LIVE`.
+10. Walk within the display's render distance and confirm current state appears without the CAD unavailable overlay.
 
 If the display has no rows, confirm its service filter matches the on-duty unit's `unit.data.page` classification.
 
@@ -149,6 +153,7 @@ If the display has no rows, confirm its service filter matches the on-duty unit'
 The production package is intended for FiveM Asset Escrow. Customer-editable files are excluded from encryption:
 
 * `config.lua`
+* `server/admin_webhook_config.lua`
 * `locales/*.lua`
 * `data/displays.DEFAULT.json`
 * `docs/*.md`
@@ -168,4 +173,3 @@ python scripts/package.py
 ```
 
 The package command creates `build/stationDisplay.zip` with one top-level `sonoran-stationdisplay` folder.
-

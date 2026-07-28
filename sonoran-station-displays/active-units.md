@@ -1,7 +1,7 @@
 ---
 title: Active Units
 published: true
-date: 2026-07-27T00:00:00.000Z
+date: 2026-07-28T00:00:00.000Z
 tags: [on-duty units, grouping, sorting]
 editor: markdown
 dateCreated: 2026-07-27T00:00:00.000Z
@@ -12,9 +12,9 @@ description: Understand Active Units fields, service filters, statuses, grouping
 
 The Active Units page shows entries from the SonoranCADFiveM on-duty unit cache. Server owners do not need to define every department.
 
-<figure><img src="../.gitbook/assets/station-displays-active-leo-sample.png" alt="Sonoran Station Displays Active Units page showing sample LEO units"><figcaption><p>The shipped LEO Active Units interface rendered with sample data.</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/station-displays-active-units-leo.webp" alt="Sonoran Station Displays Active Units page showing LEO sample units"><figcaption><p>The production LEO renderer using controlled sample data.</p></figcaption></figure>
 
-<figure><img src="../.gitbook/assets/station-displays-active-fire-ems-sample.png" alt="Sonoran Station Displays Active Units page showing sample Fire and EMS units"><figcaption><p>The shipped Fire/EMS Active Units interface rendered with sample data.</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/station-displays-active-units-fire-ems.webp" alt="Sonoran Station Displays Active Units page showing Fire and EMS sample units"><figcaption><p>The production Fire/EMS renderer using controlled sample data.</p></figcaption></figure>
 
 ## Duty and service
 
@@ -76,6 +76,10 @@ NO ON-DUTY UNITS
 The selected service has no active units
 ```
 
+<figure><img src="../.gitbook/assets/station-displays-active-units-agency.webp" alt="Active Units grouped by agency"><figcaption><p>Agency grouping with natural callsign ordering and independent group pagination.</p></figcaption></figure>
+
+<figure><img src="../.gitbook/assets/station-displays-active-units-subdivision.webp" alt="Active Units grouped by subdivision and sorted by status"><figcaption><p>Subdivision grouping with status sorting in a controlled renderer capture.</p></figcaption></figure>
+
 ## Sorting
 
 | Config value | Field |
@@ -86,6 +90,8 @@ The selected service has no active units
 | `SUBDIVISION` | Subdivision |
 
 Sorting uses case-insensitive, numeric-aware browser ordering. Callsigns such as `1A-2` therefore sort naturally before `1A-10`.
+
+<figure><img src="../.gitbook/assets/station-displays-active-units-status-sorted.webp" alt="Active Units with grouping disabled and sorted by status"><figcaption><p>A single group sorted by status.</p></figcaption></figure>
 
 ## Pagination and maximum rows
 
@@ -105,6 +111,6 @@ If no assignment exists, cached location is preferred over postal.
 
 ## Stale and missing data
 
-An unchanged unit is marked stale internally after `Config.StaleAfterSeconds` (30 seconds by default). Version 1.0.0 does not visually label individual stale rows. If a cache call fails, the display shows the disconnected overlay.
+An unchanged unit is marked stale internally after `Config.StaleAfterSeconds` (30 seconds by default). The Active Units table does not visually label individual stale rows; Live Map dims and outlines stale markers. If a cache call fails, the display shows the disconnected overlay.
 
 Use diagnostics and `sonorancad viewcaches` to investigate a frozen or missing unit.

@@ -1,14 +1,14 @@
 ---
-title: Troubleshooting and Diagnostics
+title: Troubleshooting
 published: true
-date: 2026-07-27T00:00:00.000Z
+date: 2026-07-28T00:00:00.000Z
 tags: [troubleshooting, diagnostics, error codes]
 editor: markdown
 dateCreated: 2026-07-27T00:00:00.000Z
-description: Diagnose startup, CAD cache, blank display, permissions, persistence, rotation, model, and performance problems.
+description: Diagnose startup, CAD, blank displays, permissions, persistence, pages, map, bodycams, models, and performance.
 ---
 
-# Troubleshooting and Diagnostics
+# Troubleshooting
 
 ## Resource does not start
 
@@ -41,7 +41,8 @@ Run from the server console:
 stationdisplay_serverdiag
 ```
 
-**Corrective action:** Start/update SonoranCADFiveM and make `Config.SonoranCADResource` match its folder name.
+**Corrective action:** Install or update SonoranCADFiveM to version `4.0.72` or newer,
+keep its resource name `sonorancad`, and start it before Station Displays.
 
 **Relevant logs:**
 
@@ -49,7 +50,44 @@ stationdisplay_serverdiag
 | --- | --- |
 | `SSD-CAD-001` | Configured CAD resource is not started |
 | `SSD-CAD-002` | Required cache exports are unavailable |
-| `SSD-CAD-003` | Version is below the configured minimum |
+| `SSD-CAD-003` | Version is below the supported minimum |
+
+## Version checker does not run
+
+**Likely cause:** The resource is a source or development build rather than an official
+packaged release.
+
+**Verify:** Confirm the resource was downloaded from the official granted asset.
+
+**Corrective action:** Install the official packaged release. Development builds
+intentionally retain the packaging token and skip outbound version requests.
+
+## Update check fails
+
+**Likely cause:** FXServer cannot reach the packaged version endpoint, the request timed
+out, or the endpoint returned malformed metadata.
+
+**Verify:** Review `SSD-UPDATE-001` or `SSD-UPDATE-002` in the server console and confirm
+outbound HTTPS access.
+
+**Corrective action:** Restore outbound HTTP access and retry at the next scheduled
+check or resource start. An update-check failure does not stop the display resource.
+
+## SonoranCAD version is unsupported
+
+**Likely cause:** The installed `sonorancad` version is older than `4.0.72`.
+
+**Corrective action:** Update SonoranCADFiveM to version `4.0.72` or newer so the public
+unit, call, and emergency cache interfaces are available.
+
+## Customer config contains removed settings
+
+**Likely cause:** An older `config.lua` was copied over the current package.
+
+**Corrective action:** Delete obsolete update-check, dependency, DUI
+resolution/lifecycle, and event-rate-limit entries, then merge only documented
+customer-facing settings into the current config. Do not modify protected
+implementation files; internal values always take precedence.
 
 ## Display is blank
 
@@ -124,7 +162,44 @@ Confirm the unit is in the active unit cache and inspect `data.page` and status.
 
 **Corrective action:** Restore upstream coordinates, use Auto Fit, correct the fixed center/zoom, or enable the required markers.
 
-**Relevant logs:** There is no per-marker projection log. Use cached records and the displayed count.
+**Relevant logs:** Temporarily enable `Config.Map.debug` to inspect calibrated bounds,
+asset crop, clipping, and selected viewport values. Disable it afterward.
+
+## Live Map markers are misaligned
+
+**Likely cause:** A coordinate source uses another map convention, the record is outside
+the calibrated GTA V bounds, or custom browser/map files were mixed between versions.
+
+**Verify:** Restore the shipped `gtav-satellite-z4.webp` and `map-config.js`, enable the
+map debug overlay, and compare a known landmark.
+
+**Corrective action:** Replace the complete `web/` directory from one release and fix the
+upstream world coordinates. Do not tune bounds to compensate for one malformed record.
+
+## Bodycams do not appear
+
+**Likely cause:** The installed CAD package lacks the bodycam bridge, the runtime is not
+in `PEER_STREAM` mode, bodycams/peer streaming are disabled, the unit is off duty, or
+the display filter/page excludes it.
+
+**Verify:** Open [Diagnostics](diagnostics.md) and check bodycam detected, available,
+mode, active, ready, and waiting counts.
+
+**Corrective action:** Install a compatible SonoranCADFiveM bodycam package, enable the
+submodule and peer stream, put the unit on duty, activate the bodycam, and enable the
+`BODYCAMS` page.
+
+## Bodycam stays connecting or unavailable
+
+**Likely cause:** Publisher readiness, PeerJS/STUN/TURN/NAT failure, autoplay/video
+failure, or the publisher's four-viewer limit.
+
+**Verify:** Review the officer's client console, viewer client F8, diagnostic load
+failures, and existing viewers.
+
+**Corrective action:** Restore signaling/TURN reachability, close unintended viewers,
+reduce display feed counts, and shorten overlapping render distances. Station Displays
+does not create fallback screenshot captures.
 
 ## Display is visible but frozen
 
@@ -156,6 +231,21 @@ Confirm the unit is in the active unit cache and inspect `data.page` and status.
 
 **Relevant logs:** Permission-denied notification and F8 errors. No radio resource is required.
 
+## Menu opens but an option reports no permission
+
+**Likely cause:** The server-provided menu snapshot is older than the player's current
+ACE state, the operation uses a different node, or a server recheck correctly rejected
+the action.
+
+**Verify:** Compare the requested action with [Permissions](permissions.md), then run
+`stationdisplay_permissiondiag <serverId>` from the console while `Config.Debug = true`.
+
+**Corrective action:** Grant the exact node, review inherited deny rules, and reconnect
+or refresh the menu snapshot. Do not treat a visible item as authorization.
+
+**Relevant permission:** Place, edit/force-refresh, delete, diagnostics, and webhook test
+are independent server checks.
+
 ## Cannot place or edit a display
 
 **Likely cause:** Missing `place`/`edit`, final position farther than 15 meters, invalid value, routing-bucket mismatch, or event rate limit.
@@ -170,6 +260,44 @@ Confirm the unit is in the active unit cache and inspect `data.page` and status.
 **Corrective action:** Grant the needed ACE, move closer, restore valid settings, or wait for the 10-second rate window.
 
 **Relevant logs:** Client notification such as permission denied, invalid request, position, or bucket mismatch.
+
+## Display saves but does not update live
+
+**Likely cause:** Persistence succeeded but the authorized-client broadcast failed, the
+viewer lost permission, or its DUI is unavailable.
+
+**Verify:** Look for `CLIENT_BROADCAST_FAILED`, compare the persistence audit ID, run
+`stationdisplay_serverdiag`, and inspect Active DUIs/client F8.
+
+**Corrective action:** Restore view permission and client connectivity, use
+**Force-Refresh Display**, or run **Full Display Resync** with diagnostics permission.
+Do not replace a valid persistence file for a broadcast-only failure.
+
+## Default JSON is not initialized
+
+**Likely cause:** The shipped default is missing/invalid, the resource cannot write its
+data directory, or an invalid active file already exists and was intentionally
+preserved.
+
+**Verify:** Check `data/displays.DEFAULT.json`, `data/displays.json`, and
+`SSD-PERSIST-INIT-*`; `SSD-PERSIST-INIT-005` means the existing active file was not
+overwritten.
+
+**Corrective action:** Stop the resource, preserve the active file, restore a valid
+default from the package, fix filesystem access, then restart. Use the console repair
+command only when recovery from the active file is not possible.
+
+## DUI readiness times out
+
+**Likely cause:** A missing/mixed `web/` directory, browser JavaScript failure, or a
+client DUI/runtime-texture problem prevented `duiReady` within 10 seconds.
+
+**Verify:** Inspect client F8 and confirm all production web files come from the same
+resource release.
+
+**Corrective action:** Restore the complete `web/` directory, leave/re-enter range, and
+let the internal one-second retry run. Repeated timeouts require client/runtime
+investigation rather than increasing an internal timeout.
 
 ## Display disappears at a distance
 
@@ -207,7 +335,8 @@ Confirm the unit is in the active unit cache and inspect `data.page` and status.
 
 ## Page rotation is not working
 
-**Likely cause:** One page enabled, rotation disabled, invalid interval reset to default, or a local page renderer was recreated.
+**Likely cause:** One page enabled, rotation disabled, invalid interval reset to default,
+or a recent viewer interaction is inside the default 10-second hold.
 
 **Verify:**
 
@@ -216,9 +345,84 @@ Confirm the unit is in the active unit cache and inspect `data.page` and status.
 * Confirm interval is 5–300 seconds.
 * Watch the footer dots/progress bar.
 
-**Corrective action:** Enable multiple pages, save rotation, use a valid interval, and force refresh.
+**Corrective action:** Enable multiple pages, save rotation, use a valid interval, wait
+for the interaction hold, and force refresh if needed. A recreated DUI restores the
+server runtime snapshot rather than always starting from the saved default.
 
 **Relevant logs:** No dedicated rotation log. Use the displayed footer and current page.
+
+## Nearby page prompt does not appear
+
+**Likely cause:** No applicable action, outside the display's saved interaction
+distance, poor view angle, failed line of sight, wrong interior/bucket, unavailable DUI,
+disabled page interaction, or missing view permission.
+
+**Verify:** Stand within 2.5 meters by default, face the screen, and test a display with
+multiple pages or Live Map/Bodycams controls.
+
+**Corrective action:** Restore view ACE, correct the display's interaction distance and
+world context, enable `Config.PageInteraction`, and remove geometry blocking line of
+sight. A one-page display intentionally hides the prompt only when its current page has
+no map/bodycam action.
+
+## The wrong nearby display changes page
+
+**Likely cause:** Another display has the better combined distance/view-angle target
+score even if it is not the closest object.
+
+**Verify:** Face the intended screen directly and move closer while watching the prompt
+name.
+
+**Corrective action:** Separate overlapping displays, shorten their interaction
+distances, or approach the intended surface from a clearer angle. The server still
+checks proximity and world context before broadcasting the change.
+
+## Rotation resumes too soon after manual interaction
+
+**Likely cause:** `PageInteraction.pauseRotationAfterInteraction` is low/zero, the
+configuration was not restarted, or an integration forced another runtime page.
+
+**Verify:** Confirm the default 10-second value and compare the timing with server
+`SetDisplayPage` calls.
+
+**Corrective action:** Restore the desired hold value and restart the resource. The
+manual page change itself is runtime-only and does not change the saved default.
+
+## Live Map is clipped or letterboxed
+
+**Likely cause:** Normal aspect-ratio containment, a custom/mixed map asset, or an
+incorrect model surface ratio.
+
+**Verify:** The shipped map intentionally uses the actual contained image rectangle;
+side bands can appear on a 16:9 viewport. Enable map debug and confirm markers align
+inside the displayed image.
+
+**Corrective action:** Restore the shipped asset/config and calibrate the model surface
+to 16:9. Do not project markers across the letterboxed bands.
+
+## Bodycam feed is delayed or fails to load
+
+**Likely cause:** No advancing WebRTC frame, signaling/TURN failure, browser playback
+error, publisher disconnect, or viewer-limit exhaustion.
+
+**Verify:** Watch `SIGNAL DELAY` (default 8 seconds) versus `FEED UNAVAILABLE` (default
+30 seconds), check client logs, and inspect the bodycam diagnostic failure count.
+
+**Corrective action:** Restore publisher/network readiness, reduce duplicate viewers and
+feed counts, and re-enter render range. There is no fallback periodic image loader or
+capture timestamp to repair.
+
+## Administrative webhook does not arrive
+
+**Likely cause:** Disabled/malformed private URL, Discord 4xx, outbound HTTPS failure,
+rate/test cooldown, or a queue retry in progress.
+
+**Verify:** Run the in-menu webhook test with
+`sonoran.display.webhook.test`, retain its audit ID, and inspect the server response log.
+
+**Corrective action:** Regenerate invalid credentials, restore outbound HTTPS, and allow
+429/5xx retries. The administrative action can still succeed because delivery is
+non-blocking.
 
 ## High client resource usage
 
@@ -232,53 +436,8 @@ Confirm the unit is in the active unit cache and inspect `data.page` and status.
 
 ## Diagnostics
 
-### In-game diagnostics
-
-Open:
-
-```text
-/stationdisplay → Mounted Displays → View Diagnostics
-```
-
-Requires `sonoran.display.diagnostics`.
-
-The menu shows:
-
-* CAD detected, compatible, version, and error
-* Configured display count
-* Nearby display count
-* Active DUI count
-* LEO and Fire/EMS unit counts
-* Emergency and dispatch call counts
-* Cache revision
-
-Use **Refresh Diagnostics** to request a new snapshot.
-
-### Server diagnostics
-
-From the server console:
-
-```text
-stationdisplay_serverdiag
-```
-
-The console may always run it. A player running it requires diagnostics permission.
-
-Output includes:
-
-* CAD availability/compatibility/version/error object
-* Configured display count
-* Total normalized unit count
-* Emergency and dispatch call counts
-* Cache revision
-
-### Available refresh actions
-
-* **Force-Refresh Display** — selected display, requires edit
-* Server `RefreshDisplay` export — selected display runtime resend
-* Rejoin/resource start — internal full synchronization request
-
-Version 1.0.0 has no public full-resync command, coordinate-projection status command, or CAD-cache force-rebuild action. The menu does not expose current page, last cache update, last DUI update, or render-target status as individual fields.
+See [Diagnostics](diagnostics.md) for the in-game snapshot, server/permission commands,
+persistence repair, map overlay, full resync, and bodycam counters.
 
 ## Error and warning codes
 
@@ -289,7 +448,7 @@ Version 1.0.0 has no public full-resync command, coordinate-projection status co
 | `SSD-CAD-003` | CAD version is below the supported minimum |
 | `SSD-PERSIST-001` | Persistence JSON is malformed |
 | `SSD-PERSIST-002` | One saved display failed validation |
-| `SSD-PERSIST-003` | Display data could not be encoded |
+| `SSD-PERSIST-003` | Encode/write/readback/validation/exact-state persistence verification failed |
 | `SSD-UPDATE-001` | Remote version request failed |
 | `SSD-UPDATE-002` | Remote version payload is invalid |
 | `SSD-UPDATE-003` | A newer resource version is available |

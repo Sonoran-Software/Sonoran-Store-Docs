@@ -1,166 +1,107 @@
 ---
 title: Display Management
 published: true
-date: 2026-07-27T00:00:00.000Z
+date: 2026-07-28T00:00:00.000Z
 tags: [display placement, menu, controls]
 editor: markdown
 dateCreated: 2026-07-27T00:00:00.000Z
-description: Place, configure, move, preview, refresh, and delete mounted Sonoran Station Displays.
+description: Place, configure, move, preview, refresh, and delete mounted Station Displays.
 ---
 
 # Display Management
 
 ## Open the menu
 
-Run:
+Run `/stationdisplay`, or the command configured by `Config.AdminCommand`.
 
-```text
-/stationdisplay
-```
-
-The command name comes from `Config.AdminCommand`. If a server owner changes that setting, use the configured command.
-
-Menu path:
-
-```text
-Sonoran Station Displays → Mounted Displays
-```
-
-The menu is a self-contained WarMenu adapted from the `radio_fivem` speaker-menu implementation. It does not use radio menu exports.
+The self-contained WarMenu is adapted from Sonoran's `radio_fivem` placement patterns. It does not call radio exports or require the radio resource.
 
 ## Place a display
 
-1. Open **Mounted Displays**.
-2. Select **Place New Display**.
-3. Enter a display name.
-4. Select **Flat Screen TV** or **Laptop Display**.
-5. Select `LEO`, `Fire/EMS`, or `Both`.
-6. Open **Display Pages** and select at least one page.
-7. Choose the default page and reorder the enabled pages if needed.
-8. Configure rotation, grouping, sorting, row limits, map behavior, and render distance.
-9. Select **Continue to Placement**.
-10. Position and rotate the translucent preview.
-11. Select **Confirm Placement**.
+1. Open **Mounted Displays > Place New Display**.
+2. Enter a name and choose an allowed model.
+3. Choose `LEO`, `Fire/EMS`, or `Both`.
+4. Enable at least one page, select the default, and arrange the page order.
+5. Configure rotation, grouping, sorting, list limits, map/bodycam behavior, theme, render distance, and interaction distance.
+6. Choose **Continue to Placement**.
+7. Position and rotate the translucent preview.
+8. Confirm placement.
 
-The server checks `place`, validates the complete display, and requires the final position to remain within `Config.MaximumPlacementDistance` of the player.
+The server rechecks place permission, model, settings, player/world context, and the final position. The default maximum placement distance is 15 meters.
 
 ## Placement controls
 
-| Control | Action |
+The placement overlay shows the resolved FiveM control labels for the current client. Default keyboard mappings correspond to:
+
+| Control group | Action |
 | --- | --- |
-| Numpad 4 / Numpad 6 | Move on the X axis |
-| Numpad 8 / Numpad 2 | Move on the Y axis |
-| Page Up / Page Down | Move on the Z axis |
-| **Rotation Axis** menu option | Select X, Y, or Z |
-| Numpad 7 / Numpad 9 | Rotate around the selected axis |
-| Shift | Increase movement/rotation step by `0.001`, up to `2.0` |
-| Ctrl | Decrease movement/rotation step by `0.001`, down to `0.001` |
-| **Reset Rotation** | Set X/Y to zero and Z to the player's current heading |
-| Enter on **Confirm Placement** | Save the position and rotation |
-| **Cancel Placement** or Backspace | Delete the preview and restore an existing display |
+| Numpad horizontal controls | Move X |
+| Numpad vertical controls | Move Y |
+| Page Up / Page Down | Move Z |
+| **Rotation Axis** | Select X, Y, or Z |
+| Numpad rotation controls | Rotate the selected axis |
+| Shift release | Increase step by `0.001`, up to `2.0` |
+| Ctrl release | Decrease step by `0.001`, down to `0.001` |
+| **Reset Rotation** | Zero X/Y and use the player's current heading for Z |
+| **Confirm Placement** | Save |
+| **Cancel Placement** or Back | Remove the preview and restore an existing object |
 
-The initial step is `0.05`. Shift and Ctrl change the step when released; they are not held fine-adjustment modifiers.
+The initial movement/rotation step is `0.05`. Shift and Ctrl change the step when released; they are not hold-to-modify controls.
 
-## Placement behavior and limits
+Placement starts at the first camera ray hit within 5 meters, or 2 meters in front of the player when no hit is found. The preview is translucent, frozen, and non-colliding. A saved object is frozen, invincible, and colliding. There is no automatic wall/ground snap.
 
-* A new preview begins at the first camera ray hit within 5 meters. If there is no hit, it starts 2 meters in front of the player.
-* The gameplay camera remains under normal player control.
-* The preview is translucent, frozen, and has collision disabled.
-* The saved object is frozen, invincible, and has collision enabled.
-* There is no automatic wall snap, ground snap, or surface alignment.
-* The model is selected before placement; placement mode does not cycle models.
-* A display must remain within 15 meters by default.
-* New displays automatically save the current interior ID when the player is inside an interior.
-* New displays do not automatically save a routing bucket.
+New displays save the current interior when applicable. The menu does not assign a routing bucket. Existing or externally provisioned bucket values are still enforced.
 
-## View nearby displays
+## View and edit nearby displays
 
-Open:
+Open **Mounted Displays > View Nearby Displays**. Results inside `Config.MenuNearbyDistance` (15 meters by default) are ordered by distance and filtered for the current interior/routing context.
 
-```text
-Mounted Displays → View Nearby Displays
-```
+**Edit Display** can change:
 
-The selector lists displays within `Config.MenuNearbyDistance` (15 meters by default), ordered by distance. Displays restricted to another routing bucket or interior are excluded.
+* Name and service
+* Theme
+* Enabled pages, default page, and order
+* Main rotation and interval
+* Unit grouping/sorting and unavailable-unit visibility
+* Unit/call list limits
+* Live Map mode, markers, center, and zoom
+* Bodycam layout, feed limit, and bodycam page interval
+* Render and interaction distances
 
-Select a display, then open **Display Options**.
+The shipped menu cannot change a display model after creation. Replace the display when a different model is needed.
 
-## Edit display settings
+## Move a display
 
-**Edit Display** allows:
+Choose **Move Display**. The existing object is hidden while its translucent preview is moved. Confirming persists the new transform; cancelling restores the original object. The server rechecks edit permission, proximity, and world context.
 
-* Rename
-* Service selection
-* Enable/disable pages
-* Page order
-* Default page
-* Automatic page rotation
-* Rotation interval
-* Unit grouping and sorting
-* Hide unavailable units
-* Units and calls per page
-* Map mode, marker toggles, center, and zoom
-* Render distance
+## Preview and refresh
 
-The model cannot be changed after creation in the shipped menu. Create a replacement display if another model is needed.
-
-Select **Save Display Settings** to persist changes. The server requires `edit` and checks that the player is near the display's saved position.
-
-## Move or rotate a display
-
-1. Select **Move Display**.
-2. The existing object is hidden and a translucent preview appears at its saved transform.
-3. Use the placement controls.
-4. Confirm to save, or cancel to restore the original object.
-
-## Service filters
-
-### LEO
-
-Use for a police briefing room or law-enforcement operations area. It shows on-duty units whose CAD page classifies as police.
-
-### Fire/EMS
-
-Use for an apparatus bay, fire station, or EMS room. It combines fire and EMS cache pages into `FIRE_EMS`.
-
-### Both
-
-Use for a combined dispatch center or emergency operations center. The Active Units page separates LEO and Fire/EMS when grouping by service.
-
-The filter is saved independently on every display. Agency and subdivision labels still appear when the CAD cache provides them.
-
-## Preview and force refresh
-
-**Preview Display**:
-
-* Keeps the object/DUI active for 10 seconds even if it is outside normal render distance
-* Sets the local display to its default page
-* Marks the display location with a temporary blue marker
+**Preview Display** keeps the local renderer active for 10 seconds, switches it to its default page, and places a temporary blue marker at the display.
 
 **Force-Refresh Display**:
 
-* Requires `edit`
-* Sends a full shared cache sync to the requesting player
-* Asks every authorized client currently rendering that display to resend its DUI state
+* Requires the configured `forceRefresh` permission (the default ACE is the edit node)
+* Requests a full shared cache snapshot for the player
+* Tells authorized clients rendering that display to resend its DUI state
 
-Force refresh does not force SonoranCADFiveM itself to rebuild its caches.
+It does not force SonoranCADFiveM to rebuild its caches.
 
-## Manual page controls
+## Nearby viewer controls
 
-While within `Config.InteractionDistance` (3 meters by default):
+Target selection considers distance, view angle, and the display surface, then checks line of sight and world context. When several displays are in range, the best combined distance/angle score wins; this is not always the physically nearest object.
 
-| Default key | Command | Action |
+| Page/context | Default keys | Behavior |
 | --- | --- | --- |
-| Right Arrow | `stationdisplay_next` | Next page on the nearest display |
-| Left Arrow | `stationdisplay_previous` | Previous page on the nearest display |
+| Any multi-page display | Right / Left Arrow | Next / previous display page |
+| Live Map | Numpad 8/2/4/6, Numpad 5 | Temporary synchronized pan and reset |
+| Bodycams | Page Down / Page Up | Next / previous bodycam feed page |
 
-Players can rebind these commands in FiveM key settings. The page change is local to that client's active DUI and is not persisted.
+The default interaction distance is 2.5 meters and can be saved per display. Page changes are validated by the server, broadcast to authorized viewers, and hold automatic rotation for 10 seconds by default. They are runtime-only and do not change the saved default page.
 
-## Delete a display
+Map panning is also runtime-only and synchronized. Bodycam subpage navigation is local to the targeted DUI. FiveM key settings can rebind every registered command.
 
-1. Open the nearby display's **Display Options**.
-2. Select **Delete Display**.
-3. Confirm **Yes, Delete Display**.
+The prompt is hidden when no action applies. A single-page display can still show controls when its Live Map or Bodycams page has context-specific actions.
 
-Deletion requires `delete`, a nearby player position, and server validation. The display is removed from `data/displays.json` and from authorized clients.
+## Delete
 
+Choose **Display Options > Delete Display** and confirm. Deletion requires delete permission, proximity, and server validation. The record is removed from persistence and authorized clients.
