@@ -120,13 +120,15 @@ Config.Bodycams = {
 | `minimumRotationInterval` / `maximumRotationInterval` | Accepted saved range, 5 to 300 seconds. |
 | `maximumFeeds` | Hard per-page ceiling; current implementation caps it at 4. |
 | `refreshIntervalMs` | Server bodycam-runtime polling fallback. Runtime events can update sooner. |
-| `delayedAfterSeconds` | A playing feed with no advancing frame becomes `SIGNAL DELAY`. |
-| `unavailableAfterSeconds` | A longer stall becomes `FEED UNAVAILABLE`. |
+| `delayedAfterSeconds` | A late periodic frame becomes `DELAYED`. |
+| `unavailableAfterSeconds` | A longer capture gap becomes `CAPTURE FAILED` or `OFFLINE`. |
 | `showInactiveUnits` | Includes associated inactive/off bodycams. |
 | `showUnitName`, `showAgency`, `showStatus`, `showAssignedCall` | Toggle tile metadata. |
-| `showTimestamp` | Saved and normalized, but the current WebRTC overlay does not render a capture timestamp. |
+| `showTimestamp` | Controls capture-freshness/timestamp presentation when supplied. |
 
-These controls do not change the upstream bodycam publisher, TURN configuration, viewer limit, or recording behavior. See [Bodycams](bodycams.md).
+These controls do not change the internal 4-second local capture interval, JPEG quality,
+300 KB frame ceiling, four-feed subscription limit, or recording behavior. See
+[Bodycams](bodycams.md).
 
 ## Distance and capacity
 
@@ -148,20 +150,24 @@ Internally, the client creates 1280 by 720 DUIs, waits up to 10 seconds for read
 ```lua
 Config.PermissionMode = "ace"
 Config.AcePermissions = {
-    open = "sonoran.display.view",
-    view = "sonoran.display.view",
-    place = "sonoran.display.place",
-    edit = "sonoran.display.edit",
-    delete = "sonoran.display.delete",
-    diagnostics = "sonoran.display.diagnostics",
-    forceRefresh = "sonoran.display.edit",
-    webhookTest = "sonoran.display.webhook.test"
+    menu = "sonoran.stationdisplay.menu",
+    place = "sonoran.stationdisplay.place",
+    edit = "sonoran.stationdisplay.edit",
+    delete = "sonoran.stationdisplay.delete",
+    diagnostics = "sonoran.stationdisplay.diagnostics",
+    refresh = "sonoran.stationdisplay.refresh",
+    webhookTest = "sonoran.stationdisplay.webhook.test"
 }
 ```
 
-`PermissionMode` accepts `ace` or `custom`. Empty ACE values deny. `open` and `view` intentionally share the default node; `forceRefresh` and `edit` also share a node.
+`PermissionMode` accepts `ace` or `custom`. Empty ACE values deny. Viewing has no ACE
+node; menu access, placement, editing, deletion, diagnostics, refresh, and webhook tests
+are independently configurable.
 
-`Config.CustomPermission(source, action)` is called only in custom mode. It must return boolean `true`; errors deny. The callback receives backend actions `view`, `place`, `edit`, `delete`, `diagnostics`, and `webhookTest`. See [Permissions](permissions.md).
+`Config.CustomPermission(source, action)` is called only in custom mode. It must return
+boolean `true`; errors deny. The callback receives backend actions `menu`, `place`,
+`edit`, `delete`, `diagnostics`, `refresh`, and `webhookTest`. See
+[Permissions](permissions.md).
 
 ## Call classification and fields
 
@@ -274,7 +280,10 @@ Config.PageInteraction = {
 }
 ```
 
-Page changes are server-validated and synchronized to authorized viewers. The rotation timer holds for 10 seconds by default after an interaction. A candidate display must be within its interaction distance and camera angle, in the correct world context, and visible by line of sight when required.
+Page changes are server-validated and synchronized to clients. The rotation timer holds
+for 10 seconds by default after an interaction. A candidate display must be within its
+interaction distance and camera angle, in the correct world context, and visible by
+line of sight when required.
 
 ```lua
 Config.MapInteraction = {

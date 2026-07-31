@@ -18,7 +18,8 @@ Open:
 /stationdisplay > Mounted Displays > View Diagnostics
 ```
 
-The player needs `sonoran.display.diagnostics`. The menu shows:
+The player needs `sonoran.stationdisplay.menu` to open the menu and
+`sonoran.stationdisplay.diagnostics` to open diagnostics. The menu shows:
 
 * CAD detected, compatible, version, and current error
 * Configured and nearby display counts
@@ -26,9 +27,10 @@ The player needs `sonoran.display.diagnostics`. The menu shows:
 * LEO and Fire/EMS unit counts
 * Emergency and dispatch call counts
 * Cache revision
-* Bodycam runtime detected/available/mode
-* Bodycam active, ready, and waiting counts
-* Latest bodycam sequence and viewer load-failure count
+* Bodycam runtime/capture dependency detected, available, and mode
+* Source client, capture active, last attempt/success, and upload duration
+* Latest frame size/sequence, subscribed viewers, and visible feed count
+* Accepted, malformed, oversized, stale, failed, and rate-limited counters
 
 Use **Refresh Diagnostics** for a new snapshot. The menu does not currently show webhook status, per-cache timestamps, map clipping, or each DUI's last update.
 

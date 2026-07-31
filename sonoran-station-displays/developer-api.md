@@ -105,7 +105,7 @@ local ok = exports["sonoran-stationdisplay"]:SetDisplayServiceFilter(
 
 ## Client exports
 
-Client exports act on the local client's synchronized state. A player without `view` does not receive display/cache synchronization.
+Client exports act on the local client's synchronized, sanitized display/cache state.
 
 ### `GetDisplays()`
 
@@ -148,7 +148,10 @@ Returns `true` when an active local renderer exists and the page is in its saved
 local requested = exports["sonoran-stationdisplay"]:OpenDisplayMenu()
 ```
 
-Returns `false` when placement is already active; otherwise `true` after requesting a fresh server permission snapshot. Menu opening is asynchronous and still requires `view`.
+Returns `false` when placement is already active; otherwise `true` after opening the
+non-actionable loading state and requesting a fresh server permission snapshot.
+Actionable menu opening is asynchronous and still requires the configured `menu`
+administrative permission.
 
 ## Supported client observation events
 

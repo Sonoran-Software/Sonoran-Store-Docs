@@ -117,7 +117,8 @@ A call without usable X/Y values still appears on the corresponding call page. I
 
 ## Sensitive information
 
-The board is an in-world display. Review all fields before granting `sonoran.display.view`.
+The board is an in-world display and viewing is public. Review all configured fields
+before enabling a page on displays accessible to players.
 
 Recommended public-facing configuration:
 

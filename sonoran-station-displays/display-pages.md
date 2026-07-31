@@ -36,7 +36,10 @@ The footer shows a dot for every enabled page, highlights the current page, and 
 
 ## Runtime synchronization
 
-The server maintains runtime page state for a display. Clients rotate locally from that state, while an authorized nearby manual page change is validated by the server and broadcast to authorized viewers. After a manual change, the default hold is 10 seconds before normal rotation resumes.
+The server maintains runtime page state for a display. Clients rotate locally from that
+state, while an eligible nearby manual page change is validated by the server and
+broadcast to clients. After a manual change, the default hold is 10 seconds before
+normal rotation resumes.
 
 | Situation | Behavior |
 | --- | --- |
@@ -49,7 +52,9 @@ The server maintains runtime page state for a display. Clients rotate locally fr
 | Resource restart | Initializes runtime state from the saved default page. |
 | Current page removed by settings | Selects the saved default or first valid page. |
 
-Right and Left Arrow are the default next/previous mappings. The server checks view permission, display proximity (with a small network tolerance), routing bucket, page validity, and cooldown.
+Right and Left Arrow are the default next/previous mappings. The server checks display
+proximity (with a small network tolerance), routing bucket, interior, page validity,
+and cooldown.
 
 ## Independent list and bodycam pagination
 

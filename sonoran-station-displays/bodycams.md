@@ -2,38 +2,79 @@
 title: Bodycams
 published: true
 date: 2026-07-28T00:00:00.000Z
-tags: [bodycams, webrtc, peerjs]
+tags: [bodycams, screenshot-basic, local capture]
 editor: markdown
 dateCreated: 2026-07-28T00:00:00.000Z
-description: Configure, secure, and troubleshoot live Sonoran bodycam feeds on mounted displays.
+description: Configure, secure, and troubleshoot periodic local bodycam imagery on mounted displays.
 ---
 
 # Bodycams
 
-The `BODYCAMS` page passively views active, on-duty Sonoran bodycams. The current integration uses continuous PeerJS/WebRTC streams supplied by SonoranCADFiveM. Station Displays does not take periodic screenshots, create a second capture timer, start an officer's bodycam, or upload recordings.
+The `BODYCAMS` page displays periodic live images captured locally from active,
+on-duty officers. It is not continuous video. Station Displays no longer uses the
+previous PeerJS/TURN viewer, remote image relay, or hosted bodycam URL.
 
-<figure><img src="../.gitbook/assets/station-displays-bodycams-grid.webp" alt="Station Displays bodycam grid showing controlled connection and off states"><figcaption><p>The production four-tile renderer. This controlled capture shows honest connecting/off states and contains no officer footage.</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/station-displays-bodycams-grid.webp" alt="Station Displays bodycam grid showing controlled connection and off states"><figcaption><p>The production four-tile renderer. This controlled capture contains no officer footage.</p></figcaption></figure>
 
 ## Requirements
 
-* Start the core resource as `sonorancad` before `sonoran-stationdisplay`.
-* Install a SonoranCADFiveM package/build that supplies `GetBodycamRuntime()` and `SonoranCAD::bodycam::RuntimeChanged`.
-* Enable the Sonoran bodycam submodule and `peerStream`.
-* Use a plan/submodule entitlement that includes bodycams.
-* Put the player on duty and activate the bodycam.
-* Grant display viewers `sonoran.display.view`.
+* Start the core resource as `sonorancad`.
+* Install and start `screenshot-basic`.
+* Use a SonoranCADFiveM build with `GetBodycamRuntime()` and
+  `SonoranCAD::bodycam::RuntimeChanged`.
+* Enable the Sonoran bodycam submodule, put the officer on duty, and activate it.
+* No viewing ACE is required; image delivery is limited to eligible nearby viewers.
 
-The general cache minimum remains SonoranCADFiveM `4.0.72`. That number does not prove that every `4.0.72` package includes the newer bodycam bridge. Check the installed build's exports or the Station Displays diagnostic. A runtime in `STATE_ONLY` or `DISABLED` mode cannot supply video; Station Displays needs `PEER_STREAM`, `streamReady`, and a valid peer ID.
+Recommended resource order:
 
-## Association and service filtering
+```cfg
+ensure sonorancad
+ensure screenshot-basic
+ensure sonoran-stationdisplay
+```
 
-SonoranCADFiveM associates each publisher with a player source and CAD unit. Station Displays joins it to the normalized unit cache for callsign, name, agency, service, status, and assigned call.
+If `screenshot-basic` is missing, the rest of Station Displays continues to operate
+and the bodycam page reports an unavailable capture dependency.
 
-* `LEO` shows police-page units.
-* `FIRE_EMS` shows fire and EMS-page units.
-* `BOTH` shows both.
+## How local capture works
 
-A feed is removed after player disconnect or when the required on-duty association disappears. Player source reuse is checked against the owning runtime record.
+SonoranCADFiveM supplies authoritative bodycam active state, player source, and CAD
+unit ownership. A nearby DUI subscribes only to the feeds visible on its mounted
+display. The Station Displays server validates distance, routing bucket, interior,
+current page, service filter, on-duty ownership, and active state.
+
+For each active subscribed officer, the server requests one client-local capture:
+
+```lua
+exports["screenshot-basic"]:requestClientScreenshot(source, {
+    encoding = "jpg",
+    quality = 0.55
+}, callback)
+```
+
+`screenshot-basic` returns the image through its built-in FXServer HTTP upload handler.
+Station Displays validates the JPEG and keeps only the latest frame. It uses a
+rate-controlled latent event to deliver that frame only to eligible subscribed
+viewers. The DUI replaces and revokes its previous Blob object URL.
+
+Several displays showing the same officer reuse the same capture. Display count never
+increases the officer's capture frequency.
+
+## Limits and expected bandwidth
+
+* Capture interval: 4 seconds (15 frames per minute maximum).
+* JPEG quality: 0.55.
+* Maximum decoded frame: 300 KB.
+* Maximum simultaneous visible feeds per viewing client: 4.
+* Subscription heartbeat/expiry: 4/8 seconds.
+* Stale frame timeout: 30 seconds.
+
+The installed `screenshot-basic` API supports encoding and quality but not resize
+options, so capture uses the officer's native game-frame dimensions and the DUI scales
+it into the tile. Frames over 300 KB are rejected. At the hard limit, one feed is
+about 75 KB/s (0.6 Mbps), and four feeds are about 300 KB/s (2.4 Mbps) per viewer,
+before protocol overhead. Measure average and maximum JPEG sizes on the graphics
+profiles used by your community.
 
 ## Layouts
 
@@ -44,76 +85,62 @@ A feed is removed after player disconnect or when the required on-duty associati
 | `GRID` | Up to four feeds in a 2-by-1 or 2-by-2 grid. |
 | `FOCUSED` | One large feed plus a narrow secondary rail. |
 
-<figure><img src="../.gitbook/assets/station-displays-bodycams-focused.webp" alt="Station Displays focused bodycam layout"><figcaption><p>Focused layout with one primary tile and a secondary rail.</p></figcaption></figure>
+Extra feeds create additional bodycam pages. These rotate independently using the
+saved bodycam interval (15 seconds by default). Page Down/Page Up moves between feed
+pages on the targeted DUI.
 
-<figure><img src="../.gitbook/assets/station-displays-bodycams-single.webp" alt="Station Displays single bodycam layout"><figcaption><p>Single layout uses the full content area for one viewer.</p></figcaption></figure>
+## Overlay and states
 
-`AUTO` selects the same single presentation for one feed and the grid presentation for
-multiple feeds. The captured multi-feed Auto state is available as
-`station-displays-bodycams-auto.webp` in the documentation assets.
-
-`maximumFeeds` accepts 1 through 4 per bodycam page. Extra feeds create additional bodycam pages. Those pages rotate independently from the mounted display's main page, using the saved bodycam interval (15 seconds by default). Page Down/Page Up moves between bodycam pages on the targeted DUI.
-
-## Overlay and feed states
-
-The overlay can show recording state, callsign, unit name, agency, unit status, assigned call, and stream signal. It deliberately omits fake battery/GPS/serial/bitrate fields, manufacturer branding, and evidentiary claims.
+The Station Displays overlay can show recording state, callsign, unit name, agency,
+status, assigned call, and capture freshness without depending on a baked-in label.
 
 | State | Meaning |
 | --- | --- |
-| `CONNECTING TO BODYCAM` | Runtime exists but peer/video playback is not ready. |
-| `LIVE` | Video is playing and frames are advancing. |
-| `SIGNAL DELAY` | No advancing frame for the delayed threshold, default 8 seconds. |
-| `FEED UNAVAILABLE` | Peer/video failed or the stall passed the unavailable threshold, default 30 seconds. |
-| `BODYCAM OFF` | Inactive associated unit, visible only when configured. |
-
-WebRTC has no periodic capture timestamp. The current UI does not render `Config.Bodycams.showTimestamp`, even though the setting is saved/normalized. The station header continues to show GTA/FiveM time. Audio is muted.
+| `CONNECTING` | Active and subscribed, but no accepted frame yet. |
+| `LIVE` | The latest accepted frame is current. |
+| `DELAYED` | Capture is late; the previous frame remains visible briefly. |
+| `CAPTURE FAILED` | Capture, validation, or decode failed. |
+| `OFFLINE` | Inactive, off duty, disconnected, or past the stale timeout. |
 
 ## Security and privacy
 
-The display accepts no feed URL, PeerJS host, CAD API key, upload token, or client-provided ICE configuration. The viewer host is pinned to Sonoran's PeerJS service; runtime peer IDs are length-limited and inactive publishers are rejected. Short-lived ICE/TURN data comes from the authenticated Sonoran runtime, not Station Displays configuration.
+The server chooses the source officer, capture interval, JPEG settings, and recipients.
+It does not trust client-submitted callsigns, agency labels, active state, viewers, or
+frame sequence. MIME, base64 form, ownership, size, freshness, and subscriptions are
+validated server-side.
 
-Mounted displays identify themselves as passive viewers. They do not set an officer's watched state or prevent the officer from switching off.
+Frames are never broadcast globally, written to `data/displays.json`, included in
+webhooks, logged, or returned by diagnostics. Diagnostics expose sizes, timing,
+sequence counters, source IDs, and subscriber counts only.
 
-Bodycam video can contain sensitive roleplay information. Restrict view ACE, display interiors, and routing buckets. Avoid placing a bodycam page on a publicly accessible screen.
-
-## Performance and viewer limits
-
-Each visible tile is a real WebRTC connection. The currently audited publisher allows four viewers per feed. Different FiveM clients and different display DUI instances cannot share one browser `MediaStream`.
-
-Use conservative render distances and feed limits. Prefer `SINGLE` when several clients can view the same bodycam. A Station Display can consume a publisher viewer slot even though it is passive.
-
-## Integration interface
-
-```lua
-exports["sonorancad"]:GetBodycamRuntime()
-```
-
-```text
-SonoranCAD::bodycam::RuntimeChanged
-```
-
-The normalized runtime includes association metadata plus `active`, `mode`, `peerId`, `streamReady`, `streamReason`, `activatedAt`, `updatedAt`, and `sequence`. Feed state is runtime-only and is never stored in `data/displays.json`.
-
-Routine feed changes and Page Up/Page Down viewing are not administrative webhook actions. Changes to a display's bodycam page configuration are audited.
+Bodycam imagery can contain sensitive roleplay information. Use intentional display
+placement, interiors, routing buckets, and short render distances. Avoid placing a
+bodycam page on a publicly accessible screen.
 
 ## Troubleshooting
 
 ### No bodycams appear
 
-Check entitlement/submodule state, `peerStream.enabled`, on-duty state, activation, service filter, enabled `BODYCAMS` page, and diagnostic runtime counts.
+Check the bodycam submodule, duty/active state, service filter, enabled `BODYCAMS`
+page, `GetBodycamRuntime()` bridge, and viewer range.
 
-### Connecting never becomes live
+### Capture dependency unavailable
 
-The publisher has not announced a ready peer stream or the viewer cannot establish it. Review the Sonoran client console for canvas renderer, PeerJS signaling, STUN/TURN, NAT, and browser playback errors.
+Start `screenshot-basic` before Station Displays and check the server console for
+`SSD-BODYCAM-001`.
 
-### Feed becomes delayed or unavailable
+### Capture failed or oversized
 
-Check player connectivity, PeerJS/TURN reachability, publisher viewer count, and browser errors. The diagnostic load-failure count records explicit peer/call/video failures.
+Use diagnostics to inspect last attempt/success, upload duration, frame size, sequence,
+subscriber count, and malformed/oversized counters. Lower the officer's game
+resolution if quality-0.55 JPEGs repeatedly exceed 300 KB.
 
-### Wrong or old officer
+### Delayed or stale
 
-Verify `GetUnitByPlayerId(source)`, duty state, and disconnect/logout events. The bridge should remove an off-duty/disconnected publisher.
+The previous frame remains briefly. Confirm the officer is initialized and not in a
+loading screen, pause menu, or screen fade. The frame is removed after 30 seconds.
 
-### Bandwidth is high
+### A viewer receives no image
 
-Reduce maximum feeds, select `SINGLE`, increase bodycam pagination time, reduce overlapping render distances, and confirm only intended clients have view access.
+Confirm render range, routing bucket, interior, the mounted display's current page,
+service filter, and visible feed page.

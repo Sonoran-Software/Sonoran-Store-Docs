@@ -69,7 +69,10 @@ sonorancad
 
 Sonoran Station Displays requires version `4.0.72` or newer and the local `GetUnitCache`, `GetCallCache`, and `GetEmergencyCache` exports. It does not require a second CAD API key.
 
-The optional Bodycams page additionally needs a package/build that exposes `GetBodycamRuntime()` and the runtime event in `PEER_STREAM` mode. The base `4.0.72` cache requirement does not guarantee that every package with that version contains the newer bodycam bridge.
+The optional Bodycams page additionally needs a package/build that exposes
+`GetBodycamRuntime()` and the runtime event, plus the standard `screenshot-basic`
+resource. The base `4.0.72` cache requirement does not guarantee that every package
+with that version contains the newer bodycam bridge.
 
 The dependency name is managed internally and must remain `sonorancad`.
 
@@ -79,10 +82,13 @@ Add:
 
 ```ini
 ensure sonorancad
+ensure screenshot-basic
 ensure sonoran-stationdisplay
 ```
 
-Start SonoranCADFiveM first. Sonoran Station Displays can remain started if CAD stops; displays change to a disconnected state and retry automatically when CAD returns.
+Start SonoranCADFiveM and `screenshot-basic` first. Sonoran Station Displays can remain
+started if either stops; normal boards recover with CAD, while bodycam imagery reports
+the missing capture dependency and recovers when it returns.
 
 The current preconfigured SonoranCADFiveM bundle may instruct you to use `exec @sonorancad/sonorancad.cfg` instead of manually ensuring its resources. In that installation, place the `exec` line before `ensure sonoran-stationdisplay`; the required core resource must still start as `sonorancad`.
 
@@ -93,15 +99,19 @@ Do not add `ensure radio_fivem` for this product unless your server separately u
 For an administrator group:
 
 ```ini
-add_ace group.admin sonoran.display.view allow
-add_ace group.admin sonoran.display.place allow
-add_ace group.admin sonoran.display.edit allow
-add_ace group.admin sonoran.display.delete allow
-add_ace group.admin sonoran.display.diagnostics allow
-add_ace group.admin sonoran.display.webhook.test allow
+add_ace group.admin sonoran.stationdisplay.menu allow
+add_ace group.admin sonoran.stationdisplay.place allow
+add_ace group.admin sonoran.stationdisplay.edit allow
+add_ace group.admin sonoran.stationdisplay.delete allow
+add_ace group.admin sonoran.stationdisplay.diagnostics allow
+add_ace group.admin sonoran.stationdisplay.refresh allow
+add_ace group.admin sonoran.stationdisplay.webhook.test allow
 ```
 
-Grant `sonoran.display.view` to each group that should receive display configuration and CAD cache data. See [Permissions](permissions.md) for least-privilege examples and custom permission mode.
+Viewing displays does not require an ACE. Grant `sonoran.stationdisplay.menu` to each
+group that should open the administrative menu, then grant only the required action
+ACEs. See [Permissions](permissions.md) for least-privilege examples and custom
+permission mode.
 
 ## 6. Review configuration
 

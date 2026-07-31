@@ -105,7 +105,7 @@ GTA/FiveM in-game time.
 Grant:
 
 ```ini
-add_ace group.admin sonoran.display.webhook.test allow
+add_ace group.admin sonoran.stationdisplay.webhook.test allow
 ```
 
 Open **Mounted Displays > View Diagnostics > Test Admin Webhook**. The server validates
@@ -167,6 +167,6 @@ Check `includeIdentifiers` and whether the player has the relevant identifier co
 
 ### Webhook test option is unavailable
 
-Grant `sonoran.display.webhook.test`, then reconnect or restart the resource.
+Grant `sonoran.stationdisplay.webhook.test`, then reconnect or restart the resource.
 
 The explicit test has a 60-second cooldown.

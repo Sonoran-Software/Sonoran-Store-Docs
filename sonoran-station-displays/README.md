@@ -25,7 +25,7 @@ Each nearby display uses FiveM's direct-rendered browser interface (DUI). Object
 * Nearby viewer controls for synchronized page changes and temporary map panning
 * Unit grouping and natural sorting, automatic list pagination, and configurable row limits
 * A bundled, calibrated GTA V satellite map with unit, call, and station markers
-* Live Sonoran bodycam viewing through the installed SonoranCADFiveM PeerJS/WebRTC runtime
+* Periodic local Sonoran bodycam imagery captured through `screenshot-basic`
 * GTA/FiveM in-game clock and estimated weather in the display header
 * In-game placement, movement, rotation, editing, preview, refresh, and deletion
 * Server-side ACE or custom permissions, validation, rate limiting, and JSON persistence
@@ -34,11 +34,16 @@ Each nearby display uses FiveM's direct-rendered browser interface (DUI). Object
 
 ## Data flow
 
-The server reads the local `sonorancad` cache exports, normalizes one shared unit cache plus separate emergency and dispatch call caches, and sends full or incremental state only to players with view permission. Each client filters that state for its nearby displays.
+The server reads the local `sonorancad` cache exports, normalizes one shared unit cache
+plus separate emergency and dispatch call caches, and sends sanitized full or
+incremental state to players. Each client filters that state for its nearby displays.
 
 SonoranCADFiveM determines whether a unit is on duty. A connected player is not automatically an active unit. The CAD `unit.data.page` value supplies the service category; agency and subdivision labels come from the cached unit.
 
-Bodycams use a separate runtime interface supplied by a compatible SonoranCADFiveM bodycam build. Station Displays is a passive WebRTC viewer. It does not activate a bodycam, create a second capture loop, upload evidence, or accept arbitrary stream URLs.
+Bodycams use SonoranCADFiveM for authoritative identity and active state. Station
+Displays requests one compressed local image from an officer only while an eligible
+nearby display viewer is subscribed. It does not activate bodycams, upload evidence,
+retrieve hosted images, or use the previous TURN/remote-relay path.
 
 See [SonoranCADFiveM Integration](sonorancad-integration.md).
 
@@ -60,7 +65,8 @@ The management and placement flow was adapted from Sonoran's `radio_fivem` menu 
 | --- | --- | --- |
 | Current FXServer with OneSync | Runtime | Server-side position and routing-bucket validation depends on OneSync behavior. No artifact build number is enforced. |
 | SonoranCADFiveM `4.0.72` or newer | Required | Supplies the unit, dispatch-call, and emergency-call cache exports. The resource must be named `sonorancad`. |
-| Compatible Sonoran bodycam runtime | Bodycams only | Must supply `GetBodycamRuntime()` and `SonoranCAD::bodycam::RuntimeChanged` in `PEER_STREAM` mode. See [Bodycams](bodycams.md). |
+| Compatible Sonoran bodycam runtime | Bodycams only | Must supply `GetBodycamRuntime()` and `SonoranCAD::bodycam::RuntimeChanged`. |
+| `screenshot-basic` | Bodycams only | Captures the officer's local JPEG and returns it through its built-in FXServer HTTP handler. |
 | FiveM Asset Escrow entitlement | Distribution | The paid resource is delivered through the CFX portal after Tebex purchase. |
 | Framework, SQL database, Node.js, or `radio_fivem` | Not required | The resource is standalone and ships production web files. |
 
@@ -80,7 +86,7 @@ Custom models require tested local screen geometry. GTA named render targets and
 * `FOLLOW_UNITS` currently uses the same unit-based viewport calculation as `AUTO_FIT`.
 * Stale unit state affects map marker styling, but the Active Units table has no separate stale badge.
 * The management menu does not expose a routing-bucket field. Saved or externally provisioned bucket values are honored.
-* Bodycam tiles consume real WebRTC viewer connections and may expose sensitive roleplay information.
+* Bodycam tiles consume periodic image bandwidth and may expose sensitive roleplay information.
 * Model geometry and placement must be verified in the server's own interiors and map build.
 
 ## Documentation

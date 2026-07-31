@@ -14,11 +14,11 @@ description: Place, configure, move, preview, refresh, and delete mounted Statio
 
 Run `/stationdisplay`, or the command configured by `Config.AdminCommand`.
 
-The self-contained WarMenu is adapted from Sonoran's `radio_fivem` placement patterns. It does not call radio exports or require the radio resource.
+The self-contained WarMenu is adapted from Sonoran's `radio_fivem` placement patterns. It does not call radio exports or require the radio resource. While the server supplies the latest permission and display snapshots, the menu shows a non-actionable **Loading Station Displays...** state. The compact blue header, highlighted selection, descriptions, and control hints then remain consistent throughout every submenu.
 
 ## Place a display
 
-1. Open **Mounted Displays > Place New Display**.
+1. Open **Mounted Displays > Place Display**.
 2. Enter a name and choose an allowed model.
 3. Choose `LEO`, `Fire/EMS`, or `Both`.
 4. Enable at least one page, select the default, and arrange the page order.
@@ -54,9 +54,9 @@ New displays save the current interior when applicable. The menu does not assign
 
 ## View and edit nearby displays
 
-Open **Mounted Displays > View Nearby Displays**. Results inside `Config.MenuNearbyDistance` (15 meters by default) are ordered by distance and filtered for the current interior/routing context.
+Open **Mounted Displays > Nearby Displays**. Results inside `Config.MenuNearbyDistance` (15 meters by default) are ordered by distance and filtered for the current interior/routing context.
 
-**Edit Display** can change:
+**Configure Display** can change:
 
 * Name and service
 * Theme
@@ -72,17 +72,17 @@ The shipped menu cannot change a display model after creation. Replace the displ
 
 ## Move a display
 
-Choose **Move Display**. The existing object is hidden while its translucent preview is moved. Confirming persists the new transform; cancelling restores the original object. The server rechecks edit permission, proximity, and world context.
+Choose **Reposition Display**. The existing object is hidden while its translucent preview is moved. Confirming persists the new transform; cancelling restores the original object. The server rechecks edit permission, proximity, and world context.
 
 ## Preview and refresh
 
 **Preview Display** keeps the local renderer active for 10 seconds, switches it to its default page, and places a temporary blue marker at the display.
 
-**Force-Refresh Display**:
+**Force Refresh**:
 
-* Requires the configured `forceRefresh` permission (the default ACE is the edit node)
+* Requires the configured refresh permission (`sonoran.stationdisplay.refresh` by default)
 * Requests a full shared cache snapshot for the player
-* Tells authorized clients rendering that display to resend its DUI state
+* Tells clients rendering that display to resend its DUI state
 
 It does not force SonoranCADFiveM to rebuild its caches.
 
@@ -96,7 +96,10 @@ Target selection considers distance, view angle, and the display surface, then c
 | Live Map | Numpad 8/2/4/6, Numpad 5 | Temporary synchronized pan and reset |
 | Bodycams | Page Down / Page Up | Next / previous bodycam feed page |
 
-The default interaction distance is 2.5 meters and can be saved per display. Page changes are validated by the server, broadcast to authorized viewers, and hold automatic rotation for 10 seconds by default. They are runtime-only and do not change the saved default page.
+The default interaction distance is 2.5 meters and can be saved per display. Page
+changes are validated by the server, broadcast to clients, and hold automatic rotation
+for 10 seconds by default. They are runtime-only and do not change the saved default
+page.
 
 Map panning is also runtime-only and synchronized. Bodycam subpage navigation is local to the targeted DUI. FiveM key settings can rebind every registered command.
 

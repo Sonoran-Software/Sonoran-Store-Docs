@@ -29,7 +29,11 @@ exports["sonorancad"]:GetEmergencyCache()
 
 `GetUnitByPlayerId` associates a cached CAD unit with a connected server player when possible. Player connection alone does not create an on-duty unit.
 
-The optional Bodycams page also calls `GetBodycamRuntime()` and observes `SonoranCAD::bodycam::RuntimeChanged`. This newer bridge is an additional capability check, not part of the claim that the base cache interface starts at `4.0.72`. Diagnostics report whether it is detected and whether it can supply `PEER_STREAM` video.
+The optional Bodycams page also calls `GetBodycamRuntime()` and observes
+`SonoranCAD::bodycam::RuntimeChanged`. This bridge supplies authoritative active state
+and player/unit ownership. Station Displays obtains imagery locally through
+`screenshot-basic`; the bridge does not supply a peer, TURN configuration, relay URL,
+or hosted image.
 
 ## Unit classification
 
@@ -126,7 +130,9 @@ SonoranCAD::pushevents:UnitDetach
 
 An event requests an early refresh. The server also polls units every 2 seconds and calls every 3 seconds by default to catch coordinate changes and older CAD behavior. One shared normalized cache and incremental client deltas are used regardless of display count.
 
-Bodycam runtime updates are event-driven with a 1-second polling fallback. They are not merged into either call cache and do not start a Station Displays capture loop.
+Bodycam runtime updates are event-driven with a 1-second polling fallback. They are not
+merged into either call cache. A single 4-second capture loop runs only for active
+feeds with eligible subscribers.
 
 ## CAD restart and unavailable cache
 

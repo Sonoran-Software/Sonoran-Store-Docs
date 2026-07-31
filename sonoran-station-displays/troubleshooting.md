@@ -178,28 +178,28 @@ upstream world coordinates. Do not tune bounds to compensate for one malformed r
 
 ## Bodycams do not appear
 
-**Likely cause:** The installed CAD package lacks the bodycam bridge, the runtime is not
-in `PEER_STREAM` mode, bodycams/peer streaming are disabled, the unit is off duty, or
-the display filter/page excludes it.
+**Likely cause:** The installed CAD package lacks the bodycam state bridge,
+`screenshot-basic` is not started, the bodycam is disabled/off duty, or the display
+filter/page excludes it.
 
 **Verify:** Open [Diagnostics](diagnostics.md) and check bodycam detected, available,
-mode, active, ready, and waiting counts.
+mode, active sources, capture dependency, and subscription counts.
 
-**Corrective action:** Install a compatible SonoranCADFiveM bodycam package, enable the
-submodule and peer stream, put the unit on duty, activate the bodycam, and enable the
+**Corrective action:** Install a compatible SonoranCADFiveM bodycam package, start
+`screenshot-basic`, put the unit on duty, activate the bodycam, and enable the
 `BODYCAMS` page.
 
 ## Bodycam stays connecting or unavailable
 
-**Likely cause:** Publisher readiness, PeerJS/STUN/TURN/NAT failure, autoplay/video
-failure, or the publisher's four-viewer limit.
+**Likely cause:** The officer is loading/paused/faded, local capture failed, the JPEG
+exceeded 300 KB, or the viewer subscription is out of range/ineligible.
 
-**Verify:** Review the officer's client console, viewer client F8, diagnostic load
-failures, and existing viewers.
+**Verify:** Review last attempt/success, upload duration, frame size, failure reason,
+source client, subscriber count, and malformed/oversized counters.
 
-**Corrective action:** Restore signaling/TURN reachability, close unintended viewers,
-reduce display feed counts, and shorten overlapping render distances. Station Displays
-does not create fallback screenshot captures.
+**Corrective action:** Restore `screenshot-basic`, let the officer finish loading,
+reduce game resolution if frames exceed the limit, and verify range, routing bucket,
+interior, current bodycam page, and service filter.
 
 ## Display is visible but frozen
 
@@ -218,7 +218,7 @@ does not create fallback screenshot captures.
 
 ## Menu does not open
 
-**Likely cause:** Missing `sonoran.display.view`, changed command name, placement already active, or a client error.
+**Likely cause:** Missing `sonoran.stationdisplay.menu`, changed command name, placement already active, or a client error.
 
 **Verify:**
 
@@ -227,7 +227,8 @@ does not create fallback screenshot captures.
 * Check ACE inheritance with the server's ACE tools/config.
 * Check client F8.
 
-**Corrective action:** Grant `view`, finish/cancel placement, or fix the reported client error.
+**Corrective action:** Grant `sonoran.stationdisplay.menu`, finish/cancel placement, or
+fix the reported client error.
 
 **Relevant logs:** Permission-denied notification and F8 errors. No radio resource is required.
 
@@ -243,8 +244,8 @@ the action.
 **Corrective action:** Grant the exact node, review inherited deny rules, and reconnect
 or refresh the menu snapshot. Do not treat a visible item as authorization.
 
-**Relevant permission:** Place, edit/force-refresh, delete, diagnostics, and webhook test
-are independent server checks.
+**Relevant permission:** Menu, place, edit, refresh, delete, diagnostics, and webhook
+test are independent server checks.
 
 ## Cannot place or edit a display
 
@@ -263,14 +264,14 @@ are independent server checks.
 
 ## Display saves but does not update live
 
-**Likely cause:** Persistence succeeded but the authorized-client broadcast failed, the
-viewer lost permission, or its DUI is unavailable.
+**Likely cause:** Persistence succeeded but the client broadcast failed, the viewer lost
+connectivity or world scope, or its DUI is unavailable.
 
 **Verify:** Look for `CLIENT_BROADCAST_FAILED`, compare the persistence audit ID, run
 `stationdisplay_serverdiag`, and inspect Active DUIs/client F8.
 
-**Corrective action:** Restore view permission and client connectivity, use
-**Force-Refresh Display**, or run **Full Display Resync** with diagnostics permission.
+**Corrective action:** Restore client connectivity and world scope, use **Force-Refresh
+Display**, or run **Full Display Resync** with diagnostics permission.
 Do not replace a valid persistence file for a broadcast-only failure.
 
 ## Default JSON is not initialized
@@ -355,14 +356,14 @@ server runtime snapshot rather than always starting from the saved default.
 
 **Likely cause:** No applicable action, outside the display's saved interaction
 distance, poor view angle, failed line of sight, wrong interior/bucket, unavailable DUI,
-disabled page interaction, or missing view permission.
+or disabled page interaction.
 
 **Verify:** Stand within 2.5 meters by default, face the screen, and test a display with
 multiple pages or Live Map/Bodycams controls.
 
-**Corrective action:** Restore view ACE, correct the display's interaction distance and
-world context, enable `Config.PageInteraction`, and remove geometry blocking line of
-sight. A one-page display intentionally hides the prompt only when its current page has
+**Corrective action:** Correct the display's interaction distance and world context,
+enable `Config.PageInteraction`, and remove geometry blocking line of sight. A one-page
+display intentionally hides the prompt only when its current page has
 no map/bodycam action.
 
 ## The wrong nearby display changes page
@@ -402,15 +403,15 @@ to 16:9. Do not project markers across the letterboxed bands.
 
 ## Bodycam feed is delayed or fails to load
 
-**Likely cause:** No advancing WebRTC frame, signaling/TURN failure, browser playback
-error, publisher disconnect, or viewer-limit exhaustion.
+**Likely cause:** Local capture or decode failed, the frame was oversized, the officer
+paused/loaded/disconnected, or the subscription expired.
 
-**Verify:** Watch `SIGNAL DELAY` (default 8 seconds) versus `FEED UNAVAILABLE` (default
-30 seconds), check client logs, and inspect the bodycam diagnostic failure count.
+**Verify:** Watch `DELAYED` versus `CAPTURE FAILED`/`OFFLINE`, check client logs, and
+inspect capture timing, frame size, subscriber, malformed, oversized, and stale
+counters.
 
-**Corrective action:** Restore publisher/network readiness, reduce duplicate viewers and
-feed counts, and re-enter render range. There is no fallback periodic image loader or
-capture timestamp to repair.
+**Corrective action:** Restore local capture readiness, reduce feed count, and
+re-enter render range. The last frame remains briefly and is removed after 30 seconds.
 
 ## Administrative webhook does not arrive
 
@@ -418,7 +419,7 @@ capture timestamp to repair.
 rate/test cooldown, or a queue retry in progress.
 
 **Verify:** Run the in-menu webhook test with
-`sonoran.display.webhook.test`, retain its audit ID, and inspect the server response log.
+`sonoran.stationdisplay.webhook.test`, retain its audit ID, and inspect the server response log.
 
 **Corrective action:** Regenerate invalid credentials, restore outbound HTTPS, and allow
 429/5xx retries. The administrative action can still succeed because delivery is

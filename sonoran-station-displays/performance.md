@@ -113,18 +113,19 @@ The map redraws its canvas when state changes and projects every visible marker.
 
 ## Bodycam cost
 
-Bodycam tiles are materially more expensive than unit/call pages because every visible
-tile opens a WebRTC viewer connection and decodes a live stream. Separate clients and
-separate DUI instances cannot share one browser `MediaStream`.
+Bodycam tiles are materially more expensive than unit/call pages because they decode
+periodic JPEGs. One active subscribed officer captures at most once every 4 seconds,
+and all eligible displays reuse that same latest frame.
 
-The currently audited publisher permits four viewers per feed. Count officers' normal
-viewers and mounted displays together. In busy areas:
+Frames are capped at 300 KB. At the hard limit, one feed averages about 75 KB/s and
+four feeds about 300 KB/s per viewer before overhead. In busy areas:
 
 * Prefer `SINGLE` or a lower per-page feed limit.
 * Keep bodycam displays behind short, intentional render distances.
-* Avoid several displays showing the same feeds to the same audience.
-* Restrict view permission to the intended group.
+* Avoid several overlapping displays when one screen serves the audience.
+* Place bodycam displays only where the intended audience can approach them.
 * Increase bodycam pagination time rather than raising the four-feed ceiling.
+* Use diagnostics to measure average/max frame size and upload duration.
 
 ## Routing buckets and interiors
 
@@ -156,7 +157,10 @@ Before deployment, test:
 * Routing buckets and interiors
 * Long labels and maximum row counts
 * Auto-fit, fixed-region, and follow-units maps
-* Bodycam single/grid/focused layouts, viewer limits, delayed/unavailable states, and cleanup
+* Bodycam single/grid/focused layouts, activation, subscription limits,
+  connecting/live/delayed/failed/offline states, and cleanup
+* One/four bodycams, two displays sharing a feed, two viewers, missing
+  `screenshot-basic`, malformed/oversized frames, restarts, and bandwidth
 * The server's representative client hardware and map assets
 
 The source repository's static checks cannot verify native DUI orientation, model offsets, OneSync contexts, or client performance inside FiveM.

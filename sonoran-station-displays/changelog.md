@@ -19,7 +19,7 @@ description: Sonoran Station Displays release history, behavioral changes, and k
 * Synchronized nearby page changes, temporary map panning, and rebindable controls
 * Ordered page rotation, unit grouping/sorting, and list/bodycam pagination
 * Bundled calibrated satellite map with unit, call, station, stale, bounds, and debug behavior
-* Passive PeerJS/WebRTC bodycam viewing through a compatible SonoranCADFiveM runtime
+* Subscription-scoped local JPEG bodycam capture through `screenshot-basic`
 * GTA/FiveM in-game clock and estimated weather header
 * Self-contained display management, preview, placement, movement, and diagnostics
 * ACE/custom permissions, server validation, event limits, and verified JSON persistence
@@ -30,15 +30,17 @@ description: Sonoran Station Displays release history, behavioral changes, and k
 ### Security and privacy
 
 * Player mutations are revalidated server-side for permission, proximity, routing bucket, model, enum, range, string, page, and cooldown constraints.
-* CAD/display state is sent only to authorized viewers.
+* CAD/display state is sanitized and synchronized for nearby display rendering.
 * Caller information is disabled by default and is not rendered by the current call card.
-* Bodycam viewer hosts are pinned to Sonoran's PeerJS service; arbitrary client stream URLs are rejected.
+* Bodycam source ownership, display eligibility, MIME/base64 form, size, cadence, and
+  recipients are validated server-side; arbitrary stream URLs are not accepted.
 * Administrative webhook URLs remain server-only and mentions are disabled.
 
 ### Known limitations
 
 * Active-unit rows do not display a dedicated stale badge.
-* `VisibleCallFields.status`, independent postal visibility, caller display, and bodycam `showTimestamp` are configured/normalized but not rendered by the current UI.
+* `VisibleCallFields.status`, independent postal visibility, and caller display are
+  configured/normalized but not rendered by the current UI.
 * `Config.MapRefreshInterval` is not consumed by the current renderer.
 * `FOLLOW_UNITS` and `AUTO_FIT` can produce the same viewport for ordinary unit datasets.
 * Runtime pause/resume exists internally but has no supported customer command or menu control.
@@ -47,4 +49,7 @@ description: Sonoran Station Displays release history, behavioral changes, and k
 
 ### Documentation
 
-The July 28 final pass reconciled customer documentation against Station Displays, SonoranCADFiveM, `radio_fivem`, shared store-resource conventions, and the live renderer. It replaces earlier descriptions of a coordinate grid, local-only page interaction, 3-meter targeting, four pages, or screenshot-based bodycams.
+The July 28 final pass reconciled customer documentation against Station Displays,
+SonoranCADFiveM, `radio_fivem`, shared store-resource conventions, and the live
+renderer. Bodycam imagery now uses local periodic capture and no longer depends on the
+previous TURN/remote-relay viewing path.

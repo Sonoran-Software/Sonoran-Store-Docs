@@ -42,6 +42,13 @@ The bodycam viewer can report:
 
 The client acknowledges the callback and increments its diagnostic load-failure counter for `unavailable`. It does not trust the callback to change server runtime state.
 
+### `bodycamSubscriptions`
+
+The visible bodycam DUI sends its mounted display ID and up to four visible unit IDs.
+The server validates permission, range, routing bucket, current page, service filter,
+active state, and unit ownership. A 4-second heartbeat keeps the subscription alive;
+it expires after 8 seconds.
+
 ## Lua to browser
 
 ### `DISPLAY_STATE_UPDATE`
@@ -71,7 +78,10 @@ This is the primary state message:
     "bodycamIntegration": {
       "available": true,
       "enabled": true,
-      "mode": "PEER_STREAM"
+      "mode": "LOCAL_CAPTURE",
+      "captureIntervalMs": 4000,
+      "maximumVisibleFeeds": 4,
+      "maximumFrameBytes": 307200
     },
     "bodycamPresentation": {
       "delayedAfterSeconds": 8,
@@ -126,7 +136,37 @@ Important unit fields include ID, callsign, name, status/status code, service, a
 
 Important call fields include ID, kind, title/code, priority/status, address/postal, description, assigned IDs/callsigns, optional emergency caller, coordinates, timestamps, and classified service.
 
-A bodycam feed includes the joined unit metadata plus a nested runtime record with active/mode/peer/stream readiness, reason, activation/update values, and sequence. The peer ID is not an arbitrary URL.
+A bodycam feed includes joined server-known unit metadata plus active/mode,
+activation/update values, and state sequence. It contains no peer, URL, credential, or
+image payload.
+
+### `BODYCAM_FRAME`
+
+The server sends a subscribed viewer's client a validated JPEG with a rate-controlled
+latent event. Lua forwards it only to subscribed bodycam DUIs:
+
+```json
+{
+  "action": "BODYCAM_FRAME",
+  "payload": {
+    "unitId": "unit-id",
+    "sequence": 42,
+    "mimeType": "image/jpeg",
+    "image": "data:image/jpeg;base64,...",
+    "receivedAt": 1785200000,
+    "byteLength": 82413
+  }
+}
+```
+
+The browser converts it to a Blob object URL and revokes the previous URL. Frame
+contents are not included in state snapshots or diagnostics.
+
+### `BODYCAM_STATUS`
+
+Small status messages report `CAPTURE_FAILED` or `OFFLINE` without image data. The
+browser retains a prior frame briefly for delayed/failure presentation and removes it
+at the stale timeout.
 
 ### `GAME_TIME_UPDATE`
 
