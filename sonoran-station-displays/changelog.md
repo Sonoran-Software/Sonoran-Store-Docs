@@ -1,7 +1,7 @@
 ---
 title: Changelog
 published: true
-date: 2026-07-28T00:00:00.000Z
+date: 2026-08-01T00:00:00.000Z
 tags: [changelog, release notes]
 editor: markdown
 dateCreated: 2026-07-28T00:00:00.000Z
@@ -9,6 +9,13 @@ description: Sonoran Station Displays release history, behavioral changes, and k
 ---
 
 # Changelog
+
+## 1.0.1 - August 1, 2026
+
+### Fixed
+
+* Fixed false persistence failures on FXServer builds that return stale file data after a filesystem fallback write. Successful display changes are now verified directly from disk so they remain saved after restart.
+* Fixed mounted displays not appearing inside custom MLO interiors.
 
 ## 1.0.0 release candidate - July 28, 2026
 
