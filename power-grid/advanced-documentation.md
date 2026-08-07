@@ -26,7 +26,7 @@ AddEventHandler("SonoranScripts::PowerGrid::RegisterNewDevice", function(coords,
 end)
 ```
 
-Below is an example of how registration is done within our [Traffic Camera](../speed-camera/) Script:
+Below is an example of how registration is done within our [Traffic Camera](../speed-camera/README.md) Script:
 
 ```lua
 AddEventHandler("SonoranScripts::PowerGrid::RegisterNewDevice", function(coords, entityID, requestID)

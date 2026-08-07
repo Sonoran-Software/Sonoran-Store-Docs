@@ -17,8 +17,8 @@ dateCreated: 2022-04-21T21:22:21.450Z
 
 <summary>Links to Commands</summary>
 
-* [Shot Spotter](../shot-spotter/#commands)&#x20;
-* [Traffic Cameras](../speed-camera/#commands)
+* [Shot Spotter](../shot-spotter/README.md#commands)&#x20;
+* [Traffic Cameras](../speed-camera/README.md#commands)
 
 </details>
 
