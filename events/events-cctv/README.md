@@ -10,9 +10,9 @@ description: Operate server-authoritative CCTV terminals, cameras, live view, mo
 
 # Events CCTV
 
-`eventsCctv` is the CCTV product layer over `eventsCore`. It owns terminals,
-logical camera definitions, placement, live viewing, motion/bookmark intent,
-permissions, persistence, and the operator interface.
+`eventsCctv` is a separately entitled paid DLC that requires the free `eventsCore`
+package. It owns terminals, logical camera definitions, placement, live viewing,
+motion/bookmark intent, permissions, persistence, and the operator interface.
 
 It does not own recording buffers, finalized timelines, reconstruction, video
 files, uploads, retention cleanup, CAD, or Discord queues. Those remain core-owned.

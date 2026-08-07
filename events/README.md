@@ -10,13 +10,15 @@ description: The Events suite for structured CCTV and vehicle evidence capture, 
 
 # Events
 
-Events is a three-resource FiveM suite for server-authoritative evidence workflows:
+Events is a three-resource FiveM suite for server-authoritative evidence workflows.
+The free `eventsCore` package is the required foundation. CCTV is a separately
+entitled paid DLC, while other DLC products use the same public core contracts.
 
-| Resource | Version | Role | Dependency |
-| --- | --- | --- | --- |
-| `eventsCore` | `1.0.0` | Provider-neutral capture, sessions, replay, processing, storage, retention, and integrations | None in the suite |
-| `eventsCctv` | `1.0.0` | CCTV terminals, cameras, live view, motion, and camera administration | `eventsCore` |
-| `eventsDashcam` | `1.0.0` | Moving vehicle camera, trigger markers, evidence review, and six replay views | `eventsCore` |
+| Resource | Version | Delivery | Role | Dependency |
+| --- | --- | --- | --- | --- |
+| `eventsCore` | `1.0.0` | Free foundation package | Provider-neutral capture, sessions, replay, processing, storage, retention, and integrations | None in the suite |
+| `eventsCctv` | `1.0.0` | Paid DLC | CCTV terminals, cameras, live view, motion, and camera administration | `eventsCore` |
+| `eventsDashcam` | `1.0.0` | Separate DLC; not part of the CCTV drop | Moving vehicle camera, trigger markers, evidence review, and six replay views | `eventsCore` |
 
 The resources have a one-way ownership boundary. CCTV and Dashcam provide product
 behavior and trigger intent; `eventsCore` owns the recording lifecycle and shared
@@ -58,9 +60,9 @@ worker are optional integrations.
 
 ## Distribution and support
 
-Events is delivered through the official Sonoran Store/Tebex and Cfx.re flow. The
-current product listing determines entitlement and availability; this documentation
-does not make a separate pricing or plan claim. Do not decrypt, modify, or
-redistribute protected runtime files.
+Events is delivered through the official Sonoran Store/Tebex and Cfx.re flow.
+Install the free Events Core package before any separately entitled paid DLC.
+The current product listing determines the DLC price and availability. Do not
+decrypt, modify, or redistribute protected runtime files.
 
 For help, use [Sonoran Software support](https://support.sonoransoftware.com/).

@@ -20,10 +20,11 @@ storage integration.
 Events is standalone by default. ESX, QBCore, Qbox, and optional integration
 resources can be configured after the base installation.
 
-## 1. Download the granted package
+## 1. Download the granted packages
 
-Download the current Events asset from the official delivery flow associated with
-the purchasing CFX/Tebex account. Extract it before copying it to the server.
+Download the free Events Core package and each separately entitled paid DLC from
+the official delivery flow associated with the CFX/Tebex account. Extract each
+asset before copying it to the server.
 
 Do not decrypt or edit protected Asset Escrow files. Customer configuration,
 server-only integration settings, persistence data, and documentation are the

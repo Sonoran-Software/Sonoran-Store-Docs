@@ -10,8 +10,8 @@ description: Configure the provider-neutral recording, replay, storage, and inte
 
 # Events Core
 
-`eventsCore` is the required foundation for the Events DLC resources. It owns the
-shared lifecycle:
+`eventsCore` is the free required foundation package for the Events DLC resources.
+It owns the shared lifecycle:
 
 * provider and camera registration;
 * rolling state buffers and event sessions;
