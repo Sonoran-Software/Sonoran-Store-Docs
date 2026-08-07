@@ -23,7 +23,7 @@ CCTV ships with conservative defaults and does not require a roleplay framework.
 | eventsCore/config/config.lua | Framework context, recording limits, pre-event and post-event timing, replay limits, and retention |
 | eventsCore/config/storage.lua | Local storage limits and optional allowed playback hosts |
 | eventsCore/config/permissions.lua | Permission behavior and trusted helper resources |
-| eventsCore/config/integrations.lua | Optional CAD and Discord settings |
+| eventsCore/config/integrations.lua | Optional Discord settings |
 
 ### CCTV
 
@@ -71,7 +71,7 @@ Measure available disk space and establish a backup policy before increasing ret
 
 ## Optional integrations
 
-CAD, Discord, remote viewing, external storage, and recording uploads are optional and disabled or restricted by default. Enable one integration at a time on a test server, keep credentials server-side, and grant only the required permissions.
+Discord, remote viewing, external storage, and recording uploads are optional and disabled or restricted by default. Enable one integration at a time on a test server, keep credentials server-side, and grant only the required permissions.
 
 ## Map and MLO cameras
 
