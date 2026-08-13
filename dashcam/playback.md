@@ -86,4 +86,4 @@ Changing a record's classification applies that classification's configured rete
 
 Record metadata is stored under eventsCore/data/recordings by default. Back up evidence securely before updates or storage changes.
 
-<!-- PROMO PLACEHOLDER: Add .gitbook/assets/dashcam-evidence-custody.webp here. Recommended shot: notes, classification, lock, archive, and retention controls on a selected record. -->
+<figure><img src="../.gitbook/assets/dashcam-evidence-custody.webp" alt="Dashcam evidence custody controls for lock, archive, retention, and deletion"><figcaption><p>Authorized evidence custodians can protect, archive, retain, or delete records from the same review terminal.</p></figcaption></figure>

@@ -75,4 +75,4 @@ CAD, Discord, dispatch, phone, inventory, voice metadata, and generated clips re
 
 Dashcam's standard historic replay works without an encoded video file. Any separate video-generation or upload workflow requires a compatible, trusted recorder or processing setup in Events Core.
 
-<!-- PROMO PLACEHOLDER: Add .gitbook/assets/dashcam-terminal.webp here. Recommended shot: populated Mobile Evidence terminal showing search, classifications, replay timeline, and evidence details. -->
+<figure><img src="../.gitbook/assets/dashcam-terminal.webp" alt="Dashcam Mobile Evidence terminal showing recordings, search, filters, and evidence details"><figcaption><p>The Mobile Evidence terminal keeps recording controls, searchable evidence, replay, and record details in one interface.</p></figcaption></figure>

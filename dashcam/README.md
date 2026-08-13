@@ -30,7 +30,7 @@ Operators can:
 * See recording status, department, speed, and coordinates in the in-game overlay
 * Search finalized evidence by recording, vehicle, plate, department, incident, case, citation, or arrest-report information
 
-<!-- PROMO PLACEHOLDER: Add .gitbook/assets/dashcam-recording-overlay.webp here. Recommended shot: compact recording overlay during a traffic stop. -->
+<figure><img src="../.gitbook/assets/dashcam-recording-overlay.webp" alt="Dashcam active recording status overlay"><figcaption><p>The compact overlay keeps the recording ID, department, speed, location, and timezone visible while the terminal is closed.</p></figcaption></figure>
 
 ## Review from six viewpoints
 
@@ -38,7 +38,7 @@ Each vehicle recording can be reviewed from front, rear, cabin, prisoner, left, 
 
 Dashcam replay reconstructs the recorded incident inside FiveM. It is not a conventional video file by default, so historic review does not depend on someone watching or streaming the camera live when the incident occurs.
 
-<!-- PROMO PLACEHOLDER: Add .gitbook/assets/dashcam-six-view-replay.webp here. Recommended shot: the evidence terminal with the six replay view buttons and an active timeline. -->
+<figure><img src="../.gitbook/assets/dashcam-six-view-replay.webp" alt="Dashcam Mobile Evidence terminal with an active structured replay"><figcaption><p>Review the recorded timeline and switch among all six vehicle-mounted viewpoints.</p></figcaption></figure>
 
 ## Manage evidence access
 

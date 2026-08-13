@@ -69,4 +69,4 @@ The speed threshold uses metres per second regardless of the speed unit displaye
 
 Dashcam preserves the gameplay state needed to reconstruct relevant players, vehicles, peds, objects, projectiles, explosions, weapon events, damage events, movement, environment, and evidence markers around the vehicle. The default product records voice and radio activity as event metadata only; it does not capture native voice audio.
 
-<!-- PROMO PLACEHOLDER: Add .gitbook/assets/dashcam-trigger-timeline.webp here. Recommended shot: replay timeline with collision, lights, and manual markers visible. -->
+<figure><img src="../.gitbook/assets/dashcam-trigger-timeline.webp" alt="Dashcam replay timeline with event markers and six view controls"><figcaption><p>Event markers remain visible on the replay timeline alongside playback and viewpoint controls.</p></figcaption></figure>
