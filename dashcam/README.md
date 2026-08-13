@@ -12,7 +12,7 @@ description: Capture vehicle incidents automatically and review them later from 
 
 Dashcam gives emergency and fleet vehicles a complete mobile-evidence workflow. It can preserve activity before and after an incident, start from manual or automatic triggers, and let authorized staff return later to review what happened from six vehicle-mounted viewpoints.
 
-<!-- PROMO PLACEHOLDER: Add .gitbook/assets/dashcam-hero.webp here. Recommended shot: marked patrol vehicle at night with the recording overlay and Mobile Evidence terminal visible. -->
+<figure><img src="../.gitbook/assets/dashcam-hero.webp" alt="Events Dashcam incident replay and mobile evidence overview"><figcaption><p>Record the real vehicle perspective, then reconstruct and replay the incident later.</p></figcaption></figure>
 
 {% hint style="info" %}
 **Dashcam is a paid DLC for the free Events Core package.** Install Events Core once to provide the shared recording, replay, storage, and event logic required by Dashcam and other Events products. Events Core does not add a separate gameplay interface by itself.
@@ -57,13 +57,11 @@ ACE permissions and optional framework job grades control who can record, review
 | Requirement | Details |
 | --- | --- |
 | Events Core | Free required package: [download Events Core](https://sonoran.store/packages/7606652-events-core) |
-| Events Dashcam | Paid Dashcam DLC from the Sonoran Store and your Cfx.re granted assets |
+| Events Dashcam | Paid DLC: [download Dashcam](https://sonoran.store/packages/7618996-events-dashcam) |
 | FXServer | A current FiveM server with OneSync enabled |
 | Permissions | ACE permissions or a supported framework job setup |
 | Framework | Standalone by default; ESX, QBCore, and Qbox context can be configured |
 | Database | No SQL database is required by the default configuration |
-
-<!-- PRODUCT LINK PLACEHOLDER: Link "Events Dashcam" above to its public Sonoran Store package URL when available. -->
 
 ## Start here
 

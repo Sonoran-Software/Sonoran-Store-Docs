@@ -13,7 +13,7 @@ description: Install the free Events Core dependency and paid Dashcam DLC in the
 Dashcam uses two separate resources:
 
 * [Events Core](https://sonoran.store/packages/7606652-events-core) is the free required package containing the shared recording, replay, storage, and event logic.
-* Events Dashcam is the paid DLC containing vehicle eligibility, recording controls, the Mobile Evidence terminal, and the six dashcam replay views.
+* [Events Dashcam](https://sonoran.store/packages/7618996-events-dashcam) is the paid DLC containing vehicle eligibility, recording controls, the Mobile Evidence terminal, and the six dashcam replay views.
 
 {% hint style="warning" %}
 Both packages are required. Events Core works behind the scenes and does not add a standalone gameplay interface.
@@ -34,7 +34,7 @@ Both resources are protected by FiveM Asset Escrow. Edit only the included custo
 ## Download the resources
 
 1. Obtain the free Events Core package from the Sonoran Store.
-2. Obtain the paid Dashcam package from the Sonoran Store.
+2. Obtain the paid [Dashcam package](https://sonoran.store/packages/7618996-events-dashcam) from the Sonoran Store.
 3. Sign in to the [Cfx.re Portal](https://portal.cfx.re/) using the account associated with the purchase.
 4. Download and extract both granted assets.
 
