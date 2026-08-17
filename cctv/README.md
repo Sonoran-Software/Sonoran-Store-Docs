@@ -75,4 +75,6 @@ CCTV can also be used for live monitoring, but live viewing is not required for 
 3. Create your first terminal and camera with [Camera Setup](camera-setup.md).
 4. Test both live viewing and [Historic Playback](playback.md).
 
+Building an integration? See the [Developer API](developer-api.md) for the supported remote-session exports.
+
 For help, see [Troubleshooting](troubleshooting.md) or contact [Sonoran Software support](https://support.sonoransoftware.com/).

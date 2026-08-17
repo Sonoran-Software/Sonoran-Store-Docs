@@ -70,4 +70,6 @@ ACE permissions and optional framework job grades control who can record, review
 3. Test manual and automatic [Recording](recording.md) in an eligible vehicle.
 4. Open the finalized record and test [Playback and Evidence](playback.md).
 
+Building an integration? See the [Developer API](developer-api.md) for supported exports and lifecycle events.
+
 For help, see [Troubleshooting](troubleshooting.md) or contact [Sonoran Software support](https://support.sonoransoftware.com/).
