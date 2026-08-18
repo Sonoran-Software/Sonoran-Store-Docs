@@ -46,6 +46,8 @@ Open **Structured Replay** from the selected record. The terminal supports:
 
 Bodycam recreates the incident inside FiveM from recorded gameplay state. A normal Bodycam replay is not an MP4 or continuous screen recording. Separate video generation or upload requires an optional compatible processing setup.
 
+<figure><img src="../.gitbook/assets/bodycam-recorded-perspective-replay.webp" alt="Bodycam structured replay with timeline and playback controls"><figcaption><p>Review the reconstructed timeline from the recorded bodycam perspective with markers and interactive playback controls.</p></figcaption></figure>
+
 ## Evidence details
 
 Depending on permissions, reviewers can:
@@ -59,6 +61,8 @@ Depending on permissions, reviewers can:
 * Delete an unlocked, unpreserved record with a substantive reason
 
 Locked records cannot be edited or deleted until an authorized reviewer unlocks them. Preserved records cannot be deleted. Deletion is permanent and requires bodycam.delete.
+
+<figure><img src="../.gitbook/assets/bodycam-evidence-custody.webp" alt="Bodycam evidence custody controls for locking, archiving, retention, and deletion"><figcaption><p>Authorized evidence custodians can protect, archive, retain, or delete records from the review terminal.</p></figcaption></figure>
 
 ## Shipped classifications and retention
 

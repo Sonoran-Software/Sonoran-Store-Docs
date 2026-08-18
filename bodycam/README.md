@@ -12,6 +12,8 @@ description: Preserve incidents from an officer's body-worn perspective and mana
 
 Bodycam gives public-safety personnel a body-worn evidence workflow inside FiveM. It preserves activity before and after an incident, supports manual and automatic recording triggers, and lets authorized staff review the event later from the recorded wearer's perspective.
 
+<figure><img src="../.gitbook/assets/bodycam-terminal.webp" alt="Bodycam evidence terminal with a selected use-of-force recording"><figcaption><p>Record, search, review, and manage body-worn evidence from one in-game terminal.</p></figcaption></figure>
+
 {% hint style="info" %}
 **Bodycam is a paid DLC for the free Events Core package.** Install Events Core once to provide the shared recording, replay, storage, and event logic required by Bodycam and other Events products. Events Core does not add a separate gameplay interface by itself.
 {% endhint %}

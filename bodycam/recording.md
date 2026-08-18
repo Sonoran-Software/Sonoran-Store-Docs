@@ -37,6 +37,8 @@ Adding a manual marker requires access to the active recording and bodycam.annot
 
 The recording overlay displays the active recording ID, department, callsign, coordinates, and timezone label. The overlay is hidden while the full terminal is open so it does not cover the evidence interface.
 
+<figure><img src="../.gitbook/assets/bodycam-recording-overlay.webp" alt="Compact Bodycam active recording overlay"><figcaption><p>The compact overlay keeps recording identity, department, callsign, location, and timezone visible while the terminal is closed.</p></figcaption></figure>
+
 ## Save the current buffer
 
 Use **Save buffer** or /bodycamsave when something important has just happened. This starts a manual recording that includes the configured pre-event period. Stop the recording when the incident is complete; otherwise the configured maximum duration still applies.
